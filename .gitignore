@@ -1,5 +1,12 @@
-# GeneXus KB runtime artifacts
+# GeneXus KB runtime artifacts (SQL Server files locked at runtime)
 Biblioteca/
+*.mdf
+*.ldf
+*.ndf
+
+# GeneXus build/deploy output
+web/
+DeploymentUnit/
 
 # Coda workspace
 .coda/

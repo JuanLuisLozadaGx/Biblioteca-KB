@@ -3,79 +3,128 @@
 ## Project
 
 GeneXus 18.0 U15 Knowledge Base — Library Management System ("Biblioteca").  
-Generator: .NET (Web). Database: SQL Server. KB language: Spanish.  
+Generator: .NET (Web). Database: **SQL Server 2019** (`localhost`, instancia `MSSQLSERVER`). KB language: Spanish.  
 Design System: GeneXusUnanimo v2.0.194 (Chameleon web components).
+
+## Version Control
+
+- **Git repo**: `C:\KBs\IA\Prueba` — inicializado, rama `main`.
+- **Remote**: `https://github.com/JuanLuisLozadaGx/Biblioteca-KB`
+- **Tag**: `Version1` — estado inicial de la KB con módulo OverdueLoans.
+- **Push**: `git push -u origin main && git push origin --tags`
+
+## Database — SQL Server 2019
+
+La KB fue migrada de LocalDB a SQL Server 2019. Configuración actual:
+
+| Parámetro | Valor |
+|---|---|
+| Instancia | `localhost` (MSSQLSERVER) |
+| Base de datos | `GX_KB_Biblioteca` |
+| Autenticación | SQL Server — usuario `sa` |
+| Archivos | `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\DATA\` |
+| `DetachOnClose` | `False` (no se desconecta al cerrar el IDE) |
+| `CreateDbInKbFolder` | `False` (los archivos NO están en `Biblioteca/`) |
+
+El archivo de conexión es `Biblioteca/knowledgebase.connection` — no editar manualmente salvo para cambiar el servidor.
+
+### Para nuevas KBs — usar SQL Server 2019 desde el inicio
+
+En el asistente de GeneXus: `File → New → Knowledge Base` → sección **Database connection**:
+- Server type: Microsoft SQL Server
+- Server name: `localhost`
+- Authentication: SQL Server / usuario `sa`
+- **No** usar LocalDB (evita bloqueos de archivos `.mdf`).
 
 ## Tooling
 
-- **gxnext CLI** (v1.0.0) is the primary tool for importing/exporting objects.
-- **MCP server** (`GeneXus.PIA.McpServer.exe`) exposes `open_knowledge_base`, `import_text_to_kb`, `export_kb_to_text`, `validate_kb_text_files`, `build_one`, `build_all`, `reorganize`, `run`.
-- The KB must be opened before any MCP operation: `open_knowledge_base` with `directory: "C:\KBs\IA\Prueba\Biblioteca"`.
+- **gxnext CLI** (v1.0.0) es la herramienta principal para importar/exportar objetos.
+- **MCP server** (`GeneXus.PIA.McpServer.exe`) expone `open_knowledge_base`, `import_text_to_kb`, `export_kb_to_text`, `validate_kb_text_files`, `build_one`, `build_all`, `reorganize`, `run`.
+- La KB debe estar abierta antes de cualquier operación MCP: `open_knowledge_base` con `directory: "C:\\KBs\\IA\\Prueba\\Biblioteca"`.
 
 ### Key gxnext commands
 
 ```
-# Import one or more objects
+# Importar uno o más objetos
 gxnext import-text-to-kb --names "ObjectName" [--names "Other"] --root-directory "C:\KBs\IA\Prueba"
 
-# Export objects back to text
+# Exportar objetos a texto
 gxnext export-kb-to-text --names "ObjectName" --root-directory "C:\KBs\IA\Prueba"
 
-# Validate without importing
+# Validar sin importar
 gxnext validate-kb-text-files --names "ObjectName" --root-directory "C:\KBs\IA\Prueba"
 ```
 
-Always export after import to verify GeneXus accepted the file as written (it may reformat or reject silently).
+Siempre exportar después de importar para verificar que GeneXus aceptó el archivo tal como fue escrito (puede reformatear o rechazar silenciosamente).
+
+## Coexistencia IDE + Coda
+
+- **Sí se puede** tener el IDE de GeneXus abierto mientras Coda edita archivos `.gx` en disco.
+- **Antes de importar objetos** (`import-text-to-kb`), cerrar o guardar el objeto en el IDE para evitar conflictos.
+- El archivo `.mdf` queda bloqueado por SQL Server mientras la KB está abierta — esto es normal y esperado.
+- El shadow repo de Coda respeta el `.gitignore`; los archivos `.mdf/.ldf/.ndf` están excluidos.
+
+## .gitignore — exclusiones clave
+
+```
+Biblioteca/       # runtime artifacts de la KB (incluye .mdf/.ldf)
+*.mdf             # SQL Server data files (bloqueados en runtime)
+*.ldf             # SQL Server log files
+*.ndf             # SQL Server secondary data files
+web/              # output de build/deploy
+DeploymentUnit/   # output de deploy
+.coda/            # workspace interno de Coda
+```
 
 ## Source Layout
 
 ```
 src/
-  #attributes/        Attribute definitions ([Entity][Attribute].gx)
-  #tables/            Table definitions (Book, Author, Loan, Genre, Publisher, Shelf)
-  #domains/           Domain definitions (ISBN, ReadingStatus)
-  #designsystems/     Design system references (Biblioteca.gx, Base.gx)
-  #preferences/       KB and environment config (Biblioteca.kb.gx, NET.env.gx)
-  #patternsettings/   WorkWith pattern config
-  Author/             WorkWithWebAuthor pattern + components
-  Book/               WorkWithWebBook pattern + components
-  Genre/              WorkWithWebGenre pattern + components
-  Loan/               WorkWithWebLoan pattern + components
-  Publisher/          WorkWithWebPublisher pattern + components
-  Shelf/              WorkWithWebShelf pattern + components
-  @OverduelLoans/     Overdue loans module (note: double-l typo in folder name, matches KB)
-    GetOverdueLoans.gx      Procedure — queries overdue loans, returns OverdueLoanItem SDT
-    OverdueLoanItem.gx      SDT — collection of overdue loan items
-    OverdueLoansPanel.gx    WebPanel — displays overdue loans grid
+  #attributes/        Definiciones de atributos ([Entidad][Atributo].gx)
+  #tables/            Definiciones de tablas (Book, Author, Loan, Genre, Publisher, Shelf)
+  #domains/           Dominios (ISBN, ReadingStatus)
+  #designsystems/     Referencias de design system (Biblioteca.gx, Base.gx)
+  #preferences/       Config de KB y entorno (Biblioteca.kb.gx, NET.env.gx)
+  #patternsettings/   Config del patrón WorkWith
+  Author/             Patrón WorkWithWebAuthor + componentes
+  Book/               Patrón WorkWithWebBook + componentes
+  Genre/              Patrón WorkWithWebGenre + componentes
+  Loan/               Patrón WorkWithWebLoan + componentes
+  Publisher/          Patrón WorkWithWebPublisher + componentes
+  Shelf/              Patrón WorkWithWebShelf + componentes
+  @OverduelLoans/     Módulo de préstamos vencidos (⚠ doble-l en el nombre, coincide con la KB)
+    GetOverdueLoans.gx      Procedure — consulta préstamos vencidos, retorna SDT OverdueLoanItem
+    OverdueLoanItem.gx      SDT — colección de ítems de préstamos vencidos
+    OverdueLoansPanel.gx    WebPanel — grilla de préstamos vencidos
   General/
-    UI/               Master pages, DataProviders, SDTs, Procedures
-      DataLoad.gx           WebPanel — two events: 'LoadData' and 'ClearData'
-      DataLoadInsert.gx     Procedure — inserts all test data (parm out: &Result)
-      DataLoadClear.gx      Procedure — deletes all records in FK-safe order (parm out: &Result)
-    Security/         IsAuthorized, NotAuthorized procedures
-ref/                  External module references (GeneXus core, GeneXusUnanimo)
-Biblioteca/           KB runtime artifacts — do not edit manually
+    UI/               Master pages, DataProviders, SDTs, Procedures, WebPanels custom
+      DataLoad.gx           WebPanel — eventos 'LoadData' y 'ClearData' para datos de prueba
+      SidebarItemsDP.gx     DataProvider — ítems del sidebar (registrar nuevas páginas aquí)
+      MasterUnanimoSidebar  Master page principal
+    Security/         IsAuthorized, NotAuthorized
+ref/                  Referencias de módulos externos (GeneXus core, GeneXusUnanimo)
+Biblioteca/           Artefactos runtime de la KB — NO editar manualmente
 ```
 
-New custom objects (Procedures, WebPanels, SDTs) go in `src/General/UI/` unless they belong to a specific business module. Modules created from the GeneXus IDE get an `@` prefix in the folder name.
+Objetos nuevos (Procedures, WebPanels, SDTs) van en `src/General/UI/` salvo que pertenezcan a un módulo de negocio específico. Los módulos creados desde el IDE de GeneXus reciben prefijo `@` en el nombre de carpeta.
 
 ## GeneXus Object Format (.gx files)
 
 ### Naming conventions
 
-- **Attributes**: `[Entity][Attribute]` — e.g., `BookId`, `LoanExpectedReturnDate`
-- **Objects**: PascalCase — e.g., `WorkWithWebBook`, `GetOverdueLoans`
-- **Variables**: `&PascalCase` — e.g., `&BookId`, `&OverdueLoanItem`
-- **Localizable strings**: prefix with `!` — e.g., `!"Préstamos Vencidos"`
+- **Atributos**: `[Entidad][Atributo]` — ej. `BookId`, `LoanExpectedReturnDate`
+- **Objetos**: PascalCase — ej. `WorkWithWebBook`, `GetOverdueLoans`
+- **Variables**: `&PascalCase` — ej. `&BookId`, `&OverdueLoanItem`
+- **Strings localizables**: prefijo `!` — ej. `!"Préstamos Vencidos"`
 
-### Indentation
+### Indentación
 
-Tabs (one per level). Match the style of existing `.gx` files exactly.
+Tabs (uno por nivel). Respetar el estilo de los `.gx` existentes exactamente.
 
 ### SDT structure
 
-- The root element must have `Collection = 'False'` explicitly set to prevent GeneXus from auto-converting it to a collection.
-- Nested collection item type reference uses `SDTName.CollectionItemName` (the `CollectionItemName` attribute value), **not** the collection element name.
+- El elemento raíz debe tener `Collection = 'False'` explícito para evitar que GeneXus lo convierta en colección.
+- La referencia al tipo de ítem de colección usa `SDTName.CollectionItemName` (el valor del atributo `CollectionItemName`), **no** el nombre del elemento colección.
 
 ```gx
 SDT MySDT
@@ -86,77 +135,76 @@ SDT MySDT
         }
     }
 }
-// Variable type for an item: 'MySDT.Item'
+// Tipo de variable para un ítem: 'MySDT.Item'
 ```
 
-### Procedure code — known syntax constraints
+### Procedure code — restricciones de sintaxis conocidas
 
-| ❌ Does NOT work in procedure code | ✅ Use instead |
+| ❌ NO funciona en procedure code | ✅ Usar en su lugar |
 |---|---|
-| `Today()` | `Now()` (returns DateTime; assign to Date variable) |
-| `CToD('')` | Declare a `Date` variable without initializing it (null by default) |
-| `For Each TableName` | `For Each` (GeneXus infers the table from attributes used) |
-| `Order by Attribute` | `Order Attribute` (no `by`) |
-| `Order` after `Where` | Put `Order` **before** `Where` clauses |
+| `Today()` | `Now()` (retorna DateTime; asignar a variable Date) |
+| `CToD('')` | Declarar variable `Date` sin inicializar (null por defecto) |
+| `For Each TableName` | `For Each` (GeneXus infiere la tabla por los atributos usados) |
+| `Order by Attribute` | `Order Attribute` (sin `by`) |
+| `Order` después de `Where` | Poner `Order` **antes** de las cláusulas `Where` |
 
-`Today()` and `CToD('')` **are** valid inside `#Conditions` and `#Events` sections.
+`Today()` y `CToD('')` **sí son válidos** dentro de secciones `#Conditions` y `#Events`.
 
-### WebPanel events — additional constraints
+### WebPanel events — restricciones adicionales
 
-- **`New` is NOT valid in WebPanel events.** Use a Procedure to insert records and call it from the event.
-- **`For Each / Delete` is NOT valid in WebPanel events.** Same — delegate to a Procedure.
-- **Button click events** use the syntax `Event 'EventName'` (string literal). The button in the layout references the event via `onClickEvent="'EventName'"` inside an `<actiongroup>`.
-- **User events** (`Event 'Name'`) appear as action buttons in the default layout automatically.
+- **`New` NO es válido en eventos de WebPanel.** Usar un Procedure para insertar registros y llamarlo desde el evento.
+- **`For Each / Delete` NO es válido en eventos de WebPanel.** Ídem — delegar a un Procedure.
+- **Eventos de botón** usan la sintaxis `Event 'EventName'` (literal string). El botón en el layout referencia el evento via `onClickEvent="'EventName'"` dentro de un `<actiongroup>`.
+- **User events** (`Event 'Name'`) aparecen como botones de acción en el layout por defecto automáticamente.
 
-### Layout files (.web.xml) — valid elements
+### Layout files (.web.xml) — elementos válidos
 
-| Element | Purpose |
+| Elemento | Propósito |
 |---|---|
-| `<responsive>` | Responsive container |
-| `<flex>` | Flex container |
-| `<row>` / `<cell>` | Layout rows and cells |
-| `<label>` | Static text (`caption` attribute) |
-| `<input data="&amp;VarName">` | Variable/attribute display |
-| `<actiongroup name="X" />` | Placeholder for an action group |
-| `<actiongroups>` / `<actiongroup>` / `<action>` | Button definitions (outside `<view>`) |
-| `<tabularGrid>` | Data grid |
+| `<responsive>` | Contenedor responsive |
+| `<flex>` | Contenedor flex |
+| `<row>` / `<cell>` | Filas y celdas de layout |
+| `<label>` | Texto estático (atributo `caption`) |
+| `<input data="&amp;VarName">` | Display de variable/atributo |
+| `<actiongroup name="X" />` | Placeholder para un grupo de acciones |
+| `<actiongroups>` / `<actiongroup>` / `<action>` | Definición de botones (fuera de `<view>`) |
+| `<tabularGrid>` | Grilla de datos |
 
-❌ `<textblock>` is NOT a standard element — use `<label>` instead.  
-❌ `<button>` is NOT a standard element — use `<action onClickEvent="'EventName'">` inside `<actiongroups>`.  
-❌ `<attribute>` is NOT a standard element — use `<input data="&amp;VarName">` instead.
+❌ `<textblock>` NO es un elemento estándar — usar `<label>` en su lugar.  
+❌ `<button>` NO es un elemento estándar — usar `<action onClickEvent="'EventName'">` dentro de `<actiongroups>`.  
+❌ `<attribute>` NO es un elemento estándar — usar `<input data="&amp;VarName">` en su lugar.
 
 ### WebPanel properties
 
-- `MasterPage = "MasterUnanimoSidebar"` — applies the sidebar master page.
-- `Style` is set automatically by GeneXus on import; do not set it manually.
-- Conditions go in the `#Conditions` section, not in `Event Grid.Load`.
+- `MasterPage = "MasterUnanimoSidebar"` — aplica la master page con sidebar.
+- `Style` lo setea GeneXus automáticamente al importar; no setearlo manualmente.
+- Las condiciones van en la sección `#Conditions`, no en `Event Grid.Load`.
 
-### Layout files (.web.xml)
-
-Each WebPanel with a custom layout needs a companion `ObjectName.web.xml` file in the same directory. Use the `tabularGrid` pattern from existing files (e.g., `src/Book/WorkWithWebBook/WWBook.web.xml`) as a reference.
+Cada WebPanel con layout custom necesita un archivo companion `ObjectName.web.xml` en el mismo directorio. Usar el patrón `tabularGrid` de archivos existentes (ej. `src/Book/WorkWithWebBook/WWBook.web.xml`) como referencia.
 
 ## UI Architecture
 
-- **Master page**: `MasterUnanimoSidebar` (module `General.UI`) — all web pages use this.
-- **Sidebar navigation**: `SidebarItemsDP` DataProvider — add a `SidebarItem` block to register a new page in the sidebar.
-- **Authorization**: Call `IsAuthorized(&PgmName)` in `Event Start`; redirect with `NotAuthorized(&PgmName)` if false.
-- **WorkWith pattern**: All CRUD UIs are generated via the WorkWith pattern. Prefer extending the pattern over creating standalone WebPanels for entity management.
+- **Master page**: `MasterUnanimoSidebar` (módulo `General.UI`) — todas las páginas web la usan.
+- **Sidebar navigation**: DataProvider `SidebarItemsDP` — agregar un bloque `SidebarItem` para registrar una nueva página en el sidebar.
+- **Authorization**: Llamar `IsAuthorized(&PgmName)` en `Event Start`; redirigir con `NotAuthorized(&PgmName)` si es false.
+- **WorkWith pattern**: Todos los CRUD se generan via el patrón WorkWith. Preferir extender el patrón antes de crear WebPanels standalone para gestión de entidades.
 
-## Data Model (core entities)
+## Data Model (entidades core)
 
-| Entity | Key attributes |
+| Entidad | Atributos clave |
 |---|---|
-| Book | BookId, BookTitle, BookISBN, BookStatus (ReadingStatus domain), BookRating (0–5) |
+| Book | BookId, BookTitle, BookISBN, BookStatus (dominio ReadingStatus), BookRating (0–5), BookAcquisitionDate |
 | Author | AuthorId, AuthorName, AuthorBirthDate |
 | Loan | LoanId, BookId (FK), LoanPersonName, LoanDate, LoanExpectedReturnDate, LoanReturnedDate |
 | Genre | GenreId, GenreName |
 | Publisher | PublisherId, PublisherName |
 | Shelf | ShelfId, ShelfName, ShelfDescription |
 
-`LoanReturnedDate` empty + `LoanExpectedReturnDate < today` = overdue loan.
+**Dominio ReadingStatus** — valores almacenados: `Pending`, `Reading`, `Read`, `Abandoned`.  
+**Préstamo vencido**: `LoanReturnedDate` vacío + `LoanExpectedReturnDate < hoy`.
 
 ## Module references
 
-- `GeneXus` core module: `ref/GeneXus/` — provides base types (`ObjectName`, `Url`, `Boolean`, etc.)
-- `GeneXusUnanimo` v2.0.194: `ref/GeneXusUnanimo/` — provides design system, Chameleon controls, sidebar SDTs, stencils.
-- Reference objects with their module qualifier when needed: `'ObjectName, GeneXus'`, `'OverdueLoanItem, General.UI'`.
+- `GeneXus` core module: `ref/GeneXus/` — provee tipos base (`ObjectName`, `Url`, `Boolean`, etc.)
+- `GeneXusUnanimo` v2.0.194: `ref/GeneXusUnanimo/` — design system, controles Chameleon, SDTs de sidebar, stencils.
+- Referenciar objetos con su calificador de módulo cuando sea necesario: `'ObjectName, GeneXus'`, `'OverdueLoanItem, General.UI'`.
