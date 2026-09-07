@@ -31,26 +31,33 @@ Always export after import to verify GeneXus accepted the file as written (it ma
 
 ```
 src/
-  #attributes/      Attribute definitions ([Entity][Attribute].gx)
-  #tables/          Table definitions (Book, Author, Loan, Genre, Publisher, Shelf)
-  #domains/         Domain definitions (ISBN, ReadingStatus)
-  #designsystems/   Design system references (Biblioteca.gx, Base.gx)
-  #preferences/     KB and environment config (Biblioteca.kb.gx, NET.env.gx)
-  #patternsettings/ WorkWith pattern config
-  Author/           WorkWithWebAuthor pattern + components
-  Book/             WorkWithWebBook pattern + components
-  Genre/            WorkWithWebGenre pattern + components
-  Loan/             WorkWithWebLoan pattern + components
-  Publisher/        WorkWithWebPublisher pattern + components
-  Shelf/            WorkWithWebShelf pattern + components
+  #attributes/        Attribute definitions ([Entity][Attribute].gx)
+  #tables/            Table definitions (Book, Author, Loan, Genre, Publisher, Shelf)
+  #domains/           Domain definitions (ISBN, ReadingStatus)
+  #designsystems/     Design system references (Biblioteca.gx, Base.gx)
+  #preferences/       KB and environment config (Biblioteca.kb.gx, NET.env.gx)
+  #patternsettings/   WorkWith pattern config
+  Author/             WorkWithWebAuthor pattern + components
+  Book/               WorkWithWebBook pattern + components
+  Genre/              WorkWithWebGenre pattern + components
+  Loan/               WorkWithWebLoan pattern + components
+  Publisher/          WorkWithWebPublisher pattern + components
+  Shelf/              WorkWithWebShelf pattern + components
+  @OverduelLoans/     Overdue loans module (note: double-l typo in folder name, matches KB)
+    GetOverdueLoans.gx      Procedure — queries overdue loans, returns OverdueLoanItem SDT
+    OverdueLoanItem.gx      SDT — collection of overdue loan items
+    OverdueLoansPanel.gx    WebPanel — displays overdue loans grid
   General/
-    UI/             Master pages, DataProviders, SDTs, Procedures
-    Security/       IsAuthorized procedure
-ref/                External module references (GeneXus core, GeneXusUnanimo)
-Biblioteca/         KB runtime artifacts — do not edit manually
+    UI/               Master pages, DataProviders, SDTs, Procedures
+      DataLoad.gx           WebPanel — two events: 'LoadData' and 'ClearData'
+      DataLoadInsert.gx     Procedure — inserts all test data (parm out: &Result)
+      DataLoadClear.gx      Procedure — deletes all records in FK-safe order (parm out: &Result)
+    Security/         IsAuthorized, NotAuthorized procedures
+ref/                  External module references (GeneXus core, GeneXusUnanimo)
+Biblioteca/           KB runtime artifacts — do not edit manually
 ```
 
-New custom objects (Procedures, WebPanels, SDTs) go in `src/General/UI/` unless they belong to a specific business module.
+New custom objects (Procedures, WebPanels, SDTs) go in `src/General/UI/` unless they belong to a specific business module. Modules created from the GeneXus IDE get an `@` prefix in the folder name.
 
 ## GeneXus Object Format (.gx files)
 
@@ -93,6 +100,30 @@ SDT MySDT
 | `Order` after `Where` | Put `Order` **before** `Where` clauses |
 
 `Today()` and `CToD('')` **are** valid inside `#Conditions` and `#Events` sections.
+
+### WebPanel events — additional constraints
+
+- **`New` is NOT valid in WebPanel events.** Use a Procedure to insert records and call it from the event.
+- **`For Each / Delete` is NOT valid in WebPanel events.** Same — delegate to a Procedure.
+- **Button click events** use the syntax `Event 'EventName'` (string literal). The button in the layout references the event via `onClickEvent="'EventName'"` inside an `<actiongroup>`.
+- **User events** (`Event 'Name'`) appear as action buttons in the default layout automatically.
+
+### Layout files (.web.xml) — valid elements
+
+| Element | Purpose |
+|---|---|
+| `<responsive>` | Responsive container |
+| `<flex>` | Flex container |
+| `<row>` / `<cell>` | Layout rows and cells |
+| `<label>` | Static text (`caption` attribute) |
+| `<input data="&amp;VarName">` | Variable/attribute display |
+| `<actiongroup name="X" />` | Placeholder for an action group |
+| `<actiongroups>` / `<actiongroup>` / `<action>` | Button definitions (outside `<view>`) |
+| `<tabularGrid>` | Data grid |
+
+❌ `<textblock>` is NOT a standard element — use `<label>` instead.  
+❌ `<button>` is NOT a standard element — use `<action onClickEvent="'EventName'">` inside `<actiongroups>`.  
+❌ `<attribute>` is NOT a standard element — use `<input data="&amp;VarName">` instead.
 
 ### WebPanel properties
 

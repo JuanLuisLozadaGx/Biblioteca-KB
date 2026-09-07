@@ -1,0 +1,401 @@
+Procedure DataLoadInsert
+{
+	// Verificar si ya existen datos
+	&Count = 0
+	For Each Author
+		&Count = &Count + 1
+	EndFor
+	
+	If &Count > 0
+		&Result = !"Ya existen datos cargados. Elimine primero antes de volver a cargar."
+	Else
+		// =============================================
+		// AUTORES (5)
+		// =============================================
+		New
+			AuthorName        = !"Gabriel García Márquez"
+			AuthorBirthDate   = CToD('06/03/1927')
+		EndNew
+		&AuthorId1 = AuthorId
+	
+		New
+			AuthorName        = !"Jorge Luis Borges"
+			AuthorBirthDate   = CToD('24/08/1899')
+		EndNew
+		&AuthorId2 = AuthorId
+	
+		New
+			AuthorName        = !"Isabel Allende"
+			AuthorBirthDate   = CToD('02/08/1942')
+		EndNew
+		&AuthorId3 = AuthorId
+	
+		New
+			AuthorName        = !"Mario Vargas Llosa"
+			AuthorBirthDate   = CToD('28/03/1936')
+		EndNew
+		&AuthorId4 = AuthorId
+	
+		New
+			AuthorName        = !"Julio Cortázar"
+			AuthorBirthDate   = CToD('26/08/1914')
+		EndNew
+		&AuthorId5 = AuthorId
+	
+		// =============================================
+		// EDITORIALES (4)
+		// =============================================
+		New
+			PublisherName     = !"Sudamericana"
+		EndNew
+		&PublisherId1 = PublisherId
+	
+		New
+			PublisherName     = !"Alfaguara"
+		EndNew
+		&PublisherId2 = PublisherId
+	
+		New
+			PublisherName     = !"Planeta"
+		EndNew
+		&PublisherId3 = PublisherId
+	
+		New
+			PublisherName     = !"Seix Barral"
+		EndNew
+		&PublisherId4 = PublisherId
+	
+		// =============================================
+		// GÉNEROS (4)
+		// =============================================
+		New
+			GenreName         = !"Novela"
+		EndNew
+		&GenreId1 = GenreId
+	
+		New
+			GenreName         = !"Cuento"
+		EndNew
+		&GenreId2 = GenreId
+	
+		New
+			GenreName         = !"Ensayo"
+		EndNew
+		&GenreId3 = GenreId
+	
+		New
+			GenreName         = !"Poesía"
+		EndNew
+		&GenreId4 = GenreId
+	
+		// =============================================
+		// ESTANTES (3)
+		// =============================================
+		New
+			ShelfName         = !"Estante A"
+			ShelfDescription  = !"Literatura Latinoamericana"
+		EndNew
+		&ShelfId1 = ShelfId
+	
+		New
+			ShelfName         = !"Estante B"
+			ShelfDescription  = !"Clásicos Universales"
+		EndNew
+		&ShelfId2 = ShelfId
+	
+		New
+			ShelfName         = !"Estante C"
+			ShelfDescription  = !"Ensayo y No Ficción"
+		EndNew
+		&ShelfId3 = ShelfId
+	
+		// =============================================
+		// LIBROS (10)
+		// =============================================
+		// Libro 1 — Leído, Rating 5
+		New
+			BookTitle           = !"Cien años de soledad"
+			BookISBN            = !"978-0-06-088328-7"
+			BookStatus          = "Read"
+			BookRating          = 5
+			BookAcquisitionDate = CToD('15/01/2020')
+			AuthorId            = &AuthorId1
+			PublisherId         = &PublisherId1
+			GenreId             = &GenreId1
+			ShelfId             = &ShelfId1
+		EndNew
+		&BookId1 = BookId
+	
+		// Libro 2 — Leído, Rating 4
+		New
+			BookTitle           = !"El amor en los tiempos del cólera"
+			BookISBN            = !"978-0-14-303943-3"
+			BookStatus          = "Read"
+			BookRating          = 4
+			BookAcquisitionDate = CToD('20/03/2020')
+			AuthorId            = &AuthorId1
+			PublisherId         = &PublisherId1
+			GenreId             = &GenreId1
+			ShelfId             = &ShelfId1
+		EndNew
+		&BookId2 = BookId
+	
+		// Libro 3 — Leído, Rating 5
+		New
+			BookTitle           = !"Ficciones"
+			BookISBN            = !"978-0-8021-3030-5"
+			BookStatus          = "Read"
+			BookRating          = 5
+			BookAcquisitionDate = CToD('10/06/2019')
+			AuthorId            = &AuthorId2
+			PublisherId         = &PublisherId2
+			GenreId             = &GenreId2
+			ShelfId             = &ShelfId2
+		EndNew
+		&BookId3 = BookId
+	
+		// Libro 4 — Leyendo, Rating 4
+		New
+			BookTitle           = !"El Aleph"
+			BookISBN            = !"978-0-14-028680-4"
+			BookStatus          = "Reading"
+			BookRating          = 4
+			BookAcquisitionDate = CToD('05/09/2021')
+			AuthorId            = &AuthorId2
+			PublisherId         = &PublisherId2
+			GenreId             = &GenreId2
+			ShelfId             = &ShelfId2
+		EndNew
+		&BookId4 = BookId
+	
+		// Libro 5 — Leído, Rating 4
+		New
+			BookTitle           = !"La casa de los espíritus"
+			BookISBN            = !"978-0-553-38380-1"
+			BookStatus          = "Read"
+			BookRating          = 4
+			BookAcquisitionDate = CToD('12/11/2018')
+			AuthorId            = &AuthorId3
+			PublisherId         = &PublisherId1
+			GenreId             = &GenreId1
+			ShelfId             = &ShelfId1
+		EndNew
+		&BookId5 = BookId
+	
+		// Libro 6 — Pendiente, Rating 0
+		New
+			BookTitle           = !"Paula"
+			BookISBN            = !"978-0-06-092721-9"
+			BookStatus          = "Pending"
+			BookRating          = 0
+			BookAcquisitionDate = CToD('01/04/2022')
+			AuthorId            = &AuthorId3
+			PublisherId         = &PublisherId3
+			GenreId             = &GenreId3
+			ShelfId             = &ShelfId3
+		EndNew
+		&BookId6 = BookId
+	
+		// Libro 7 — Leyendo, Rating 3
+		New
+			BookTitle           = !"La ciudad y los perros"
+			BookISBN            = !"978-0-374-52706-0"
+			BookStatus          = "Reading"
+			BookRating          = 3
+			BookAcquisitionDate = CToD('18/07/2021')
+			AuthorId            = &AuthorId4
+			PublisherId         = &PublisherId4
+			GenreId             = &GenreId1
+			ShelfId             = &ShelfId1
+		EndNew
+		&BookId7 = BookId
+	
+		// Libro 8 — Pendiente, Rating 0
+		New
+			BookTitle           = !"Conversación en La Catedral"
+			BookISBN            = !"978-0-06-093399-9"
+			BookStatus          = "Pending"
+			BookRating          = 0
+			BookAcquisitionDate = CToD('30/08/2023')
+			AuthorId            = &AuthorId4
+			PublisherId         = &PublisherId4
+			GenreId             = &GenreId1
+			ShelfId             = &ShelfId1
+		EndNew
+		&BookId8 = BookId
+	
+		// Libro 9 — Leído, Rating 5
+		New
+			BookTitle           = !"Rayuela"
+			BookISBN            = !"978-0-394-72521-0"
+			BookStatus          = "Read"
+			BookRating          = 5
+			BookAcquisitionDate = CToD('22/02/2017')
+			AuthorId            = &AuthorId5
+			PublisherId         = &PublisherId2
+			GenreId             = &GenreId1
+			ShelfId             = &ShelfId2
+		EndNew
+		&BookId9 = BookId
+	
+		// Libro 10 — Abandonado, Rating 2
+		New
+			BookTitle           = !"Bestiario"
+			BookISBN            = !"978-0-394-72522-7"
+			BookStatus          = "Abandoned"
+			BookRating          = 2
+			BookAcquisitionDate = CToD('14/05/2023')
+			AuthorId            = &AuthorId5
+			PublisherId         = &PublisherId2
+			GenreId             = &GenreId2
+			ShelfId             = &ShelfId2
+		EndNew
+		&BookId10 = BookId
+	
+		// =============================================
+		// PRÉSTAMOS (8): 3 activos · 3 devueltos · 2 vencidos
+		// =============================================
+	
+		// Préstamo 1 — ACTIVO
+		New
+			BookId                 = &BookId1
+			LoanPersonName         = !"Juan Pérez"
+			LoanDate               = CToD('15/08/2026')
+			LoanExpectedReturnDate = CToD('30/09/2026')
+		EndNew
+	
+		// Préstamo 2 — ACTIVO
+		New
+			BookId                 = &BookId3
+			LoanPersonName         = !"María González"
+			LoanDate               = CToD('20/08/2026')
+			LoanExpectedReturnDate = CToD('05/10/2026')
+		EndNew
+	
+		// Préstamo 3 — ACTIVO
+		New
+			BookId                 = &BookId7
+			LoanPersonName         = !"Carlos López"
+			LoanDate               = CToD('01/09/2026')
+			LoanExpectedReturnDate = CToD('30/09/2026')
+		EndNew
+	
+		// Préstamo 4 — DEVUELTO
+		New
+			BookId                 = &BookId2
+			LoanPersonName         = !"Ana Martínez"
+			LoanDate               = CToD('01/06/2026')
+			LoanExpectedReturnDate = CToD('30/06/2026')
+			LoanReturnedDate       = CToD('25/06/2026')
+		EndNew
+	
+		// Préstamo 5 — DEVUELTO
+		New
+			BookId                 = &BookId5
+			LoanPersonName         = !"Pedro Rodríguez"
+			LoanDate               = CToD('01/07/2026')
+			LoanExpectedReturnDate = CToD('31/07/2026')
+			LoanReturnedDate       = CToD('29/07/2026')
+		EndNew
+	
+		// Préstamo 6 — DEVUELTO
+		New
+			BookId                 = &BookId9
+			LoanPersonName         = !"Laura Sánchez"
+			LoanDate               = CToD('01/05/2026')
+			LoanExpectedReturnDate = CToD('31/05/2026')
+			LoanReturnedDate       = CToD('28/05/2026')
+		EndNew
+	
+		// Préstamo 7 — VENCIDO (sin devolver, fecha pasada)
+		New
+			BookId                 = &BookId4
+			LoanPersonName         = !"Roberto García"
+			LoanDate               = CToD('01/07/2026')
+			LoanExpectedReturnDate = CToD('01/08/2026')
+		EndNew
+	
+		// Préstamo 8 — VENCIDO (sin devolver, fecha pasada)
+		New
+			BookId                 = &BookId6
+			LoanPersonName         = !"Sofía Torres"
+			LoanDate               = CToD('15/06/2026')
+			LoanExpectedReturnDate = CToD('15/07/2026')
+		EndNew
+	
+		&Result = !"Datos cargados: 5 autores, 4 editoriales, 4 géneros, 3 estantes, 10 libros, 8 préstamos (3 activos, 3 devueltos, 2 vencidos)."
+	EndIf
+
+	#Rules
+		parm(out: &Result);
+	#End
+
+	#Variables
+		Result [ DataType = 'VarChar(300)' ]
+
+		Count [ DataType = 'Numeric(10.0)' ]
+
+		AuthorId1 [ DataType = 'Attribute:AuthorId' ]
+
+		AuthorId2 [ DataType = 'Attribute:AuthorId' ]
+
+		AuthorId3 [ DataType = 'Attribute:AuthorId' ]
+
+		AuthorId4 [ DataType = 'Attribute:AuthorId' ]
+
+		AuthorId5 [ DataType = 'Attribute:AuthorId' ]
+
+		PublisherId1 [ DataType = 'Attribute:PublisherId' ]
+
+		PublisherId2 [ DataType = 'Attribute:PublisherId' ]
+
+		PublisherId3 [ DataType = 'Attribute:PublisherId' ]
+
+		PublisherId4 [ DataType = 'Attribute:PublisherId' ]
+
+		GenreId1 [ DataType = 'Attribute:GenreId' ]
+
+		GenreId2 [ DataType = 'Attribute:GenreId' ]
+
+		GenreId3 [ DataType = 'Attribute:GenreId' ]
+
+		GenreId4 [ DataType = 'Attribute:GenreId' ]
+
+		ShelfId1 [ DataType = 'Attribute:ShelfId' ]
+
+		ShelfId2 [ DataType = 'Attribute:ShelfId' ]
+
+		ShelfId3 [ DataType = 'Attribute:ShelfId' ]
+
+		BookId1 [ DataType = 'Attribute:BookId' ]
+
+		BookId2 [ DataType = 'Attribute:BookId' ]
+
+		BookId3 [ DataType = 'Attribute:BookId' ]
+
+		BookId4 [ DataType = 'Attribute:BookId' ]
+
+		BookId5 [ DataType = 'Attribute:BookId' ]
+
+		BookId6 [ DataType = 'Attribute:BookId' ]
+
+		BookId7 [ DataType = 'Attribute:BookId' ]
+
+		BookId8 [ DataType = 'Attribute:BookId' ]
+
+		BookId9 [ DataType = 'Attribute:BookId' ]
+
+		BookId10 [ DataType = 'Attribute:BookId' ]
+
+		
+	#End
+
+	#Properties
+		Name = "DataLoadInsert"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

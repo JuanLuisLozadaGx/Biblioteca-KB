@@ -1,0 +1,32 @@
+WebPanel DataLoad
+{
+	#Events
+		Event Start
+			Form.Caption = !"Carga de Datos de Prueba"
+		EndEvent
+		
+		Event 'LoadData'
+			DataLoadInsert(&Msg)
+		EndEvent
+		
+		Event 'ClearData'
+			DataLoadClear(&Msg)
+		EndEvent
+		
+	#End
+
+	#Properties
+		Name = "DataLoad"
+
+		Description = "Carga de Datos de Prueba"
+
+		Style = "UnanimoWeb"
+
+		MasterPage = "MasterUnanimoSidebar"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

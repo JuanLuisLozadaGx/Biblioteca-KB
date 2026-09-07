@@ -1,0 +1,48 @@
+Procedure DataLoadClear
+{
+	// Eliminar en orden inverso de FK para respetar integridad referencial
+	For Each Loan
+		Delete
+	EndFor
+	
+	For Each Book
+		Delete
+	EndFor
+	
+	For Each Shelf
+		Delete
+	EndFor
+	
+	For Each Genre
+		Delete
+	EndFor
+	
+	For Each Publisher
+		Delete
+	EndFor
+	
+	For Each Author
+		Delete
+	EndFor
+	
+	&Result = !"Todos los datos han sido eliminados correctamente."
+
+	#Rules
+		parm(out: &Result);
+	#End
+
+	#Variables
+		Result [ DataType = 'VarChar(300)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "DataLoadClear"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -22,6 +22,14 @@ DataProvider SidebarItemsDP
 			target = OverdueLoansPanel.Link()
 			hasSubItems = false
 		}
+
+		SidebarItem
+		{
+			id = !"DataLoad"
+			title = !"Carga de Datos"
+			target = DataLoad.Link()
+			hasSubItems = false
+		}
 	}
 	
 
