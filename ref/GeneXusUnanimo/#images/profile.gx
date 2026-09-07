@@ -1,0 +1,15 @@
+Image profile
+{
+	'profile.svg' [ Description = 'profile.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "profile"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,23 @@
+SDT ImagesCollection
+{
+	ImagesCollection [ Collection = 'True', CollectionItemName = 'Items' ]{
+
+		Image [ DataType = 'Image' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "ImagesCollection"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

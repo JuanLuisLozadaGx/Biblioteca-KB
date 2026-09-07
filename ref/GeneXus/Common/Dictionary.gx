@@ -1,0 +1,527 @@
+ExternalObject Dictionary
+{
+	#GenericTypes
+		KeyType
+
+		[
+
+			PropertyName = 'Key',
+
+			DefaultType = 'VarChar',
+
+			Length = '255'
+
+		]
+
+		
+
+		ValueType
+
+		[
+
+			PropertyName = 'Value',
+
+			DefaultType = 'VarChar',
+
+			Length = '255'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalProperties
+		Values
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Returns a collection with all values.',
+
+			Type = 'ValueType',
+
+			Collection = 'True',
+
+			NetFrameworkExternalName = 'ValueList',
+
+			NetFrameworkExternalType = 'System.Collections.Generic.List<ValueType>',
+
+			JavaExternalName = 'values',
+
+			JavaExternalType = 'java.util.Collection<ValueType>',
+
+			JavaExternalGetMethod = 'values'
+
+		]
+
+		
+
+		Keys
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Returns a collection with all keys.',
+
+			Type = 'KeyType',
+
+			Collection = 'True',
+
+			NetFrameworkExternalName = 'KeyList',
+
+			NetFrameworkExternalType = 'System.Collections.Generic.List<KeyType>',
+
+			JavaExternalName = 'keySet',
+
+			JavaExternalType = 'java.util.Collection<KeyType>',
+
+			JavaExternalGetMethod = 'keySet'
+
+		]
+
+		
+
+		Count
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Returns the number of items.',
+
+			NetFrameworkExternalName = 'Count',
+
+			NetFrameworkExternalType = 'int',
+
+			JavaExternalName = 'size',
+
+			JavaExternalType = 'int',
+
+			JavaExternalGetMethod = 'size'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		Set
+
+		[
+
+			Description = 'If the Key already exists then its Value is updated.',
+
+			NetFrameworkExternalName = 'Set',
+
+			NetFrameworkExternalType = 'void',
+
+			JavaExternalName = 'put',
+
+			JavaExternalType = 'void'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'KeyType'
+
+				]
+
+		
+
+				Value
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'ValueType'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SetDictionary
+
+		[
+
+			Description = 'If a Key already exists, then its Value is updated',
+
+			NetFrameworkExternalName = 'SetDictionary',
+
+			NetFrameworkExternalType = 'void',
+
+			JavaExternalName = 'setHashMap',
+
+			JavaExternalType = 'void'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Dictionary
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Dictionary, GeneXus.Common',
+
+					NetFrameworkExternalType = 'GxGenericDictionary<KeyType,ValueType>',
+
+					JavaExternalType = 'com.genexus.util.GXHashMap<KeyType,ValueType>',
+
+					KeyType = 'KeyType',
+
+					ValueType = 'ValueType'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Remove
+
+		[
+
+			Description = 'Removes the item with the specified Key.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			NetFrameworkExternalName = 'RemoveKey',
+
+			NetFrameworkExternalType = 'bool',
+
+			JavaExternalName = 'removeKey',
+
+			JavaExternalType = 'boolean'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'KeyType'
+
+				]
+
+			}
+
+		}
+
+		
+
+		RemoveKeys
+
+		[
+
+			Description = 'Removes the items with the specified Keys.',
+
+			NetFrameworkExternalName = 'RemoveKeys',
+
+			NetFrameworkExternalType = 'void',
+
+			JavaExternalName = 'removeKeys',
+
+			JavaExternalType = 'void'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Keys
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'KeyType',
+
+					Collection = 'True',
+
+					NetFrameworkExternalType = 'System.Collections.Generic.List<KeyType>',
+
+					JavaExternalType = 'java.util.Vector<KeyType>'
+
+				]
+
+			}
+
+		}
+
+		
+
+		RemoveAll
+
+		[
+
+			Description = 'Removes the items with the Keys of the Dictionary',
+
+			NetFrameworkExternalName = 'RemoveAll',
+
+			NetFrameworkExternalType = 'void',
+
+			JavaExternalName = 'removeAll',
+
+			JavaExternalType = 'void'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Dictionary
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Dictionary, GeneXus.Common',
+
+					Length = '0',
+
+					NetFrameworkExternalType = 'GxGenericDictionary<KeyType,ValueType>',
+
+					JavaExternalType = 'com.genexus.util.GXHashMap<KeyType,ValueType>',
+
+					KeyType = 'KeyType',
+
+					ValueType = 'ValueType'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Clear
+
+		[
+
+			Description = 'Remove all items from the dictionary.',
+
+			NetFrameworkExternalName = 'Clear',
+
+			NetFrameworkExternalType = 'void',
+
+			JavaExternalName = 'clear',
+
+			JavaExternalType = 'void'
+
+		]
+
+		
+
+		Get
+
+		[
+
+			Description = 'Gets the Value for the given Key.',
+
+			Type = 'ValueType',
+
+			NetFrameworkExternalName = 'Get',
+
+			NetFrameworkExternalType = 'ValueType',
+
+			JavaExternalName = 'get',
+
+			JavaExternalType = 'ValueType'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'KeyType'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Contains
+
+		[
+
+			Description = 'Check if there is an item with the given Key.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			NetFrameworkExternalName = 'ContainsKey',
+
+			NetFrameworkExternalType = 'bool',
+
+			JavaExternalName = 'containsKey',
+
+			JavaExternalType = 'boolean'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'KeyType'
+
+				]
+
+			}
+
+		}
+
+		
+
+		FromJson
+
+		[
+
+			Description = 'Remove all items from the dictionary. All previous items in the dictionary are removed. If the string has not a valid format no items are added.',
+
+			NetFrameworkExternalName = 'FromJson',
+
+			NetFrameworkExternalType = 'void',
+
+			JavaExternalName = 'fromJson',
+
+			JavaExternalType = 'void'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Json
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '255'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ToJson
+
+		[
+
+			Description = 'Get a string representation in json format for the dictionary.',
+
+			Type = 'VarChar',
+
+			Length = '255',
+
+			NetFrameworkExternalName = 'ToJson',
+
+			NetFrameworkExternalType = 'string',
+
+			JavaExternalName = 'toJson',
+
+			JavaExternalType = 'String'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Dictionary"
+
+		IsGeneric = "True"
+
+		NetFrameworkExternalName = "GxGenericDictionary<KeyType,ValueType>"
+
+		NetExternalName = "GxGenericDictionary<KeyType,ValueType>"
+
+		JavaExternalName = "GXHashMap<KeyType,ValueType>"
+
+		JavaExternalPackageName = "com.genexus.util"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

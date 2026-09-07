@@ -1,0 +1,1 @@
+GeneXus Core Module is a basic set of interfaces and implementations of data structures and algorithms to solve common programming use cases.

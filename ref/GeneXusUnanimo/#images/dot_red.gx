@@ -1,0 +1,15 @@
+Image dot_red
+{
+	'dot_red.svg' [ Description = 'dot_red.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "dot_red"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

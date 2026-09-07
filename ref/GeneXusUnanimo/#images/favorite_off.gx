@@ -1,0 +1,17 @@
+Image favorite_off
+{
+	'favorite_off.svg' [ Description = 'favorite_off.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "favorite_off"
+
+		Description = "favorite_off"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

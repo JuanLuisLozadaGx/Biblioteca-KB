@@ -1,0 +1,45 @@
+SDT LocalNotificationsInfo
+{
+	LocalNotificationsInfo [ Collection = 'True', CollectionItemName = 'Item' ]{
+
+		DateTime [ DataType = 'DateTime' ]
+
+		Text [ DataType = 'VarChar(128)' ]
+
+		Event	{
+
+			Name [ DataType = 'VarChar(40)' ]
+
+			Parameters [ Collection = 'True', CollectionItemName = 'Item' ]		{
+
+				Name [ DataType = 'VarChar(40)' ]
+
+				Value [ DataType = 'VarChar(128)' ]
+
+			}
+
+	
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "LocalNotificationsInfo"
+
+		Description = "Local Notifications Information"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

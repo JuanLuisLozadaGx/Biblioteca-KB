@@ -1,0 +1,15 @@
+Image column_not_fixed
+{
+	'Column Not Fixed.svg' [ Description = 'Column Not Fixed.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "column_not_fixed"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

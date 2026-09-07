@@ -1,0 +1,27 @@
+SDT AudioPlayerCustomAction
+{
+	AudioPlayerCustomAction{
+
+		Id [ DataType = 'VarChar(40)' ]
+
+		Title [ DataType = 'VarChar(200)' ]
+
+		Image [ DataType = 'Image' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "AudioPlayerCustomAction"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

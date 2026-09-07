@@ -1,0 +1,41 @@
+SDT SynchronizationEventResultList
+{
+	SynchronizationEventResultList [ Collection = 'True' ]{
+
+		EventId [ Description = 'Pending Event Id', DataType = 'GUID' ]
+
+		EventTimestamp [ Description = 'Pending Event Timestamp', DataType = 'DateTime' ]
+
+		EventStatus [ Description = 'Pending Event Status', DataType = 'EventStatus, GeneXus' ]
+
+		EventErrors [ Description = 'Pending Event Errors', DataType = 'EventErrors, GeneXus' ]
+
+		Mappings [ Collection = 'True', CollectionItemName = 'MappingsItem' ]	{
+
+			Table [ DataType = 'VarChar(128)' ]
+
+			Updates [ DataType = 'LongVarChar(2M)' ]
+
+			Conditions [ DataType = 'LongVarChar(2M)' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "SynchronizationEventResultList"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

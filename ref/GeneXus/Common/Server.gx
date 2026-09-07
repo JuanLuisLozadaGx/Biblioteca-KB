@@ -1,0 +1,39 @@
+ExternalObject Server
+{
+	#ExternalMethods
+		InvalidateCache
+
+		[
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'InvalidateCache',
+
+			JavaExternalName = 'invalidateCache',
+
+			RubyExternalName = 'invalidatecache'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Server"
+
+		Namespace = "GX"
+
+		NetFrameworkExternalName = "SDServerAPI"
+
+		JavaExternalName = "SDServerAPI"
+
+		JavaExternalPackageName = "com.genexus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,17 @@
+Image arrow_select
+{
+	'arrow_select.svg' [ Description = 'arrow_select.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "arrow_select"
+
+		Description = "arrow_select"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

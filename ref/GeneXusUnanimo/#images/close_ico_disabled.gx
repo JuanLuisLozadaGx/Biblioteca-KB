@@ -1,0 +1,17 @@
+Image close_ico_disabled
+{
+	'close_ico_disabled.svg' [ Description = 'close_ico_disabled.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "close_ico_disabled"
+
+		Description = "close_ico_disabled"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

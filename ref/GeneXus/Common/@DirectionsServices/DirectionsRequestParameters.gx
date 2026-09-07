@@ -1,0 +1,35 @@
+SDT DirectionsRequestParameters
+{
+	DirectionsRequestParameters{
+
+		sourceLocation [ Description = 'Source Location', DataType = 'GeoPoint', Collection = 'False', JsonName = 'sourceLocation', JsonNullSerialization = 'No Property' ]
+
+		destinationLocation [ Description = 'Destination Location', DataType = 'GeoPoint', JsonName = 'destinationLocation', JsonNullSerialization = 'No Property' ]
+
+		waypoints [ Description = 'Intermediate waypoints', DataType = 'GeoPoint', Collection = 'True', CollectionItemName = 'waypoint' ]
+
+		optimizeWaypoints [ DataType = 'Boolean' ]
+
+		transportType [ DataType = 'TransportType, GeneXus.Common', JsonName = 'transportType', JsonNullSerialization = 'No Property' ]
+
+		requestAlternateRoutes [ DataType = 'Boolean', JsonName = 'requestAlternateRoutes', JsonNullSerialization = 'No Property' ]
+
+		additionalParameters [ DataType = 'ConfigurationProperty, GeneXus.Common.Notifications', Collection = 'True', CollectionItemName = 'parameter' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "DirectionsRequestParameters"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

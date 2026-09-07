@@ -1,0 +1,50 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" class="Table">
+			<row>
+				<cell widthSm="100">
+					<responsive name="TableTop" class="ww__actions-container">
+						<row>
+							<cell class="ww__view__button-back__cell" widthSm="100" offsetSm="0">
+								<label name="ViewAll" caption="Genres" class="ww__view__button-back" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+			<row>
+				<cell widthSm="100" offsetSm="0" widthXs="100">
+					<flex name="TableFixedData_1" class="Flex ww__view__title-table">
+						<cell flexGrow="0">
+							<input labelPosition="None" labelCaption="Name" class="heading-01" inputType="Values" dataSourceFrom="Values" data="GenreName" name="ctlGenreName" />
+						</cell>
+					</flex>
+				</cell>
+			</row>
+			<row>
+				<cell widthSm="100" offsetSm="0" widthXs="100" offsetXs="0">
+					<tab name="Tab" class="ww__view__tab" historyManagement="True">
+						<tabPage name="General" caption="General">
+							<responsive name="TableGeneral" class="ww__view__tab__form-container">
+								<row>
+									<cell widthSm="100">
+										<component name="GeneralWC" />
+									</cell>
+								</row>
+							</responsive>
+						</tabPage>
+						<tabPage name="Book" caption="Book">
+							<responsive name="TableBook" class="ww__view__tab__form-container">
+								<row>
+									<cell widthSm="100">
+										<component name="BookWC" />
+									</cell>
+								</row>
+							</responsive>
+						</tabPage>
+					</tab>
+				</cell>
+			</row>
+		</responsive>
+	</view>
+</layout>

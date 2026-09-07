@@ -1,0 +1,21 @@
+MasterPage MasterPrompt
+{
+	#Variables
+		IsAuthorized [ DataType = 'Boolean' ]
+
+		
+	#End
+
+	#Properties
+		Name = "MasterPrompt"
+
+		Description = "Prompt Master Page"
+
+		Type = "Master Page"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

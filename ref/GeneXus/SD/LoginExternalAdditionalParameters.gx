@@ -1,0 +1,39 @@
+SDT LoginExternalAdditionalParameters
+{
+	LoginExternalAdditionalParameters{
+
+		Repository [ DataType = 'Character(40)' ]
+
+		AuthenticationTypeName [ DataType = 'Character(60)' ]
+
+		UseTwoFactorAuthentication [ DataType = 'Boolean' ]
+
+		OTPStep [ Description = 'One Time Password Step Number', DataType = 'Numeric(1.0)' ]
+
+		Properties [ Collection = 'True', CollectionItemName = 'Property' ]	{
+
+			Id [ DataType = 'Character(40)' ]
+
+			Value [ DataType = 'Character(40)' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "LoginExternalAdditionalParameters"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

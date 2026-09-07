@@ -1,0 +1,27 @@
+SDT SynchronizationInfo
+{
+	SynchronizationInfo{
+
+		GxAppVersion [ Description = 'Application Version', DataType = 'Character(20)' ]
+
+		Synchronizer [ Description = 'Synchronizer', DataType = 'Character(256)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "SynchronizationInfo"
+
+		Description = "Synchronization's Additional Information"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

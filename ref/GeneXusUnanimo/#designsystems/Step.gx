@@ -1,0 +1,43 @@
+DesignSystem Step
+{
+	#DesignStyles
+		styles Step
+		{
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		
+		    .ch-step {
+		        --text-color: $colors.un-text__on-surface--negative;
+		        --font-weight: bold;
+		        --font-size: $fontSizes.un-s;
+		        --item-color: $colors.un-color__gray--300;
+		        --item-active-color: $colors.un-accent__primary;
+		        --line-color: $colors.un-color__gray--300;
+		    }
+		    .ch-step-done {
+		        --item-color: $colors.un-accent__primary--active;
+		        --line-color: $colors.un-accent__primary--active;
+		    }
+		    .item--selected {
+		        --item-color: $colors.un-accent__primary;
+		        --line-color: $colors.un-accent__primary;
+		    }
+		    .ch-step::part(item-icon){
+		        -webkit-mask: gx-image(GeneXusUnanimo.dot_gray);
+		        -webkit-mask-size: 12px;
+		        -webkit-mask-repeat: no-repeat;
+		        background-color: $colors.un-surface--positive; 
+		        width: 12px;
+		        height: 12px; 
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "Step"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

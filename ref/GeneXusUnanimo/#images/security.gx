@@ -1,0 +1,17 @@
+Image security
+{
+	'security.svg' [ Description = 'security.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "security"
+
+		Description = "security"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

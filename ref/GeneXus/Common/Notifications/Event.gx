@@ -1,0 +1,33 @@
+SDT Event
+{
+	Event{
+
+		Name [ Description = 'Event Name', DataType = 'Character(100)' ]
+
+		Parameters [ Collection = 'True', CollectionItemName = 'Parameter' ]	{
+
+			Name [ DataType = 'Character(100)' ]
+
+			Value [ DataType = 'Character(100)' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "Event"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

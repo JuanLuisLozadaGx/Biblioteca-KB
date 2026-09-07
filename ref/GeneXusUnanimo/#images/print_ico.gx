@@ -1,0 +1,17 @@
+Image print_ico
+{
+	'print_ico.svg' [ Description = 'print_ico.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "print_ico"
+
+		Description = "print_ico"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

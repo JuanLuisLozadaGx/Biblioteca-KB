@@ -1,0 +1,15 @@
+Domain MobileSettings
+{
+	#Properties
+		Name = "MobileSettings"
+
+		DataType = "VarChar(40)"
+
+		EnumValues = "General, General, General; Application, Application, Application"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

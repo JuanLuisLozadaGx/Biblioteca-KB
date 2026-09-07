@@ -1,0 +1,15 @@
+Domain DirectionsServiceProviders
+{
+	#Properties
+		Name = "DirectionsServiceProviders"
+
+		DataType = "VarChar(40)"
+
+		EnumValues = "Google, Google, Google"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

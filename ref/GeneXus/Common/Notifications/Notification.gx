@@ -1,0 +1,117 @@
+SDT Notification
+{
+	Notification{
+
+		Id [ DataType = 'Character(20)' ]
+
+		Text [ DataType = 'LocalizedText, GeneXus.Common.Notifications' ]
+
+		Title [ DataType = 'LocalizedText, GeneXus.Common.Notifications' ]
+
+		Appearance	{
+
+			Badge [ DataType = 'Character(4)' ]
+
+			BadgeType [ DataType = 'NotificationBadgeType, GeneXus.Common.Notifications' ]
+
+			Icon		{
+
+				Large [ Description = 'Large icon (can be an URL)', DataType = 'Url, GeneXus' ]
+
+				Small [ Description = 'Small icon (embedded resource)', DataType = 'Character(100)' ]
+
+			}
+
+	
+
+			Sound [ Description = 'Sound (default Notification sound will be played)' ]		{
+
+				Sound [ Description = 'Emit sound', DataType = 'Boolean', InitialValue = 'true' ]
+
+				CustomSound [ Description = 'Custom Sound name', DataType = 'Character(100)' ]
+
+			}
+
+	
+
+			Picture [ Description = 'Big Picture', DataType = 'Character(100)', Collection = 'False', ControlType = 'Edit' ]
+
+			Channel [ Description = 'The Android Oreo Notification Category to send the notification under', DataType = 'Character(100)' ]
+
+		}
+
+	
+
+		Actions	{
+
+			DefaultAction		{
+
+				Event [ DataType = 'Event, GeneXus.Common.Notifications' ]
+
+			}
+
+	
+
+			CustomUIActions [ Collection = 'True', CollectionItemName = 'Action' ]		{
+
+				Event [ DataType = 'Event, GeneXus.Common.Notifications' ]
+
+				Id [ DataType = 'Character(20)' ]
+
+				Text [ DataType = 'LocalizedText, GeneXus.Common.Notifications' ]
+
+				Icon [ Description = 'Icon resource name (optional)', DataType = 'Character(100)' ]
+
+			}
+
+	
+
+		}
+
+	
+
+		Advanced	{
+
+			Attachments [ Description = 'Rich content Notifications (iOS only)', Collection = 'True', CollectionItemName = 'Attachment' ]		{
+
+				Type [ DataType = 'Character(100)' ]
+
+				URL [ DataType = 'Url, GeneXus' ]
+
+			}
+
+	
+
+			Group [ Description = 'Grouping (Android only)' ]		{
+
+				GroupId [ DataType = 'Character(100)' ]
+
+				GroupMessage [ DataType = 'LocalizedText, GeneXus.Common.Notifications' ]
+
+			}
+
+	
+
+			Template [ DataType = 'Character(100)' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "Notification"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

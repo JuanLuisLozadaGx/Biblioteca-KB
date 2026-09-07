@@ -1,0 +1,397 @@
+ExternalObject Actions
+{
+	#ExternalMethods
+		Login
+
+		[
+
+			Description = 'Call this action to execute the standard batch login against the OAuth server.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				User
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+		
+
+				Password
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Login
+
+		[
+
+			Description = 'Call this action to execute the standard batch login against the OAuth server.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				User
+
+				[
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+		
+
+				Password
+
+				[
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+		
+
+				AdditionalParameters
+
+				[
+
+					Type = 'LoginExternalAdditionalParameters, GeneXus.SD',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		LoginExternal
+
+		[
+
+			Description = 'Call this action to execute the batch login against the OAuth server for a External login type.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Type
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+		
+
+				User
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+		
+
+				Password
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		LoginExternal
+
+		[
+
+			Description = 'Call this action to execute the batch login against the OAuth server for a External login type.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Type
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+		
+
+				User
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+		
+
+				Password
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+		
+
+				AdditionalParameters
+
+				[
+
+					Type = 'LoginExternalAdditionalParameters, GeneXus.SD',
+
+					Length = '0',
+
+					Collection = 'False'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Logout
+
+		[
+
+			Description = 'Call this action to execute the standard logout against the OAuth server.',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		GoHome
+
+		[
+
+			Description = 'Returns to the main object of the application, clearing the current call stack.',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		ReturnTo
+
+		[
+
+			Description = 'Returns to the object specified in the parameter. If it is present more than once in the call stack, it will return to the most recent instance.',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				ObjectName
+
+				[
+
+					Description = 'Object to return to.',
+
+					BasedOn = 'ObjectName, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Save
+
+		[
+
+			Description = 'Call this action to execute the standard save in the edit form in the device.',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		Cancel
+
+		[
+
+			Description = 'Call this action to execute the standard cancel in the edit form in the device.',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		CancelTo
+
+		[
+
+			Description = 'Returns to the object specified in the parameter, like ReturnTo method, but with the behavior of Cancel method.',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				ObjectName
+
+				[
+
+					Description = 'Object to return to.',
+
+					BasedOn = 'ObjectName, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Delete
+
+		[
+
+			Description = 'Call this action to execute the standard delete in the edit form in the device.',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		TakeApplicationScreenshot
+
+		[
+
+			Description = 'Takes an application screenshot for further use like sharing, save in library, etc.',
+
+			Type = 'Image',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Actions"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

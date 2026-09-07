@@ -1,0 +1,41 @@
+SDT OverdueLoanItem
+{
+	OverdueLoanItem [ Collection = 'False' ]{
+
+		OverdueLoanList [ Collection = 'True', CollectionItemName = 'OverdueLoan' ]	{
+
+			BookId [ DataType = 'Attribute:BookId' ]
+
+			BookTitle [ DataType = 'Attribute:BookTitle' ]
+
+			AuthorName [ DataType = 'Attribute:AuthorName' ]
+
+			LoanId [ DataType = 'Attribute:LoanId' ]
+
+			LoanPersonName [ DataType = 'Attribute:LoanPersonName' ]
+
+			LoanDate [ DataType = 'Attribute:LoanDate' ]
+
+			LoanExpectedReturnDate [ DataType = 'Attribute:LoanExpectedReturnDate' ]
+
+			DaysOverdue [ DataType = 'Numeric(5.0)' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "OverdueLoanItem"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

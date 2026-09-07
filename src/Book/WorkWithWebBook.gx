@@ -1,0 +1,871 @@
+WorkWith WorkWithWebBook
+{
+	WorkWithPatternInstance
+
+	[
+
+		UpdateTransaction = 'Apply WW Style'
+
+	]
+
+	{
+
+		Transaction
+
+		[
+
+			Transaction = 'Book'
+
+		]
+
+		Level
+
+		[
+
+			Id = '2bdedf8d-d355-49e6-aff1-aaddd77cc16b:1',
+
+			Name = 'Book'
+
+		]
+
+		{
+
+			DescriptionAttribute
+
+			[
+
+				Attribute = 'BookTitle',
+
+				Description = 'Title'
+
+			]
+
+			Selection
+
+			[
+
+				Description = 'Books',
+
+				RowsPerPage = '<default>'
+
+			]
+
+			{
+
+				Attributes
+
+				{
+
+					Attribute
+
+					[
+
+						Attribute = 'BookId',
+
+						Description = 'Id',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'BookTitle',
+
+						Description = 'Title',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'AuthorId',
+
+						Description = 'Author Id',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'AuthorName',
+
+						Description = 'Author Name',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'PublisherId',
+
+						Description = 'Publisher Id',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'PublisherName',
+
+						Description = 'Publisher Name',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'GenreId',
+
+						Description = 'Genre Id',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'GenreName',
+
+						Description = 'Genre Name',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'ShelfId',
+
+						Description = 'Shelf Id',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'ShelfName',
+
+						Description = 'Shelf Name',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'BookISBN',
+
+						Description = 'ISBN',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'BookPublicationYear',
+
+						Description = 'Publication Year',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'BookPages',
+
+						Description = 'Pages',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'BookLanguage',
+
+						Description = 'Language',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'BookStatus',
+
+						Description = 'Status',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'BookRating',
+
+						Description = 'Rating',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'BookAcquisitionDate',
+
+						Description = 'Acquisition Date',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'BookNotes',
+
+						Description = 'Notes',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+				}
+
+				Orders
+
+				{
+
+					Order
+
+					[
+
+						Name = 'Title'
+
+					]
+
+					{
+
+						Attribute
+
+						[
+
+							Attribute = 'BookTitle',
+
+							Description = 'Title',
+
+							Ascending = 'True'
+
+						]
+
+					}
+
+				}
+
+				Filter
+
+				{
+
+					Attributes
+
+					{
+
+						FilterAttribute
+
+						[
+
+							Name = 'BookTitle',
+
+							Description = 'Title',
+
+							Default = ''
+
+						]
+
+					}
+
+					Conditions
+
+					{
+
+						Condition
+
+						[
+
+							Value = 'BookTitle like &BookTitle when not &BookTitle.IsEmpty()'
+
+						]
+
+					}
+
+				}
+
+			}
+
+			View
+
+			[
+
+				Caption = 'BookTitle.ToString()',
+
+				Description = 'Book Information',
+
+				BackToSelection = 'True',
+
+				MasterPage = '<default>'
+
+			]
+
+			{
+
+				Parameters
+
+				{
+
+					Parameter
+
+					[
+
+						Name = 'BookId',
+
+						NullValue = 'True'
+
+					]
+
+				}
+
+				FixedData
+
+				{
+
+					Attributes
+
+					{
+
+						Attribute
+
+						[
+
+							Attribute = 'BookTitle',
+
+							Description = 'Title',
+
+							Autolink = 'True',
+
+							Visible = 'True'
+
+						]
+
+					}
+
+				}
+
+				Tabs
+
+				{
+
+					Tab
+
+					[
+
+						Caption = 'General',
+
+						Code = 'General',
+
+						Description = 'Book Info',
+
+						Type = 'Tabular',
+
+						ComponentName = 'BookGeneral'
+
+					]
+
+					{
+
+						Attributes
+
+						{
+
+							Attribute
+
+							[
+
+								Attribute = 'BookId',
+
+								Description = 'Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookTitle',
+
+								Description = 'Title',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'AuthorId',
+
+								Description = 'Author Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'AuthorName',
+
+								Description = 'Author Name',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'PublisherId',
+
+								Description = 'Publisher Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'PublisherName',
+
+								Description = 'Publisher Name',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'GenreId',
+
+								Description = 'Genre Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'GenreName',
+
+								Description = 'Genre Name',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'ShelfId',
+
+								Description = 'Shelf Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'ShelfName',
+
+								Description = 'Shelf Name',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookISBN',
+
+								Description = 'ISBN',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookPublicationYear',
+
+								Description = 'Publication Year',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookPages',
+
+								Description = 'Pages',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookLanguage',
+
+								Description = 'Language',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookStatus',
+
+								Description = 'Status',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookRating',
+
+								Description = 'Rating',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookAcquisitionDate',
+
+								Description = 'Acquisition Date',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookNotes',
+
+								Description = 'Notes',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+						}
+
+						Actions
+
+						{
+
+							Action
+
+							[
+
+								Name = 'Update'
+
+							]
+
+							Action
+
+							[
+
+								Name = 'Delete'
+
+							]
+
+						}
+
+					}
+
+					Tab
+
+					[
+
+						Caption = 'Loan',
+
+						Code = 'Loan',
+
+						Type = 'Grid',
+
+						ComponentName = 'BookLoanWC',
+
+						RowsPerPage = '<default>'
+
+					]
+
+					{
+
+						Transaction
+
+						[
+
+							Transaction = 'Loan'
+
+						]
+
+						Modes
+
+						Attributes
+
+						{
+
+							Attribute
+
+							[
+
+								Attribute = 'LoanId',
+
+								Description = 'Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'LoanPersonName',
+
+								Description = 'Person Name',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'LoanDate',
+
+								Description = 'Date',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'LoanExpectedReturnDate',
+
+								Description = 'Return Date',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'LoanReturnedDate',
+
+								Description = 'Returned Date',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "WorkWithWebBook"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

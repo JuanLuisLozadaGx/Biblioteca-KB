@@ -1,0 +1,95 @@
+ExternalObject CallResult
+{
+	#ExternalMethods
+		Success
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			NetFrameworkExternalName = 'Success',
+
+			NetFrameworkExternalType = 'bool',
+
+			NetExternalName = 'Success',
+
+			NetExternalType = 'bool',
+
+			JavaExternalName = 'success',
+
+			JavaExternalType = 'boolean'
+
+		]
+
+		
+
+		Fail
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			NetFrameworkExternalName = 'Fail',
+
+			NetFrameworkExternalType = 'bool',
+
+			NetExternalName = 'Fail',
+
+			NetExternalType = 'bool',
+
+			JavaExternalName = 'fail',
+
+			JavaExternalType = 'boolean'
+
+		]
+
+		
+
+		GetMessages
+
+		[
+
+			Type = 'Messages, GeneXus.Common',
+
+			Length = '0',
+
+			NetFrameworkExternalName = 'GetMessages',
+
+			NetFrameworkExternalType = 'msglist',
+
+			NetExternalName = 'GetMessages',
+
+			NetExternalType = 'msglist',
+
+			JavaExternalName = 'getMessages',
+
+			JavaExternalType = 'MsgList'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "CallResult"
+
+		NetFrameworkExternalName = "GeneXus.Utils.CallResult"
+
+		NetExternalName = "GeneXus.Utils.CallResult"
+
+		JavaExternalName = "CallResult"
+
+		JavaExternalPackageName = "com.genexus.util"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

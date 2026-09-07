@@ -1,0 +1,27 @@
+SDT BeaconProximityAlert
+{
+	BeaconProximityAlert{
+
+		BeaconRegion [ DataType = 'BeaconRegion, GeneXus.SD' ]
+
+		NotifyOnEntry [ Description = 'Alert will be executed when the user enters the region.', DataType = 'Boolean' ]
+
+		NotifyOnExit [ Description = 'Alert will be executed when the user exits the region.', DataType = 'Boolean' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "BeaconProximityAlert"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

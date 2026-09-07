@@ -1,0 +1,468 @@
+DesignSystem UnanimoAngular
+{
+	#DesignTokens
+		tokens UnanimoAngular 
+		{}
+	#End
+
+	#DesignStyles
+		styles UnanimoAngular
+		{ 
+		    @import GeneXusUnanimo.Unanimo;
+		    @import GeneXusUnanimo.UnanimoControls;
+		    
+		    #region Application
+		        .Application {
+		            background-color: $colors.un-surface--alternative; //$colors.un-surface--positive;
+		            font-family: $fonts.un-font__family;
+		            color: $colors.un-text__on-surface--positive;
+		        }
+		        .ApplicationBars {
+		            background-color: $colors.header-bg;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--bold;
+		            color: $colors.un-text__on-secondary;
+		            border-bottom: solid 2px $colors.header-separator-bg;
+		        }
+		    #endregion
+		
+		    #region Attribute
+		        .Attribute, .AttributeSearch {
+		            max-width: fit-content;
+		        }
+		        .Attribute.gx-disabled-custom {
+		            @include Attribute;
+		            color: $colors.un-text__disabled;
+		            background-color: $colors.un-color__gray--300;
+		            border-color: $colors.un-border-color__disabled;
+		        }
+		        .Attribute[type="date"]:not([readonly="true"]), .Attribute[type="datetime-local"]:not([readonly="true"]) {
+		            width: fit-content;
+		        }
+		        .Attribute[type="date"][readonly="true"], .Attribute[type="datetime-local"][readonly="true"] {
+		            width: auto;
+		        }
+		        select.Attribute {
+		            max-width: fit-content;
+		        }
+		        .Attribute.gx-edit--multiline {
+		            min-width: 240px;
+		            min-height: 60px;
+		        }
+		        //auto-grow in cell
+		        [auto-grow] .Attribute[readonly="true"] {
+		            height: auto;
+		        }
+		        //checkbox
+		        .attribute-checkbox {
+		            --option-checked-color: $colors.un-accent__primary;
+		            --option-border-color: $colors.un-border-color__strong;
+		            --option-highlight-color: $colors.un-accent__primary--active;
+		            gx-label-class: attribute-label;
+		        }
+		        gx-checkbox.Attribute {
+		            @include attribute-checkbox;
+		            border: none;
+		            padding-inline: 0px;
+		        }
+		        gx-checkbox.Attribute[readonly="true"] {
+		            --option-checked-color: $colors.un-accent__disabled;
+		        }
+		        gx-checkbox.Attribute:focus-within {
+		            box-shadow: none;
+		        }
+		        .attribute-checkbox--disabled {
+		            @include attribute-checkbox;
+		            --option-checked-color: $colors.un-color__gray--500;
+		            --option-border-color: $colors.un-border-color__strong;
+		            --option-highlight-color: unset;
+		        }
+		        //radio button
+		        gx-radio-option {
+		            --option-checked-color: $colors.un-accent__primary;
+		            --option-border-color: $colors.un-border-color__strong;
+		            --option-highlight-color: $colors.un-accent__primary--active;
+		        }
+		        .attribute-radiobutton {
+		            gx-label-class: attribute-label;
+		        }
+		        .attribute-radiobutton--disabled {
+		            @include attribute-radiobutton;
+		            --option-checked-color: $colors.un-color__gray--500;
+		            --option-border-color: $colors.un-border-color__strong;
+		            --option-highlight-color: unset;
+		        }
+		        gx-radio-option .label-of-the-option {
+		            font-family: $fonts.un-font__family;
+		            font-size: $fontSizes.un-s;
+		        }
+		        //select
+		        .gx-select-control {
+		            align-items: center;
+		        }
+		    #endregion
+		
+		    #region Badges
+		        //tag attributes ("badges")
+		        .badge {
+		            max-height: 18px;
+		            max-width: fit-content;
+		        }
+		        .badge-success, .badge-info, .badge-warning, .badge-danger, .badge-disabled {
+		            @include badge;
+		        }
+		    #endregion
+		
+		    #region Button
+		        .Button, .button {
+		            @include Button;
+		        }
+		        .Button {
+		            max-width: fit-content;
+		        }
+		        .Button::part(main-img) {
+		            padding-inline-start: $spacing.un-m;
+		        }
+		        //image only
+		        .Button.gx-empty-caption {
+		            min-width: 28px;
+		            padding: 0px;
+		        }
+		        .Button.gx-empty-caption::part(main-img) {
+		            padding: 0px;
+		        }
+		        //button img
+		        .button-primary::part(main-img) {
+		            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7495%) hue-rotate(105deg) brightness(104%) contrast(100%);
+		        }
+		        .button-secondary::part(main-img) {
+		            filter: brightness(0) saturate(100%) invert(39%) sepia(90%) saturate(693%) hue-rotate(207deg) brightness(96%) contrast(97%);
+		        }
+		        .button-tertiary::part(main-img) {
+		            filter: brightness(0) saturate(100%) invert(39%) sepia(90%) saturate(693%) hue-rotate(207deg) brightness(96%) contrast(97%);
+		        }
+		        .button-rounded::part(main-img) {
+		            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7495%) hue-rotate(105deg) brightness(104%) contrast(100%);
+		        }
+		        //disabled state button img
+		        .button-primary--disabled::part(main-img) {
+		            filter: brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(66%) hue-rotate(191deg) brightness(83%) contrast(90%);
+		        }
+		         .button-secondary--disabled::part(main-img) {
+		            filter: brightness(0) saturate(100%) invert(58%) sepia(10%) saturate(102%) hue-rotate(191deg) brightness(100%) contrast(84%);
+		        }
+		        .button-tertiary--disabled::part(main-img) {
+		            filter: brightness(0) saturate(100%) invert(58%) sepia(10%) saturate(102%) hue-rotate(191deg) brightness(100%) contrast(84%);
+		        }
+		        .button-rounded--disabled::part(main-img) {
+		            filter: brightness(0) saturate(100%) invert(94%) sepia(11%) saturate(66%) hue-rotate(191deg) brightness(83%) contrast(90%);
+		        }
+		    #endregion
+		
+		    #region Group
+		        .gx-group-caption {
+		            display: block;
+		            color: $colors.un-text__on-surface--positive;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--bold;
+		            font-size: $fontSizes.un-l;
+		            letter-spacing: $spacing.letter-spacing-s;
+		            width: 100%;
+		            height: 30px;
+		            padding: 0;
+		            margin-bottom: $spacing.un-l;
+		            border: 0;
+		            border-bottom: 1px solid $colors.un-border-color__mild;
+		        }
+		    #endregion
+		
+		    #region Grid
+		        .Grid {
+		            gx-grid-header-row-class: GridTitle;
+		            gx-grid-column-class: grid-column;
+		            gx-grid-row-class: grid-row;
+		            gx-grid-selected-row-class: gx-row-selected;
+		            gx-grid-hover-row-class: grid-row-highlight;
+		            gx-group-separator-class: grid__group-separator;
+		        }
+		        .GridTitle {
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--bold;
+		            font-size: $fontSizes.un-s;
+		            color: $colors.un-text__on-surface--positive;
+		            cursor: pointer;
+		            border-bottom: $borders.un-width--xs solid $colors.un-border-color__mild;
+		            padding-block: 7px;
+		            padding-inline: $spacing.un-m;
+		        }
+		    #endregion
+		
+		    #region Image
+		        .Image, .ViewImage {
+		            gx-label-class: attribute-label;
+		        }
+		    #endregion
+		
+		    #region Switch
+		        .Switch {
+		            --option-checked-color: $colors.un-accent__primary--active;
+		            --option-border-color: $colors.un-border-color__strong;
+		            --option-highlight-color: $colors.un-accent__primary--active;
+		            gx-label-class: attribute-label;
+		        }
+		        gx-switch>.gx-switch-container>.gx-switch-slider::before {
+		            width: 24px;
+		            height: 24px;
+		        }
+		        gx-switch>.gx-switch-container>.gx-switch-slider {
+		            width: 48px;
+		            height: 12px;
+		            border-radius: 12px;
+		            background-color: $colors.un-color__gray--500;
+		        }
+		        gx-switch>.gx-switch-container--checked>.gx-switch-slider {
+		            background-color: $colors.un-accent__primary;
+		        }
+		        //value text
+		        gx-switch>.gx-switch-container:last-child {
+		            font-family: $fonts.un-font__family;
+		            font-size: $fontSizes.un-s;
+		        }
+		    #endregion
+		
+		    #region Tab
+		        .Tab {
+		            gx-selected-tab-page-class: tab-item--selected;
+		            gx-unselected-tab-page-class: tab-item;
+		            border-bottom-left-radius: $radius.un-radius--l;
+		            border-bottom-right-radius: $radius.un-radius--l;
+		        }
+		        .Tab::part(tab-content){
+		            background-color: $colors.form-container-bg;
+		        }
+		        .Tab::part(nav-tabs) {
+		            padding-block-end: 5px;
+		        }
+		        .Tab::part(nav-tabs-table) {
+		            display: flex;
+		            gap: $spacing.un-l;
+		        }
+		        .Tab::part(nav-tabs-table-filler) {
+		            border: none;
+		        }
+		        .tab-item {
+		            padding: 10px;
+		            border-block-end-width: 3px;
+		            border-block-end-color: $colors.un-surface--alternative;
+		        }
+		        .tab-item--selected {
+		            padding: 10px;
+		        }
+		        .tab-item:hover, tab-item--selected:hover {
+		            border-block-end-color: $colors.un-border-color__secondary--hover;
+		        }
+		        .tab-item:focus, tab-item--selected:focus {
+		            border: solid 1px $colors.un-accent__secondary--active;
+		        }
+		        .Tab gx-card {
+		            border-top-left-radius: $radius.un-radius--l;
+		            border-top-right-radius: $radius.un-radius--l;
+		        }
+		    #endregion
+		
+		    #region Table
+		        .gx-sections-container {
+		            background-color: $colors.un-surface--alternative;
+		            min-height: 400px;
+		            height: fit-content;
+		        }
+		        .TableDetail {
+		            background-color: $colors.un-surface--alternative;
+		            padding-inline: $spacing.un-xxl;
+		        }
+		        .TableSectioninsert {
+		            margin: 32px;
+		            padding: 32px;
+		            background-color: $colors.form-container-bg;
+		            border-radius: $radius.un-radius--l;
+		            box-shadow: $shadows.xxs;
+		            gx-row-horizontal-line-separator: true;
+		        }
+		        .TableSectioninsert gx-form-field {
+		            border-bottom: solid 1px $colors.un-color__gray--500;
+		        }
+		    #endregion
+		
+		    #region Master Panel
+		        .HeaderContainer {
+		            margin: 0px;
+		        }
+		    #endregion
+		
+		    #region Modal
+		        //msg default modal
+		        .Application gx-modal::part(header) {
+		            background-color: $colors.overlay-bg;
+		            //color: $colors.un-text__on-background;
+		        }
+		        .Application gx-modal::part(body) {
+		            background-color: $colors.overlay-bg;
+		        }
+		        .Application gx-modal::part(footer) {
+		            background-color: $colors.overlay-bg;
+		        }
+		        gx-modal > .gx-modal-primary-action {
+		            background-color: $colors.un-accent__primary;
+		            font-size: $fontSizes.un-s;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            color: $colors.un-text__on-primary;
+		            text-transform: uppercase;
+		            box-shadow: none;
+		            border: none;
+		            border-radius: $radius.un-radius--s;
+		            min-width: 80px;
+		            height: 28px;
+		            line-height: 0px;
+		        }
+		        gx-modal > .gx-modal-secondary-action {
+		            background-color: transparent;
+		            font-size: $fontSizes.un-s;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            color: $colors.un-text__primary;
+		            text-transform: uppercase;
+		            box-shadow: none;
+		            border: none;
+		            border-radius: $radius.un-radius--s;
+		             min-width: 80px;
+		            height: 28px;
+		            line-height: 0px;
+		        }
+		        gx-modal > .gx-modal-secondary-action:hover {
+		            background-color: $colors.un-accent__primary-dim--hover;
+		        }
+		    #endregion
+		
+		    #region Work With
+		        .TableSectioninsert gx-map {
+		            --gx-map-width: 200px;
+		            --gx-map-height: 80px;
+		        }
+		        .ww__list__main-container {
+		            background-color: $colors.un-surface--alternative;
+		        }
+		        .ww__list__main-container .sidebar {
+		            background-color: $colors.form-container-bg;
+		            padding-block: $spacing.un-m;
+		            padding-inline: $spacing.un-l;
+		        }
+		        .ww__list__grid-container {
+		            padding-inline: $spacing.un-xxl;
+		        }
+		        .ww__list__filters-container .Attribute {
+		            max-width: unset;
+		        }
+		        .gx-sections-container {
+		            height: unset;
+		            min-height: unset;
+		            margin-block-end: $spacing.un-xxl;
+		        }
+		        .ww__detail-container {
+		            padding-inline: $spacing.un-xxl;
+		        }
+		        .ww__detail-container .Tab gx-form-field {
+		            border-block-end: solid 1px $colors.un-border-color__mild;
+		            padding: $spacing.un-l;
+		            align-content: center;
+		        }
+		        .ww__detail-container .Tab .Grid gx-form-field {
+		            border: none;
+		            padding-inline: 0px;
+		            padding-block: 11px;
+		        }
+		        .ww__view__button-back {
+		            color: $colors.un-text__primary;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            font-size: $fontSizes.un-s;
+		            letter-spacing: 0.25px;
+		            text-transform: uppercase;
+		            justify-content: flex-start;
+		            max-width: fit-content;
+		        }
+		        .ww__view__button-back:hover {
+		            color: $colors.un-text__primary--hover;
+		        }
+		        .ww__view__button-back::part(main-img){
+		            width: 24px;
+		            height: 24px;
+		        }
+		        .attribute--action { 
+		            background-color: transparent;
+		            font-size: $fontSizes.un-s;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            color: $colors.un-text__primary;
+		            text-transform: uppercase;
+		            border:none;
+		            border-radius: 0;
+		            padding-inline-start: $spacing.un-m;
+		            padding-inline-end: $spacing.un-m;
+		        }
+		        .attribute--action:hover {
+		            background-color: $colors.un-accent__primary-dim--hover;
+		            color: $colors.un-text__secondary--active;
+		            height: 28px;
+		            padding-block-start: 5px;
+		        }
+		        .grid-column--action {
+		            padding-block: 0px;
+		        }   
+		        .attribute--link {
+		            @include Attribute;
+		            gx-label-class: attribute-label;
+		            font-family: $fonts.un-font__family;
+		            font-size: $fontSizes.un-s;
+		            color: $colors.un-text__primary;
+		            text-decoration: underline;
+		        }
+		        .attribute--link:hover {
+		            color: $colors.un-text__primary--hover;
+		        }
+		        .ww__actions-container {
+		            gap: $spacing.un-l;
+		        }
+		        .ww__filters-container {
+		            background-color: $colors.form-container-bg;
+		            padding-inline: 16px;
+		            padding-block: 8px;
+		            height: 100%;
+		        }
+		        .Tab .TableSection {
+		            background-color: $colors.form-container-bg;
+		            padding: $spacing.un-l;
+		        }
+		        .Tab .ApplicationBars {
+		            background-color: $colors.form-container-bg;
+		            border-bottom: none;
+		            border-top-left-radius: $radius.un-radius--l;
+		            border-top-right-radius: $radius.un-radius--l;
+		            padding: $spacing.un-l;
+		        }
+		        .Tab .ApplicationBars .Button{
+		            margin-inline-start: $spacing.un-l;
+		        }
+		    #endregion
+		}
+	#End
+
+	#Properties
+		Name = "UnanimoAngular"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

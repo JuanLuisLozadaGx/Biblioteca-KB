@@ -1,0 +1,15 @@
+Image projects
+{
+	'projects.svg' [ Description = 'projects.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "projects"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

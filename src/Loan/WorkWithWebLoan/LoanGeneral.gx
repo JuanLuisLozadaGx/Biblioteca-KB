@@ -1,0 +1,87 @@
+WebComponent LoanGeneral
+{
+	#Rules
+		parm(in:LoanId);
+		
+	#End
+
+	#Events
+		Event Start
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+			Do 'PrepareTransaction'
+		EndEvent
+		
+		Event Load
+			BookTitle.Link = ViewBook.Link(BookId, "")
+		EndEvent
+		
+		Event 'DoUpdate'
+			Loan(TrnMode.Update, LoanId)
+		EndEvent
+		
+		Event 'DoDelete'
+			Loan(TrnMode.Delete, LoanId)
+		EndEvent
+		
+		Sub 'PrepareTransaction'
+			&TrnContext = new()
+			&TrnContext.CallerObject = &Pgmname
+			&TrnContext.CallerOnDelete = False
+			&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+			&TrnContext.TransactionName = !"Loan"
+		
+			&TrnContextAtt = new()
+			&TrnContextAtt.AttributeName = !"LoanId"
+			&TrnContextAtt.AttributeValue = &LoanId.ToString()
+			&TrnContext.Attributes.Add(&TrnContextAtt)
+		
+			&Session.Set(!"TrnContext", &TrnContext.ToXml())
+		EndSub
+		
+	#End
+
+	#Variables
+		IsAuthorized [ DataType = 'Boolean' ]
+
+		LoanId [ DataType = 'Attribute:LoanId' ]
+
+		TrnContext [ DataType = 'TransactionContext, General.UI' ]
+
+		TrnContextAtt [ DataType = 'TransactionContext.Attribute, General.UI' ]
+
+		Session [ DataType = 'WebSession' ]
+
+		HTTPRequest [ DataType = 'HttpRequest' ]
+
+		
+	#End
+
+	#Properties
+		Name = "LoanGeneral"
+
+		Type = "Component"
+
+		IsDefault = "False"
+
+		
+
+		WebForm.Defaults = "WorkWith:Templates\\TabTabularWebForm.dkt"
+
+		
+
+		Rules.Defaults = "WorkWith:Templates\\TabTabularRules.dkt"
+
+		
+
+		Events.Defaults = "WorkWith:Templates\\TabTabularEvents.dkt"
+
+		
+
+		Variables.Defaults = "WorkWith:Templates\\TabTabularVariables.dkt"
+
+		
+	#End
+
+}

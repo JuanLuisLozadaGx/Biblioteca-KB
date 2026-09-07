@@ -1,0 +1,99 @@
+ExternalObject DataBase
+{
+	#ExternalMethods
+		Backup
+
+		[
+
+			Description = 'Call this method to execute the backup of the appplication offline database.',
+
+			BasedOn = 'ResultCode, GeneXus.SD.Offline',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'backup',
+
+			AndroidExternalName = 'backup'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Path
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Path Uri of the backup file',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Restore
+
+		[
+
+			Description = 'Call this method to execute the restore of the appplication offline database from previous backup.',
+
+			BasedOn = 'ResultCode, GeneXus.SD.Offline',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'restore',
+
+			AndroidExternalName = 'restore'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Path
+
+				[
+
+					Description = 'Path Uri of the backup file',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "DataBase"
+
+		IosExternalName = "GXEOOfflineDatabase"
+
+		AndroidExternalName = "DataBaseAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.core.externalobjects"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

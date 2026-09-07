@@ -1,0 +1,29 @@
+SDT MediaQueueState
+{
+	MediaQueueState{
+
+		State [ Description = 'Playback State', DataType = 'PlaybackState, GeneXus' ]
+
+		MediaId [ Description = 'Id of the current item in the media queue', DataType = 'VarChar(40)' ]
+
+		QueuePosition [ DataType = 'Numeric(8.0)' ]
+
+		TrackPosition [ Description = 'Number of milliseconds elapsed since the start of the media item', DataType = 'MediaDuration, GeneXus' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "MediaQueueState"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

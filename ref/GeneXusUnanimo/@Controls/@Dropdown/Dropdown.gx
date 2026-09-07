@@ -1,0 +1,173 @@
+UserControl Dropdown
+{
+	#UserControlScreenTemplate
+		<div class="dropdown" id="dropdown{{Id}}" aria-haspopup="true" aria-expanded="false">
+			<div class="dd-flex-container" tabindex="0">
+				<div class="dd-text-container" id="textContainer{{Id}}">
+					<div class="row"> <span class="dd-username">{{UserFullName}}</span> </div>
+					{{#UserCompany}} <div class="row"> <span class="dd-companyname">{{UserCompany}}</span> </div> {{/UserCompany}}
+				</div>
+				<div class="dd-avatar-container" id="imgContainer{{Id}}">
+					<img {{#UserPhoto}}src={{UserPhoto}}{{/UserPhoto}} class="dd-avatar" alt="avatar-image">
+				</div>
+				{{#ShowVerticalSeparator}}
+				<div class="dd-vertical-separator" id="ddSeparator{{Id}}"></div>
+				{{/ShowVerticalSeparator}}
+			</div>
+			<ul class="dropdown-content" id="dropdown-content{{Id}}">
+				{{#DropdownItems}}
+				<li id="{{id}}" class="dd-option-container">
+					<img alt="{{alternativeText}}" class="dd-option-icon" src={{icon}}>
+					<span class="dd-option">{{title}}</span>
+				</li>
+				{{/DropdownItems}}
+				<!-- default logout event -->
+				{{#ShowLogoutOption}}	
+				<li class="dd-option-container"  {{Logout}}>
+					<img alt="logout_icon" class="dd-option-icon" src={{LogoutIcon}}>
+					<span class="dd-option">{{LogoutText}}</span>
+				</li>
+				{{/ShowLogoutOption}}
+			</ul>
+		</div>
+		
+	#End
+
+	#UserControlProperties
+		<Definition auto="false">
+		  <Property Name="Id" Type="numeric" Default="" />
+		  <Property Name="UserPhoto" Type="string" Default="" />
+		  <Property Name="UserFullName" Type="string" Default="" />
+		  <Property Name="UserCompany" Type="string" Default="" />
+		  <Property Name="DisplayType" Type="enum" Default="Avatar">
+		    <Value>Avatar</Value>
+		    <Value>Text</Value>
+		    <Value>Avatar and Text</Value>
+			<Value>Text into options box</Value>
+		  </Property>
+		  <Property Name="ExpandBehavior" Type="enum" Default="Hover">
+		    <Value>Click</Value>
+		    <Value>Hover</Value>
+		  </Property>
+		  <Property Name="ShowVerticalSeparator" Type="boolean" Default="true" />
+		  <Property Name="ShowLogoutOption" Type="boolean" Default="true" />
+		  <Property Name="LogoutIcon" Type="string" Default="" />
+		  <Property Name="LogoutText" Type="string" Default="Logout" />
+		  <Property Name="DropdownItems" Type="sdt" Default="" />
+		  <Property Name="DropdownItemsCurrentIndex" Type="numeric" Default="" />
+		  <Property Name="SelectedItemId" Type="string" Default="" />
+		  <Property Name="SelectedItemTarget" Type="string" Default="" />
+		  
+		  <Event Name="Logout" On="Click"/>
+		  <Event Name="ItemClick" />
+		  
+		  <script name="Init" when="AfterShow">
+		  	const UC = this;
+			const imgContainerId = "imgContainer" + UC.Id;
+			const imgContainer = document.getElementById(imgContainerId);
+			const textContainerId = "textContainer" + UC.Id;
+			const textContainer = document.getElementById(textContainerId);
+			const separatorId = "ddSeparator" + UC.Id;
+			const verticalSeparator = document.getElementById(separatorId);
+		
+			var elContent = document.getElementById("dropdown-content" + UC.Id);
+			var dropdown = document.getElementById("dropdown" + UC.Id);
+			
+			switch(UC.DisplayType) {
+				case "Avatar":
+				textContainer.hidden = true;
+				break;
+				case "Text": 
+				imgContainer.hidden = true;
+				break;
+				case "Avatar and Text":
+				break;
+				case "Text into options box":
+				elContent.prepend(textContainer);
+				break;
+			}
+			switch(UC.ExpandBehavior) {
+				case "Click":
+				imgContainer.addEventListener("click", function(e){
+					if (!elContent.classList.contains('dropdown-content--visible')){
+						addElementProperties();
+					}else {
+						removeElementProperties();
+					}		
+				})
+				textContainer.addEventListener("click", function(e){
+					if (!elContent.classList.contains('dropdown-content--visible')){
+						addElementProperties();
+					}else {
+						removeElementProperties();
+					}	
+				})
+				break;
+				case "Hover":
+				textContainer.addEventListener("mouseover", function(e){
+					addElementProperties();
+				})
+				imgContainer.addEventListener("mouseover", function(e){
+					addElementProperties();
+				})
+				textContainer.addEventListener("mouseout", function(e){
+					removeElementProperties()
+				})
+				imgContainer.addEventListener("mouseout", function(e){
+					removeElementProperties()
+				})
+				break;
+			}
+			//close dropdown when click outside the control
+			document.addEventListener("click", function(e) {
+				var target = e.target
+				if(!target.closest('.dropdown') && elContent.classList.contains('dropdown-content--visible')) {
+					elContent.classList.remove('dropdown-content--visible');
+				}        
+			});
+			/*get the item's target*/
+			elContent.addEventListener("click", function(e){
+				var anchor = getParentAnchor(e.target);
+				if(anchor !== null) {
+					for (let i = 0; i < UC.DropdownItems.length; i++) {
+						const item = UC.DropdownItems[i];
+						if (item.id === anchor.id){
+							UC.SelectedItemId = item.id;
+							UC.SelectedItemTarget = item.link;
+							UC.ItemClick();
+							break;
+						}
+					}
+				}
+			});
+			var getParentAnchor = function (element) {
+				while (element !== null) {
+					if (element.tagName && element.tagName.toUpperCase() === "LI") {
+						return element;
+					}
+					element = element.parentNode;
+				}
+				return null;
+			};
+		
+			var addElementProperties = function () {
+				elContent.classList.add('dropdown-content--visible');
+				dropdown.setAttribute("aria-expanded", "true")
+			}
+			var removeElementProperties = function () {
+				elContent.classList.remove('dropdown-content--visible');
+				dropdown.setAttribute("aria-expanded", "false")
+			}
+		  </script>
+		</Definition>
+	#End
+
+	#Properties
+		Name = "Dropdown"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

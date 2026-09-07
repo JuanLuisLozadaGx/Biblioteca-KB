@@ -1,0 +1,41 @@
+WebPanel OverdueLoansPanel
+{
+	#Events
+		Event Start
+			Form.Caption = !"Préstamos Vencidos"
+		EndEvent
+		
+		Event Grid.Load
+			&DaysOverdue = Today() - LoanExpectedReturnDate
+			BookTitle.Link = ViewBook.Link(BookId, !"")
+		EndEvent
+		
+	#End
+
+	#Conditions
+		LoanExpectedReturnDate < Today();
+		LoanReturnedDate = CToD('');
+		
+	#End
+
+	#Variables
+		DaysOverdue [ DataType = 'Numeric(5.0)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "OverdueLoansPanel"
+
+		Description = "Préstamos Vencidos"
+
+		Style = "UnanimoWeb"
+
+		MasterPage = "MasterUnanimoSidebar"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

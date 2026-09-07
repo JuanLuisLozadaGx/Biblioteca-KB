@@ -1,0 +1,15 @@
+Attribute LoanPersonName
+{
+	#Properties
+		Name = "LoanPersonName"
+
+		DataType = "VarChar(64)"
+
+		Length = "64"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,47 @@
+ExternalObject WeChat
+{
+	#ExternalProperties
+		IsAvailable
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Whether WeChat is installed on the device and can be used by the app',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'isAvailable',
+
+			AndroidExternalType = 'boolean',
+
+			AndroidExternalGetMethod = 'isAvailable'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "WeChat"
+
+		Description = "WeChat"
+
+		IosExternalName = "GXEOWeChat"
+
+		AndroidExternalName = "WeChatOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.payments.wechat"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

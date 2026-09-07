@@ -1,0 +1,19 @@
+Image error_ico
+{
+	'error.svg' [ Description = 'error.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'error_dark.svg' [ Description = 'error_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "error_ico"
+
+		Description = "error_ico"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

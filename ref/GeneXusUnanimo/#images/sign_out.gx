@@ -1,0 +1,15 @@
+Image sign_out
+{
+	'sign_out.svg' [ Description = 'sign_out.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "sign_out"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,15 @@
+Domain CallType
+{
+	#Properties
+		Name = "CallType"
+
+		DataType = "Character(20)"
+
+		EnumValues = "Popup, Popup, Popup; Replace, Replace, Replace; Push, Push, Push; Callout, Callout, Callout"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,17 @@
+Attribute AuthorId
+{
+	#Properties
+		Name = "AuthorId"
+
+		DataType = "Numeric(10.0)"
+
+		Length = "10"
+
+		Autonumber = "True"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

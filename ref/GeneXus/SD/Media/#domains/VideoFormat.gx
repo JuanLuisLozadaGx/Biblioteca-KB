@@ -1,0 +1,13 @@
+Domain VideoFormat
+{
+	#Properties
+		Name = "VideoFormat"
+
+		EnumValues = "MPEG4, MPEG-4, 101; ThirdGenPP, 3GPP, 102; ThirdGenPP2, 3GPP2, 103; QuickTime, QuickTime (iOS), 201; M4V, iTunes (iOS), 202"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,31 @@
+SDT StoreProduct
+{
+	StoreProduct [ Collection = 'False' ]{
+
+		LocalizedDescription [ DataType = 'VarChar(100)' ]
+
+		LocalizedTitle [ DataType = 'VarChar(100)' ]
+
+		LocalizedPriceAsString [ DataType = 'VarChar(100)' ]
+
+		Identifier [ DataType = 'VarChar(100)' ]
+
+		Purchased [ DataType = 'Boolean' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "StoreProduct"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

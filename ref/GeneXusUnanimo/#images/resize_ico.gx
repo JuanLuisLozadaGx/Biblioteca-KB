@@ -1,0 +1,17 @@
+Image resize_ico
+{
+	'resize.png' [ Description = 'resize.png', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "resize_ico"
+
+		Description = "resize"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

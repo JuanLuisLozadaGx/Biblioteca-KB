@@ -1,0 +1,15 @@
+Domain TargetType
+{
+	#Properties
+		Name = "TargetType"
+
+		DataType = "Numeric(4.0)"
+
+		EnumValues = "Everybody, Everybody, 1; Devices, Devices, 2; Groups, Groups, 3; Targets, Targets, 4"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

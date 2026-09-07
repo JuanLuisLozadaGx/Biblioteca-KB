@@ -1,0 +1,65 @@
+UserControl Select
+{
+	#UserControlScreenTemplate
+		<ch-select id="ch-select-{{Name}}" name="{{Name}}" class="{{Class}}" icon-src="{{Icon}}" {{#IconAutoColor}}auto-color{{/IconAutoColor}} 
+		width="{{Width}}" height="{{Height}}" option-height="{{OptionHeight}}">
+			{{#SelectItems}}
+			<ch-select-option value="{{value}}" {{#selected}}selected{{/selected}} {{#disabled}}disabled{{/disabled}} left-icon-src="{{leftIcon}}" 
+			right-icon-src="{{rightIcon}}" {{#IconAutoColor}}auto-color{{/IconAutoColor}}> 
+				{{text}} 
+			</ch-select-option>
+			{{/SelectItems}}
+		</ch-select>
+	#End
+
+	#UserControlProperties
+		<Definition auto="false">
+			<Property Name="Name" Type="string" Default="" />
+			<Property Name="Class" Type="string" Default="ch-select" />
+			<Property Name="Width" Type="string" Default="" />
+			<Property Name="Height" Type="string" Default="" />
+			<Property Name="OptionHeight" Type="string" Default="" />
+			<Property Name="Icon" Type="string" Default="" />
+			<Property Name="ArrowIcon" Type="string" Default="" />
+			<Property Name="IconAutoColor" Type="boolean" Default="false" />
+			<Property Name="SelectedItem" Type="string" Default="" />
+			<Property Name="SelectItems" Type="sdt" Default="" />
+			<Property Name="SelectItemsCurrentIndex" Type="numeric" Default="" />
+			
+			<Event Name="ItemClick" />
+			
+			<Dependency Type="npm" name="@genexus/chameleon-controls-library" version="6.20.1" />
+			<Dependency Type="shared-module" source="chameleon/chameleon.esm.js" />
+		  	
+			<script name="initItemClick" when="AfterShow">
+				const UC = this;
+				const elId = "ch-select-" + UC.Name;
+				const el = document.getElementById(elId);
+				el.addEventListener("itemClicked", function(e){
+					/*get the selected option value*/
+					for (let i = 0; i < UC.SelectItems.length; i++) {
+						const option = UC.SelectItems[i];
+						if (option.value ===  e.detail["option-value"].trim()){
+							UC.SelectedItem = option.value;
+							if (UC.ItemClick){
+								UC.ItemClick();
+							}
+							break;
+						}
+					}
+				});
+			</script>
+		</Definition>
+	#End
+
+	#Properties
+		Name = "Select"
+
+		BaseCss = "Unanimo_chameleon"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

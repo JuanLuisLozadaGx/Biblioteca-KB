@@ -1,0 +1,15 @@
+Domain FlexDirection
+{
+	#Properties
+		Name = "FlexDirection"
+
+		DataType = "Character(20)"
+
+		EnumValues = "Row, Row, row; RowReverse, Row Reverse, row-reverse; Column, Column, column; ColumnReverse, Column Reverse, column-reverse"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

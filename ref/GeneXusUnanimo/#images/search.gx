@@ -1,0 +1,19 @@
+Image search
+{
+	'search.svg' [ Description = 'search.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'search_dark.svg' [ Description = 'search_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "search"
+
+		Description = "search"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,29 @@
+SDT BeaconState
+{
+	BeaconState{
+
+		Beacon [ Description = 'A single beacon.', DataType = 'BeaconInfo, GeneXus.SD' ]
+
+		Proximity [ Description = 'Proximity of the beacon from the device. The value in this property gives a general sense of the relative distance to the beacon.', DataType = 'BeaconProximity, GeneXus' ]
+
+		Distance [ Description = 'The estimated proximity value, measured in meters from the beacon. This value is heavily subject to variations in an RF environment. A negative accuracy value indicates the proximity is unknown.', DataType = 'Numeric(8.3-)', Signed = 'True' ]
+
+		Signal [ Description = 'Received signal strength in decibels of the specified beacon. This value is an average of the RSSI samples collected since this beacon was last reported.', DataType = 'Numeric(8.0-)', Signed = 'True' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "BeaconState"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

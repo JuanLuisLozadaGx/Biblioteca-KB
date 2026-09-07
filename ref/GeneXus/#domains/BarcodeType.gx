@@ -1,0 +1,15 @@
+Domain BarcodeType
+{
+	#Properties
+		Name = "BarcodeType"
+
+		DataType = "VarChar(40)"
+
+		EnumValues = "UPC_E, UPC-E Code, UPC-E; Code39, Code 39 Code, Code39; Code39Mod43, Code 39 mod 43 Code, Code39Mod43; EAN_13, EAN-13 Code, EAN-13; EAN_8, EAN-8 Code, EAN-8; Code93, Code 93 Code, Code93; Code128, Code 128 Code, Code128; Interleaved2of5, Interleaved 2 of 5 Code, Interleaved2of5; ITF_14, ITF-14 Code, ITF-14; PDF417, PDF417 Code, PDF417; QR, QR Code, QR; Aztec, Aztec Code, Aztec; DataMatrix, Data Matrix Code, DataMatrix"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

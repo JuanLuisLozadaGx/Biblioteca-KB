@@ -1,0 +1,31 @@
+SDT PurchaseResult
+{
+	PurchaseResult{
+
+		Success [ DataType = 'Boolean' ]
+
+		PurchaseId [ DataType = 'VarChar(100)' ]
+
+		PurchasePlatform [ DataType = 'StorePurchasePlatform, GeneXus.SD.Store' ]
+
+		ProductIdentifier [ DataType = 'VarChar(100)' ]
+
+		TransactionData [ DataType = 'LongVarChar(2M)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "PurchaseResult"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

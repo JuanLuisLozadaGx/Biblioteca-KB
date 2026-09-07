@@ -1,0 +1,56 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" class="body-container">
+			<row>
+				<cell name="GridCell" class="ww__grid-cell" widthSm="100">
+					<responsive name="GridTable" class="container-fluid container-advanced" responsiveSizes="[]">
+						<row>
+							<cell>
+								<flex name="TableTop" class="Flex ww__actions-container">
+									<cell class="ww__title-cell" flexGrow="1">
+										<label name="TitleText" caption="Authors" class="heading-01" />
+									</cell>
+									<cell class="ww__actions-cell" flexGrow="0">
+										<actiongroup name="Actions" />
+									</cell>
+									<cell class="ww__filter-cell" flexGrow="0">
+										<input labelPosition="None" class="attribute-search" inviteMessage="Name" data="&amp;AuthorName" name="ctlAuthorName" />
+									</cell>
+								</flex>
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<errorviewer name="ErrorViewer" />
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<responsive name="GridContainer" class="ww__grid-container" responsiveSizes="[]">
+									<row>
+										<cell>
+											<tabularGrid name="Grid" class="ww__grid" order="AuthorName" maxRows="10" infiniteScrolling="One page at a time">
+												<input title="Id" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="AuthorId" name="ctlAuthorId" />
+												<input title="Name" class="attribute-description" inputType="Values" dataSourceFrom="Values" columnClass="column" visible="True" data="AuthorName" name="ctlAuthorName" />
+												<input title="Birth Date" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="AuthorBirthDate" name="ctlAuthorBirthDate" />
+												<input title="" class="TextActionAttribute TextLikeLink" columnClass="WWTextActionColumn" readOnly="True" data="&amp;Update" name="ctlUpdate" />
+												<input title="" class="TextActionAttribute TextLikeLink" columnClass="WWTextActionColumn" readOnly="True" data="&amp;Delete" name="ctlDelete" />
+											</tabularGrid>
+										</cell>
+									</row>
+								</responsive>
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups>
+			<actiongroup name="Actions">
+				<item>
+					<action name="BtnInsert" onClickEvent="'DoInsert'" caption="GXM_insert" class="Button button-primary" />
+				</item>
+			</actiongroup>
+		</actiongroups>
+	</view>
+</layout>

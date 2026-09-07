@@ -1,0 +1,15 @@
+Attribute AuthorName
+{
+	#Properties
+		Name = "AuthorName"
+
+		DataType = "VarChar(80)"
+
+		Length = "80"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

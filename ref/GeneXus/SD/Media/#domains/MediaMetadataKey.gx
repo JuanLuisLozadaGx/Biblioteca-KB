@@ -1,0 +1,19 @@
+Domain MediaMetadataKey
+{
+	#Properties
+		Name = "MediaMetadataKey"
+
+		Description = "Media Metadata Key"
+
+		DataType = "VarChar(50)"
+
+		Length = "50"
+
+		EnumValues = "Artist, Artist, gx.media.metadata.artist; Album, Album, gx.media.metadata.album; Author, Author, gx.media.metadata.author; Writer, Writer, gx.media.metadata.writer; Composer, Composer, gx.media.metadata.composer; Compilation, Compilation, gx.media.metadata.compilation; Date, Date, gx.media.metadata.date; Year, Year, gx.media.metadata.year; Genre, Genre, gx.media.metadata.genre; TrackNumber, TrackNumber, gx.media.metadata.tracknumber; NumberOfTracks, NumberOfTracks, gx.media.metadata.numberoftracks; DiscNumber, DiscNumber, gx.media.metadata.discnumber; AlbumArtist, AlbumArtist, gx.media.metadata.albumartist"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

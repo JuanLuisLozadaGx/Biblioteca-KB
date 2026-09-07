@@ -1,0 +1,15 @@
+Domain RuntimeEnvironment
+{
+	#Properties
+		Name = "RuntimeEnvironment"
+
+		Description = "Runtime Environment"
+
+		EnumValues = "Server, Server, 1; Device, Device, 2; Browser, Browser, 3"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

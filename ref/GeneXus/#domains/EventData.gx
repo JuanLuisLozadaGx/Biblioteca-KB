@@ -1,0 +1,13 @@
+Domain EventData
+{
+	#Properties
+		Name = "EventData"
+
+		DataType = "LongVarChar(2M)"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

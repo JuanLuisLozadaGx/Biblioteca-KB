@@ -1,0 +1,342 @@
+DesignSystem Unanimo_LegacyTokens
+{
+	#DesignTokens
+		tokens Unanimo_LegacyTokens (color-scheme:[light]|dark)
+		{
+		    
+		    //BORDER WIDTH
+		    #borders  {
+		        extra-small: 1px;
+		        small: 2px;
+		    }
+		    
+		    //BORDER RADIUS
+		    #radius  {
+		        xs: 1px;
+		        s: 2px;
+		        m: 3px;
+		        l: 4px;
+		        xl: 6px;
+		    }
+		    
+		    //COLORS 
+		    @color-scheme = light {
+		        #colors
+		        {
+		            #region Unanimo_Colors
+		                primary: #696ef2;
+		                secondary: #13142c;
+		            #endregion
+		
+		            #region Background_Colors
+		                surface: #ffffff;
+		                alt-surface: #f3f4f6;
+		                surface-negative: #121212;
+		                elevation-01: $colors.surface;
+		                elevation-02: $colors.surface;
+		                elevation-03: $colors.surface;
+		                elevation-04: $colors.surface;
+		                sidebar-bg: $colors.secondary;
+		                item-hover: $colors.secondary-hover; 
+		                item-active: $colors.secondary-active;
+		                row-hover: $colors.gray01;
+		                row-active: rgba(105, 110, 242, 0.2);
+		                header-bg: $colors.secondary;
+		                header-separator-bg: $colors.primary;
+		                form-container-bg: $colors.surface;
+		                footer-actions-bg: $colors.alt-surface;
+		                attribute-bg: $colors.surface;
+		                attribute-select-bg: $colors.surface;
+		                overlay-bg: $colors.surface;
+		            #endregion
+		
+		            #region States_Primary
+		                primary-enabled: $colors.primary; 
+		                primary-active: #3015b0;
+		                primary-hover: #413cd4;
+		                primary-hover-20: #d9daf3;
+		                primary-disabled: $colors.gray03;
+		            #endregion
+		
+		            #region States_Secondary
+		                secondary-enabled: $colors.secondary;
+		                secondary-active: #2a2c5f;
+		                secondary-hover: #202143;
+		                secondary-disabled: $colors.gray03;
+		            #endregion
+		
+		            #region Grays
+		                gray01: #e0e0e0; 
+		                gray02: #c3c4c8;
+		                gray03: #939498; 
+		                gray04: #575965;
+		            #endregion    
+		
+		            #region Alerts
+		                error-dark: #f02031;
+		                error-light: #ffeaee;
+		                warning-dark: #ff8000;
+		                warning-light: #ffe7e6;
+		                success-dark: #02a08b;
+		                success-light: #e1f3f1;
+		            #endregion
+		
+		            #region Auxiliary
+		                destructive: #f44336;
+		                zebra-grid: #fafafa;
+		            #endregion
+		
+		            #region On_Colors
+		                on-primary: $colors.surface;
+		                on-secondary: $colors.surface;
+		                on-background: #000000;
+		                on-alert: $colors.surface-negative;
+		                on-disabled: $colors.gray02;
+		            #endregion
+		
+		            #region Borders_Primary
+		                border-primary-enabled: $colors.primary;
+		                border-primary-active: $colors.primary-active; 
+		                border-primary-hover: $colors.primary-hover; 
+		                border-primary-disabled: $colors.gray03;
+		            #endregion
+		
+		            #region Borders_Secondary
+		                border-secondary-enabled: $colors.secondary;
+		                border-secondary-active: $colors.secondary-active;
+		                border-secondary-hover: $colors.secondary-hover; 
+		                border-secondary-disabled: $colors.gray03;
+		            #endregion
+		
+		            #region Borders_Tertiary
+		                border-tertiary-enabled: $colors.tertiary;
+		                border-tertiary-active: $colors.tertiary-active;
+		                border-tertiary-hover: $colors.tertiary-hover; 
+		                border-tertiary-disabled: $colors.gray03;
+		            #endregion
+		
+		            #region Borders_Gray
+		                border-gray-01: $colors.gray01;
+		                border-gray-02: $colors.gray02;
+		                border-gray-03: $colors.gray03;
+		                border-gray-04: $colors.gray04;
+		            #endregion
+		
+		            #region Borders_Error
+		                border-error: $colors.error-dark;
+		                border-warning: $colors.warning-dark;
+		                border-success: $colors.success-dark;
+		            #endregion
+		        }
+		    }
+		
+		    @color-scheme = dark {
+		        #colors
+		        {
+		            #region Unanimo_Colors
+		                primary: #a9acf8;
+		                secondary: #34334e;
+		            #endregion
+		
+		            #region Background_Colors
+		                surface: #121212;
+		                alt-surface: #1c1c1e;
+		                surface-negative: #ffffff;
+		                elevation-01: #242426;
+		                elevation-02: #2c2c2e;
+		                elevation-03: #353537;
+		                elevation-04: #3e3e40;
+		                sidebar-bg: $colors.elevation-01;
+		                item-hover: $colors.elevation-04; 
+		                item-active: $colors.gray01;
+		                row-hover: $colors.elevation-04;
+		                row-active: $colors.gray01;
+		                header-bg: $colors.elevation-01;
+		                header-separator-bg: $colors.gray01;
+		                form-container-bg: $colors.elevation-01;
+		                footer-actions-bg: $colors.elevation-01;
+		                attribute-bg: transparent;
+		                attribute-select-bg: $colors.alt-surface;
+		                overlay-bg: $colors.elevation-02;
+		            #endregion
+		
+		            #region States_Primary
+		                primary-enabled: $colors.primary;
+		                primary-active: #858af6;
+		                primary-hover: #ccccfb;
+		                primary-hover-20: #5a5edc33;
+		                primary-disabled: $colors.gray03;
+		            #endregion
+		
+		            #region States_Secondary
+		                secondary-enabled: $colors.secondary;
+		                secondary-active: #666483;
+		                secondary-hover: #53516e;
+		                secondary-disabled: $colors.gray03;
+		            #endregion
+		
+		            #region Grays
+		                gray01: #575965;
+		                gray02: #939498;
+		                gray03: #c3c4c8; 
+		                gray04: #e0e0e0;
+		            #endregion
+		
+		            #region Alerts
+		                error-dark: #f9464e;
+		                error-light: #ffeaee;
+		                warning-dark: #ffab13;
+		                warning-light: #ffe7e6;
+		                success-dark: #50beae;
+		                success-light: #e1f3f1;
+		            #endregion
+		
+		            #region Auxiliary
+		                destructive: #ef5350;
+		                zebra-grid: #323234;
+		            #endregion
+		
+		            #region On_Colors
+		                on-primary: $colors.surface;
+		                on-secondary: #e9e9e9;
+		                on-background: $colors.on-secondary;
+		                on-alert: $colors.surface-negative;
+		                on-disabled: $colors.gray02;
+		            #endregion
+		
+		            #region Borders_Primary
+		                border-primary-enabled: $colors.primary;
+		                border-primary-active: $colors.primary-active; 
+		                border-primary-hover: $colors.primary-hover; 
+		                border-primary-disabled: $colors.gray03;
+		            #endregion
+		
+		            #region Borders_Secondary
+		                border-secondary-enabled: $colors.secondary; 
+		                border-secondary-active: $colors.secondary-active;
+		                border-secondary-hover: $colors.secondary-hover; 
+		                border-secondary-disabled: $colors.gray03;
+		            #endregion
+		
+		            #region Borders_Gray
+		                border-gray-01: $colors.gray04;
+		                border-gray-02: $colors.gray03;
+		                border-gray-03: $colors.gray02;
+		                border-gray-04: $colors.gray01;
+		            #endregion
+		
+		            #region Borders_Error
+		                border-error: $colors.error-dark;
+		                border-warning: $colors.warning-dark;
+		                border-success: $colors.success-dark;
+		            #endregion
+		        }
+		    }
+		
+		    //ELEVATION
+		    #shadows { 
+		        xxxs: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+		        xxs: 0px 2px 2px 0px rgba(0, 0, 0, 0.14);
+		        xs: 0px 3px 4px 0px rgba(0, 0, 0, 0.14); 
+		        s: 0px 4px 5px 0px rgba(0, 0, 0, 0.14);
+		        m: 0px 6px 10px 0px rgba(0, 0, 0, 0.14);
+		        l: 0px 8px 10px 1px rgba(0, 0, 0, 0.14);
+		        xl: 0px 9px 12px 1px rgba(0, 0, 0, 0.14);
+		        xxl: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
+		    }
+		
+		    //OPACITY
+		    #opacity
+		    {
+		        s: 0.1;
+		        m: 0.25;
+		        l: 0.5;
+		    }
+		    
+		    //SPACING
+		    #spacing { 
+		        //LAYOUT -> Inset
+		        inset-xs: 4px;
+		        inset-s: 8px;
+		        inset-m: 16px;
+		        inset-l: 32px;
+		
+		        //LAYOUT -> Stack
+		        stack-xs: 2px;
+		        stack-s: 4px;
+		        stack-m: 8px;
+		        stack-l: 16px;
+		        stack-xl: 24px;
+		        stack-xxl: 32px;
+		        stack-xxxl: 64px;
+		        stack-xxxxl: 128px;
+		
+		        //LAYOUT -> Inline
+		        inline-xs: 2px;
+		        inline-m: 4px;
+		        inline-l: 8px;
+		        inline-xl: 16px;
+		        inline-xxl: 24px;
+		        inline-xxxl: 32px;
+		
+		        //TYPOGRAPHY -> Letter spacing
+		        letter-spacing-xs: 0.2px;
+		        letter-spacing-s: 0.4px;
+		        letter-spacing-m: 0.8px; 
+		        letter-spacing-l: 1.6px;
+		        letter-spacing-xl: 3.2px;
+		    }
+		
+		    //TYPOGRAPHY -> Font 
+		    #fonts  {
+		        primary-light: SourceSansPro-Light;
+		        primary-regular: SourceSansPro-Regular;
+		        primary-semibold: SourceSansPro-SemiBold;
+		        primary-bold: SourceSansPro-Bold;
+		    }    
+		
+		    //TYPOGRAPHY -> Font Sizes
+		    #fontSizes  {
+		        xs: 11px; 
+		        s: 14px;  
+		        m: 18px;
+		        l: 22px;
+		        xl: 28px;
+		    }
+		}
+		
+	#End
+
+	#DesignStyles
+		styles Unanimo_LegacyTokens
+		{
+		    #region Fonts  
+		        @font-face { 
+		        font-family: SourceSansPro-Light;
+		        src: gx-file(GeneXusUnanimo.Unanimo_SourceSansPro-Light_ttf);
+		        }
+		        @font-face {
+		        font-family: SourceSansPro-Regular;
+		        src: gx-file(GeneXusUnanimo.Unanimo_SourceSansPro-Regular_ttf);
+		        }
+		        @font-face {
+		        font-family: SourceSansPro-SemiBold;
+		        src: gx-file(GeneXusUnanimo.Unanimo_SourceSansPro-SemiBold_ttf);
+		        }
+		        @font-face {
+		        font-family: SourceSansPro-Bold;
+		        src: gx-file(GeneXusUnanimo.Unanimo_SourceSansPro-Bold_ttf);
+		        }
+		    #endregion
+		}
+	#End
+
+	#Properties
+		Name = "Unanimo_LegacyTokens"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

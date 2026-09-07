@@ -1,0 +1,1 @@
+General purpose Design System and related building blocks designed by GeneXus for the GeneXus Community

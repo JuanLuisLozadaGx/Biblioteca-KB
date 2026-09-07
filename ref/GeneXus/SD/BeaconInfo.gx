@@ -1,0 +1,27 @@
+SDT BeaconInfo
+{
+	BeaconInfo [ Description = 'Beacon Information' ]{
+
+		UUID [ Description = 'The proximity ID of the beacon', DataType = 'GUID' ]
+
+		GroupId [ Description = 'Group Identifier (Major Id)', DataType = 'Numeric(5.0)' ]
+
+		Id [ Description = 'Identifier within the GroupId (Minor Id)', DataType = 'Numeric(5.0)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "BeaconInfo"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

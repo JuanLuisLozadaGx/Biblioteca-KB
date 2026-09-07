@@ -1,0 +1,18 @@
+DesignSystem Base
+{
+	#DesignStyles
+		styles Base {
+		@import GeneXusUnanimo.UnanimoWeb;
+		}
+		
+	#End
+
+	#Properties
+		Name = "Base"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

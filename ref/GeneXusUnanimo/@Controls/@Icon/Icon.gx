@@ -1,0 +1,31 @@
+UserControl Icon
+{
+	#UserControlScreenTemplate
+		<ch-icon src="{{source}}" class="{{class}}" style="--icon-size:{{size}}; --icon-color:{{color}}" {{#autoColor}}auto-color{{/autoColor}} {{Click}}>
+		</ch-icon>
+	#End
+
+	#UserControlProperties
+		<Definition auto="false">
+		  <Property Name="source" Type="string" Default="" />
+		  <Property Name="size" Type="string" Default="" />
+		  <Property Name="color" Type="string" Default="" />
+		  <Property Name="autoColor" Type="boolean" Default="false" />
+		  <Property Name="class" Type="string" Default="ch-icon" />
+		  
+		  <Event Name="Click" />
+		  
+		</Definition>
+	#End
+
+	#Properties
+		Name = "Icon"
+
+		BaseCss = "Unanimo_chameleon"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

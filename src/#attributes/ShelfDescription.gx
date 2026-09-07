@@ -1,0 +1,15 @@
+Attribute ShelfDescription
+{
+	#Properties
+		Name = "ShelfDescription"
+
+		DataType = "VarChar(120)"
+
+		Length = "120"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

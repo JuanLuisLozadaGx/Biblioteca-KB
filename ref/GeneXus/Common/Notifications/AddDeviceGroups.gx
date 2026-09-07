@@ -1,0 +1,30 @@
+Procedure AddDeviceGroups
+{
+	#Rules
+		parm(in:&Configuration, in:&DeviceToken, in:&Groups, out:&Messages, out:&Success);
+		
+	#End
+
+	#Variables
+		Groups [ DataType = 'Character(20)', Collection = 'True' ]
+
+		Messages [ DataType = 'Messages, GeneXus.Common' ]
+
+		Success [ DataType = 'Boolean' ]
+
+		Configuration [ DataType = 'Configuration, GeneXus.Common.Notifications' ]
+
+		DeviceToken [ DataType = 'Character(500)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "AddDeviceGroups"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

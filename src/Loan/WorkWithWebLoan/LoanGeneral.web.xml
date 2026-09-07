@@ -1,0 +1,62 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable">
+			<row>
+				<cell class="ww__view__actions-cell" horizontalAlignment="Right" widthSm="100">
+					<actiongroup name="Actions" />
+				</cell>
+			</row>
+			<row>
+				<cell widthSm="100">
+					<responsive name="AttributesTable">
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Id" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="LoanId" name="ctlLoanId" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Book Id" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="BookId" name="ctlBookId" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Book Title" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="BookTitle" name="ctlBookTitle" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Person Name" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="LoanPersonName" name="ctlLoanPersonName" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Date" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="LoanDate" name="ctlLoanDate" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Return Date" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="LoanExpectedReturnDate" name="ctlLoanExpectedReturnDate" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Returned Date" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="LoanReturnedDate" name="ctlLoanReturnedDate" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups>
+			<actiongroup name="Actions" class="ww__view__actions">
+				<item>
+					<action name="BtnUpdate" onClickEvent="'DoUpdate'" caption="GXM_update" class="Button button-primary" />
+				</item>
+				<item>
+					<action name="BtnDelete" onClickEvent="'DoDelete'" caption="GX_BtnDelete" class="Button button-tertiary" />
+				</item>
+			</actiongroup>
+		</actiongroups>
+	</view>
+</layout>

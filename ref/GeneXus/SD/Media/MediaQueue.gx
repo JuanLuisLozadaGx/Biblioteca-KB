@@ -1,0 +1,25 @@
+SDT MediaQueue
+{
+	MediaQueue{
+
+		Title [ DataType = 'VarChar(100)' ]
+
+		Items [ DataType = 'MediaItem, GeneXus.SD.Media', Collection = 'True' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "MediaQueue"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,15 @@
+Domain PushNotificationPriority
+{
+	#Properties
+		Name = "PushNotificationPriority"
+
+		DataType = "Character(20)"
+
+		EnumValues = "High, High, High; Normal, Normal, Normal"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

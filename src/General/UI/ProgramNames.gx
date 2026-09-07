@@ -1,0 +1,25 @@
+SDT ProgramNames
+{
+	ProgramNames [ Collection = 'True', CollectionItemName = 'ProgramName' ]{
+
+		Name [ DataType = 'ObjectName, GeneXus' ]
+
+		Description [ DataType = 'VarChar(255)' ]
+
+		Link [ DataType = 'Url, GeneXus' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "ProgramNames"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

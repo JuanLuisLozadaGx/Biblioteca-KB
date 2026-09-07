@@ -1,0 +1,35 @@
+SDT SynchronizationEventList
+{
+	SynchronizationEventList [ Collection = 'True' ]{
+
+		EventId [ Description = 'Pending Event Id', DataType = 'GUID' ]
+
+		EventTimestamp [ Description = 'Pending Event Timestamp', DataType = 'DateTime' ]
+
+		EventBC [ Description = 'Pending Event BC', DataType = 'VarChar(128)' ]
+
+		EventAction [ Description = 'Pending Event Action', DataType = 'EventAction, GeneXus' ]
+
+		EventData [ Description = 'Pending Event Data', DataType = 'EventData, GeneXus' ]
+
+		EventStatus [ Description = 'Pending Event Status', DataType = 'EventStatus, GeneXus' ]
+
+		EventErrors [ Description = 'Pending Event Extras', DataType = 'EventErrors, GeneXus' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "SynchronizationEventList"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

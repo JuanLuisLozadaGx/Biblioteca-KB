@@ -1,0 +1,434 @@
+DesignSystem UnanimoMobile
+{
+	#DesignTokens
+		 tokens UnanimoMobile (color-scheme:light|dark)
+		{
+		    @color-scheme = light {
+		        #colors
+		        {        
+		            accent: #f3f6fd;
+		            text-color: #3d4854;
+		        }
+		    }
+		
+		    @color-scheme = dark {
+		        #colors
+		        {        
+		            accent: #242426;
+		            text-color: #ffffff;
+		        }
+		    }
+		}
+	#End
+
+	#DesignStyles
+		styles UnanimoMobile {
+		    @import GeneXusUnanimo.Unanimo;
+		
+		    #region Application
+		        .Application {
+		            gx-primary-color: $colors.un-accent__primary;
+		            gx-primary-color-dark: $colors.accent;
+		            gx-accent-color: $colors.un-accent__primary;
+		            gx-action-tint-color: $colors.un-accent__primary;
+		        }
+		        .ApplicationBars {
+		            background-color: $colors.accent;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--bold;
+		            color: $colors.un-surface--negative;
+		        }
+		    #endregion
+		
+		    #region Menu
+		        .Menu {
+		            gx-grid-class: Grid;
+		            gx-tab-class: Tab;
+		        }
+		        .MenuItem {
+		            color: $colors.text-color;
+		        }
+		    #endregion
+		
+		    #region Attribute
+		        .Attribute {
+		            gx-label-class: attribute__label;
+		            gx-focused-class: attribute--focused;
+		            gx-readonly-class: attribute--readonly;
+		            border-style: solid;
+		            border-color: #8592A6; //change to token when defined
+		            border-width: 1dip;
+		            border-radius: 4dip;
+		            margin-left: 16dip;
+		            margin-right: 16dip;
+		            margin-bottom: 8dip;
+		            background-color: $colors.un-surface--positive;
+		            padding-left: 8dip;
+		            padding-right: 8dip;
+		            gx-show-edit-text-line: false;
+		            color: $colors.text-color;
+		            gx-invite-message-color: #8592A6; //change to token when defined
+		            font-size: 16dip;
+		            font-family: $fonts.un-font__family;
+		        }
+		        .attribute--focused {
+		            border-color: $colors.un-border-color__primary;
+		        }
+		        .attribute--error {
+		            @include Attribute;
+		            border-color: $colors.un-border-color__error;
+		        }
+		        .AttributeTitle {
+		            font-size: 16dip;
+		            font-family: $fonts.un-font__family;
+		            color: $colors.un-text__on-surface--positive;
+		            padding-left: 10dip;
+		        }
+		        .AttributeSubTitle {
+		            font-size: 13dip;
+		            font-family: $fonts.un-font__family;
+		            color: $colors.un-body__font-color--gray;
+		            padding-left: 10dip;
+		        }
+		        .attribute-checkbox {
+		            @include Attribute;
+		            border-style: none;
+		            padding-left: 8dip;
+		        }  
+		        .attribute-radiobutton {
+		            @include Attribute;
+		            border-style: none;
+		            padding-left: 8dip;
+		        }
+		        .attribute-date {
+		            @include Attribute;
+		            margin-bottom: 7dip;
+		        }
+		        .attribute-select__item {
+		            border-style: none;
+		        }
+		        //readonly
+		        .attribute--readonly {
+		            gx-label-class: ww__attribute__label--readonly;
+		            color: $colors.text-color;
+		            border-style: none;
+		            padding-top: 8dip;
+		            margin-bottom: 0dip;
+		            margin-left: 16dip;
+		            margin-right: 16dip;
+		        }
+		        //disabled
+		        .attribute--disabled {
+		            @include Attribute;
+		            gx-label-class: attribute__label--disabled; 
+		            color: $colors.un-text__disabled;
+		            border-color: $colors.un-border-color__disabled;
+		        }
+		        .attribute-checkbox--disabled {
+		            @include attribute--disabled;
+		            border-style: none;
+		            padding-left: 8dip;
+		        }
+		        .attribute-radiobutton--disabled {
+		            @include attribute--disabled;
+		            border-style: none;
+		            padding-left: 8dip;
+		        }
+		        .attribute-date--disabled {
+		            @include attribute--disabled;
+		            margin-bottom: 7dip;
+		        }
+		        //work with
+		        .ww__attribute--readonly { 
+		            @include Attribute;
+		            gx-label-class: ww__attribute__label--readonly;
+		            color: $colors.text-color;
+		            padding-top: 8dip;
+		            margin-bottom: 0dip;
+		            margin-left: 0dip;
+		            margin-right: 0dip;
+		            border-style: none; 
+		        }
+		        //semantic domains class
+		        .LinkAttribute {
+		            //@include ww__attribute--readonly; -- change to this when working
+		            gx-label-class: ww__attribute__label--readonly;
+		            color: $colors.text-color;
+		            padding-top: 8dip;
+		            margin-bottom: 0dip;
+		            margin-left: 16dip;
+		            margin-right: 16dip;
+		            border-style: none; 
+		            background-color: $colors.un-surface--positive;
+		            padding-left: 8dip;
+		            padding-right: 8dip;
+		            gx-show-edit-text-line: false;
+		            gx-invite-message-color: #8592A6; //change to token when defined
+		            font-size: 16dip;
+		            font-family: $fonts.un-font__family;
+		        }
+		        .Image {
+		            gx-label-class: attribute__label;
+		        }
+		        .WWImage {
+		            width: 44dip;
+		            height: 44dip;
+		            border-radius: 5dip;
+		        }
+		        .ViewImage {
+		            gx-label-class: ww__attribute__label--readonly;
+		            color: #3D4854; //change to token when defined
+		            background-color: $colors.un-surface--positive;
+		            padding: 8dip;
+		            margin-left: 16dip;
+		            margin-right: 16dip;
+		        }
+		        .image--disabled {
+		            gx-label-class: ww__attribute__label--readonly;
+		            margin-top: 8dip;
+		            margin-left: 8dip;
+		            margin-right: 8dip;
+		            margin-bottom: 16dip;
+		            background-color: $colors.un-surface--positive;
+		        }
+		    #endregion
+		
+		    #region Label
+		        .attribute-login-label {
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            font-size: 12dip;
+		            letter-spacing: 0.5dip;
+		            color: #c3c4c8;
+		        }
+		        .attribute__label--disabled {
+		            @include attribute__label;
+		            color: $colors.un-text__disabled;
+		        }
+		        .attribute__label {
+		            font-size: 12dip;
+		            font-family: $fonts.un-font__family;
+		            letter-spacing: 0.4dip;
+		            color: $colors.un-text__on-surface--positive;
+		        }
+		        .switch__label {
+		            font-size: 16dip;
+		            font-family: $fonts.un-font__family;
+		            color: $colors.text-color;
+		        }
+		        .attribute-label-bold {
+		            @include attribute-login-label;
+		            color: #000000;
+		        }
+		        //workwith
+		        .ww__attribute__label--readonly {
+		            font-size: 12dip;
+		            font-family: $fonts.un-font__family;
+		            letter-spacing: 0.4dip;
+		            color: $colors.un-text__on-surface--positive;
+		        }
+		    #endregion
+		
+		    #region Button
+		        .Button {
+		            border-radius: 4dip;
+		            font-size: 16dip;
+		        }
+		        .button-primary {
+		            @include Button;
+		            gx-elevation: 0;
+		            color: $colors.un-text__on-primary;
+		        }
+		        .button-secondary {
+		            @include Button;
+		            gx-elevation: 0;
+		        }
+		        .button-tertiary {
+		            @include Button;
+		            gx-elevation: 0;
+		        }
+		        .button-rounded {
+		            border-radius: 28dip;
+		            gx-elevation: 0;
+		        }
+		        .button-primary-destructive {
+		            @include button-primary;
+		            gx-elevation: 0;
+		        }
+		        //disabled
+		        .button-primary--disabled {
+		            @include Button;
+		            background-color: $colors.un-accent__disabled;
+		            color: $colors.un-text__on-disabled;
+		        }
+		        .button-secondary--disabled {
+		            @include button;
+		            color: $colors.un-text__disabled;
+		        }
+		        .button-tertiary--disabled {
+		            @include Button;
+		            border-style: solid;
+		            border-width: 1dip;
+		            border-color: $colors.un-border-color__disabled;
+		            color: $colors.un-text__disabled;
+		        }
+		        .button-rounded--disabled {
+		            @include button-rounded;
+		            background-color: $colors.un-accent__disabled;
+		            color: $colors.un-text__disabled;
+		        }
+		    #endregion
+		
+		    #region Badges
+		        .badge {
+		            gx-label-class: attribute__label;
+		            max-height: 32dip;
+		            margin-left: 16dip;
+		            margin-right: 16dip;
+		        }
+		        .badge-success {
+		            @include badge;
+		        }
+		        .badge-warning {
+		            @include badge;
+		        }
+		        .badge-danger {
+		            @include badge;
+		        }
+		        .badge-info {
+		            @include badge;
+		        }
+		    #endregion
+		
+		    #region Textblock
+		        .TextBlock {
+		            font-family: $fonts.un-font__family;
+		            color: $colors.un-text__on-surface--positive;
+		            padding-left: 8dip;
+		        }
+		    #endregion
+		
+		    #region Grid
+		        .Grid {
+		            gx-row-horizontal-line-separator: true;
+		            gx-horizontal-line-class: WWLineSeparator;
+		            background-color: $colors.un-surface--positive;
+		        }
+		    #endregion
+		
+		    #region Table
+		        .MainTable {
+		            padding: 0dip 0dip 16dip 0dip;
+		            background-color: $colors.un-surface--positive;
+		            gx-row-horizontal-line-separator: false;
+		        }
+		        .TableDetail {
+		            background-color: $colors.un-surface--positive;
+		            padding: 16dip 0dip 16dip 0dip;
+		            height: 100%;
+		            gx-row-horizontal-line-separator: false;
+		        }
+		        .TableSection {
+		            margin-top: 16dip;
+		            margin-bottom: 16dip;
+		            gx-row-horizontal-line-separator: true;
+		            gx-horizontal-line-class: WWLineSeparator;
+		        }
+		        .TableSectioninsert {
+		            margin-top: 16dip;
+		            margin-bottom: 16dip;
+		            gx-row-horizontal-line-separator: false;
+		        }
+		        .GridContainer {
+		            background-color: $colors.un-surface--positive;
+		            gx-row-horizontal-line-separator: false;
+		        }
+		    #endregion
+		
+		    #region Separator
+		        .WWLineSeparator {
+		            background-color: $colors.un-color__gray--300;
+		            height: 1dip;
+		        }
+		    #endregion
+		
+		    #region Tab
+		        .Tab {
+		            
+		        }
+		        .TabPageUnselected {
+		            font-family: $fonts.un-font__family;
+		            color: $colors.un-text__on-surface--positive;
+		        }
+		        .TabPageSelected {
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            color: $colors.un-text__on-surface--positive;
+		        }
+		    #endregion
+		
+		    #region Group
+		        .Group {          
+		            color: $colors.un-text__on-surface--positive;
+		            gx-caption-class: group__caption;
+		            gx-group-separator-class: group__separator;
+		        }
+		        .group__caption {
+		            color: $colors.un-text__on-surface--positive; 
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--bold;
+		            letter-spacing: 0.4dip;
+		            font-size: 16dip;
+		        }
+		        .group__separator {
+		            margin-bottom: 20dip;
+		            margin-left: 20dip;
+		            background-color: transparent;
+		        }
+		    #endregion
+		
+		    #region User Controls
+		        .Switch {
+		            padding-left: 16dip;
+		            padding-right: 8dip;
+		            gx-label-class: attribute__label;
+		            gx-switch-on-background-color: $colors.un-accent__primary;
+		            gx-switch-on-text-color: $colors.un-accent__primary--active;
+		            gx-switch-off-background-color: $colors.un-color__gray--400;
+		            gx-switch-off-text-color: $colors.un-surface--positive;
+		        }
+		        .switch--disabled {
+		            @include Switch;
+		            gx-switch-on-background-color: $colors.un-color__gray--400;
+		            gx-switch-on-text-color: $colors.un-color__gray--300;
+		            gx-switch-off-background-color: $colors.un-color__gray--400;
+		            gx-switch-off-text-color: $colors.un-color__gray--300;
+		        }
+		        .Slider {
+		            padding-left: 8dip;
+		            padding-right: 8dip;
+		            gx-label-class: attribute__label;
+		            gx-thumb-color: $colors.un-accent__primary;
+		            gx-selected-bar-color: $colors.un-accent__primary;
+		            gx-unselected-bar-color: $colors.un-color__gray--300;
+		        }
+		        .slider--disabled {
+		            @include Slider;
+		            gx-thumb-color: $colors.un-color__gray--500;
+		            gx-selected-bar-color: $colors.un-color__gray--400;
+		            gx-unselected-bar-color: $colors.un-color__gray--300;
+		        }
+		    #endregion
+		}
+		
+	#End
+
+	#Properties
+		Name = "UnanimoMobile"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

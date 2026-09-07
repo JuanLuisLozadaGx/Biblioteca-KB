@@ -1,0 +1,19 @@
+Domain Phone
+{
+	#Properties
+		Name = "Phone"
+
+		DataType = "Character(20)"
+
+		Length = "20"
+
+		AutoCorrection = "False"
+
+		AutoCapitalization = "None"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

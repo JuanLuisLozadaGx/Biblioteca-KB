@@ -1,0 +1,11 @@
+Stencil Card
+{
+	#Properties
+		Name = "Card"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

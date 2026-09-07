@@ -1,0 +1,17 @@
+Image plus
+{
+	'plus.svg' [ Description = 'plus.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "plus"
+
+		Description = "plus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

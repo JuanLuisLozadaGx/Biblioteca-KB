@@ -1,0 +1,123 @@
+PatternSettings WorkWithForWeb
+{
+	WwConfiguration
+
+	{
+
+		StandardActions
+
+		{
+
+			Insert
+
+			[
+
+				Caption = 'GXM_insert',
+
+				Tooltip = 'GXM_insert',
+
+				Image = 'ActionInsert',
+
+				DisabledImage = 'ActionDisabled',
+
+				InGridClass = ''
+
+			]
+
+			Update
+
+			[
+
+				Caption = 'GXM_update',
+
+				Tooltip = 'GXM_update',
+
+				DisabledClass = 'DisabledActionAttribute',
+
+				InGridClass = 'TextActionAttribute TextLikeLink'
+
+			]
+
+			Delete
+
+			[
+
+				Caption = 'GX_BtnDelete',
+
+				Tooltip = 'GX_BtnDelete',
+
+				DisabledClass = 'DisabledActionAttribute',
+
+				InGridClass = 'TextActionAttribute TextLikeLink'
+
+			]
+
+			Display
+
+			[
+
+				Caption = 'GXM_display',
+
+				Tooltip = 'GXM_display',
+
+				EnabledByDefault = 'False',
+
+				DisabledClass = 'DisabledActionAttribute',
+
+				InGridClass = 'TextActionAttribute TextLikeLink'
+
+			]
+
+			Export
+
+			[
+
+				Caption = 'Export',
+
+				Tooltip = 'Export to Excel',
+
+				EnabledByDefault = 'False',
+
+				Image = 'ActionExport',
+
+				DisabledImage = 'ActionDisabled'
+
+			]
+
+			Search
+
+			[
+
+				Caption = 'GX_BtnSearch',
+
+				Tooltip = 'GX_BtnSearch'
+
+			]
+
+		}
+
+		Security
+
+		[
+
+			Check = 'IsAuthorized',
+
+			NotAuthorized = 'NotAuthorized'
+
+		]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "WorkWithForWeb"
+
+		Description = "Work With for Web"
+
+		
+	#End
+
+}

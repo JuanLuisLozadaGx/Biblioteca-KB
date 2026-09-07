@@ -1,0 +1,153 @@
+ExternalObject DeviceAuthentication
+{
+	#ExternalProperties
+		BiometricsDescription
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Returns the name of the biometrics authentication method available on the current device',
+
+			Type = 'VarChar',
+
+			Length = '40',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		AllowableReuseDuration
+
+		[
+
+			Description = 'Indicates the minimum time (in seconds) before asking the user to locally authenticate again after a successful authentication',
+
+			Type = 'Numeric',
+
+			Length = '8',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		IsAvailable
+
+		[
+
+			Description = 'Returns True if the API can be used in the current device, False otherwise',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				method
+
+				[
+
+					Description = 'Specifies the policy the developer wants to use',
+
+					BasedOn = 'DeviceAuthenticationPolicy, GeneXus.SD'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Authenticate
+
+		[
+
+			Description = 'Performs the authentication step, using the method that corresponds for the current device.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				method
+
+				[
+
+					Description = 'If set to Biometrics, then only biometrics sensors will be used. If set to Any and biometrics is not available or is disabled, then the password will be used.',
+
+					BasedOn = 'DeviceAuthenticationPolicy, GeneXus.SD'
+
+				]
+
+		
+
+				title
+
+				[
+
+					Description = 'Used to present the end user with a title when they are prompted for the local authorization. It is used only in Android.',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+		
+
+				usageDescription
+
+				[
+
+					Description = 'Used to present the end user with a message when they are prompted for the local authorization',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "DeviceAuthentication"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

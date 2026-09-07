@@ -1,0 +1,197 @@
+ExternalObject Socket
+{
+	#ExternalProperties
+		Status
+
+		[
+
+			PropertyType = 'Read',
+
+			BasedOn = 'SocketStatus, GeneXus.Client',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'status',
+
+			AndroidExternalName = '',
+
+			AndroidExternalGetMethod = 'status'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		Open
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'open',
+
+			AndroidExternalName = 'open',
+
+			JavascriptExternalName = 'open'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				url
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100',
+
+					AndroidExternalType = 'String'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Close
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'close',
+
+			AndroidExternalName = 'close',
+
+			JavascriptExternalName = 'close'
+
+		]
+
+		
+
+		Send
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'send',
+
+			AndroidExternalName = 'send',
+
+			JavascriptExternalName = 'send'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				msg
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100',
+
+					AndroidExternalType = 'String'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#ExternalEvents
+		Connected
+
+		[
+
+			JavascriptExternalName = 'gx.core.clientsocket.onconnect'
+
+		]
+
+		
+
+		ConnectionFailed
+
+		[
+
+			JavascriptExternalName = 'gx.core.clientsocket.onconnectfailed'
+
+		]
+
+		
+
+		MessageReceived
+
+		[
+
+			JavascriptExternalName = 'gx.core.clientsocket.onmessagereceived'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				msg
+
+				[
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Socket"
+
+		IosExternalName = "GXEOClientSocket"
+
+		AndroidExternalName = "WebSocketAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.websockets"
+
+		JavascriptExternalName = "gx.core.clientSocket"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

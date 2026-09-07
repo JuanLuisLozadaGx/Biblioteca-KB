@@ -1,0 +1,34 @@
+Procedure SendEventTargets
+{
+	#Rules
+		parm(in:&Configuration, in:&Target, in:&Event, in:&Delivery, out:&Messages, out:&Success);
+		
+	#End
+
+	#Variables
+		Configuration [ DataType = 'Configuration, GeneXus.Common.Notifications' ]
+
+		Delivery [ DataType = 'Delivery, GeneXus.Common.Notifications' ]
+
+		Event [ DataType = 'Event, GeneXus.Common.Notifications' ]
+
+		Messages [ DataType = 'Messages, GeneXus.Common' ]
+
+		Success [ DataType = 'Boolean' ]
+
+		Target [ DataType = 'Target, GeneXus.Common.Notifications' ]
+
+		
+	#End
+
+	#Properties
+		Name = "SendEventTargets"
+
+		Description = "Send Event Targets"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

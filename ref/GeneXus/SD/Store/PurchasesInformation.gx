@@ -1,0 +1,27 @@
+SDT PurchasesInformation
+{
+	PurchasesInformation{
+
+		Purchases [ DataType = 'PurchaseResult, GeneXus.SD.Store', Collection = 'True' ]
+
+		Receipt [ Description = 'Receipt (iOS only)', DataType = 'LongVarChar(2M)' ]
+
+		PurchasePlatform [ DataType = 'StorePurchasePlatform, GeneXus.SD.Store' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "PurchasesInformation"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

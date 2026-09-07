@@ -1,0 +1,15 @@
+Domain CommonCallTarget
+{
+	#Properties
+		Name = "CommonCallTarget"
+
+		DataType = "Character(20)"
+
+		EnumValues = "Content, Content, content; Left, Left, left; Right, Right, right; Top, Top, top; Bottom, Bottom, bottom; Blank, Blank, blank"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

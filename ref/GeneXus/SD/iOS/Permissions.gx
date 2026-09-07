@@ -1,0 +1,111 @@
+ExternalObject Permissions
+{
+	#ExternalProperties
+		UserTrackingPermissionStatus
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'The tracking authorization status that is current for the application.',
+
+			BasedOn = 'APIAuthorizationStatus, GeneXus',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'userTrackingPermissionStatusNumber'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		RequestUserNotificationsPermission
+
+		[
+
+			Description = 'Requests permission to alert the user. Typically, you make this request if your app uses local or push notifications to alert the user to new information involving your app.',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'requestUserNotificationsPermission'
+
+		]
+
+		
+
+		RequestLocationPermissionWhenInUse
+
+		[
+
+			Description = 'Requests permission to use location services while the app is in the foreground.',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'requestLocationPermissionWhenInUse'
+
+		]
+
+		
+
+		RequestLocationPermissionAlways
+
+		[
+
+			Description = 'Requests permission to use location services whenever the app is running.',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'requestLocationPermissionAlways'
+
+		]
+
+		
+
+		RequestRemoteNotificationsPermission
+
+		[
+
+			Description = 'Deprecated. Use RequestUserNotificationsPermission instead.',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'requestRemoteNotificationsPermission'
+
+		]
+
+		
+
+		RequestUserTrackingPermission
+
+		[
+
+			Description = 'Requests permission to access app-related data that can be used for tracking the user or the device.',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'requestUserTrackingPermission'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Permissions"
+
+		Namespace = "GX"
+
+		IosExternalName = "GXEOiOSPermissions"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

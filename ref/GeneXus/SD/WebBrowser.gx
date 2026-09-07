@@ -1,0 +1,137 @@
+ExternalObject WebBrowser
+{
+	#ExternalMethods
+		Open
+
+		[
+
+			Description = 'Opens the give URL in the InApp Browser',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				url
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Close
+
+		[
+
+			Description = 'Closes the InApp Browser',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalEvents
+		BeforeNavigate
+
+		[
+
+			Description = 'Triggered before navigating to the given URL, set the &handled parameter to True to avoid navigation'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				url
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+		
+
+				handled
+
+				[
+
+					Description = '',
+
+					Type = 'Boolean',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		OnClose
+
+		[
+
+			Description = 'Triggered after the InApp Browser is closed, the &url parameter contains the last active web page´s URL'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				url
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "WebBrowser"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

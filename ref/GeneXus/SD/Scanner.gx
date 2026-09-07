@@ -1,0 +1,265 @@
+ExternalObject Scanner
+{
+	#ExternalMethods
+		ScanBarcode
+
+		[
+
+			Type = 'VarChar',
+
+			Length = '200',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		ScanBarcode
+
+		[
+
+			Type = 'VarChar',
+
+			Length = '200',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				barcodeTypes
+
+				[
+
+					AccessType = 'In',
+
+					Collection = 'True',
+
+					BasedOn = 'BarcodeType, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ScanInLoop
+
+		[
+
+			Type = 'ScannedBarcodes, GeneXus.SD',
+
+			Length = '0',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				beepOnEachRead
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Boolean',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ScanInLoop
+
+		[
+
+			Type = 'ScannedBarcodes, GeneXus.SD',
+
+			Length = '0',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				beepOnEachRead
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Boolean',
+
+					Length = '4'
+
+				]
+
+		
+
+				barcodeTypes
+
+				[
+
+					AccessType = 'In',
+
+					Collection = 'True',
+
+					BasedOn = 'BarcodeType, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ScanFromImage
+
+		[
+
+			Description = 'Allows scanning a barcode from an image',
+
+			Type = 'ScannedBarcodes, GeneXus.SD',
+
+			Length = '0',
+
+			Collection = 'False',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'scanFromImage',
+
+			AndroidExternalName = 'scanFromImage'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Image
+
+				[
+
+					Description = 'The image to scan',
+
+					Type = 'Image',
+
+					Length = '4',
+
+					Collection = 'False',
+
+					IosExternalType = 'String'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ScanFromImage
+
+		[
+
+			Description = 'Allows scanning a barcode from an image',
+
+			Type = 'ScannedBarcodes, GeneXus.SD',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'scanFromImage',
+
+			AndroidExternalName = 'scanFromImage'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Image
+
+				[
+
+					Description = 'The image to scan',
+
+					Type = 'Image',
+
+					Length = '4',
+
+					IosExternalType = 'String'
+
+				]
+
+		
+
+				BarcodeTypes
+
+				[
+
+					Description = 'A collection of the barcode types to detect',
+
+					Collection = 'True',
+
+					BasedOn = 'BarcodeType, GeneXus',
+
+					IosExternalType = 'GXObjectCollection'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Scanner"
+
+		IosExternalName = "GXEOScanner"
+
+		AndroidExternalName = "QRScannerExternalObjectOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.qrscanner"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

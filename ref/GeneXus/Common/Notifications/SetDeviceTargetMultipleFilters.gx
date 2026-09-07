@@ -1,0 +1,30 @@
+Procedure SetDeviceTargetMultipleFilters
+{
+	#Rules
+		parm(in:&Configuration, in:&DeviceToken, in:&FilterTags, out:&Messages, out:&Success);
+		
+	#End
+
+	#Variables
+		Success [ DataType = 'Boolean' ]
+
+		Messages [ DataType = 'Messages, GeneXus.Common' ]
+
+		Configuration [ DataType = 'Configuration, GeneXus.Common.Notifications' ]
+
+		DeviceToken [ DataType = 'Character(500)' ]
+
+		FilterTags [ DataType = 'Properties' ]
+
+		
+	#End
+
+	#Properties
+		Name = "SetDeviceTargetMultipleFilters"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

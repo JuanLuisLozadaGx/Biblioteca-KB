@@ -1,0 +1,15 @@
+Image filter
+{
+	'filter.svg' [ Description = 'filter.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "filter"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

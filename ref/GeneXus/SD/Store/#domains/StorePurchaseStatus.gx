@@ -1,0 +1,13 @@
+Domain StorePurchaseStatus
+{
+	#Properties
+		Name = "StorePurchaseStatus"
+
+		EnumValues = "Invalid, Invalid, 0; Valid, Valid, 1; Expired, Expired, 2; Cancelled, Cancelled, 3"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

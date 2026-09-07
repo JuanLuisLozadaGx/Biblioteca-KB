@@ -1,0 +1,94 @@
+WebPanel Gx0060
+{
+	#Rules
+		parm(out:&pShelfId);
+		order(ShelfId); 
+		
+	#End
+
+	#Events
+		Event Start
+			Form.Caption = Format("GXSPC_SelectionList", "Shelf")
+			&ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>"
+		EndEvent
+		
+		Event 'Toggle'
+			if AdvancedContainer.Class = StyleClass:AdvancedContainer
+				AdvancedContainer.Class = StyleClass:AdvancedContainer + !" " + StyleClass:AdvancedContainerVisible
+				BtnToggle.Class += !" " + StyleClass:BtnToggleActive
+			else
+				AdvancedContainer.Class = StyleClass:AdvancedContainer
+				BtnToggle.Class = StyleClass:BtnToggle
+			endif
+		Endevent
+		
+		Event LblShelfIdFilter.Click
+			if ShelfIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				ShelfIdFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cShelfId.Visible = true
+			else
+				ShelfIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cShelfId.Visible = false
+			endif
+		EndEvent
+		
+		Event LblShelfNameFilter.Click
+			if ShelfNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				ShelfNameFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cShelfName.Visible = true
+			else
+				ShelfNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cShelfName.Visible = false
+			endif
+		EndEvent
+		
+		Event Load
+			&LinkSelection.FromImage(selectRow)
+		EndEvent
+		
+		Event Enter
+			&pShelfId = ShelfId
+			Return
+		EndEvent
+		
+	#End
+
+	#Conditions
+		ShelfId >= &cShelfId ;
+		ShelfName >= &cShelfName when not &cShelfName.IsEmpty();
+		
+	#End
+
+	#Variables
+		LinkSelection [ DataType = 'Image' ]
+
+		cShelfId [ Description = 'Shelf Id', DataType = 'Attribute:ShelfId' ]
+
+		cShelfName [ Description = 'Shelf Name', DataType = 'Attribute:ShelfName' ]
+
+		pShelfId [ Description = 'Shelf Id', DataType = 'Attribute:ShelfId' ]
+
+		ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "Gx0060"
+
+		Description = "Selection List Shelf"
+
+		MasterPage = "MasterPrompt"
+
+		IsPrompt = "True"
+
+		AssociatedTable = "Shelf"
+
+		FocusControl = "Browser dependent"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

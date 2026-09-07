@@ -1,0 +1,19 @@
+Image download_ico
+{
+	'download.svg' [ Description = 'download.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'download_dark.svg' [ Description = 'download_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "download_ico"
+
+		Description = "download"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

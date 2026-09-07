@@ -1,0 +1,39 @@
+Table Author
+{
+	AuthorId*
+
+	AuthorName
+
+	AuthorBirthDate
+
+	
+
+	#Indexes
+		IAuthor
+
+		[
+
+			Source = 'Automatic',
+
+			Type = 'Primary Key'
+
+		]
+
+		{
+
+			AuthorId
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Author"
+
+		
+	#End
+
+}

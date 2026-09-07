@@ -1,0 +1,17 @@
+Image prompt_ico
+{
+	'prompt.svg' [ Description = 'prompt.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "prompt_ico"
+
+		Description = "prompt"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,175 @@
+ExternalObject SynchronizationEvents
+{
+	#ExternalMethods
+		HasEvents
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'hasevents',
+
+			AndroidExternalName = 'hasEvents',
+
+			AndroidExternalType = 'boolean'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				EventStatus
+
+				[
+
+					AccessType = 'In',
+
+					AndroidExternalType = 'int'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetEvents
+
+		[
+
+			Type = 'SynchronizationEventList, GeneXus.SD.Synchronization',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'getevents',
+
+			AndroidExternalName = 'getEvents'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				EventStatus
+
+				[
+
+					AccessType = 'In',
+
+					AndroidExternalType = 'int'
+
+				]
+
+			}
+
+		}
+
+		
+
+		MarkEventAsPending
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'markeventaspending',
+
+			AndroidExternalName = 'markEventAsPending'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				EventGUID
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'GUID',
+
+					Length = '4',
+
+					AndroidExternalType = 'java.util.UUID'
+
+				]
+
+			}
+
+		}
+
+		
+
+		RemoveEvent
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'removeevent',
+
+			AndroidExternalName = 'removeEvent'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				EventGUID
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'GUID',
+
+					Length = '4',
+
+					AndroidExternalType = 'java.util.UUID'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "SynchronizationEvents"
+
+		IosExternalName = "GXEOSynchronizationEventsAPI"
+
+		AndroidExternalName = "SynchronizationEventsOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.core.externalobjects"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

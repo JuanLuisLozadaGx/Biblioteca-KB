@@ -1,0 +1,19 @@
+Image warning_ico
+{
+	'warning.svg' [ Description = 'warning.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'warning_dark.svg' [ Description = 'warning_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "warning_ico"
+
+		Description = "warning_ico"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

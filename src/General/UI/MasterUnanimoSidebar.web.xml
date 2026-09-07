@@ -1,0 +1,41 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" class="MainContainer">
+			<row>
+				<cell>
+					<flex name="Header" class="HeaderContainer ContainerFluid" responsiveSizes="[{&quot;scale&quot;:&quot;sm&quot;,&quot;rows&quot;:[[{&quot;width&quot;:17},{&quot;width&quot;:67},{&quot;width&quot;:17}]]}]" alignItems="Center">
+						<cell flexGrow="0" alignSelf="Center" flexHeight="24">
+							<image name="Image2" image="GeneXusUnanimo.list_view_white" class="sidebar__toggle-ico" />
+						</cell>
+						<cell horizontalAlignment="Left" flexGrow="0" minHeight="20">
+							<image name="Image1" image="GeneXusUnanimo.genexus_logo" class="header__logo" />
+						</cell>
+						<cell horizontalAlignment="Center" minHeight="20">
+							<label name="ApplicationHeader" caption="Application Name" class="header__title" />
+						</cell>
+					</flex>
+				</cell>
+			</row>
+			<row>
+				<cell widthSm="17">
+					<responsive name="TableSidebarContainer">
+						<row>
+							<cell>
+								<geneXusUnanimoSidebarMenu controlName="SidebarMenu" SidebarItems="&amp;sidebarItems" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+				<cell widthSm="100">
+					<responsive name="Content" class="expandible-container">
+						<row>
+							<cell widthSm="100">
+								<contentholder name="ContentHolder" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+	</view>
+</layout>

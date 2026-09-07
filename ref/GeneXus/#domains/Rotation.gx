@@ -1,0 +1,15 @@
+Domain Rotation
+{
+	#Properties
+		Name = "Rotation"
+
+		Length = "1"
+
+		EnumValues = "No, No, 0; Left, Left, 1; Right, Right, 2"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

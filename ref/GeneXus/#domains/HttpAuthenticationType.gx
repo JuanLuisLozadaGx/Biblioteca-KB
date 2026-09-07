@@ -1,0 +1,15 @@
+Domain HttpAuthenticationType
+{
+	#Properties
+		Name = "HttpAuthenticationType"
+
+		Description = "Http Authentication Type"
+
+		EnumValues = "Basic, Basic, 0; Digest, Digest, 1; NTLM, NTLM, 2; Kerberos, Kerberos, 3; OAuth, OAuth, 4"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

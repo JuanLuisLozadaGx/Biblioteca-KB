@@ -1,0 +1,33 @@
+SDT TrackingParameters
+{
+	TrackingParameters{
+
+		ChangesInterval [ Description = 'Minimum time in seconds to generate new tracking information', DataType = 'Numeric(8.0)' ]
+
+		Distance [ Description = 'Minimum distance in meters to generate new tracking information', DataType = 'Numeric(8.0)' ]
+
+		Action [ Description = 'The name of the action from the parent object to be called where there is new tracking information available', DataType = 'Character(20)' ]
+
+		ActionTimeInterval [ Description = 'The minimum interval in seconds between invocations to the action. Must be greater than changesInterval.', DataType = 'Numeric(8.0)' ]
+
+		Accuracy [ Description = 'Precision to obtain the locations, in meters', DataType = 'Numeric(8.0)' ]
+
+		UseForegroundService [ Description = 'Enables/disables the usage of Foreground service for tracking location.', DataType = 'Boolean' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "TrackingParameters"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

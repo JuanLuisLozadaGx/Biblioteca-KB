@@ -1,0 +1,25 @@
+<layout type="">
+	<view>
+		<table class="card" tableType="Responsive" responsiveSizes="[]">
+			<row>
+				<cell>
+					<table name="CardHeader" class="card-heading" tableType="Responsive" responsiveSizes="[]">
+						<row>
+							<cell>
+								<label name="Textblock1" caption="Title" class="TextBlock" />
+							</cell>
+							<cell horizontalAlignment="Right">
+								<label name="Textblock2" caption="badge" class="badge-info" />
+							</cell>
+						</row>
+					</table>
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<table name="CardBody" class="card-body" tableType="Responsive" responsiveSizes="[]" isSlot="True" />
+				</cell>
+			</row>
+		</table>
+	</view>
+</layout>

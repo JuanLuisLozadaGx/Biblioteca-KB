@@ -1,0 +1,110 @@
+WebComponent BookLoanWC
+{
+	#Rules
+		parm(in:&BookId);
+		
+	#End
+
+	#Events
+		Event Start
+		
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+		
+			Grid.Rows = 10
+			&Update = "GXM_update"
+			&Delete = "GX_BtnDelete"
+			BookId.Visible = False
+		
+			Do 'PrepareTransaction'
+		EndEvent
+		
+		Event Grid.Load
+			&Update.Link = Loan.Link(TrnMode.Update, LoanId)
+			&Delete.Link = Loan.Link(TrnMode.Delete, LoanId)
+			LoanPersonName.Link = ViewLoan.Link(LoanId, "")
+		EndEvent
+		
+		Event 'DoInsert'
+			Loan(TrnMode.Insert, nullvalue(LoanId))
+		EndEvent
+		
+		Sub 'PrepareTransaction'
+			&TrnContext = new()
+			&TrnContext.CallerObject = &Pgmname
+			&TrnContext.CallerOnDelete = True
+			&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+			&TrnContext.TransactionName = !"Loan"
+		
+			&TrnContextAtt = new()
+			&TrnContextAtt.AttributeName = !"BookId"
+			&TrnContextAtt.AttributeValue = &BookId.ToString()
+			&TrnContext.Attributes.Add(&TrnContextAtt)
+		
+			&Session.Set(!"TrnContext", &TrnContext.ToXml())
+		EndSub
+		
+		
+	#End
+
+	#Conditions
+		BookId = &BookId;
+		
+	#End
+
+	#Variables
+		IsAuthorized [ DataType = 'Boolean' ]
+
+		BookId [ DataType = 'Attribute:BookId' ]
+
+		Session [ DataType = 'WebSession' ]
+
+		HTTPRequest [ DataType = 'HttpRequest' ]
+
+		GridState [ DataType = 'GridState, GeneXus.Common' ]
+
+		TrnContext [ DataType = 'TransactionContext, General.UI' ]
+
+		TrnContextAtt [ DataType = 'TransactionContext.Attribute, General.UI' ]
+
+		Update [ DataType = 'Character(20)' ]
+
+		Delete [ DataType = 'Character(20)' ]
+
+		ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "BookLoanWC"
+
+		Type = "Component"
+
+		IsDefault = "False"
+
+		
+
+		WebForm.Defaults = "WorkWith:Templates\\TabGridWebForm.dkt"
+
+		
+
+		Rules.Defaults = "WorkWith:Templates\\TabGridRules.dkt"
+
+		
+
+		Events.Defaults = "WorkWith:Templates\\TabGridEvents.dkt"
+
+		
+
+		Conditions.Defaults = "WorkWith:Templates\\TabGridConditions.dkt"
+
+		
+
+		Variables.Defaults = "WorkWith:Templates\\TabGridVariables.dkt"
+
+		
+	#End
+
+}

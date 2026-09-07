@@ -1,0 +1,19 @@
+Image close_ico_light
+{
+	'close_ico.svg' [ Description = 'close_ico.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'close_ico_dark.svg' [ Description = 'close_ico_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "close_ico_light"
+
+		Description = "close_ico_light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

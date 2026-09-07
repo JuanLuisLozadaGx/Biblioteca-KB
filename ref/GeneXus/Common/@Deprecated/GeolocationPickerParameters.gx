@@ -1,0 +1,27 @@
+SDT GeolocationPickerParameters
+{
+	GeolocationPickerParameters{
+
+		InitialLocation [ DataType = 'Geolocation, GeneXus' ]
+
+		MapType [ DataType = 'MapType, GeneXus.Common' ]
+
+		ShowMyLocation [ DataType = 'Boolean' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "GeolocationPickerParameters"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

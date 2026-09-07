@@ -1,0 +1,117 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable">
+			<row>
+				<cell class="ww__view__actions-cell" horizontalAlignment="Right" widthSm="100">
+					<actiongroup name="Actions" />
+				</cell>
+			</row>
+			<row>
+				<cell widthSm="100">
+					<responsive name="AttributesTable">
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Id" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="BookId" name="ctlBookId" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Title" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="BookTitle" name="ctlBookTitle" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Author Id" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="AuthorId" name="ctlAuthorId" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Author Name" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="AuthorName" name="ctlAuthorName" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Publisher Id" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="PublisherId" name="ctlPublisherId" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Publisher Name" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="PublisherName" name="ctlPublisherName" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Genre Id" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="GenreId" name="ctlGenreId" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Genre Name" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="GenreName" name="ctlGenreName" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Shelf Id" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="ShelfId" name="ctlShelfId" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Shelf Name" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="ShelfName" name="ctlShelfName" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="ISBN" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="BookISBN" name="ctlBookISBN" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Publication Year" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="BookPublicationYear" name="ctlBookPublicationYear" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Pages" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="BookPages" name="ctlBookPages" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Language" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="BookLanguage" name="ctlBookLanguage" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Status" class="ReadonlyAttribute" data="BookStatus" name="ctlBookStatus" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Rating" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="BookRating" name="ctlBookRating" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Acquisition Date" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="BookAcquisitionDate" name="ctlBookAcquisitionDate" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Notes" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="BookNotes" name="ctlBookNotes" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups>
+			<actiongroup name="Actions" class="ww__view__actions">
+				<item>
+					<action name="BtnUpdate" onClickEvent="'DoUpdate'" caption="GXM_update" class="Button button-primary" />
+				</item>
+				<item>
+					<action name="BtnDelete" onClickEvent="'DoDelete'" caption="GX_BtnDelete" class="Button button-tertiary" />
+				</item>
+			</actiongroup>
+		</actiongroups>
+	</view>
+</layout>

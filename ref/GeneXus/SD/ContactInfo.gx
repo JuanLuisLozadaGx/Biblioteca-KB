@@ -1,0 +1,37 @@
+SDT ContactInfo
+{
+	ContactInfo{
+
+		DisplayName [ DataType = 'Character(80)' ]
+
+		FirstName [ DataType = 'Character(40)' ]
+
+		LastName [ DataType = 'Character(40)' ]
+
+		EMail [ DataType = 'Email, GeneXus' ]
+
+		Phone [ DataType = 'Phone, GeneXus' ]
+
+		CompanyName [ DataType = 'Character(40)' ]
+
+		Photo [ DataType = 'Image', Collection = 'False', ControlType = 'Image' ]
+
+		Notes [ DataType = 'VarChar(200)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "ContactInfo"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

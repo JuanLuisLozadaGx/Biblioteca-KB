@@ -1,0 +1,15 @@
+Image duplicate
+{
+	'duplicate.svg' [ Description = 'duplicate.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "duplicate"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

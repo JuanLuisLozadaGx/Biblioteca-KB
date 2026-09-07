@@ -1,0 +1,15 @@
+Domain MobileSettingsOptions
+{
+	#Properties
+		Name = "MobileSettingsOptions"
+
+		DataType = "VarChar(40)"
+
+		EnumValues = "AirplaneMode, Airplane Mode, AirplaneMode; Bluetooth, Bluetooth, Bluetooth; Display, Display, Display; Location, Location, Location; Media, Media, Media; Network, Network, Network; Notifications, Notifications, Notifications; Sound, Sound, Sound; Wifi, Wifi, Wifi"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

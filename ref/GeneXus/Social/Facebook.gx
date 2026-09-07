@@ -1,0 +1,203 @@
+ExternalObject Facebook
+{
+	#ExternalProperties
+		AccessToken
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Access Token for interacting with FB Graph API',
+
+			Type = 'FacebookAccessToken, GeneXus.Social',
+
+			Length = '0',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		PostToWall
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				name
+
+				[
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+		
+
+				caption
+
+				[
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+		
+
+				description
+
+				[
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+		
+
+				link
+
+				[
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+		
+
+				picture
+
+				[
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ShareLink
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				link
+
+				[
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ShareImage
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				image
+
+				[
+
+					Type = 'Image',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ShareVideo
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				video
+
+				[
+
+					Type = 'Video',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Facebook"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

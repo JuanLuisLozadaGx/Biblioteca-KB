@@ -1,0 +1,17 @@
+Domain AlertType
+{
+	#Properties
+		Name = "AlertType"
+
+		DataType = "VarChar(100)"
+
+		Length = "100"
+
+		EnumValues = "info, Info, info; warning, Warning, warning; success, Success, success; error, Error, error"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

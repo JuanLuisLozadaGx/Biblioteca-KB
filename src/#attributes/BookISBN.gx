@@ -1,0 +1,13 @@
+Attribute BookISBN
+{
+	#Properties
+		Name = "BookISBN"
+
+		BasedOn = "ISBN"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

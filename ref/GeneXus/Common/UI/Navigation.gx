@@ -1,0 +1,271 @@
+ExternalObject Navigation
+{
+	#ExternalMethods
+		ShowTarget
+
+		[
+
+			Description = 'Makes a target visible. For example, ShowTarget("Left") opens the Drawer in an app with Slide Navigation.',
+
+			IsStatic = 'True',
+
+			JavascriptExternalName = 'showTarget'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		HideTarget
+
+		[
+
+			IsStatic = 'True',
+
+			JavascriptExternalName = 'hideTarget'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ExpandTarget
+
+		[
+
+			IsStatic = 'True',
+
+			JavascriptExternalName = 'expandTarget'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		CollapseTarget
+
+		[
+
+			IsStatic = 'True',
+
+			JavascriptExternalName = 'collapseTarget'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#ExternalEvents
+		TargetShown
+
+		[
+
+			JavascriptExternalName = 'gx.targetshown'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		TargetHidden
+
+		[
+
+			JavascriptExternalName = 'gx.targethidden'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		TargetExpanded
+
+		[
+
+			JavascriptExternalName = 'gx.targetexpanded'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		TargetCollapsed
+
+		[
+
+			JavascriptExternalName = 'gx.targetcollapsed'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				TargetName
+
+				[
+
+					Type = 'Character',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Navigation"
+
+		JavascriptExternalName = "gx.pO"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

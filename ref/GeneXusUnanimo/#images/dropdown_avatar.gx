@@ -1,0 +1,19 @@
+Image dropdown_avatar
+{
+	'dropdown_avatar.svg' [ Description = 'dropdown_avatar.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'dropdown_avatar_dark.svg' [ Description = 'dropdown_avatar_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "dropdown_avatar"
+
+		Description = "dropdown_avatar"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

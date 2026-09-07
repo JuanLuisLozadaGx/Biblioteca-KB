@@ -1,0 +1,17 @@
+Image delete
+{
+	'delete.svg' [ Description = 'delete.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "delete"
+
+		Description = "delete"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

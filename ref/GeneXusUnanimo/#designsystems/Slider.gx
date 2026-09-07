@@ -1,0 +1,86 @@
+DesignSystem Slider
+{
+	#DesignStyles
+		styles Slider
+		{
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		
+		    .slider-container {
+		        position: relative;
+		        margin-top: $spacing.un-l;
+		        margin-bottom: $spacing.un-l;
+		    }
+		    .slider {
+		        width: calc(100% - 3px);
+		        -webkit-appearance: none;
+		        height: 4px;
+		        background-color: $colors.un-color__gray--400;
+		        outline: none;
+		        border-radius: 6px;
+		        -webkit-transition: .2s;
+		        transition: opacity .2s;
+		        //default
+		        writing-mode: horizontal-tb;
+		        text-rendering: auto;
+		        display: inline-block;
+		        text-align: start;
+		    }
+		    .slider:hover {
+		        opacity: 1;
+		    }
+		    .slider-container input[type=range][disabled] + .slider-value {
+		        color: $colors.un-text__disabled;
+		    }
+		    .slider::-webkit-slider-thumb {
+		        -webkit-appearance: none;
+		        width: 14px;
+		        height: 14px;
+		        border-radius: 100%;
+		        cursor: pointer;
+		        background-color: $colors.un-accent__primary;
+		        box-shadow: $shadows.m;
+		    }
+		    .slider:focus::-webkit-slider-thumb {
+		        background-color: $colors.un-accent__primary--active;
+		    }
+		    //FF
+		    .slider::-moz-range-thumb {
+		        width: 14px;
+		        height: 14px;
+		        background-color: $colors.un-accent__primary;
+		        cursor: pointer;
+		        border-radius: 100%;
+		        border: none;
+		        box-shadow: $shadows.m;
+		    }
+		    .slider:focus::-moz-range-thumb {
+		        background-color: $colors.un-accent__primary--active;
+		    }
+		    .slider::-moz-range-progress {
+		        background-color: $colors.un-accent__primary;
+		    }
+		    .slider-value {
+		        font-family: $fonts.un-font__family;
+		        font-weight: $fonts.un-font__weight--bold;
+		        font-size: $fontSizes.un-s;
+		        color: $colors.un-text__primary;
+		        background: transparent;
+		        padding-block: 4px;
+		        position: absolute;
+		        border-radius: 4px;
+		        top: -20px;
+		        inset-inline-start: 50%;
+		        transform: translateX(-50%);
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "Slider"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

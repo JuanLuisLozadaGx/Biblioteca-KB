@@ -1,0 +1,32 @@
+Procedure RefreshToken
+{
+	#Rules
+		parm(in:&OAuthAuthorizationConfig, in:&RefreshToken, out:&OAuthAccessToken, out:&DateTimeTokenExpire, out:&OutMessages, out:&Success);
+		
+	#End
+
+	#Variables
+		OAuthAccessToken [ DataType = 'Oauth20AccessTokenSDT, GeneXus.OAuth.v2' ]
+
+		OAuthAuthorizationConfig [ DataType = 'OAuthAuthorizationConfig, GeneXus.OAuth.v2' ]
+
+		OutMessages [ DataType = 'Messages, GeneXus.Common' ]
+
+		RefreshToken [ DataType = 'LongVarChar(2M)' ]
+
+		Success [ DataType = 'Boolean' ]
+
+		DateTimeTokenExpire [ DataType = 'DateTime' ]
+
+		
+	#End
+
+	#Properties
+		Name = "RefreshToken"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

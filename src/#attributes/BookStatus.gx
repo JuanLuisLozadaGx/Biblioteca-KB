@@ -1,0 +1,13 @@
+Attribute BookStatus
+{
+	#Properties
+		Name = "BookStatus"
+
+		BasedOn = "ReadingStatus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

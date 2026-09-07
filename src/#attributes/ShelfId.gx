@@ -1,0 +1,17 @@
+Attribute ShelfId
+{
+	#Properties
+		Name = "ShelfId"
+
+		DataType = "Numeric(10.0)"
+
+		Length = "10"
+
+		Autonumber = "True"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

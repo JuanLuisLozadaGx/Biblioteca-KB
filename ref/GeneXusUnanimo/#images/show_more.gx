@@ -1,0 +1,19 @@
+Image show_more
+{
+	'show_more.svg' [ Description = 'show_more.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'show_more_dark.svg' [ Description = 'show_more_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "show_more"
+
+		Description = "show_more"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

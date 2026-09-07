@@ -1,0 +1,37 @@
+SDT TransactionContext
+{
+	TransactionContext [ Collection = 'False' ]{
+
+		CallerObject [ DataType = 'ObjectName, GeneXus' ]
+
+		CallerOnDelete [ DataType = 'Boolean' ]
+
+		CallerURL [ DataType = 'Url, GeneXus' ]
+
+		TransactionName [ DataType = 'ObjectName, GeneXus' ]
+
+		Attributes [ Collection = 'True', CollectionItemName = 'Attribute' ]	{
+
+			AttributeName [ DataType = 'VarChar(128)' ]
+
+			AttributeValue [ DataType = 'VarChar(1000)' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "TransactionContext"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

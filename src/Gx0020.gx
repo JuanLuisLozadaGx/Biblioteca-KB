@@ -1,0 +1,97 @@
+WebPanel Gx0020
+{
+	#Rules
+		parm(out:&pAuthorId);
+		order(AuthorId); 
+		
+	#End
+
+	#Events
+		Event Start
+			Form.Caption = Format("GXSPC_SelectionList", "Author")
+			&ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>"
+		EndEvent
+		
+		Event 'Toggle'
+			if AdvancedContainer.Class = StyleClass:AdvancedContainer
+				AdvancedContainer.Class = StyleClass:AdvancedContainer + !" " + StyleClass:AdvancedContainerVisible
+				BtnToggle.Class += !" " + StyleClass:BtnToggleActive
+			else
+				AdvancedContainer.Class = StyleClass:AdvancedContainer
+				BtnToggle.Class = StyleClass:BtnToggle
+			endif
+		Endevent
+		
+		Event LblAuthorIdFilter.Click
+			if AuthorIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				AuthorIdFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cAuthorId.Visible = true
+			else
+				AuthorIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cAuthorId.Visible = false
+			endif
+		EndEvent
+		
+		Event LblAuthorNameFilter.Click
+			if AuthorNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				AuthorNameFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cAuthorName.Visible = true
+			else
+				AuthorNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cAuthorName.Visible = false
+			endif
+		EndEvent
+		
+		Event Load
+			&LinkSelection.FromImage(selectRow)
+		EndEvent
+		
+		Event Enter
+			&pAuthorId = AuthorId
+			Return
+		EndEvent
+		
+	#End
+
+	#Conditions
+		AuthorId >= &cAuthorId ;
+		AuthorName LIKE &cAuthorName when not &cAuthorName.IsEmpty();
+		AuthorBirthDate >= &cAuthorBirthDate when not &cAuthorBirthDate.IsEmpty();
+		
+	#End
+
+	#Variables
+		LinkSelection [ DataType = 'Image' ]
+
+		cAuthorId [ Description = 'Author Id', DataType = 'Attribute:AuthorId' ]
+
+		cAuthorName [ Description = 'Author Name', DataType = 'Attribute:AuthorName' ]
+
+		cAuthorBirthDate [ Description = 'Author Birth Date', DataType = 'Attribute:AuthorBirthDate' ]
+
+		pAuthorId [ Description = 'Author Id', DataType = 'Attribute:AuthorId' ]
+
+		ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "Gx0020"
+
+		Description = "Selection List Author"
+
+		MasterPage = "MasterPrompt"
+
+		IsPrompt = "True"
+
+		AssociatedTable = "Author"
+
+		FocusControl = "Browser dependent"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

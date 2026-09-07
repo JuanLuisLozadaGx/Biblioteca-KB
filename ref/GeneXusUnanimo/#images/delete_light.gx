@@ -1,0 +1,19 @@
+Image delete_light
+{
+	'delete_light.svg' [ Description = 'delete_light.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'delete_dark.svg' [ Description = 'delete_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "delete_light"
+
+		Description = "delete_light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

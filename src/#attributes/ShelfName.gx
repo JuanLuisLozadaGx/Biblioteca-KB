@@ -1,0 +1,11 @@
+Attribute ShelfName
+{
+	#Properties
+		Name = "ShelfName"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

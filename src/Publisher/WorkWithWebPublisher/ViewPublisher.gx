@@ -1,0 +1,105 @@
+WebPanel ViewPublisher
+{
+	#Rules
+		parm(in:&PublisherId, in:&TabCode);
+		
+	#End
+
+	#Events
+		Event Start
+		
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+		
+			For each
+				Where PublisherId = &PublisherId
+				Form.Caption = PublisherName.ToString()
+				ViewAll.Link = WWPublisher.Link()
+				&Exists = True
+		
+			When none
+				Form.Caption = "Record not found"
+				ViewAll.Visible = false
+				&Exists = False
+			Endfor
+			&LoadAllTabs = false
+		
+			If &Exists
+				&SelectedTabCode = &TabCode
+				Tab.ActivePageControlName = &SelectedTabCode
+				Do 'Load Tab'
+			Endif
+		EndEvent
+		
+		Event Tab.TabChanged
+			&SelectedTabCode = Tab.ActivePageControlName
+			&LoadAllTabs = false
+			Do 'Load Tab'
+		EndEvent
+		
+		Sub 'Load Tab'
+			if &LoadAllTabs or &SelectedTabCode = '' or&SelectedTabCode = "General"
+				GeneralWC.Object = PublisherGeneral.Create(&PublisherId)
+			endif
+			if &LoadAllTabs or &SelectedTabCode = "Book"
+				BookWC.Object = PublisherBookWC.Create(&PublisherId)
+			endif
+		EndSub
+		
+	#End
+
+	#Conditions
+		PublisherId = &PublisherId;
+		
+	#End
+
+	#Variables
+		IsAuthorized [ DataType = 'Boolean' ]
+
+		TabCode [ DataType = 'TabCode, General' ]
+
+		SelectedTabCode [ DataType = 'TabCode, General' ]
+
+		Tabs
+
+		Tab
+
+		Exists [ Description = 'Exists', DataType = 'Boolean' ]
+
+		LoadAllTabs [ Description = 'LoadAllTabs', DataType = 'Boolean' ]
+
+		PublisherId [ DataType = 'Attribute:PublisherId' ]
+
+		
+	#End
+
+	#Properties
+		Name = "ViewPublisher"
+
+		IsDefault = "False"
+
+		
+
+		WebForm.Defaults = "WorkWith:Templates\\ViewWebForm.dkt"
+
+		
+
+		Rules.Defaults = "WorkWith:Templates\\ViewRules.dkt"
+
+		
+
+		Events.Defaults = "WorkWith:Templates\\ViewEvents.dkt"
+
+		
+
+		Conditions.Defaults = "WorkWith:Templates\\ViewConditions.dkt"
+
+		
+
+		Variables.Defaults = "WorkWith:Templates\\ViewVariables.dkt"
+
+		
+	#End
+
+}

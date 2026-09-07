@@ -1,0 +1,32 @@
+Procedure RemoveDeviceTargetFilter
+{
+	#Rules
+		parm(in:&Configuration, in:&DeviceToken, in:&FilterName, in:&FilterValue, out:&OutMessages, out:&Success);
+		
+	#End
+
+	#Variables
+		FilterName [ DataType = 'Character(20)' ]
+
+		FilterValue [ DataType = 'Character(20)' ]
+
+		OutMessages [ DataType = 'Messages, GeneXus.Common' ]
+
+		Success [ DataType = 'Boolean' ]
+
+		Configuration [ DataType = 'Configuration, GeneXus.Common.Notifications' ]
+
+		DeviceToken [ DataType = 'Character(500)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "RemoveDeviceTargetFilter"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,41 @@
+SDT CardInformation
+{
+	CardInformation{
+
+		CardNumber [ DataType = 'VarChar(40)' ]
+
+		RedactedCardNumber [ DataType = 'VarChar(40)' ]
+
+		ExpiryMonth [ DataType = 'Numeric(2.0)' ]
+
+		ExpiryYear [ DataType = 'Numeric(2.0)' ]
+
+		CVV [ DataType = 'VarChar(40)' ]
+
+		PostalCode [ DataType = 'VarChar(40)' ]
+
+		CardHolderName [ DataType = 'VarChar(200)' ]
+
+		CardImage [ DataType = 'Image' ]
+
+		CardType [ DataType = 'CreditCardType, GeneXus.SD' ]
+
+		CardLogo [ DataType = 'Image' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "CardInformation"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

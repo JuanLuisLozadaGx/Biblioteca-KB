@@ -1,0 +1,15 @@
+Image PageNext
+{
+	'PageNext.gif' [ IsExternal = 'True', Style = 'Any', Language = 'Any', Source = 'PageNext.gif' ]
+
+	
+
+	#Properties
+		Name = "PageNext"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

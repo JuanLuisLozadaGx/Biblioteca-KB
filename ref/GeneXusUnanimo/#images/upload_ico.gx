@@ -1,0 +1,19 @@
+Image upload_ico
+{
+	'upload.svg' [ Description = 'upload.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	'upload_white.svg' [ Description = 'upload_white.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	
+
+	#Properties
+		Name = "upload_ico"
+
+		Description = "upload_ico"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

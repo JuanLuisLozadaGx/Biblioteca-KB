@@ -1,0 +1,105 @@
+WebPanel WWGenre
+{
+	#Events
+		Event Start
+		
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+		
+			Grid.Rows = 10
+			&Update = "GXM_update"
+			&Delete = "GX_BtnDelete"
+			Form.Caption = 'Genres'
+		
+			Do 'PrepareTransaction'
+			Grid.LoadSessionState()
+		EndEvent
+		
+		Event Refresh
+			Grid.SaveSessionState()
+		EndEvent
+		
+		Event Grid.Load
+			&Update.Link = Genre.Link(TrnMode.Update, GenreId)
+			&Delete.Link = Genre.Link(TrnMode.Delete, GenreId)
+			GenreName.Link = ViewGenre.Link(GenreId, "")
+		EndEvent
+		
+		Event 'DoInsert'
+			Genre(TrnMode.Insert, nullvalue(GenreId))
+		EndEvent
+		
+		Sub 'PrepareTransaction'
+			&TrnContext = new()
+			&TrnContext.CallerObject = &Pgmname
+			&TrnContext.CallerOnDelete = True
+			&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+			&TrnContext.TransactionName = !"Genre"
+		
+			&Session.Set(!"TrnContext", &TrnContext.ToXml())
+		EndSub
+		
+		
+	#End
+
+	#Conditions
+		GenreName >= &GenreName when not &GenreName.IsEmpty();
+		
+	#End
+
+	#Variables
+		IsAuthorized [ DataType = 'Boolean' ]
+
+		Session [ DataType = 'WebSession' ]
+
+		HTTPRequest [ DataType = 'HttpRequest' ]
+
+		GridState [ DataType = 'GridState, GeneXus.Common' ]
+
+		TrnContext [ DataType = 'TransactionContext, General.UI' ]
+
+		TrnContextAtt [ DataType = 'TransactionContext.Attribute, General.UI' ]
+
+		GenreName [ DataType = 'Attribute:GenreName' ]
+
+		Update [ DataType = 'Character(20)' ]
+
+		Delete [ DataType = 'Character(20)' ]
+
+		ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "WWGenre"
+
+		Description = "Genres"
+
+		IsDefault = "False"
+
+		
+
+		WebForm.Defaults = "WorkWith:Templates\\SelectionWebForm.dkt"
+
+		
+
+		Rules.Defaults = "WorkWith:Templates\\SelectionRules.dkt"
+
+		
+
+		Events.Defaults = "WorkWith:Templates\\SelectionEvents.dkt"
+
+		
+
+		Conditions.Defaults = "WorkWith:Templates\\SelectionConditions.dkt"
+
+		
+
+		Variables.Defaults = "WorkWith:Templates\\SelectionVariables.dkt"
+
+		
+	#End
+
+}

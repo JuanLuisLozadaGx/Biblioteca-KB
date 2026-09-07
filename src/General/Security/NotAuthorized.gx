@@ -1,0 +1,32 @@
+WebPanel NotAuthorized
+{
+	#Rules
+		parm(in:&GxObject);
+		
+	#End
+
+	#Events
+		Event Start
+		        //HeaderBC.Object = PageHeader.Create()
+		        Msg('You are not authorized to do this action')
+		Endevent
+		
+	#End
+
+	#Variables
+		GxObject [ DataType = 'ObjectName, GeneXus' ]
+
+		
+	#End
+
+	#Properties
+		Name = "NotAuthorized"
+
+		Description = "Not Authorized web panel"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

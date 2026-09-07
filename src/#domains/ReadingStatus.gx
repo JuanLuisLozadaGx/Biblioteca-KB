@@ -1,0 +1,17 @@
+Domain ReadingStatus
+{
+	#Properties
+		Name = "ReadingStatus"
+
+		DataType = "Character(20)"
+
+		Length = "20"
+
+		EnumValues = "Pending, Pendiente, Pending; Reading, Leyendo, Reading; Read, Leido, Read; Abandoned, Abandonado, Abandoned"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

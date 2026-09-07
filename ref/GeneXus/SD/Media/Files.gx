@@ -1,0 +1,211 @@
+ExternalObject Files
+{
+	#ExternalMethods
+		ChooseFile
+
+		[
+
+			Type = 'BlobFile',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				acceptedTypes
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ChooseFile
+
+		[
+
+			Type = 'BlobFile',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		SaveToFolder
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'saveToFolder'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				fileUri
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+		
+
+				destination
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'DeviceFolder, GeneXus.SD.Media'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SaveToFolder
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'saveToFolder'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				fileUri
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+		
+
+				destination
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'DeviceFolder, GeneXus.SD.Media'
+
+				]
+
+		
+
+				saveMode
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'SaveMode, GeneXus.SD.Media'
+
+				]
+
+			}
+
+		}
+
+		
+
+		IsDeviceFolderAvailable
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				destination
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'DeviceFolder, GeneXus.SD.Media'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Files"
+
+		AndroidExternalName = "FilesAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.controls.filepicker"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

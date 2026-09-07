@@ -1,0 +1,230 @@
+DesignSystem Chat
+{
+	#DesignStyles
+		styles Chat
+		{
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		
+		    .chat {
+		        width: 100%;
+		        height: 100%;
+		    }
+		    .chat::part(message) {
+		        display: grid;
+		        grid-template-columns: max-content 1fr;
+		        align-items: center;
+		        color: $colors.un-text__on-surface--positive;
+		        /* Text/Body-02 */
+		        font-family: $fonts.un-font__family;
+		        font-size: $fontSizes.un-s;
+		        font-weight: $fonts.un-font__weight--regular;
+		        line-height: 18px; /* 128.571% */
+		        letter-spacing: $spacing.letter-spacing-xs;
+		    }
+		    /* Base message icon */
+		    .chat::part(message)::before {
+		        grid-column: 1;
+		        grid-row: 1;
+		        align-self: flex-start;
+		        content: '';
+		        display: block;
+		        width: 40px;
+		        height: 40px;
+		        padding: $spacing.un-m;
+		        margin-inline-end: $spacing.un-l;
+		        mask-position: center;
+		        mask-repeat: no-repeat;
+		    }
+		    /* Base message icon background */
+		    .chat::part(message)::after {
+		        grid-column: 1;
+		        grid-row: 1;
+		        align-self: flex-start;
+		        content: '';
+		        display: block;
+		        width: 40px;
+		        height: 40px;
+		        padding: $spacing.un-m;
+		        border-radius: $radius.un-radius--m;
+		        margin-inline-end: $spacing.un-l;
+		    }
+		    #region User Message
+		    /* User message container */
+		    .chat::part(message user) {
+		        padding: $spacing.un-l $spacing.un-l $spacing.un-l $spacing.un-xxxl;
+		    }
+		    /* User message icon */
+		    .chat::part(message user)::before {
+		        mask-image: gx-image(GeneXusUnanimo.profile);
+		        background-color: $colors.un-accent__primary;
+		    }
+		    /* User message icon background */
+		    .chat::part(message user)::after {
+		        background-color: $colors.un-color__purple--20;
+		    }
+		    #endregion
+		
+		    #region Agent Message
+		    /* Agent message container */
+		    .chat::part(message assistant) {
+		        background-color: $colors.un-surface--alternative;
+		        padding: $spacing.un-l $spacing.un-xxxl;
+		    }
+		    /* Agent message icon */
+		    .chat::part(message assistant)::before {
+		        mask-image: gx-image(GeneXusUnanimo.chat_ico);
+		        background-color: $colors.un-color__positive;
+		    }
+		    /* Agent message icon background */
+		    .chat::part(message assistant)::after {
+		        background-color: $colors.un-accent__primary;
+		    }
+		    #endregion
+		
+		    #region Error Message
+		    /* Error message container */
+		    .chat::part(message error) {
+		        padding: 16px 64px;
+		    }
+		    /* Error message icon */
+		    .chat::part(message error)::before {
+		        mask-image: gx-image(GeneXusUnanimo.error_ico);
+		        background-color: $colors.un-accent__destructive;
+		    }
+		    #endregion
+		
+		    .chat::part(message assistant waiting) {
+		    }
+		    .chat::part(message assistant complete) {
+		    }
+		    .chat::part(sources-container) {
+		        display: flex;
+		        gap: $spacing.un-s;
+		
+		        padding: $spacing.un-l 0px 0px 0px;
+		    }
+		    .chat::part(sources-caption) {
+		        display: flex;
+		        align-items: center;
+		        font-family: $fonts.un-font__family;
+		        font-size: $fontSizes.un-xs;
+		        font-weight: $fonts.un-font__weight--regular;
+		        line-height: 13px; /* 118.182% */
+		        letter-spacing: $spacing.letter-spacing-xs;
+		    }
+		    .chat::part(source) {
+		        border-radius: $radius.un-radius--m;
+		        padding: $spacing.un-s $spacing.un-m;
+		        background: $colors.un-color__purple--20;
+		        /* Form input/Helper */
+		        font-family: $fonts.un-font__family;
+		        font-size: $fontSizes.un-xs;
+		        font-weight: $fonts.un-font__weight--regular;
+		        line-height: 13px; /* 118.182% */
+		        letter-spacing: $spacing.letter-spacing-xs;
+		        color: $colors.un-text__on-surface--positive;
+		    }
+		    .chat::part(source)::before {
+		        content: '';
+		        display: block;
+		        width: 16px;
+		        height: 16px;
+		        padding: $spacing.un-xs;
+		        margin-inline-end: $spacing.un-s;
+		        mask-size: 16px;
+		        mask-position: center;
+		        mask-repeat: no-repeat;
+		        mask-image: gx-image(GeneXusUnanimo.prompt_ico);
+		        background-color: $colors.un-accent__primary;
+		    }
+		    .chat::part(copy-message-content) {
+		        display: none;
+		    }
+		    .chat::part(send-container) {
+		        grid-template-areas: 
+		            "send-container-before send-container-before"
+		            "send-input send-container-after";
+		        grid-template-rows: 32px 1fr;
+		        grid-template-columns: 1fr max-content;
+		        column-gap: 12px;
+		        row-gap: $spacing.un-m;
+		        align-self: flex-end;
+		    }
+		    .chat::part(send-container-before) {
+		        grid-area: send-container-before;
+		        align-items: center;
+		        justify-content: center;
+		    }
+		    .chat::part(send-container-after) {
+		        grid-area: send-container-after;
+		    }
+		    .chat::part(send-input) {
+		        grid-area: send-input;
+		        padding-inline: $spacing.un-m;
+		        border-radius: $radius.un-radius--m;
+		        border: $borders.un-width--xs solid $colors.un-border-color__strong;
+		        /* Form input/Input text */
+		        font-family: $fonts.un-font__family;
+		        font-size: $fontSizes.un-s;
+		        font-weight: $fonts.un-font__weight--regular;
+		        height: 28px;
+		        line-height: 26px;
+		        letter-spacing: $spacing.letter-spacing-xs;
+		        color: $colors.un-color__negative;
+		        --ch-placeholder-color: $colors.un-color__gray--500;
+		    }
+		    #region Buttons
+		    .chat::part(send-button) {
+		        width: 24px;
+		        height: 24px;
+		        mask-image: gx-image(GeneXusUnanimo.send);
+		        mask-position: center;
+		        mask-repeat: no-repeat;
+		        background-color: $colors.un-accent__primary;
+		        align-self: center;
+		        position: relative;
+		    }
+		    .chat::part(send-button):disabled {
+		        background-color: $colors.un-accent__disabled;
+		    }
+		    .chat::part(stop-response-button) {
+		        display: flex;
+		        gap: $spacing.un-s;
+		        color: $colors.un-text__primary;
+		        font-family: $fonts.un-font__family;
+		        font-size: $fontSizes.un-s;
+		        font-weight: $fonts.un-font__weight--semibold;
+		        line-height: 18px;
+		        letter-spacing: $spacing.letter-spacing-xs;
+		        text-transform: uppercase;
+		    }
+		    .chat::part(stop-response-button)::before {
+		        content: '';
+		        display: block;
+		        width: 24px;
+		        height: 24px;
+		        mask-image: gx-image(GeneXusUnanimo.stop_ico);
+		        mask-position: center;
+		        mask-repeat: no-repeat;
+		        background-color: $colors.un-accent__primary;
+		    }
+		    #endregion
+		    .chat div[slot="empty-chat"],
+		    .chat div[slot="additional-content"],
+		    .chat div[data-slot="EmptyChat"],
+		    .chat div[data-slot="AdditionalContent"],
+		    .chat div.gx_usercontrol_child {
+		        display:contents;
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "Chat"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,27 @@
+SDT StepItems
+{
+	StepItems [ Collection = 'True', CollectionItemName = 'StepItem' ]{
+
+		id [ DataType = 'Code, GeneXusUnanimo' ]
+
+		text [ DataType = 'Description, GeneXusUnanimo' ]
+
+		class [ DataType = 'Description, GeneXusUnanimo' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "StepItems"
+
+		ExposedNamespace = "GeneXusUnanimo"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

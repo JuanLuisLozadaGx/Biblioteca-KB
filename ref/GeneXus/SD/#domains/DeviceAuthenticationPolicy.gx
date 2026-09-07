@@ -1,0 +1,17 @@
+Domain DeviceAuthenticationPolicy
+{
+	#Properties
+		Name = "DeviceAuthenticationPolicy"
+
+		Description = "Device Authentication Policy"
+
+		Length = "1"
+
+		EnumValues = "Any, Any, 0; Biometrics, Biometrics, 1"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

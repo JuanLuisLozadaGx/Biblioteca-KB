@@ -1,0 +1,17 @@
+Domain StorePurchaseState
+{
+	#Properties
+		Name = "StorePurchaseState"
+
+		Description = "Purchase State"
+
+		Length = "1"
+
+		EnumValues = "Purchasing, Purchasing, 1; Purchased, Purchased, 2; Failed, Failed, 3; Restored, Restored, 4; Deferred, Deferred, 5"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

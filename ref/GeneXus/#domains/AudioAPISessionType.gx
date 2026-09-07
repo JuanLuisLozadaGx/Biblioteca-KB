@@ -1,0 +1,17 @@
+Domain AudioAPISessionType
+{
+	#Properties
+		Name = "AudioAPISessionType"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		EnumValues = "Background, Background, 1; Mix, Mix, 2; Solo, Solo, 3"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,13 @@
+Domain RegionStatus
+{
+	#Properties
+		Name = "RegionStatus"
+
+		EnumValues = "Queued, Queued, 1; Downloading, Downloading, 2; Downloaded, Downloaded, 3; Paused, Paused, 4; Canceled, Canceled, 5"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

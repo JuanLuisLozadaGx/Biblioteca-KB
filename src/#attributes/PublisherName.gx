@@ -1,0 +1,11 @@
+Attribute PublisherName
+{
+	#Properties
+		Name = "PublisherName"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

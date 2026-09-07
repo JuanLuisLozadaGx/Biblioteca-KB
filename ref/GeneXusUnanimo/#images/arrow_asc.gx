@@ -1,0 +1,19 @@
+Image arrow_asc
+{
+	'arrow_asc.svg' [ Description = 'arrow_asc.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'arrow_asc_dark.svg' [ Description = 'arrow_asc_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "arrow_asc"
+
+		Description = "arrow_asc"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

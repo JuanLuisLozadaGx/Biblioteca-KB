@@ -1,0 +1,17 @@
+Image upload_ico_light
+{
+	'upload_ico_light.svg' [ Description = 'upload_ico_light.svg', Style = 'Any', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "upload_ico_light"
+
+		Description = "upload_ico_light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

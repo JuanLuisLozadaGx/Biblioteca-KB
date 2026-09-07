@@ -1,0 +1,35 @@
+ExternalObject Synchronization
+{
+	#ExternalEvents
+		SendBeforeStart
+
+		
+
+		SendAfterFinish
+
+		
+
+		ReceiveBeforeStart
+
+		
+
+		ReceiveAfterSaveData
+
+		
+
+		ReceiveAfterFinish
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Synchronization"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

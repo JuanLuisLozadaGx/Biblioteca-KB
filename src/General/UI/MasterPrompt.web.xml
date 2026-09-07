@@ -1,0 +1,11 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" class="ContainerFluid PromptMainTable">
+			<row>
+				<cell>
+					<contentholder name="ContentHolder" />
+				</cell>
+			</row>
+		</responsive>
+	</view>
+</layout>

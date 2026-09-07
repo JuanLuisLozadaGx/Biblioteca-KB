@@ -1,0 +1,17 @@
+Image settings
+{
+	'settings.svg' [ Description = 'account-settings.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'settings_dark.svg' [ Description = 'settings_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "settings"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

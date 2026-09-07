@@ -1,0 +1,17 @@
+Image chat_ico
+{
+	'chat_ico.svg' [ Description = 'chat_ico.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "chat_ico"
+
+		Description = "chat_ico"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

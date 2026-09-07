@@ -1,0 +1,133 @@
+Table Book
+{
+	BookId*
+
+	BookTitle
+
+	AuthorId
+
+	PublisherId
+
+	GenreId
+
+	ShelfId
+
+	BookISBN
+
+	BookPublicationYear
+
+	BookPages
+
+	BookLanguage
+
+	BookStatus
+
+	BookRating
+
+	BookAcquisitionDate
+
+	BookNotes
+
+	
+
+	#Indexes
+		IBook
+
+		[
+
+			Source = 'Automatic',
+
+			Type = 'Primary Key'
+
+		]
+
+		{
+
+			BookId
+
+		}
+
+		
+
+		IBook1
+
+		[
+
+			Source = 'Automatic',
+
+			Type = 'Duplicate'
+
+		]
+
+		{
+
+			AuthorId
+
+		}
+
+		
+
+		IBook2
+
+		[
+
+			Source = 'Automatic',
+
+			Type = 'Duplicate'
+
+		]
+
+		{
+
+			GenreId
+
+		}
+
+		
+
+		IBook3
+
+		[
+
+			Source = 'Automatic',
+
+			Type = 'Duplicate'
+
+		]
+
+		{
+
+			PublisherId
+
+		}
+
+		
+
+		IBook4
+
+		[
+
+			Source = 'Automatic',
+
+			Type = 'Duplicate'
+
+		]
+
+		{
+
+			ShelfId
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Book"
+
+		
+	#End
+
+}

@@ -1,0 +1,595 @@
+ExternalObject Audio
+{
+	#ExternalMethods
+		Play
+
+		[
+
+			Description = 'Plays the given audio with the specified category',
+
+			IsStatic = 'True',
+
+			JavascriptExternalName = 'play'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				audio
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Audio',
+
+					Length = '4'
+
+				]
+
+		
+
+				category
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'AudioAPISessionType, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		PlayBackground
+
+		[
+
+			Description = 'Plays the given audio in background, keeps playing while the application is in background',
+
+			IsStatic = 'True',
+
+			JavascriptExternalName = 'playBackground'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				audio
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Audio',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		PlayBackground
+
+		[
+
+			Description = 'Plays the given audio in background, keeps playing while the application is in background',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				audio
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Audio',
+
+					Length = '4'
+
+				]
+
+		
+
+				description
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The description is displayed in the lock screen',
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Stop
+
+		[
+
+			Description = 'Stops the audio playing in all categories',
+
+			IsStatic = 'True',
+
+			JavascriptExternalName = 'stop'
+
+		]
+
+		
+
+		Stop
+
+		[
+
+			Description = 'Stops the audio in the given category (if specified)',
+
+			IsStatic = 'True',
+
+			JavascriptExternalName = 'stop'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				category
+
+				[
+
+					AccessType = 'In',
+
+					Description = '',
+
+					BasedOn = 'AudioAPISessionType, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		IsPlaying
+
+		[
+
+			Description = 'Returns whether there is audio playing in any category',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		IsPlaying
+
+		[
+
+			Description = 'Returns whether the audio is playing in the given category',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				category
+
+				[
+
+					AccessType = 'In',
+
+					Description = '',
+
+					BasedOn = 'AudioAPISessionType, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetQueue
+
+		[
+
+			Description = 'Returns the current audio queue.',
+
+			Type = 'MediaQueue, GeneXus.SD.Media',
+
+			Length = '0',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		GetQueueState
+
+		[
+
+			Description = 'Returns the state of the current audio queue (including the position in the queue and inside the current playing item, if any).',
+
+			Type = 'MediaQueueState, GeneXus.SD.Media',
+
+			Length = '0',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		SetQueue
+
+		[
+
+			Description = 'Sets the current audio queue. Stops current background playback, if any.',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				queue
+
+				[
+
+					Type = 'MediaQueue, GeneXus.SD.Media',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		PlayQueue
+
+		[
+
+			Description = 'Starts or resumes playback of the current audio queue.',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		PauseQueue
+
+		[
+
+			Description = 'Pauses playback of the current audio queue.',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		SetQueueCurrentItem
+
+		[
+
+			Description = 'Sets the current item in the media queue, given its media id.',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				mediaId
+
+				[
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SetQueueCurrentIndex
+
+		[
+
+			Description = 'Sets the current item in the media queue, given its index.',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				index
+
+				[
+
+					AccessType = 'In'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SetPlayerSettings
+
+		[
+
+			Description = 'Allows configuring the audio player UI settings',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				settings
+
+				[
+
+					Type = 'AudioPlayerSettings, GeneXus.SD.Media',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		iOSSetShowsMiniPlayer
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				show
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Boolean',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		iOSDisplayFullScreenPlayer
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		iOSDismissFullScreenPlayer
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalEvents
+		QueueStateChanged
+
+		[
+
+			Description = 'Fires whenever the current media item or the state of the playback changes.'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				queueState
+
+				[
+
+					Type = 'MediaQueueState, GeneXus.SD.Media',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		QueueItemFinished
+
+		[
+
+			Description = 'Fires whenever a media item is "finished" (either because playback completes or for another reason, such as the user skipping to another item or stopping playback).'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				finishedInfo
+
+				[
+
+					Type = 'MediaItemFinishedInfo, GeneXus.SD.Media',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		CustomActionEvent
+
+		[
+
+			Description = 'Fires whenever a custom action (as defined in the settings) is launched by the user.'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				actionId
+
+				[
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+		
+
+				currentItem
+
+				[
+
+					Type = 'MediaItem, GeneXus.SD.Media',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Audio"
+
+		JavascriptExternalName = "gx.core.audio"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

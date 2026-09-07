@@ -1,0 +1,19 @@
+Domain LocationAccuracy
+{
+	#Properties
+		Name = "LocationAccuracy"
+
+		DataType = "Numeric(2.0-)"
+
+		Length = "2"
+
+		Signed = "True"
+
+		EnumValues = "Default, Default, 0; Best, Best, -1; BestForNavigation, BestForNavigation, -2; NearestTenMeters, Nearest Ten Meters, -3; HundredMeters, HundredMeters, -4; Kilometer, Kilometer, -5; ThreeKilometer, Three Kilometer, -6; Reduced, Reduced, -7"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

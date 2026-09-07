@@ -1,0 +1,15 @@
+Domain ResultCode
+{
+	#Properties
+		Name = "ResultCode"
+
+		Description = "Result Code"
+
+		EnumValues = "Success, Success, 0; AppNotOffline, Application is not Offline, 1; IncorrectPath, Incorrect path / Backup file not found, 2; DatabaseStructure, Database structure does not match, 3; InternalError, Internal error, 9"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,19 @@
+Image minus_light
+{
+	'minus_light.svg' [ Description = 'minus_light.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	'minus_dark.svg' [ Description = 'minus_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "minus_light"
+
+		Description = "minus_light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

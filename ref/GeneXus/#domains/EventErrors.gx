@@ -1,0 +1,13 @@
+Domain EventErrors
+{
+	#Properties
+		Name = "EventErrors"
+
+		DataType = "LongVarChar(2M)"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

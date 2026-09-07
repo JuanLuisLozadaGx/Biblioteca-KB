@@ -1,0 +1,39 @@
+<layout type="Web">
+	<view>
+		<responsive class="card" responsiveSizes="[]">
+			<row>
+				<cell>
+					<responsive name="CardHeader" class="card-heading" responsiveSizes="[]">
+						<row>
+							<cell>
+								<label name="Textblock1" caption="This is some content" class="TextBlock" />
+							</cell>
+							<cell horizontalAlignment="Right">
+								<label name="Textblock2" caption="ASSIGNED TO ME" class="badge-info" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<responsive name="CardBody" class="card-body" responsiveSizes="[]" />
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<responsive name="CardFooter" class="card-footer" responsiveSizes="[]">
+						<row>
+							<cell>
+								<actiongroup name="ActionGroup2" />
+							</cell>
+							<cell horizontalAlignment="Right">
+								<actiongroup name="ActionGroup1" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+	</view>
+</layout>

@@ -1,0 +1,27 @@
+SDT AnalyticsKeyValue
+{
+	AnalyticsKeyValue [ Description = 'CrashAnalytics Key Value pair' ]{
+
+		Key [ DataType = 'VarChar(40)' ]
+
+		Value [ DataType = 'VarChar(200)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "AnalyticsKeyValue"
+
+		Description = "Analytics Key Value"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,17 @@
+Image save_ico
+{
+	'save_ico.svg' [ Description = 'save_ico.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "save_ico"
+
+		Description = "save_ico"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

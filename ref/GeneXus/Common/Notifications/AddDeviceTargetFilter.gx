@@ -1,0 +1,32 @@
+Procedure AddDeviceTargetFilter
+{
+	#Rules
+		parm(in:&Configuration, in:&DeviceToken, in:&FilterName, in:&FilterValue, out:&Messages, out:&Success);
+		
+	#End
+
+	#Variables
+		FilterName [ DataType = 'Character(20)' ]
+
+		FilterValue [ DataType = 'Character(20)' ]
+
+		Success [ DataType = 'Boolean' ]
+
+		Messages [ DataType = 'Messages, GeneXus.Common' ]
+
+		Configuration [ DataType = 'Configuration, GeneXus.Common.Notifications' ]
+
+		DeviceToken [ DataType = 'Character(500)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "AddDeviceTargetFilter"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

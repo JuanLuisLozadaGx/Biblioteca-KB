@@ -1,0 +1,15 @@
+Domain FlexJustifyContent
+{
+	#Properties
+		Name = "FlexJustifyContent"
+
+		DataType = "Character(20)"
+
+		EnumValues = "FlexStart, Flex Start, flex-start; FlexEnd, Flex End, flex-end; Center, Center, center; SpaceBetween, Space Between, space-between; SpaceAround, Space Around, space-around"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

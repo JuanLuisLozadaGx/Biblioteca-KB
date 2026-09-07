@@ -1,0 +1,14 @@
+<layout type="">
+	<view>
+		<column>
+			<flex name="Table1" flexDirection="Column">
+				<cell>
+					<GeneXusUnanimo.Card class="card" tableType="Responsive" responsiveSizes="[]" name="Card" />
+				</cell>
+				<cell>
+					<GeneXusUnanimo.Card class="card" tableType="Responsive" responsiveSizes="[]" name="Stencil1" />
+				</cell>
+			</flex>
+		</column>
+	</view>
+</layout>

@@ -1,0 +1,34 @@
+Procedure SendEvent
+{
+	#Rules
+		parm(in:&Configuration, in:&DeviceToken, in:&NotificationEvent, in:&Delivery, out:&Messages, out:&Success);
+		
+	#End
+
+	#Variables
+		Configuration [ DataType = 'Configuration, GeneXus.Common.Notifications' ]
+
+		Delivery [ DataType = 'Delivery, GeneXus.Common.Notifications' ]
+
+		DeviceToken [ DataType = 'Character(500)' ]
+
+		Messages [ DataType = 'Messages, GeneXus.Common' ]
+
+		NotificationEvent [ DataType = 'Event, GeneXus.Common.Notifications' ]
+
+		Success [ DataType = 'Boolean' ]
+
+		
+	#End
+
+	#Properties
+		Name = "SendEvent"
+
+		Description = "Send Event"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,17 @@
+Domain APIAuthorizationStatus
+{
+	#Properties
+		Name = "APIAuthorizationStatus"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		EnumValues = "NotDetermined, Not Determined, 0; Restricted, Restricted, 1; Denied, Denied, 2; Authorized, Authorized, 3; AuthorizedWhenInUse, Authorized When In Use, 4"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

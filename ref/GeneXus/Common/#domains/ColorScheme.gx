@@ -1,0 +1,13 @@
+Domain ColorScheme
+{
+	#Properties
+		Name = "ColorScheme"
+
+		EnumValues = "Unspecified, Unspecified, 0; Light, Light, 1; Dark, Dark, 2"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

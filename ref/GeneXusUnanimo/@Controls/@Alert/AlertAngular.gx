@@ -1,0 +1,52 @@
+UserControl AlertAngular
+{
+	#UserControlScreenTemplate
+		{{=<% %>=}}
+		<div class="alert alert-<%Type:info|warning|success|error%>" [ngClass]="{'alert-fixed': Position=='Fixed to bottom', 'alert-multiple':ShowMultiple}">
+			<div class="inline-left-xxxl inline-right-xxl" style="flex-grow: 1">
+				<div class="row"> <span class="alert-title">{{Title}}</span> </div>
+				<div class="row"> <span class="alert-message">{{Message}}</span> </div>
+			</div>
+			<div class="inline-left-xl inline-right-xl" style="flex-grow: 0">
+				<button type="button" class="alert-close" data-dismiss="alert" aria-label="Close" <%Close%>><span aria-hidden="true">&times;</span></button>
+			</div>
+			<div *ngIf="ShowMultiple" class="alert-badge">
+				<span class="alert-badge-text">{{Count}}</span>
+			</div>
+		</div>
+		
+	#End
+
+	#UserControlProperties
+		<Definition auto="false" target="Angular">
+		  <Property Name="Type" Type="enum" Default="info">
+		    <Value>info</Value>
+		    <Value>warning</Value>
+		    <Value>success</Value>
+		    <Value>error</Value>
+		  </Property>
+		  <Property Name="Title" Type="string" Default="" />
+		  <Property Name="Message" Type="string" />
+		  <Property Name="Position" Type="enum">
+		    <Value>User defined</Value>
+		    <Value>Fixed to bottom</Value>
+		  </Property>
+		  <Property Name="ShowMultiple" Type="boolean" Default="false" />
+		  <Property Name="Count" Type="numeric" Default="0" />
+		  
+		  <Event Name="Close" On="click" />
+		  
+		</Definition>
+	#End
+
+	#Properties
+		Name = "AlertAngular"
+
+		Description = "Alert Angular"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

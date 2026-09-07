@@ -1,0 +1,15 @@
+Domain DynamicCallOption
+{
+	#Properties
+		Name = "DynamicCallOption"
+
+		DataType = "VarChar(40)"
+
+		EnumValues = "EnterEffect, Enter Effect, entereffect; ExitEffect, Exit Effect, exiteffect; Target, Target, target; TargetHeight, Target Height, targetheight; TargetSize, Target Size, targetsize; TargetWidth, Target Width, targetwidth; Type, Type, type"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

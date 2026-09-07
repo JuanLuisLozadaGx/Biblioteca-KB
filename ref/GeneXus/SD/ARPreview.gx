@@ -1,0 +1,77 @@
+ExternalObject ARPreview
+{
+	#ExternalProperties
+		IsAvailable
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Determines if 3D objects models can be displayed in Augmented Reality.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'isAvailable'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		PreviewObject
+
+		[
+
+			Description = 'Previews the given 3D object model in Augmented Reality.',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Object3D
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The 3D object model file to preview.',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "ARPreview"
+
+		Description = "Augmented Reality Preview"
+
+		IosExternalName = "GXEOARPreview"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

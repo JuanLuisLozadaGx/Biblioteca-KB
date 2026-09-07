@@ -1,0 +1,17 @@
+Domain Time
+{
+	#Properties
+		Name = "Time"
+
+		DataType = "DateTime"
+
+		Length = "0"
+
+		DateFormat = "None"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

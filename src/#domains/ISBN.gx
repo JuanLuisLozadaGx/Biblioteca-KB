@@ -1,0 +1,17 @@
+Domain ISBN
+{
+	#Properties
+		Name = "ISBN"
+
+		DataType = "VarChar(17)"
+
+		Length = "17"
+
+		RegularExpression = "^[0-9][0-9-]{8,15}[0-9X]$"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

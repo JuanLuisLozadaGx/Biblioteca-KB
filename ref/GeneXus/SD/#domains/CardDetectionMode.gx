@@ -1,0 +1,17 @@
+Domain CardDetectionMode
+{
+	#Properties
+		Name = "CardDetectionMode"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		EnumValues = "ImageAndNumber, Image & number, 0; ImageOnly, Image only, 1; Automatic, Automatic, 2"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

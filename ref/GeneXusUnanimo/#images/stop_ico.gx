@@ -1,0 +1,17 @@
+Image stop_ico
+{
+	'stop_ico.svg' [ Description = 'stop_ico.svg', Style = 'Any', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "stop_ico"
+
+		Description = "stop_ico"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

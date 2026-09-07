@@ -1,0 +1,67 @@
+ExternalObject DynamicCallPropertiesJava
+{
+	#ExternalProperties
+		ExternalName
+
+		[
+
+			Type = 'VarChar',
+
+			Length = '40',
+
+			NetFrameworkExternalName = '',
+
+			NetFrameworkExternalType = '',
+
+			JavaExternalName = 'externalName',
+
+			JavaExternalType = 'String',
+
+			JavaExternalSetMethod = 'setExternalName',
+
+			JavaExternalGetMethod = 'getExternalName'
+
+		]
+
+		
+
+		PackageName
+
+		[
+
+			Type = 'VarChar',
+
+			Length = '40',
+
+			JavaExternalName = 'packageName',
+
+			JavaExternalType = 'String',
+
+			JavaExternalSetMethod = 'setPackageName',
+
+			JavaExternalGetMethod = 'getPackageName'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "DynamicCallPropertiesJava"
+
+		NetFrameworkExternalName = ""
+
+		NetFrameworkAssemblyName = ""
+
+		JavaExternalName = "GXDynCallProperties"
+
+		JavaExternalPackageName = "com.genexus.gxdynamiccall"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

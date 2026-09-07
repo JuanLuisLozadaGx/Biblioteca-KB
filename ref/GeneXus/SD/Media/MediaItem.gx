@@ -1,0 +1,51 @@
+SDT MediaItem
+{
+	MediaItem{
+
+		Id [ DataType = 'VarChar(40)' ]
+
+		Uri [ DataType = 'Url, GeneXus' ]
+
+		ContentType [ Description = 'Content type for the media (such as "audio/mpeg")', DataType = 'VarChar(100)' ]
+
+		StreamType [ Description = 'Stream type (none, buffered, or live)', DataType = 'MediaStreamType, GeneXus.SD.Media' ]
+
+		Title [ DataType = 'VarChar(100)' ]
+
+		Subtitle [ DataType = 'VarChar(100)' ]
+
+		Description [ DataType = 'VarChar(300)' ]
+
+		Image [ DataType = 'Image' ]
+
+		Duration [ Description = 'Duration in milliseconds (0 for "infinite" or "unknown").', DataType = 'MediaDuration, GeneXus' ]
+
+		IsFavorite [ DataType = 'Boolean' ]
+
+		Metadata [ Collection = 'True', CollectionItemName = 'Property' ]	{
+
+			Key [ Description = 'Property key. Usage of the values from MediaMetadataKey is preferred.', DataType = 'VarChar(50)' ]
+
+			Value [ Description = 'Property value', DataType = 'VarChar(500)' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "MediaItem"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

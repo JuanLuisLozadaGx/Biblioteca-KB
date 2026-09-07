@@ -1,0 +1,261 @@
+ExternalObject Network
+{
+	#ExternalProperties
+		ApplicationServerURL
+
+		[
+
+			PropertyType = 'Read',
+
+			BasedOn = 'Url, GeneXus',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'applicationserverurl',
+
+			AndroidExternalGetMethod = 'applicationServerUrl'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		IsServerAvailable
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'isserveravailable',
+
+			AndroidExternalName = 'isServerAvailable',
+
+			AndroidExternalType = 'boolean'
+
+		]
+
+		
+
+		IsServerAvailable
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'isserveravailable',
+
+			AndroidExternalName = 'isServerAvailable',
+
+			AndroidExternalType = 'boolean'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Url
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Type
+
+		[
+
+			BasedOn = 'NetworkAPIConnectionType, GeneXus',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'connectiontype',
+
+			AndroidExternalName = 'type',
+
+			AndroidExternalType = 'int'
+
+		]
+
+		
+
+		Type
+
+		[
+
+			BasedOn = 'NetworkAPIConnectionType, GeneXus',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'connectiontype',
+
+			AndroidExternalName = 'type',
+
+			AndroidExternalType = 'int'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Url
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		TrafficBasedCost
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'trafficbasedcost',
+
+			AndroidExternalName = 'trafficBasedCost',
+
+			AndroidExternalType = 'boolean'
+
+		]
+
+		
+
+		TrafficBasedCost
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'trafficbasedcost',
+
+			AndroidExternalName = 'trafficBasedCost',
+
+			AndroidExternalType = 'boolean'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Url
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SetApplicationServerURL
+
+		[
+
+			Description = 'If the property Dynamic Services URL is set to True, changes the URL at runtime.',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'setApplicationServerURL'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Url
+
+				[
+
+					Description = 'The new URL for the application.',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#ExternalEvents
+		NetworkStatusChanged
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Network"
+
+		IosExternalName = "GXEONetworkAPI"
+
+		AndroidExternalName = "NetworkAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.core.externalobjects"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

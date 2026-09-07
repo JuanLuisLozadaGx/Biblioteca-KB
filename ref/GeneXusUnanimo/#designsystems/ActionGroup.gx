@@ -1,0 +1,51 @@
+DesignSystem ActionGroup
+{
+	#DesignStyles
+		styles ActionGroup {
+		    @import GeneXusUnanimo.Dropdown; // Required to style the Action Group
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		
+		    .action-group::part(actions) {
+		        gap: $spacing.un-l;
+		    }
+		
+		    .action-group::part(more-actions-button) {
+		        width: 28px;
+		        height: 28px;
+		        margin-inline-end: 4px;
+		        border-radius: $radius.un-radius--s;
+		    }
+		
+		    .action-group::part(more-actions-button)::before {
+		        width: 24px;
+		        height: 24px;
+		        color: $colors.un-text__primary;
+		        -webkit-mask: gx-image(GeneXusUnanimo.show_more) 50% 50%;
+		        -webkit-mask-repeat: no-repeat;
+		    }
+		    
+		    .action-group-item::part(action) {
+		        min-width: 80px;
+		        padding-inline: $spacing.un-l;
+		        gap: $spacing.un-m;
+		        border: 1px solid;
+		        border-radius: $radius.un-radius--s;
+		        color: $colors.un-text__primary;
+		        font-family: $fonts.un-font__family;
+		        font-weight: $fonts.un-font__weight--semibold;
+		        font-size: $fontSizes.un-s;
+		        text-align: center;
+		        text-transform: uppercase;
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "ActionGroup"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

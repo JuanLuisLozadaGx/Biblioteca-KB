@@ -1,0 +1,13 @@
+Attribute LoanDate
+{
+	#Properties
+		Name = "LoanDate"
+
+		DataType = "Date"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

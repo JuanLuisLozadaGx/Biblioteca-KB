@@ -1,0 +1,15 @@
+Domain SmartDeviceType
+{
+	#Properties
+		Name = "SmartDeviceType"
+
+		Length = "1"
+
+		EnumValues = "iOS, iOS, 0; Android, Android, 1; Blackberry, Blackberry, 2; Windows, Windows, 3"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

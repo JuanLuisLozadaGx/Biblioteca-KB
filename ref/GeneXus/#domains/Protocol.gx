@@ -1,0 +1,13 @@
+Domain Protocol
+{
+	#Properties
+		Name = "Protocol"
+
+		EnumValues = "Rest, ReST, 1; Grpc, GRPC, 2"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,13 @@
+Domain EventAction
+{
+	#Properties
+		Name = "EventAction"
+
+		EnumValues = "INS, INS, 1; UPD, UPD, 2; DLT, DLT, 3"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

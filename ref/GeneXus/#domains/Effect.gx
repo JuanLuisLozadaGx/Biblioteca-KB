@@ -1,0 +1,17 @@
+Domain Effect
+{
+	#Properties
+		Name = "Effect"
+
+		DataType = "Character(20)"
+
+		Length = "20"
+
+		EnumValues = "Default, Default, gx_default; CurlUp, Curl Up (iOS Only), gx_curl_up; CurlDown, Curl Down (iOS Only), gx_curl_down; FlipFromLeft, Flip From Left (iOS only), gx_flip_from_left; FlipFromRight, Flip From Right (iOS only), gx_flip_from_right; SlideDown, Slide Down, gx_slide_down; SlideUp, Slide Up, gx_slide_up; SlideLeft, Slide Left, gx_slide_left; SlideRight, Slide Right, gx_slide_right; PushDown, Push Down, gx_push_down; PushUp, Push Up, gx_push_up; PushLeft, Push Left, gx_push_left; PushRight, Push Right, gx_push_right; Fade, Fade, gx_fade; None, None, gx_none"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

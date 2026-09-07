@@ -1,0 +1,15 @@
+Image success_ico
+{
+	'success.svg' [ Description = 'success.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "success_ico"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,15 @@
+Attribute BookRating
+{
+	#Properties
+		Name = "BookRating"
+
+		DataType = "Numeric(2.0)"
+
+		Length = "2"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

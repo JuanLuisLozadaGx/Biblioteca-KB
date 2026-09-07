@@ -1,0 +1,58 @@
+UserControl Step
+{
+	#UserControlScreenTemplate
+		<ch-step-list id="ch-step{{id}}">
+			{{#StepItems}}
+			<ch-step-list-item class="{{Class}}" >
+				{{text}}
+			</ch-step-list-item>
+			{{/StepItems}}
+		</ch-step-list>
+	#End
+
+	#UserControlProperties
+		<Definition auto="false">
+			<Property Name="id" Type="string" Default="" />
+			<Property Name="Class" Type="string" Default="ch-step" />
+			<Property Name="SelectedItem" Type="string" Default="" />
+			<Property Name="StepItems" Type="sdt" Default="" />
+			<Property Name="StepItemsCurrentIndex" Type="numeric" Default="" />
+			
+			<Event Name="ItemClick" />
+			
+			<Dependency Type="npm" name="@genexus/chameleon-controls-library" version="6.20.1" />
+			<Dependency Type="shared-module" source="chameleon/chameleon.esm.js" />
+		  	
+			<script name="initItemClick" when="AfterShow">
+				const UC = this;
+				const elId = "ch-step" + UC.id;
+				const el = document.getElementById(elId);
+				el.addEventListener("itemClicked", function(e){
+					/*get the selected item*/
+					for (let i = 0; i < UC.StepItems.length; i++) {
+						const item = UC.StepItems[i];
+						if (item.text === e.detail["item-clicked"]){
+							UC.SelectedItem = item.text;
+							if (UC.ItemClick){
+								UC.ItemClick();
+							}
+							break;
+						}
+					}
+				});
+			</script>
+			
+		</Definition>
+	#End
+
+	#Properties
+		Name = "Step"
+
+		BaseCss = "Unanimo_chameleon"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

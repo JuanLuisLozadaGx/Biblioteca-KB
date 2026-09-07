@@ -1,0 +1,91 @@
+ExternalObject AudioRecorder
+{
+	#ExternalProperties
+		IsRecording
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'True if there is an active recording session, False otherwise',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'isRecording',
+
+			AndroidExternalType = 'boolean',
+
+			AndroidExternalGetMethod = 'isRecording'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		Start
+
+		[
+
+			Description = 'Starts a recording session. Returns True if the operation was successful, False otherwise',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'start',
+
+			AndroidExternalName = 'start',
+
+			AndroidExternalType = 'boolean'
+
+		]
+
+		
+
+		Stop
+
+		[
+
+			Description = 'Stops the recording session and returns the URL of the recorder file.',
+
+			BasedOn = 'Url, GeneXus',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'stop',
+
+			AndroidExternalName = 'stop',
+
+			AndroidExternalType = 'String'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "AudioRecorder"
+
+		IosExternalName = "GXEOAudioRecorderAPI"
+
+		AndroidExternalName = "AudioRecorder"
+
+		AndroidExternalPackageName = "com.genexus.android.media.audio"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

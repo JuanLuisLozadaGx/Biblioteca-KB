@@ -1,0 +1,15 @@
+Attribute BookPages
+{
+	#Properties
+		Name = "BookPages"
+
+		DataType = "Numeric(5.0)"
+
+		Length = "5"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,67 @@
+DesignSystem Sidebar
+{
+	#DesignStyles
+		styles Sidebar 
+		{
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		
+		    .header {
+		        background-color: $colors.header-bg;
+		        border-block-end: 2px solid $colors.header-separator-bg;
+		        color: $colors.un-text__on-secondary;
+		        padding: $spacing.un-m;
+		        gap: $spacing.un-m;
+		    }
+		    .sidebar {
+		        --ch-sidebar-inline-size--collapsed: 42px;
+		        --ch-sidebar-inline-size--expanded: 240px;
+		        --ch-sidebar__chevron-size: 24px;
+		        --ch-sidebar__chevron-image-size: 14px;
+		        background-color: $colors.sidebar-bg;
+		        color: $colors.un-text__on-secondary;
+		    }
+		    .sidebar::part(expand-button) {
+		        padding: $spacing.un-m;
+		        border-block-start: 1px solid $colors.un-border-color__primary;
+		        justify-content: flex-start;
+		    }
+		    .sidebar::part(expand-button):hover {
+		        background-color: $colors.item-hover;
+		    }
+		    .sidebar::part(expand-button collapsed) {
+		        max-width: 42px;
+		    }
+		    .sidebar__title {
+		        display: block;
+		        margin-block: $spacing.un-l $spacing.un-m;
+		        margin-inline: $spacing.un-m $spacing.un-m;
+		        color: $colors.un-text__on-secondary;
+		        font-weight: $fonts.un-font__weight--semibold;
+		    }
+		    .ch-sidebar--collapsed .sidebar__title {
+		        visibility: hidden;
+		    }
+		    .sidebar .navigation-list::part(item__action) {
+		        color: $colors.un-text__on-secondary;
+		    }
+		    .sidebar .navigation-list::part(item__button):hover {
+		        background-color: $colors.item-hover;
+		        color: $colors.un-text__on-secondary;
+		    }
+		    .sidebar .navigation-list::part(item__link not-selected):hover {
+		        background-color: $colors.item-hover;
+		        color: $colors.un-text__on-secondary;
+		    }
+		}
+		
+	#End
+
+	#Properties
+		Name = "Sidebar"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

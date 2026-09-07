@@ -1,0 +1,261 @@
+ExternalObject Socket
+{
+	#ExternalProperties
+		ClientId
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'Character',
+
+			Length = '100',
+
+			NetFrameworkExternalName = 'ClientId',
+
+			JavaExternalGetMethod = 'getClientId'
+
+		]
+
+		
+
+		ErrCode
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'Numeric',
+
+			Length = '4',
+
+			NetFrameworkExternalName = 'ErrCode',
+
+			JavaExternalGetMethod = 'getErrCode'
+
+		]
+
+		
+
+		ErrDescription
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'Character',
+
+			Length = '100',
+
+			NetFrameworkExternalName = 'ErrDescription',
+
+			JavaExternalGetMethod = 'getErrDescription'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		Notify
+
+		[
+
+			Type = 'Numeric',
+
+			Length = '4',
+
+			NetFrameworkExternalName = 'Notify',
+
+			JavaExternalName = 'notify'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				sdtNotification
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'NotificationInfo, GeneXus.Server',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		NotifyClient
+
+		[
+
+			Type = 'Numeric',
+
+			Length = '4',
+
+			NetFrameworkExternalName = 'NotifyClient',
+
+			JavaExternalName = 'notifyClient'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				clientId
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+		
+
+				sdtNotification
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'NotificationInfo, GeneXus.Server',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Broadcast
+
+		[
+
+			NetFrameworkExternalName = 'Broadcast',
+
+			JavaExternalName = 'broadcast'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				sdtNotification
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'NotificationInfo, GeneXus.Server',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		NotifyClientText
+
+		[
+
+			Type = 'Numeric',
+
+			Length = '4',
+
+			NetFrameworkExternalName = 'NotifyClient',
+
+			JavaExternalName = 'notifyClient'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				clientId
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+		
+
+				message
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '200'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Socket"
+
+		Namespace = ""
+
+		NetFrameworkExternalName = "GeneXus.Notifications.GXWebNotification"
+
+		NetFrameworkConstructorParameters = "context"
+
+		JavaExternalName = "GXWebNotification"
+
+		JavaExternalPackageName = "com.genexus.internet"
+
+		JavaConstructorParameters = "context"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

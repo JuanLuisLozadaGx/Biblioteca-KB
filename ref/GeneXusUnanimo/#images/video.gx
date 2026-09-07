@@ -1,0 +1,17 @@
+Image video
+{
+	'video.svg' [ Description = 'video.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "video"
+
+		Description = "video"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

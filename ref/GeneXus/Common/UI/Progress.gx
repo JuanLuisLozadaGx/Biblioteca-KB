@@ -1,0 +1,333 @@
+ExternalObject Progress
+{
+	#ExternalProperties
+		Class
+
+		[
+
+			Type = 'Character',
+
+			Length = '20',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Instance',
+
+			NetFrameworkExternalName = 'Class',
+
+			JavaExternalSetMethod = 'setCssClass',
+
+			JavaExternalGetMethod = 'getCssClass',
+
+			IosExternalName = 'progressIndicatorClass',
+
+			AndroidExternalSetMethod = 'setClass',
+
+			AndroidExternalGetMethod = 'getClass'
+
+		]
+
+		
+
+		Type
+
+		[
+
+			BasedOn = 'ProgressIndicatorType, GeneXus',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Instance',
+
+			NetFrameworkExternalName = 'Type',
+
+			JavaExternalSetMethod = 'setType',
+
+			JavaExternalGetMethod = 'getType',
+
+			IosExternalName = 'progressIndicatorType',
+
+			AndroidExternalSetMethod = 'setType',
+
+			AndroidExternalGetMethod = 'getType'
+
+		]
+
+		
+
+		Title
+
+		[
+
+			Type = 'Character',
+
+			Length = '255',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Instance',
+
+			NetFrameworkExternalName = 'Title',
+
+			JavaExternalSetMethod = 'setTitle',
+
+			JavaExternalGetMethod = 'getTitle',
+
+			IosExternalName = 'progressIndicatorTitle',
+
+			AndroidExternalSetMethod = 'setTitle',
+
+			AndroidExternalGetMethod = 'getTitle'
+
+		]
+
+		
+
+		Description
+
+		[
+
+			Type = 'Character',
+
+			Length = '255',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Instance',
+
+			NetFrameworkExternalName = 'Description',
+
+			JavaExternalSetMethod = 'setDescription',
+
+			JavaExternalGetMethod = 'getDescription',
+
+			IosExternalName = 'progressIndicatorDescription',
+
+			AndroidExternalSetMethod = 'setDescription',
+
+			AndroidExternalGetMethod = 'getDescription'
+
+		]
+
+		
+
+		MaxValue
+
+		[
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Instance',
+
+			NetFrameworkExternalName = 'MaxValue',
+
+			JavaExternalSetMethod = 'setMaxValue',
+
+			JavaExternalGetMethod = 'getMaxValue',
+
+			IosExternalName = 'progressIndicatorMaxValue',
+
+			AndroidExternalSetMethod = 'setMaxValue',
+
+			AndroidExternalGetMethod = 'getMaxValue'
+
+		]
+
+		
+
+		Value
+
+		[
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Instance',
+
+			NetFrameworkExternalName = 'Value',
+
+			JavaExternalSetMethod = 'setValue',
+
+			JavaExternalGetMethod = 'getValue',
+
+			IosExternalName = 'progressIndicatorValue',
+
+			AndroidExternalSetMethod = 'setValue',
+
+			AndroidExternalGetMethod = 'getValue'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		Show
+
+		[
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Instance',
+
+			NetFrameworkExternalName = 'Show',
+
+			JavaExternalName = 'show',
+
+			IosExternalName = 'show',
+
+			AndroidExternalName = 'show'
+
+		]
+
+		
+
+		ShowWithTitle
+
+		[
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Instance',
+
+			NetFrameworkExternalName = 'ShowWithTitle',
+
+			JavaExternalName = 'showWithTitle',
+
+			IosExternalName = 'showWithTitle',
+
+			AndroidExternalName = 'showWithTitle'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				title
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '255'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ShowWithTitleAndDescription
+
+		[
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Instance',
+
+			NetFrameworkExternalName = 'ShowWithTitleAndDescription',
+
+			JavaExternalName = 'showWithTitleAndDescription',
+
+			IosExternalName = 'showWithTitleAndDescription',
+
+			AndroidExternalName = 'showWithTitleAndDescription'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				title
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '255'
+
+				]
+
+		
+
+				description
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '255'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Hide
+
+		[
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Instance',
+
+			NetFrameworkExternalName = 'Hide',
+
+			JavaExternalName = 'hide',
+
+			IosExternalName = 'hide',
+
+			AndroidExternalName = 'hide'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Progress"
+
+		NetFrameworkExternalName = "GeneXus.Notifications.GXWebProgressIndicator"
+
+		NetFrameworkConstructorParameters = "context"
+
+		JavaExternalName = "GXWebProgressIndicator"
+
+		JavaExternalPackageName = "com.genexus.internet"
+
+		JavaConstructorParameters = "context"
+
+		IosExternalName = "GXEOProgressIndicator"
+
+		AndroidExternalName = "ProgressIndicatorAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.core.externalobjects"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

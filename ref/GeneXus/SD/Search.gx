@@ -1,0 +1,79 @@
+ExternalObject Search
+{
+	#ExternalEvents
+		SearchTextChanged
+
+		{
+
+			Parameters
+
+			{
+
+				text
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SearchScopeChanged
+
+		{
+
+			Parameters
+
+			{
+
+				scopeId
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Numeric',
+
+					Length = '4'
+
+				]
+
+		
+
+				scopeDescription
+
+				[
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Search"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

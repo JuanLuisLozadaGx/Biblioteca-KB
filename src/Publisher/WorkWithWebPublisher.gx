@@ -1,0 +1,577 @@
+WorkWith WorkWithWebPublisher
+{
+	WorkWithPatternInstance
+
+	[
+
+		UpdateTransaction = 'Apply WW Style'
+
+	]
+
+	{
+
+		Transaction
+
+		[
+
+			Transaction = 'Publisher'
+
+		]
+
+		Level
+
+		[
+
+			Id = '8185aa59-beee-453c-892d-dc19d4a16688:1',
+
+			Name = 'Publisher'
+
+		]
+
+		{
+
+			DescriptionAttribute
+
+			[
+
+				Attribute = 'PublisherName',
+
+				Description = 'Name'
+
+			]
+
+			Selection
+
+			[
+
+				Description = 'Publishers',
+
+				RowsPerPage = '<default>'
+
+			]
+
+			{
+
+				Attributes
+
+				{
+
+					Attribute
+
+					[
+
+						Attribute = 'PublisherId',
+
+						Description = 'Id',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'PublisherName',
+
+						Description = 'Name',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+				}
+
+				Orders
+
+				{
+
+					Order
+
+					[
+
+						Name = 'Name'
+
+					]
+
+					{
+
+						Attribute
+
+						[
+
+							Attribute = 'PublisherName',
+
+							Description = 'Name',
+
+							Ascending = 'True'
+
+						]
+
+					}
+
+				}
+
+				Filter
+
+				{
+
+					Attributes
+
+					{
+
+						FilterAttribute
+
+						[
+
+							Name = 'PublisherName',
+
+							Description = 'Name',
+
+							Default = ''
+
+						]
+
+					}
+
+					Conditions
+
+					{
+
+						Condition
+
+						[
+
+							Value = 'PublisherName >= &PublisherName when not &PublisherName.IsEmpty()'
+
+						]
+
+					}
+
+				}
+
+			}
+
+			View
+
+			[
+
+				Caption = 'PublisherName.ToString()',
+
+				Description = 'Publisher Information',
+
+				BackToSelection = 'True',
+
+				MasterPage = '<default>'
+
+			]
+
+			{
+
+				Parameters
+
+				{
+
+					Parameter
+
+					[
+
+						Name = 'PublisherId',
+
+						NullValue = 'True'
+
+					]
+
+				}
+
+				FixedData
+
+				{
+
+					Attributes
+
+					{
+
+						Attribute
+
+						[
+
+							Attribute = 'PublisherName',
+
+							Description = 'Name',
+
+							Autolink = 'True',
+
+							Visible = 'True'
+
+						]
+
+					}
+
+				}
+
+				Tabs
+
+				{
+
+					Tab
+
+					[
+
+						Caption = 'General',
+
+						Code = 'General',
+
+						Description = 'Publisher Info',
+
+						Type = 'Tabular',
+
+						ComponentName = 'PublisherGeneral'
+
+					]
+
+					{
+
+						Attributes
+
+						{
+
+							Attribute
+
+							[
+
+								Attribute = 'PublisherId',
+
+								Description = 'Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'PublisherName',
+
+								Description = 'Name',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+						}
+
+						Actions
+
+						{
+
+							Action
+
+							[
+
+								Name = 'Update'
+
+							]
+
+							Action
+
+							[
+
+								Name = 'Delete'
+
+							]
+
+						}
+
+					}
+
+					Tab
+
+					[
+
+						Caption = 'Book',
+
+						Code = 'Book',
+
+						Type = 'Grid',
+
+						ComponentName = 'PublisherBookWC',
+
+						RowsPerPage = '<default>'
+
+					]
+
+					{
+
+						Transaction
+
+						[
+
+							Transaction = 'Book'
+
+						]
+
+						Modes
+
+						Attributes
+
+						{
+
+							Attribute
+
+							[
+
+								Attribute = 'BookId',
+
+								Description = 'Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookTitle',
+
+								Description = 'Title',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'AuthorId',
+
+								Description = 'Author Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'AuthorName',
+
+								Description = 'Author Name',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'GenreId',
+
+								Description = 'Genre Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'GenreName',
+
+								Description = 'Genre Name',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'ShelfId',
+
+								Description = 'Shelf Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'ShelfName',
+
+								Description = 'Shelf Name',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookISBN',
+
+								Description = 'ISBN',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookPublicationYear',
+
+								Description = 'Publication Year',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookPages',
+
+								Description = 'Pages',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookLanguage',
+
+								Description = 'Language',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookStatus',
+
+								Description = 'Status',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookRating',
+
+								Description = 'Rating',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookAcquisitionDate',
+
+								Description = 'Acquisition Date',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookNotes',
+
+								Description = 'Notes',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "WorkWithWebPublisher"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,17 @@
+Image language
+{
+	'language.svg' [ Description = 'language.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "language"
+
+		Description = "language"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

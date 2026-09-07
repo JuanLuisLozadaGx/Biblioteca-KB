@@ -1,0 +1,17 @@
+Image minus
+{
+	'minus.svg' [ Description = 'minus.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "minus"
+
+		Description = "minus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

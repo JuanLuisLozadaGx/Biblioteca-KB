@@ -1,0 +1,21 @@
+Domain TrnMode
+{
+	#Properties
+		Name = "TrnMode"
+
+		Description = "TrnMode"
+
+		DataType = "Character(3)"
+
+		Length = "3"
+
+		EnumValues = "Insert, Insert, INS; Update, Update, UPD; Delete, Delete, DLT; Display, Display, DSP"
+
+		ControlType = "Combo Box"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,25 @@
+SDT Delivery
+{
+	Delivery{
+
+		Priority [ DataType = 'PushNotificationPriority, GeneXus', InitialValue = 'PushNotificationPriority.Normal' ]
+
+		Expiration [ Description = 'Expiration in seconds', DataType = 'Numeric(18.0)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "Delivery"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,19 @@
+Image prompt_light
+{
+	'prompt_light.svg' [ Description = 'prompt_light.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'prompt_dark.svg' [ Description = 'prompt_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "prompt_light"
+
+		Description = "prompt_light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

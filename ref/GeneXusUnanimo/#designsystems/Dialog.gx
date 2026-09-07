@@ -1,0 +1,78 @@
+DesignSystem Dialog
+{
+	#DesignStyles
+		styles Dialog
+		{
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		
+		    .dialog::part(dialog) {
+		        background-color: $colors.form-container-bg;
+		        border-radius: $radius.un-radius--l;
+		        box-shadow: $shadows.xxs;
+		    }
+		    .dialog::part(content) {
+		        padding: $spacing.un-l;
+		    }
+		    .dialog::part(header) {
+		        padding: $spacing.un-l;
+		        border-block-end: solid $borders.un-width--xs $colors.un-border-color__mild;
+		    }
+		    .dialog::part(caption) {
+		        font-size: $fontSizes.un-s;
+		        font-family: $fonts.un-font__family;
+		        font-weight: $fonts.un-font__weight--bold;
+		        letter-spacing: $spacing.letter-spacing-s;
+		        color: $colors.un-text__on-surface--positive;
+		    }
+		    .dialog::part(close-button)::before {
+		        content: "";
+		        inline-size: 16px;
+		        block-size: 16px;
+		        background-image: gx-image(GeneXusUnanimo.close_ico);
+		        background-position: center;
+		        background-repeat: no-repeat;
+		        background-size: 16px;
+		    }
+		    .dialog::part(footer) {
+		        padding: $spacing.un-l;
+		        border-block-start: solid $borders.un-width--xs $colors.un-border-color__mild;
+		    }
+		    .dialog::part(edge edge-block-start):hover {
+		        background-color: $colors.un-accent__primary-dim--hover;
+		        border-top-left-radius: $radius.un-radius--l;
+		        border-top-right-radius: $radius.un-radius--l;
+		    }
+		    .dialog::part(edge edge-block-end):hover {
+		        background-color: $colors.un-accent__primary-dim--hover;
+		        border-bottom-left-radius: $radius.un-radius--l;
+		        border-bottom-right-radius: $radius.un-radius--l;
+		    }
+		    .dialog::part(edge edge-inline-end):hover {
+		        background-color: $colors.un-accent__primary-dim--hover;
+		        border-top-right-radius: $radius.un-radius--l;
+		        border-bottom-right-radius: $radius.un-radius--l;
+		    }
+		    .dialog::part(edge edge-inline-start):hover {
+		        background-color: $colors.un-accent__primary-dim--hover;
+		        border-top-left-radius: $radius.un-radius--l;
+		        border-bottom-left-radius: $radius.un-radius--l;
+		    }
+		    .dialog::part(corner corner-block-start-inline-start):hover,
+		    .dialog::part(corner corner-block-end-inline-start):hover,
+		    .dialog::part(corner corner-block-start-inline-end):hover,
+		    .dialog::part(corner corner-block-end-inline-end):hover {
+		        background-color: $colors.un-accent__primary-dim--hover;
+		        border-radius: $radius.un-radius--l;
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "Dialog"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

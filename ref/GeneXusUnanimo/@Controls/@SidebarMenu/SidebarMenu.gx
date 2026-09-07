@@ -1,0 +1,154 @@
+UserControl SidebarMenu
+{
+	#UserControlScreenTemplate
+		<ch-sidebar-menu 
+		    menu-title="{{Title}}" 
+		    id="ch-sidebar-menu" 
+		    class="{{Class}}" 
+		    distance-to-top="{{DistanceToTop}}" 
+		    collapsible="{{Collapsible}}" 
+		    active-item-id="{{ActiveItemId}}" >
+		    <ch-sidebar-menu-list>
+			  {{#SidebarItems}}
+		      <ch-sidebar-menu-list-item id="{{id}}" item-icon-src="{{icon}}" {{#IconAutoColor}}auto-color{{/IconAutoColor}}>
+		        {{title}}
+				{{#hasSubItems}}
+		        <ch-sidebar-menu-list slot="list">
+				  {{#SidebarSubItems}}
+		            <ch-sidebar-menu-list-item id="{{id}}">
+		              {{title}}		  
+					  {{#hasSubItems}}
+						<ch-sidebar-menu-list slot="list">
+						{{#SidebarSubSubItems}}
+							<ch-sidebar-menu-list-item id="{{id}}">
+							{{title}}
+							</ch-sidebar-menu-list-item>
+						{{/SidebarSubSubItems}}
+						</ch-sidebar-menu-list>
+					  {{/hasSubItems}}
+		            </ch-sidebar-menu-list-item>
+				  {{/SidebarSubItems}}
+				</ch-sidebar-menu-list>
+				{{/hasSubItems}}
+		      </ch-sidebar-menu-list-item>
+			  {{/SidebarItems}}
+		    </ch-sidebar-menu-list>
+		    <div slot="footer">{{FooterText}}</div>
+		</ch-sidebar-menu>
+		
+		
+	#End
+
+	#UserControlProperties
+		<Definition auto="false">
+			<Property Name="Title" Type="string" Default="" />
+			<Property Name="Class" Type="string" Default="ch-sidebar" />
+			<Property Name="FooterText" Type="string" Default="" />
+			<Property Name="DistanceToTop" Type="Numeric" Default="" />
+			<Property Name="Collapsible" Type="Boolean" Default="True" />
+			<Property Name="SidebarItems" Type="sdt" Default="" />
+			<Property Name="SidebarItemsCurrentIndex" Type="numeric" Default="" />
+			<Property Name="ActiveItemId" Type="string" Default="" />
+			<Property Name="SelectedItemTarget" Type="string" Default="" />
+			<Property Name="isCollapsed" Type="Boolean" Default="" />
+			<Property Name="IconAutoColor" Type="boolean" Default="false" />
+			
+			<Event Name="ItemClick" />
+			<Event Name="GetState" />
+			
+			<Dependency Type="npm" name="@genexus/chameleon-controls-library" version="6.20.1" />
+			<Dependency Type="shared-module" source="chameleon/chameleon.esm.js" />
+			
+			<script name="GetActiveItem">
+				/*get active item from storage*/
+				const UC = this;
+				let activeItem = sessionStorage.getItem("active-item");
+				UC.SidebarItems.activeItem = activeItem;
+			</script>
+			
+			<script name="initSidebar" when="AfterShow">
+				const UC = this;
+				const sidebar = document.getElementById("ch-sidebar-menu"); 
+				
+				sidebar.addEventListener("collapseBtnClicked", function(e){
+					UC.isCollapsed = e.detail.isCollapsed;
+					if (UC.GetState){
+						UC.GetState();
+					}
+				});
+				
+				sidebar.addEventListener("itemClickedEvent", function(e){
+					/*get the item's target*/
+					for (let i = 0; i < UC.SidebarItems.length; i++) {
+						const item = UC.SidebarItems[i];
+						if (item.id === e.detail["item-id"]){
+							if (item.target !== "") {
+								UC.SelectedItemTarget = item.target;
+								if (UC.ItemClick){
+									UC.ItemClick();
+								}
+								break;
+							}
+						}
+						if (item.hasSubItems) {
+							for (let j = 0; j < item.SidebarSubItems.length; j++) {
+								const subItem = item.SidebarSubItems[j];
+								if (subItem.id === e.detail["item-id"]){
+									if (subItem.target !== "") {
+										UC.SelectedItemTarget = subItem.target;
+										if (UC.ItemClick){
+											UC.ItemClick();
+										}
+										break;
+									}
+								}
+								if (subItem.hasSubItems) {		
+									for (let k = 0; k < subItem.SidebarSubSubItems.length; k++) {
+										const subSubItem = subItem.SidebarSubSubItems[k];
+										if (subSubItem.id === e.detail["item-id"]){
+											if (subSubItem.target !== "") {
+												UC.SelectedItemTarget = subSubItem.target;
+												if (UC.ItemClick){
+													UC.ItemClick();
+												}
+												break;
+											}
+										}
+									}
+									
+								}
+							}
+						}
+					}
+				});
+			
+				const toggleSidebarBtn = document.getElementsByClassName("sidebar__toggle-ico")[0];
+				if (toggleSidebarBtn) {
+					toggleSidebarBtn.addEventListener("click", function(e){
+						const menu = sidebar.shadowRoot.lastChild;
+						if (!menu.classList.contains("visible-xs")){
+							menu.classList.add("visible-xs");
+							menu.classList.remove("hidden-xs");
+							}else{
+							menu.classList.remove("visible-xs");
+							menu.classList.add("hidden-xs");
+						}
+					})
+				}
+			</script>
+			
+		
+		</Definition>
+	#End
+
+	#Properties
+		Name = "SidebarMenu"
+
+		BaseCss = "Unanimo_chameleon"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

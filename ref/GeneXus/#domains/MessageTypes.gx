@@ -1,0 +1,19 @@
+Domain MessageTypes
+{
+	#Properties
+		Name = "MessageTypes"
+
+		Length = "2"
+
+		Decimals = "0"
+
+		EnumValues = "Warning, Warning, 0; Error, Error, 1; Info, Info, 2; Debug, Debug, 3"
+
+		ControlType = "Combo Box"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

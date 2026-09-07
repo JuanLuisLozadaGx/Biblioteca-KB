@@ -1,0 +1,29 @@
+SDT AudioPlayerSettings
+{
+	AudioPlayerSettings{
+
+		SupportsFavorite [ DataType = 'Boolean' ]
+
+		SupportsRepeat [ DataType = 'Boolean' ]
+
+		SupportsShuffle [ DataType = 'Boolean' ]
+
+		CustomActions [ DataType = 'AudioPlayerCustomAction, GeneXus.SD.Media', Collection = 'True', CollectionItemName = 'CustomAction' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "AudioPlayerSettings"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,15 @@
+Domain ObjectName
+{
+	#Properties
+		Name = "ObjectName"
+
+		DataType = "VarChar(256)"
+
+		Length = "256"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

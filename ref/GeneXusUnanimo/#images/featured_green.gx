@@ -1,0 +1,17 @@
+Image featured_green
+{
+	'featured_green.svg' [ Description = 'featured_green.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "featured_green"
+
+		Description = "featured_green"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

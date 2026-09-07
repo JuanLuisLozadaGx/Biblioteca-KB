@@ -1,0 +1,193 @@
+ExternalObject Printer
+{
+	#ExternalProperties
+		PrinterName
+
+		[
+
+			Type = 'Character',
+
+			Length = '200',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Static',
+
+			AndroidExternalSetMethod = 'setPrinterName',
+
+			AndroidExternalGetMethod = 'getPrinterName'
+
+		]
+
+		
+
+		Dpi
+
+		[
+
+			Type = 'Numeric',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Static',
+
+			AndroidExternalSetMethod = 'setDpi',
+
+			AndroidExternalGetMethod = 'getDpi'
+
+		]
+
+		
+
+		Width
+
+		[
+
+			Type = 'Numeric',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Static',
+
+			AndroidExternalSetMethod = 'setWidth',
+
+			AndroidExternalGetMethod = 'getWidth'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		GetDevices
+
+		[
+
+			Type = 'VarChar',
+
+			Length = '200',
+
+			Collection = 'True',
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'getDevices'
+
+		]
+
+		
+
+		Print
+
+		[
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'print'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Path
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '250'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Print
+
+		[
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'print'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Path
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '250'
+
+				]
+
+		
+
+				Rotation
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Rotation, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		CutPaper
+
+		[
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'cutPaper'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Printer"
+
+		AndroidExternalName = "PrinterAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.printer"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

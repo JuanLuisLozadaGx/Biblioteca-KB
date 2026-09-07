@@ -1,0 +1,17 @@
+Image audio
+{
+	'audio.svg' [ Description = 'audio.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "audio"
+
+		Description = "audio"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

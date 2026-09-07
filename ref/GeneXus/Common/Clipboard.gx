@@ -1,0 +1,61 @@
+ExternalObject Clipboard
+{
+	#ExternalMethods
+		SetText
+
+		[
+
+			Length = '0',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				data
+
+				[
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetText
+
+		[
+
+			Type = 'Character',
+
+			Length = '100',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Clipboard"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,583 @@
+ExternalObject Beacons
+{
+	#ExternalProperties
+		RangingAvailable
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Determines whether the device supports ranging. If False, all attempts to range beacons will fail.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'rangingAvailable'
+
+		]
+
+		
+
+		BeaconProximityAlertsAvailable
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Determines whether the device supports beacon proximity alerts. If False, all attempts to set proximity alerts will fail.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'beaconProximityAlertsAvailable'
+
+		]
+
+		
+
+		ServiceEnabled
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Determines whether the user has location services enabled. If False, and you proceed to call other Location API, user will be prompted with the warning or fail depending on the current authorization status.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'serviceEnabled'
+
+		]
+
+		
+
+		AuthorizationStatus
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Returns the current authorization status.',
+
+			BasedOn = 'APIAuthorizationStatus, GeneXus',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'authorizationStatusNumber'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		AddBeaconProximityAlert
+
+		[
+
+			Description = 'Start monitoring the specified beacon region.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'addBeaconProximityAlertWithParameters'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				proximityAlert
+
+				[
+
+					Description = 'The beacon proximity alert to start monitoring.',
+
+					Type = 'BeaconProximityAlert, GeneXus.SD',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		AddBeaconProximityAlerts
+
+		[
+
+			Description = 'Start monitoring the specified beacon regions.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'addBeaconProximityAlertsWithParameters'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				proximityAlerts
+
+				[
+
+					Description = 'The beacon proximity alerts to start monitoring.',
+
+					Type = 'BeaconProximityAlert, GeneXus.SD',
+
+					Collection = 'True'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetBeaconProximityAlerts
+
+		[
+
+			Description = 'Retrieve a collection for the beacon regions that are currently being monitored.',
+
+			Type = 'BeaconProximityAlert, GeneXus.SD',
+
+			Collection = 'True',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'beaconProximityAlertsCollection'
+
+		]
+
+		
+
+		RemoveBeaconProximityAlert
+
+		[
+
+			Description = 'Removes the beacon region being monitored.',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'removeBeaconProximityAlertWithParameters'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				proximityAlertRegionId
+
+				[
+
+					Description = 'The beacon proximity alert region\'s identifier to stop monitoring.',
+
+					Type = 'VarChar',
+
+					Length = '256'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ClearBeaconProximityAlerts
+
+		[
+
+			Description = 'Removes all the beacon regions being monitored.',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'clearBeaconProximityAlerts'
+
+		]
+
+		
+
+		GetBeaconRegionState
+
+		[
+
+			Description = 'Retrieve the cached state of the specified region.',
+
+			BasedOn = 'RegionState, GeneXus',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'beaconRegionStateWithParameters'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				regionId
+
+				[
+
+					Description = 'The beacon region\'s identifier to retrieve state.',
+
+					Type = 'VarChar',
+
+					Length = '256'
+
+				]
+
+			}
+
+		}
+
+		
+
+		StartRangingBeaconRegion
+
+		[
+
+			Description = 'Starts the delivery of notifications for beacons in the specified region.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'startRangingBeaconRegionWithParameters'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				beaconRegion
+
+				[
+
+					Description = 'The region object that defines the identifying information for the targeted beacons.',
+
+					Type = 'BeaconRegion, GeneXus.SD'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetRangedBeaconRegions
+
+		[
+
+			Description = 'Retrieve a collection for the beacon regions that are currently providing ranging.',
+
+			Type = 'BeaconRegion, GeneXus.SD',
+
+			Collection = 'True',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'rangedBeaconRegionsCollection'
+
+		]
+
+		
+
+		StopRangingBeaconRegion
+
+		[
+
+			Description = 'Stops the delivery of notifications for the specified beacon region.',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'stopRangingBeaconRegionWithParameters'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				regionId
+
+				[
+
+					Description = 'The beacon region\'s identifier.',
+
+					Type = 'VarChar',
+
+					Length = '256'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetBeaconsInRange
+
+		[
+
+			Description = 'Retrieve a collection for the beacons (sorted by proximity) currently in range for the given region.',
+
+			Type = 'BeaconState, GeneXus.SD',
+
+			Collection = 'True',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'beaconsInRangeWithParameters'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				regionId
+
+				[
+
+					Description = 'The beacon region\'s identifier to retrieve becons in range. Empty means all regions.',
+
+					Type = 'VarChar',
+
+					Length = '256'
+
+				]
+
+			}
+
+		}
+
+		
+
+		StartAsBeacon
+
+		[
+
+			Description = 'Advertises the current device as a beacon.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'startAsBeaconWithParameters'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				beaconInfo
+
+				[
+
+					Description = 'The beacon information to advertice.',
+
+					Type = 'BeaconInfo, GeneXus.SD'
+
+				]
+
+			}
+
+		}
+
+		
+
+		StopAsBeacon
+
+		[
+
+			Description = 'Stops advertising the current device as a beacon.',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'stopAsBeacon'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalEvents
+		EnterBeaconRegion
+
+		[
+
+			Description = 'Invoked when the user enters a monitored beacon region.'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				beaconRegion
+
+				[
+
+					Description = 'An object containing information about the region that was entered.',
+
+					Type = 'BeaconRegion, GeneXus.SD'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ExitBeaconRegion
+
+		[
+
+			Description = 'Invoked when the user exits a monitored beacon region.'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				beaconRegion
+
+				[
+
+					Description = 'An object containing information about the beacon region that was exited.',
+
+					Type = 'BeaconRegion, GeneXus.SD'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ChangeBeaconsInRange
+
+		[
+
+			Description = 'Invoked when a new set of beacons\' states are available in the specified region.'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				beaconRegion
+
+				[
+
+					Description = 'The region object containing the parameters that were used to locate the beacons.',
+
+					Type = 'BeaconRegion, GeneXus.SD'
+
+				]
+
+		
+
+				beacons
+
+				[
+
+					Description = 'The beacons currently in range, sorted by proximity. If beacons is empty, it may be assumed no beacons that match the specified region are nearby. Similarly if a specific beacon no longer appears in beacons, it may be assumed the beacon is no longer received by the device.',
+
+					Type = 'BeaconState, GeneXus.SD',
+
+					Collection = 'True'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Beacons"
+
+		Namespace = "GX"
+
+		IosExternalName = "GXEOLocation"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

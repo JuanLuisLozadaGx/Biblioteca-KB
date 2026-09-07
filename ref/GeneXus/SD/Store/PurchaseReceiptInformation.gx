@@ -1,0 +1,37 @@
+SDT PurchaseReceiptInformation
+{
+	PurchaseReceiptInformation{
+
+		Valid [ DataType = 'Boolean' ]
+
+		Quantity [ DataType = 'Numeric(8.0)' ]
+
+		ProductId [ DataType = 'VarChar(100)' ]
+
+		TransactionId [ DataType = 'VarChar(40)' ]
+
+		PurchaseDate [ DataType = 'DateTime' ]
+
+		OriginalTransactionId [ DataType = 'VarChar(40)' ]
+
+		OriginalPurchaseDate [ DataType = 'DateTime' ]
+
+		ApplicationItemsId [ DataType = 'VarChar(100)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "PurchaseReceiptInformation"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

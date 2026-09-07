@@ -1,0 +1,21 @@
+Domain IMEMode
+{
+	#Properties
+		Name = "IMEMode"
+
+		Description = "IMEMode property values"
+
+		DataType = "Character(40)"
+
+		Length = "40"
+
+		EnumValues = "Hiragana, Hiragana, hiragana; FullWidthKatakana, FullWidthKatakana, full width katakana; FullWidthAlphanumeric, FullWidthAlphanumeric, full width alphanumeric; HalfWidthKatakana, HalfWidthKatakana, half width katakana; HalfWidthAlphanumeric, HalfWidthAlphanumeric, half width alphanumeric; Disabled, Disabled, disabled; Inactive, Inactive, inactive"
+
+		ControlType = "Combo Box"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

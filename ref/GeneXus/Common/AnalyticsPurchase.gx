@@ -1,0 +1,51 @@
+SDT AnalyticsPurchase
+{
+	AnalyticsPurchase{
+
+		TransactionId [ DataType = 'Character(100)' ]
+
+		Affiliation [ DataType = 'Character(100)' ]
+
+		Revenue [ DataType = 'Numeric(18.2-)', Signed = 'True' ]
+
+		Tax [ DataType = 'Numeric(18.2-)', Signed = 'True' ]
+
+		Shipping [ DataType = 'Numeric(18.2-)', Signed = 'True' ]
+
+		CurrencyCode [ DataType = 'Character(20)' ]
+
+		Items [ Collection = 'True', CollectionItemName = 'Item' ]	{
+
+			Id [ DataType = 'Character(100)' ]
+
+			Name [ DataType = 'Character(100)' ]
+
+			Category [ DataType = 'Character(100)' ]
+
+			Price [ DataType = 'Numeric(18.2-)', Signed = 'True' ]
+
+			Quantity [ DataType = 'Numeric(18.2-)', Signed = 'True' ]
+
+			CurrencyCode [ DataType = 'Character(20)' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "AnalyticsPurchase"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

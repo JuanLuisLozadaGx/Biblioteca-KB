@@ -1,0 +1,215 @@
+ExternalObject CardScanner
+{
+	#ExternalProperties
+		IsAvailable
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'canReadCard'
+
+		]
+
+		
+
+		CollectCardholderName
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'collectCardholderName'
+
+		]
+
+		
+
+		CollectCVV
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'collectCVV'
+
+		]
+
+		
+
+		CollectExpiry
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'collectExpiry'
+
+		]
+
+		
+
+		CollectPostalCode
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'collectPostalCode'
+
+		]
+
+		
+
+		DetectionMode
+
+		[
+
+			BasedOn = 'CardDetectionMode, GeneXus.SD',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'detectionMode'
+
+		]
+
+		
+
+		DisableManualEntry
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'disableManualEntry'
+
+		]
+
+		
+
+		RestrictPostalCodeNumeric
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'restricPostalCodeNumeric'
+
+		]
+
+		
+
+		ScanExpiry
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'scanExpiry'
+
+		]
+
+		
+
+		ScanInstructionsText
+
+		[
+
+			Type = 'VarChar',
+
+			Length = '200',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'scanInstructionsText'
+
+		]
+
+		
+
+		SuppressScanConfirmation
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'suppressScanConfirmation'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		ScanCard
+
+		[
+
+			Type = 'CardInformation, GeneXus.SD',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'scanCard',
+
+			IosExternalType = 'sdtcardinformation'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "CardScanner"
+
+		IosExternalName = "GXEOCardIO"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,19 @@
+Image arrow_left_light
+{
+	'arrow_left_light.svg' [ Description = 'arrow_left_light.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'arrow_left_dark.svg' [ Description = 'arrow_left_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "arrow_left_light"
+
+		Description = "arrow_left_light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

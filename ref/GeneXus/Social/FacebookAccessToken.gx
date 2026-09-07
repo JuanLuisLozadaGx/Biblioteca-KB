@@ -1,0 +1,35 @@
+SDT FacebookAccessToken
+{
+	FacebookAccessToken [ Description = 'Facebook Access Token required to interact with Facebook Graph API' ]{
+
+		AccessToken [ Description = 'Facebook Access Token', DataType = 'Character(300)' ]
+
+		ApplicationId [ Description = 'Facebook Application Id', DataType = 'Character(300)' ]
+
+		UserId [ Description = 'Facebook User Id', DataType = 'Character(300)' ]
+
+		Permissions [ Description = 'Permissions granted by user', DataType = 'Character(20)', Collection = 'True' ]
+
+		DeclinedPermissions [ Description = 'Declined Permissions by user', DataType = 'Character(20)', Collection = 'True' ]
+
+		ExpirationDate [ Description = 'Token Expiration Date', DataType = 'DateTime', Collection = 'False', ControlType = 'Edit' ]
+
+		LastRefreshDate [ Description = 'Token Last Refresh Date', DataType = 'DateTime' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "FacebookAccessToken"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,87 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable">
+			<row>
+				<cell widthSm="100" offsetSm="0">
+					<responsive name="TitleContainer" class="title-container" responsiveSizes="[]">
+						<row>
+							<cell>
+								<label name="Title" caption="Shelf" class="heading-01" />
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<errorviewer name="ErrorViewer" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+			<row>
+				<cell widthSm="100" offsetSm="0">
+					<responsive name="FormContainer" class="form-container">
+						<row>
+							<cell name="ToolbarCell" class="form__toolbar-cell" widthSm="75" offsetSm="25">
+								<actiongroup name="Toolbar" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell-advanced" widthSm="100" offsetSm="0">
+								<input labelCaption="=ShelfId.ContextualTitle" data="ShelfId" name="ctlShelfId" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="=ShelfName.ContextualTitle" data="ShelfName" name="ctlShelfName" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="=ShelfDescription.ContextualTitle" data="ShelfDescription" name="ctlShelfDescription" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+			<row>
+				<cell class="form__actions--fixed" horizontalAlignment="Right" verticalAlignment="Middle" widthSm="100" offsetSm="0">
+					<actiongroup name="FormButtons" />
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups>
+			<actiongroup name="FormButtons">
+				<item>
+					<action name="btn_enter" onClickEvent="Enter" caption="GX_BtnEnter" class="Button button-primary" />
+				</item>
+				<item>
+					<action name="btn_cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="Button button-tertiary" />
+				</item>
+				<item>
+					<action name="btn_delete" onClickEvent="Delete" caption="GX_BtnDelete" class="Button button-tertiary" />
+				</item>
+			</actiongroup>
+			<actiongroup name="Toolbar">
+				<item>
+					<actiongroup name="NavButtons">
+						<item>
+							<action name="btn_first" onClickEvent="First" caption="" class="Button button-auxiliary ico__arrow-first" />
+						</item>
+						<item>
+							<action name="btn_previous" onClickEvent="Previous" caption="" class="Button button-auxiliary ico__arrow-prev" />
+						</item>
+						<item>
+							<action name="btn_next" onClickEvent="Next" caption="" class="Button button-auxiliary ico__arrow-next" />
+						</item>
+						<item>
+							<action name="btn_last" onClickEvent="Last" caption="" class="Button button-auxiliary ico__arrow-last" />
+						</item>
+						<item>
+							<action name="btn_select" onClickEvent="Select" caption="GX_BtnSelect" class="Button button-secondary" />
+						</item>
+					</actiongroup>
+				</item>
+			</actiongroup>
+		</actiongroups>
+	</view>
+</layout>

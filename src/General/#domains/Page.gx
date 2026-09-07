@@ -1,0 +1,19 @@
+Domain Page
+{
+	#Properties
+		Name = "Page"
+
+		Length = "4"
+
+		Decimals = "0"
+
+		EnumValues = "Rows, Rows, 10"
+
+		ControlType = "Combo Box"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,17 @@
+Domain ApplicationState
+{
+	#Properties
+		Name = "ApplicationState"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		EnumValues = "Active, Active, 0; Inactive, Inactive, 1; Background, Background, 2; NotRunning, Not Running, 3"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

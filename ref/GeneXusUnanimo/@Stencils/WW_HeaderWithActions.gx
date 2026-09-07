@@ -1,0 +1,11 @@
+Stencil WW_HeaderWithActions
+{
+	#Properties
+		Name = "WW_HeaderWithActions"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

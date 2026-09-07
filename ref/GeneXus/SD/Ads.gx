@@ -1,0 +1,251 @@
+ExternalObject Ads
+{
+	#ExternalMethods
+		RequestInterstitial
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'requestInterstitial',
+
+			AndroidExternalName = 'requestInterstitial'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40',
+
+					AndroidExternalType = 'String'
+
+				]
+
+			}
+
+		}
+
+		
+
+		IsInterstitialReady
+
+		[
+
+			Type = 'Boolean',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'isInterstitialReady',
+
+			AndroidExternalName = 'isInterstitialReady',
+
+			AndroidExternalType = 'boolean'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40',
+
+					Collection = 'False',
+
+					AndroidExternalType = 'String'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ShowInterstitial
+
+		[
+
+			Type = 'Boolean',
+
+			Collection = 'False',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'showInterstitial',
+
+			AndroidExternalName = 'showInterstitial',
+
+			AndroidExternalType = 'boolean'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40',
+
+					AndroidExternalType = 'String'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#ExternalEvents
+		InterstitialLoaded
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+				[
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		InterstitialFailedToLoad
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+				[
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		InterstitialClicked
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		InterstitialClosed
+
+		{
+
+			Parameters
+
+			{
+
+				adUnitID
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Ads"
+
+		IosExternalName = "GXEOAds"
+
+		AndroidExternalName = "AdsAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.ads"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

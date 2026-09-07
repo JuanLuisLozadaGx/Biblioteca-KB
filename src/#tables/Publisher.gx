@@ -1,0 +1,37 @@
+Table Publisher
+{
+	PublisherId*
+
+	PublisherName
+
+	
+
+	#Indexes
+		IPublisher
+
+		[
+
+			Source = 'Automatic',
+
+			Type = 'Primary Key'
+
+		]
+
+		{
+
+			PublisherId
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Publisher"
+
+		
+	#End
+
+}

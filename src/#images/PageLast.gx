@@ -1,0 +1,15 @@
+Image PageLast
+{
+	'PageLast.gif' [ IsExternal = 'True', Style = 'Any', Language = 'Any', Source = 'PageLast.gif' ]
+
+	
+
+	#Properties
+		Name = "PageLast"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

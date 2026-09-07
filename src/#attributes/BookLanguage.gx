@@ -1,0 +1,15 @@
+Attribute BookLanguage
+{
+	#Properties
+		Name = "BookLanguage"
+
+		DataType = "VarChar(30)"
+
+		Length = "30"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,69 @@
+UserControl Alert
+{
+	#UserControlScreenTemplate
+		<div id="alert{{id}}" class="alert alert-{{Type:info|warning|success|error}}" aria-live="assertive"> 
+			<div class="inline-left-xxxl inline-right-xxl" style="flex-grow: 1">
+				<div class="row"> <span class="alert-title">{{Title}}</span> </div>
+				<div class="row"> <span class="alert-message">{{Message}}</span> </div>
+			</div>
+			<div class="inline-left-xl inline-right-xl" style="flex-grow: 0">
+				<button type="button" class="alert-close" data-dismiss="alert" aria-label="Close" id="alert{{id}}close" {{Close}}><span aria-hidden="true">&times;</span></button>
+			</div>
+			{{#ShowMultiple}}
+			<div class="alert-badge">
+				<span class="alert-badge-text">{{Count}}</span>
+			</div>
+			{{/ShowMultiple}}
+		</div>
+		
+	#End
+
+	#UserControlProperties
+		<Definition auto="false">
+		  <Property Name="id" Type="string" Default="" />
+		  <Property Name="Type" Type="enum" Default="info">
+		    <Value>info</Value>
+		    <Value>warning</Value>
+		    <Value>success</Value>
+		    <Value>error</Value>
+		  </Property>
+		  <Property Name="Title" Type="string" Default="" />
+		  <Property Name="Message" Type="string" Default="" />
+		  <Property Name="Position" Type="enum" Default="User defined">
+		    <Value>User defined</Value>
+		    <Value>Fixed to bottom</Value>
+		  </Property>
+		  <Property Name="ShowMultiple" Type="boolean" Default="false" />
+		  <Property Name="Count" Type="numeric" Default="" />
+		  
+		  <Event Name="Close" On="click" />
+		  
+		  <script name="Init" when="AfterShow">
+		  	const UC = this;
+			const elId = "alert" + UC.id;
+			const el = document.getElementById(elId);
+				
+			if (UC.Position === "Fixed to bottom") {
+				if (!el.classList.contains("alert-fixed")) {
+					el.classList.add("alert-fixed");
+				}
+			}
+		
+			if (UC.ShowMultiple === true) {
+				if (!el.classList.contains("alert-multiple")) {
+					el.classList.add("alert-multiple");
+				}
+			}
+		  </script>
+		</Definition>
+	#End
+
+	#Properties
+		Name = "Alert"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

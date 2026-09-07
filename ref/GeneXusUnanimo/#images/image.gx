@@ -1,0 +1,17 @@
+Image image
+{
+	'image.svg' [ Description = 'image.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "image"
+
+		Description = "image"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

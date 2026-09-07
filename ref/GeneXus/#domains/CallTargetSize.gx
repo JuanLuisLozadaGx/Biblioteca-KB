@@ -1,0 +1,17 @@
+Domain CallTargetSize
+{
+	#Properties
+		Name = "CallTargetSize"
+
+		DataType = "Character(10)"
+
+		Length = "10"
+
+		EnumValues = "Small, Small, Small; Medium, Medium, Medium; Large, Large, Large"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

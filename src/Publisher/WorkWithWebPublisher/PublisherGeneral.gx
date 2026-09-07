@@ -1,0 +1,86 @@
+WebComponent PublisherGeneral
+{
+	#Rules
+		parm(in:PublisherId);
+		
+	#End
+
+	#Events
+		Event Start
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+			Do 'PrepareTransaction'
+		EndEvent
+		
+		Event Load
+		EndEvent
+		
+		Event 'DoUpdate'
+			Publisher(TrnMode.Update, PublisherId)
+		EndEvent
+		
+		Event 'DoDelete'
+			Publisher(TrnMode.Delete, PublisherId)
+		EndEvent
+		
+		Sub 'PrepareTransaction'
+			&TrnContext = new()
+			&TrnContext.CallerObject = &Pgmname
+			&TrnContext.CallerOnDelete = False
+			&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+			&TrnContext.TransactionName = !"Publisher"
+		
+			&TrnContextAtt = new()
+			&TrnContextAtt.AttributeName = !"PublisherId"
+			&TrnContextAtt.AttributeValue = &PublisherId.ToString()
+			&TrnContext.Attributes.Add(&TrnContextAtt)
+		
+			&Session.Set(!"TrnContext", &TrnContext.ToXml())
+		EndSub
+		
+	#End
+
+	#Variables
+		IsAuthorized [ DataType = 'Boolean' ]
+
+		PublisherId [ DataType = 'Attribute:PublisherId' ]
+
+		TrnContext [ DataType = 'TransactionContext, General.UI' ]
+
+		TrnContextAtt [ DataType = 'TransactionContext.Attribute, General.UI' ]
+
+		Session [ DataType = 'WebSession' ]
+
+		HTTPRequest [ DataType = 'HttpRequest' ]
+
+		
+	#End
+
+	#Properties
+		Name = "PublisherGeneral"
+
+		Type = "Component"
+
+		IsDefault = "False"
+
+		
+
+		WebForm.Defaults = "WorkWith:Templates\\TabTabularWebForm.dkt"
+
+		
+
+		Rules.Defaults = "WorkWith:Templates\\TabTabularRules.dkt"
+
+		
+
+		Events.Defaults = "WorkWith:Templates\\TabTabularEvents.dkt"
+
+		
+
+		Variables.Defaults = "WorkWith:Templates\\TabTabularVariables.dkt"
+
+		
+	#End
+
+}

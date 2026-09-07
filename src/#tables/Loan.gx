@@ -1,0 +1,63 @@
+Table Loan
+{
+	LoanId*
+
+	BookId
+
+	LoanPersonName
+
+	LoanDate
+
+	LoanExpectedReturnDate
+
+	LoanReturnedDate
+
+	
+
+	#Indexes
+		ILoan
+
+		[
+
+			Source = 'Automatic',
+
+			Type = 'Primary Key'
+
+		]
+
+		{
+
+			LoanId
+
+		}
+
+		
+
+		ILoan1
+
+		[
+
+			Source = 'Automatic',
+
+			Type = 'Duplicate'
+
+		]
+
+		{
+
+			BookId
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Loan"
+
+		
+	#End
+
+}

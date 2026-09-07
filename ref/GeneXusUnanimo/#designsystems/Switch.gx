@@ -1,0 +1,81 @@
+DesignSystem Switch
+{
+	#DesignStyles
+		styles Switch
+		{
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		
+		    .switch-container {
+		        margin-top: 12px;
+		    }
+		    .switch-container > input[type="checkbox"] {
+		        display: none;   
+		    }
+		    .switch-container > label {
+		        cursor: pointer;
+		        height: 0px;
+		        position: relative; 
+		        width: 40px;
+		        color: transparent;
+		        font-size: 0px;
+		    }
+		    .switch-container > label::before {
+		        background-color: $colors.un-color__gray--500;
+		        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+		        border-radius: 8px;
+		        content: '';
+		        height: 12px;
+		        margin-top: -6px;
+		        position:absolute;
+		        transition: all 0.4s ease-in-out;
+		        width: 40px;
+		    }
+		    .switch-container > label::after {
+		        background-color: $colors.un-color__white;
+		        border-radius: 16px;
+		        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+		        content: '';
+		        height: 24px;
+		        inset-inline-start: -4px;
+		        margin-top: -22px;
+		        position: absolute;
+		        top: -4px;
+		        transition: all 0.3s ease-in-out;
+		        width: 24px;
+		    }
+		    .switch-container > input[type="checkbox"]:checked + label::before {
+		        background-color: $colors.un-accent__primary;
+		        opacity: 0.5;
+		    }
+		    .switch-container > input[type="checkbox"]:checked + label::after {
+		        background-color: $colors.un-accent__primary--active;
+		        inset-inline-start: 20px;
+		    }
+		    //disabled
+		    .switch-container > input[type="checkbox"]:disabled + label::before {
+		        background-color: $colors.un-color__gray--500; 
+		        cursor: auto;
+		    }
+		    .switch-container > input[type="checkbox"]:disabled + label::after {
+		        background-color: $colors.un-color__gray--500;
+		        cursor: auto;
+		    }
+		    //focus
+		    .switch-container:focus {
+		        outline: none;
+		    }
+		    .switch-container:focus label:after{
+		        box-shadow: 0px 0px 1px 3px $colors.un-accent__secondary;
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "Switch"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

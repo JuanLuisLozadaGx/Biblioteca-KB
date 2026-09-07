@@ -1,0 +1,39 @@
+Table Shelf
+{
+	ShelfId*
+
+	ShelfName
+
+	ShelfDescription
+
+	
+
+	#Indexes
+		IShelf
+
+		[
+
+			Source = 'Automatic',
+
+			Type = 'Primary Key'
+
+		]
+
+		{
+
+			ShelfId
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Shelf"
+
+		
+	#End
+
+}

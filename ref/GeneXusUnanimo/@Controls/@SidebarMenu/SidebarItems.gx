@@ -1,0 +1,59 @@
+SDT SidebarItems
+{
+	SidebarItems [ Collection = 'True', CollectionItemName = 'SidebarItem' ]{
+
+		id [ DataType = 'Code, GeneXusUnanimo' ]
+
+		title [ DataType = 'Title, GeneXusUnanimo' ]
+
+		icon [ DataType = 'VarChar(1000)', Collection = 'False', ControlType = 'Edit' ]
+
+		target [ DataType = 'Url, GeneXus' ]
+
+		hasSubItems [ DataType = 'Boolean' ]
+
+		SidebarSubItems [ Collection = 'True', CollectionItemName = 'SubItem' ]	{
+
+			id [ DataType = 'Code, GeneXusUnanimo' ]
+
+			title [ DataType = 'Title, GeneXusUnanimo' ]
+
+			target [ DataType = 'Url, GeneXus' ]
+
+			hasSubItems [ DataType = 'Boolean' ]
+
+			SidebarSubSubItems [ Collection = 'True', CollectionItemName = 'SubSubItem' ]		{
+
+				id [ DataType = 'Code, GeneXusUnanimo' ]
+
+				title [ DataType = 'Title, GeneXusUnanimo' ]
+
+				target [ DataType = 'Url, GeneXus' ]
+
+			}
+
+	
+
+		}
+
+	
+
+		activeItem [ DataType = 'Title, GeneXusUnanimo' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "SidebarItems"
+
+		ExposedNamespace = "GeneXusUnanimo"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

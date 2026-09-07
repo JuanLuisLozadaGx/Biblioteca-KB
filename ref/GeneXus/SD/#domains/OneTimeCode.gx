@@ -1,0 +1,21 @@
+Domain OneTimeCode
+{
+	#Properties
+		Name = "OneTimeCode"
+
+		Description = "One Time Code"
+
+		DataType = "VarChar(40)"
+
+		AutoCorrection = "False"
+
+		AutoCapitalization = "None"
+
+		InputHistory = "False"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

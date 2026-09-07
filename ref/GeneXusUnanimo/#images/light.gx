@@ -1,0 +1,15 @@
+Image light
+{
+	'light.svg' [ Description = 'light.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,15 @@
+Domain Title
+{
+	#Properties
+		Name = "Title"
+
+		DataType = "VarChar(100)"
+
+		Length = "100"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

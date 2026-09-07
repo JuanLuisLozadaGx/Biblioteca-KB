@@ -1,0 +1,17 @@
+Domain CompareKind
+{
+	#Properties
+		Name = "CompareKind"
+
+		DataType = "Character(4)"
+
+		Length = "4"
+
+		EnumValues = "Equal, Equal, =; Greater, Greater, >; GreaterOrEqual, Greater Or Equal, >=; Less, Less, <; LessOrEqual, Less Or Equal, <=; NotEqual, Not Equal, <>; Like, Like, like"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

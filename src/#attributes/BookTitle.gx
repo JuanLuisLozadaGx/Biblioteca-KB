@@ -1,0 +1,13 @@
+Attribute BookTitle
+{
+	#Properties
+		Name = "BookTitle"
+
+		BasedOn = "Title, GeneXusUnanimo"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

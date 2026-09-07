@@ -1,0 +1,17 @@
+Image file_ico
+{
+	'file_ico.svg' [ Description = 'file_ico.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "file_ico"
+
+		Description = "file_ico"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

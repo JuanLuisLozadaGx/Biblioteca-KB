@@ -1,0 +1,117 @@
+ExternalObject PhotoLibrary
+{
+	#ExternalMethods
+		Save
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Image
+
+				[
+
+					Type = 'Image',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SaveVideo
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Video
+
+				[
+
+					Type = 'Video',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ChooseImage
+
+		[
+
+			Type = 'Image',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		ChooseVideo
+
+		[
+
+			Type = 'Video',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		ChooseImages
+
+		[
+
+			Type = 'ImagesCollection, GeneXus.SD.Media',
+
+			Length = '0',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "PhotoLibrary"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

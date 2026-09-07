@@ -1,0 +1,15 @@
+Attribute BookNotes
+{
+	#Properties
+		Name = "BookNotes"
+
+		DataType = "VarChar(256)"
+
+		Length = "256"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

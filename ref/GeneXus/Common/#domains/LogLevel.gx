@@ -1,0 +1,13 @@
+Domain LogLevel
+{
+	#Properties
+		Name = "LogLevel"
+
+		EnumValues = "OFF, OFF, 0; DEBUG, DEBUG, 5; INFO, INFO, 10; WARNING, WARNING, 15; ERROR, ERROR, 20; FATAL, FATAL, 30"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

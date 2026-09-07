@@ -1,0 +1,13 @@
+Attribute LoanExpectedReturnDate
+{
+	#Properties
+		Name = "LoanExpectedReturnDate"
+
+		DataType = "Date"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

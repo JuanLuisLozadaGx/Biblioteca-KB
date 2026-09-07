@@ -1,0 +1,1 @@
+This Design System is used to style the <CODE data-end="232" data-start="213">ProgressIndicator</CODE> control.<BR data-end="244" data-start="241">For more information, please refer to the documentation 

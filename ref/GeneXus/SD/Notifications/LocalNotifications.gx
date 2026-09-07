@@ -1,0 +1,141 @@
+ExternalObject LocalNotifications
+{
+	#ExternalMethods
+		CreateAlerts
+
+		[
+
+			Type = 'Numeric',
+
+			Length = '5',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'createAlerts',
+
+			AndroidExternalName = 'createAlerts',
+
+			AndroidExternalType = 'int'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				alerts
+
+				[
+
+					Type = 'LocalNotificationsInfo, GeneXus.SD.Notifications',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ListAlerts
+
+		[
+
+			Type = 'LocalNotificationsInfo, GeneXus.SD.Notifications',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'listAlerts',
+
+			AndroidExternalName = 'listAlerts',
+
+			AndroidExternalType = 'JSONArray'
+
+		]
+
+		
+
+		RemoveAlerts
+
+		[
+
+			Type = 'Numeric',
+
+			Length = '5',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'removeAlerts',
+
+			AndroidExternalName = 'removeAlerts',
+
+			AndroidExternalType = 'int'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				alerts
+
+				[
+
+					Type = 'LocalNotificationsInfo, GeneXus.SD.Notifications',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		RemoveAllAlerts
+
+		[
+
+			Type = 'Numeric',
+
+			Length = '5',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'removeAllAlerts',
+
+			AndroidExternalName = 'removeAllAlerts',
+
+			AndroidExternalType = 'int'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "LocalNotifications"
+
+		IosExternalName = "GXEOLocalNotifications"
+
+		AndroidExternalName = "LocalNotificationsAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.notifications.local"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

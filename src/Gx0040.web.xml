@@ -1,0 +1,67 @@
+<layout type="Web">
+	<view>
+		<responsive name="Main" class="ContainerFluid PromptContainer">
+			<row>
+				<cell class="PromptAdvancedBarCell" widthSm="25">
+					<responsive name="AdvancedContainer" class="AdvancedContainerVisible">
+						<row>
+							<cell widthSm="100">
+								<responsive name="GenreIdFilterContainer" class="AdvancedContainerItem AdvancedContainerItemExpanded">
+									<row>
+										<cell widthSm="100">
+											<label name="LblGenreIdFilter" caption="=GenreId.Title" class="WWAdvancedLabel WWFilterLabel" gxFormat="HTML" />
+										</cell>
+									</row>
+									<row>
+										<cell class="WWFiltersCell" widthSm="100">
+											<input labelPosition="None" data="&amp;cGenreId" name="ctlcGenreId" />
+										</cell>
+									</row>
+								</responsive>
+							</cell>
+						</row>
+						<row>
+							<cell widthSm="100">
+								<responsive name="GenreNameFilterContainer" class="AdvancedContainerItem AdvancedContainerItemExpanded">
+									<row>
+										<cell widthSm="100">
+											<label name="LblGenreNameFilter" caption="=GenreName.Title" class="WWAdvancedLabel WWFilterLabel" gxFormat="HTML" />
+										</cell>
+									</row>
+									<row>
+										<cell class="WWFiltersCell" widthSm="100">
+											<input labelPosition="None" data="&amp;cGenreName" name="ctlcGenreName" />
+										</cell>
+									</row>
+								</responsive>
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+				<cell class="WWGridCell" widthSm="75">
+					<responsive name="GridTable">
+						<row>
+							<cell class="ToggleCell" visibleSm="False" widthXs="100" visibleMd="False" visibleLg="False">
+								<action name="BtnToggle" onClickEvent="'Toggle'" caption="|||" class="BtnToggle" />
+							</cell>
+						</row>
+						<row>
+							<cell widthSm="100">
+								<tabularGrid name="Grid1" class="PromptGrid" maxRows="10">
+									<input title="" class="SelectionAttribute" columnClass="WWActionColumn" returnOnClick="True" data="&amp;LinkSelection" name="ctlLinkSelection" />
+									<input title="=GenreId.ContextualTitle" columnClass="WWColumn" data="GenreId" name="ctlGenreId" />
+									<input title="=GenreName.ContextualTitle" class="DescriptionAttribute" columnClass="WWColumn" returnOnClick="True" readOnly="True" data="GenreName" name="ctlGenreName" />
+								</tabularGrid>
+							</cell>
+						</row>
+						<row>
+							<cell widthSm="100">
+								<action name="btn_cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="BtnCancel" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+	</view>
+</layout>

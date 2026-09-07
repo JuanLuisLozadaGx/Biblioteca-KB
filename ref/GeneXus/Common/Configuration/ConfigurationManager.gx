@@ -1,0 +1,239 @@
+ExternalObject ConfigurationManager
+{
+	#ExternalMethods
+		GetValue
+
+		[
+
+			Type = 'VarChar',
+
+			Length = '40',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'GetValue',
+
+			NetFrameworkExternalType = 'System.String',
+
+			JavaExternalName = 'getValue',
+
+			JavaExternalType = 'String'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				propName
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40',
+
+					NetFrameworkExternalType = 'System.String'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetValue
+
+		[
+
+			Type = 'VarChar',
+
+			Length = '40',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'GetValue',
+
+			NetFrameworkExternalType = 'System.String',
+
+			JavaExternalName = 'getValue',
+
+			JavaExternalType = 'String'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				propName
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40',
+
+					NetFrameworkExternalType = 'System.String'
+
+				]
+
+		
+
+				fileName
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40',
+
+					NetFrameworkExternalType = 'System.String'
+
+				]
+
+			}
+
+		}
+
+		
+
+		HasValue
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'HasValue',
+
+			NetFrameworkExternalType = 'System.Boolean',
+
+			JavaExternalName = 'hasValue',
+
+			JavaExternalType = 'boolean'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				propName
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40',
+
+					NetFrameworkExternalType = 'System.String'
+
+				]
+
+			}
+
+		}
+
+		
+
+		HasValue
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'HasValue',
+
+			NetFrameworkExternalType = 'System.Boolean',
+
+			JavaExternalName = 'hasValue',
+
+			JavaExternalType = 'boolean'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				propName
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40',
+
+					NetFrameworkExternalType = 'System.String'
+
+				]
+
+		
+
+				fileName
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40',
+
+					NetFrameworkExternalType = 'System.String'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "ConfigurationManager"
+
+		Namespace = "GeneXus.Configuration"
+
+		NetFrameworkExternalName = "ConfigurationManager"
+
+		JavaExternalName = "ConfigurationManager"
+
+		JavaExternalPackageName = "com.genexus.configuration"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,211 @@
+ExternalObject ClientStorage
+{
+	#ExternalMethods
+		Set
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'set',
+
+			AndroidExternalName = 'set'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+		
+
+				value
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SecureSet
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'secureSet',
+
+			AndroidExternalName = 'secureSet'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+		
+
+				value
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Get
+
+		[
+
+			Type = 'Character',
+
+			Length = '20',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'get',
+
+			AndroidExternalName = 'get'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Remove
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'remove',
+
+			AndroidExternalName = 'remove'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Clear
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'clear',
+
+			AndroidExternalName = 'clear'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "ClientStorage"
+
+		IosExternalName = "GXEOClientStorageAPI"
+
+		AndroidExternalName = "ClientStorageAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.core.externalobjects"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

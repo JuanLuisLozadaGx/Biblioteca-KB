@@ -1,0 +1,17 @@
+Domain CreditCardType
+{
+	#Properties
+		Name = "CreditCardType"
+
+		DataType = "Character(20)"
+
+		Length = "20"
+
+		EnumValues = "Unrecognized, Unrecognized, unrecognized; Ambiguous, Ambiguous, ambiguous; Amex, Amex, amex; JCB, JCB, JCB; Visa, Visa, visa; Mastercard, Mastercard, mastercard; Discover, Discover, discover; Maestro, Maestro, maestro; DinersClub, Diners Club, diners"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

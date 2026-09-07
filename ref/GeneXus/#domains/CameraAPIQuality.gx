@@ -1,0 +1,19 @@
+Domain CameraAPIQuality
+{
+	#Properties
+		Name = "CameraAPIQuality"
+
+		Description = "Camera API Quality"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		EnumValues = "Low, Low, 3; Medium, Medium, 5; High, High, 7"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

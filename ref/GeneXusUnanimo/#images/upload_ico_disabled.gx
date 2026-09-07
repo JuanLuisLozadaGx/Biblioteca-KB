@@ -1,0 +1,17 @@
+Image upload_ico_disabled
+{
+	'upload_ico_disabled.svg' [ Description = 'upload_ico_disabled.svg', Style = 'Any', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "upload_ico_disabled"
+
+		Description = "upload_ico_disabled"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

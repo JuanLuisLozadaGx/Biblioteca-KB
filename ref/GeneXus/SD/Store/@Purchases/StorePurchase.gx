@@ -1,0 +1,61 @@
+SDT StorePurchase
+{
+	StorePurchase{
+
+		PurchaseId [ DataType = 'VarChar(200)', JsonName = 'purchaseId' ]
+
+		ProductIdentifier [ DataType = 'VarChar(100)', JsonName = 'productId' ]
+
+		PurchaseDate [ DataType = 'DateTime', JsonName = 'purchaseDate' ]
+
+		ProductType [ DataType = 'StoreProductType, GeneXus.SD.Store', JsonName = 'productType' ]
+
+		Status [ DataType = 'StorePurchaseStatus, GeneXus.SD.Store', JsonName = 'status' ]
+
+		Subscription [ JsonName = 'subscription' ]	{
+
+			ExpirationDate [ Description = 'Subscription Expiration Date', DataType = 'DateTime', JsonName = 'expiration' ]
+
+			FirstPurchaseDate [ Description = 'Subscription First Purchase Date', DataType = 'DateTime', JsonName = 'purchaseDate' ]
+
+		}
+
+	
+
+		Advanced [ JsonName = 'advanced' ]	{
+
+			Consumed [ Description = 'Product Consumed (Android only)', DataType = 'Boolean', JsonName = 'consumed' ]
+
+			Quantity [ Description = 'Quantity (iOS only)', JsonName = 'qty' ]
+
+			SubscriptionWillAutoRenew [ Description = 'Subscription Will Auto Renew (Android only)', DataType = 'Boolean', JsonName = 'willRenew' ]
+
+			CancelReason [ Description = 'Cancel Reason (Android only)', JsonName = 'cancelReason' ]
+
+			IsTrialPeriod [ Description = 'Is Trial Period (iOS only)', DataType = 'Boolean', JsonName = 'isTrial' ]
+
+			OriginalPurchase [ Description = 'Original Purchase PurchaseResult', DataType = 'PurchaseResult, GeneXus.SD.Store', JsonName = 'originalPurchase' ]
+
+			AcknowledgementState [ DataType = 'Numeric(2.0)', JsonName = 'acknowledgementState', JsonNullSerialization = 'No Property' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "StorePurchase"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,17 @@
+Domain AlertPosition
+{
+	#Properties
+		Name = "AlertPosition"
+
+		DataType = "VarChar(100)"
+
+		Length = "100"
+
+		EnumValues = "userDefined, User defined, User defined; fixedToBottom, Fixed to bottom, Fixed to bottom"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

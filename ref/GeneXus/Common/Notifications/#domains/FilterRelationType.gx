@@ -1,0 +1,15 @@
+Domain FilterRelationType
+{
+	#Properties
+		Name = "FilterRelationType"
+
+		DataType = "Numeric(4.0)"
+
+		EnumValues = "Exists, Exists, 1; NotExists, Not Exists, 2; Equal, Equal, 3; NotEqual, Not Equal, 4; Greater, Greater, 5; Less, Less, 6"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

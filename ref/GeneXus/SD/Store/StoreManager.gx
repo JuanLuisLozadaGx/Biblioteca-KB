@@ -1,0 +1,317 @@
+ExternalObject StoreManager
+{
+	#ExternalProperties
+		CanMakePurchases
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'If user device can make purchases',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'canMakePurchases'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		GetProducts
+
+		[
+
+			Type = 'StoreProduct, GeneXus.SD.Store',
+
+			Length = '0',
+
+			Collection = 'True',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'getProducts'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				ProductIdentifiers
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '100',
+
+					Collection = 'True'
+
+				]
+
+			}
+
+		}
+
+		
+
+		PurchaseProduct
+
+		[
+
+			Description = '',
+
+			Type = 'PurchaseResult, GeneXus.SD.Store',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'purchaseProduct'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				ProductIdentifier
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '100'
+
+				]
+
+		
+
+				Quantity
+
+				[
+
+					AccessType = 'In',
+
+					Description = '(iOS only)'
+
+				]
+
+			}
+
+		}
+
+		
+
+		PurchaseProduct
+
+		[
+
+			Type = 'PurchaseResult, GeneXus.SD.Store',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'purchaseProduct'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				ProductIdentifier
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '100'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetPurchases
+
+		[
+
+			Type = 'PurchasesInformation, GeneXus.SD.Store',
+
+			Length = '0',
+
+			Collection = 'False',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'getPurchases'
+
+		]
+
+		
+
+		ConsumeProduct
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'consumeProduct'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				ProductIdentifier
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '100'
+
+				]
+
+			}
+
+		}
+
+		
+
+		RestorePurchases
+
+		[
+
+			Description = 'Restore transactions (iOS only)',
+
+			Type = 'PurchasesInformation, GeneXus.SD.Store',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'restorePurchases'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalEvents
+		PurchaseStateChanged
+
+		[
+
+			Description = 'Called when Purchase state changed (iOS only)'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Purchase
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'PurchaseResult, GeneXus.SD.Store',
+
+					Length = '0'
+
+				]
+
+		
+
+				PurchaseState
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'StorePurchaseState, GeneXus.SD.Store'
+
+				]
+
+		
+
+				Handled
+
+				[
+
+					AccessType = 'InOut',
+
+					Type = 'Boolean',
+
+					Length = '4',
+
+					Collection = 'False'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "StoreManager"
+
+		Namespace = "GX"
+
+		NetFrameworkExternalName = "Store"
+
+		JavaExternalName = "Store"
+
+		JavaExternalPackageName = "com.genexus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

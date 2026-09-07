@@ -1,0 +1,17 @@
+Image edit
+{
+	'edit.svg' [ Description = 'edit.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "edit"
+
+		Description = "edit"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

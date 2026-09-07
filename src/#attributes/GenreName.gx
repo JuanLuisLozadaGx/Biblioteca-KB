@@ -1,0 +1,11 @@
+Attribute GenreName
+{
+	#Properties
+		Name = "GenreName"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

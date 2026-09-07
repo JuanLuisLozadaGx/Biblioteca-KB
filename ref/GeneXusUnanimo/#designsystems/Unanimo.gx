@@ -1,0 +1,1240 @@
+DesignSystem Unanimo
+{
+	#DesignTokens
+		tokens Unanimo (color-scheme:[light]|dark)
+		{
+		    //BORDER WIDTH
+		    #borders  {
+		        un-width--xs: 1px;
+		        un-width--s: 2px;
+		    }
+		    
+		    //BORDER RADIUS
+		    #radius  {
+		        un-radius--xs: 1px;
+		        un-radius--s: 2px;
+		        un-radius--m: 4px;
+		        un-radius--l: 8px;
+		        un-radius--xl: 16px;
+		        un-radius--xxl: 32px;
+		    }
+		    
+		    //COLORS 
+		    @color-scheme = light {
+		        #colors
+		        {
+		            #region Foundations
+		                un-color__white: #fff;
+		                un-color__black: #121212;
+		                un-color__positive: $colors.un-color__white;
+		                un-color__negative: $colors.un-color__black;
+		                un-color__green--100: #e1f3f1;
+		                un-color__green--200: #02a08b;
+		                un-color__orange--100: #ffe7e6;
+		                un-color__orange--200: #ff8000;
+		                un-color__red--100: #ffeaee;
+		                un-color__red--200: #f44336;
+		                un-color__red--300: #f02031;
+		                un-color__purple--10: #696ef21a;
+		                un-color__purple--20: #696ef233;
+		                un-color__purple--100: #696ef2;
+		                un-color__purple--200: #413cd4;
+		                un-color__purple--300: #3015b0;
+		                un-color__purple--400: #2a2c5f;
+		                un-color__purple--500: #202143;
+		                un-color__purple--600: #13142c;
+		                un-color__gray--100: #fafafa;
+		                un-color__gray--200: #f3f4f6;
+		                un-color__gray--300: #e0e0e0;
+		                un-color__gray--400: #c3c4c8;
+		                un-color__gray--500: #939498;
+		                un-color__gray--600: #575965;
+		                un-color__gray--700: #3e3e40;
+		                un-color__gray--800: #353537;
+		                un-color__gray--900: #2c2c2e;
+		                un-color__gray--1000: #242426;
+		            #endregion
+		
+		            #region Surfaces
+		                un-surface--positive: $colors.un-color__positive;
+		                un-surface--negative: $colors.un-color__negative;
+		                un-surface--alternative: $colors.un-color__gray--200;
+		            #endregion
+		
+		            #region Accents
+		                un-accent__primary: $colors.un-color__purple--100;
+		                un-accent__primary--hover: $colors.un-color__purple--200;
+		                un-accent__primary-dim--hover: $colors.un-color__purple--20;
+		                un-accent__primary--active: $colors.un-color__purple--300;
+		                un-accent__secondary: $colors.un-color__purple--600;
+		                un-accent__secondary--hover: $colors.un-color__purple--500;
+		                un-accent__secondary--active: $colors.un-color__purple--400;
+		                un-accent__disabled: $colors.un-color__gray--400;
+		                un-accent__destructive: $colors.un-color__red--300;
+		            #endregion
+		
+		            #region Font_Colors
+		                un-text__on-surface--positive: $colors.un-color__negative;
+		                un-text__on-surface--negative: $colors.un-color__positive;
+		                un-text__on-surface--alternative: $colors.un-color__negative;
+		                un-text__on-primary: $colors.un-color__positive;
+		                un-text__on-secondary: $colors.un-color__white;
+		                un-text__on-disabled: $colors.un-color__gray--300;
+		                un-text__on-destructive: $colors.un-color__positive;
+		                un-text__on-alert: $colors.un-color__positive;
+		                un-text__primary: $colors.un-accent__primary;
+		                un-text__primary--hover: $colors.un-accent__primary--hover;
+		                un-text__primary--active: $colors.un-accent__primary--active;
+		                un-text__secondary: $colors.un-accent__secondary;
+		                un-text__secondary--hover: $colors.un-accent__secondary--hover;
+		                un-text__secondary--active: $colors.un-accent__secondary--active;
+		                un-text__disabled: $colors.un-color__gray--400;
+		                un-text__destructive: $colors.un-color__red--300;
+		                un-text__error: $colors.un-color__red--200;
+		                un-text__warning: $colors.un-color__orange--200;
+		                un-text__success: $colors.un-color__green--200;
+		                //Heading colors
+		                un-h1__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h1__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h2__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h2__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h3__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h3__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h4__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h4__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h5__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h5__font-color--negative: $colors.un-text__on-surface--negative;
+		                //Body text colors
+		                un-body__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-body__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-body__font-color--gray: $colors.un-color__gray--500;
+		                //Special text colors
+		                un-highlight__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-highlight__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-highlight__font-color--gray: $colors.un-color__gray--500;
+		                //Link colors
+		                un-link__font-color: $colors.un-text__primary;
+		                un-link__font-color--hover: $colors.un-text__primary--hover;
+		                un-link__font-color--active: $colors.un-text__primary--active;
+		                un-link__font-color--disabled: $colors.un-text__disabled;
+		            #endregion
+		
+		            #region Border_Colors
+		                un-border-color__primary: $colors.un-accent__primary;
+		                un-border-color__primary--hover: $colors.un-accent__primary--hover;
+		                un-border-color__primary--active: $colors.un-accent__primary--active;
+		                un-border-color__secondary: $colors.un-accent__secondary;
+		                un-border-color__secondary--hover: $colors.un-accent__secondary--hover;
+		                un-border-color__secondary--active: $colors.un-accent__secondary--active;
+		                un-border-color__disabled: $colors.un-accent__disabled;
+		                un-border-color__focused: $colors.un-accent__secondary;
+		                un-border-color__destructive: $colors.un-accent__destructive;
+		                un-border-color__error: $colors.un-color__red--200;
+		                un-border-color__warning: $colors.un-color__orange--200;
+		                un-border-color__success: $colors.un-color__green--200;
+		                un-border-color__mild: $colors.un-color__gray--300;
+		                un-border-color__strong: $colors.un-color__gray--600;
+		            #endregion
+		
+		            #region Elevations
+		                un-elevation--1: $colors.un-color__positive;
+		                un-elevation--2: $colors.un-color__positive;
+		                un-elevation--3: $colors.un-color__positive;
+		                un-elevation--4: $colors.un-color__positive;
+		            #endregion
+		
+		            #region Icons
+		                un-icon__on-surface--positive: $colors.un-color__negative;
+		                un-icon__on-surface--negative: $colors.un-color__positive;
+		                un-icon__on-surface--alternative: $colors.un-color__negative;
+		                un-icon__on-primary: $colors.un-color__positive;
+		                un-icon__on-secondary: $colors.un-color__white;
+		                un-icon__on-disabled: $colors.un-accent__disabled;
+		                un-icon__on-destructive: $colors.un-color__positive;
+		                un-icon__on-alert: $colors.un-color__positive;
+		                un-icon__primary: $colors.un-color__purple--100;
+		            #endregion
+		
+		            #region Background_Colors
+		                sidebar-bg: $colors.un-accent__secondary;
+		                item-hover: $colors.un-accent__secondary--hover; 
+		                item-active: $colors.un-accent__secondary--active;
+		                row-hover: $colors.un-color__gray--300;
+		                row-active: rgba(105, 110, 242, 0.2);
+		                header-bg: $colors.un-accent__secondary;
+		                header-separator-bg: $colors.un-accent__primary;
+		                form-container-bg: $colors.un-surface--positive;
+		                footer-actions-bg: $colors.un-surface--alternative;
+		                attribute-bg: $colors.un-surface--positive;
+		                attribute-select-bg: $colors.un-surface--positive;
+		                overlay-bg: $colors.un-surface--positive;
+		            #endregion
+		
+		            #region Auxiliary
+		                zebra-grid: #fafafa;
+		            #endregion
+		        }
+		    }
+		
+		    @color-scheme = dark {
+		        #colors
+		        {
+		            #region Foundations
+		                un-color__white: #fff;
+		                un-color__black: #171717;
+		                un-color__positive: $colors.un-color__black;
+		                un-color__negative: $colors.un-color__white;
+		                un-color__green--100: #e1f3f1;
+		                un-color__green--200: #50beae;
+		                un-color__orange--100: #ffe7e6;
+		                un-color__orange--200: #ffab13;
+		                un-color__red--100: #ffeaee;
+		                un-color__red--200: #ef5350;
+		                un-color__red--300: #f9464e;
+		                un-color__purple--10: #696ef21a;
+		                un-color__purple--20: #696ef233;
+		                un-color__purple--100: #a9acf8;
+		                un-color__purple--200: #413cd4;
+		                un-color__purple--300: #858af6;
+		                un-color__purple--400: #666483;
+		                un-color__purple--500: #53516e;
+		                un-color__purple--600: #34334e;
+		                un-color__gray--100: #171717;
+		                un-color__gray--200: #212121;
+		                un-color__gray--300: #303030;
+		                un-color__gray--400: #3b3b3b;
+		                un-color__gray--500: #575757;
+		                un-color__gray--600: #8c8c8c;
+		                un-color__gray--700: #a9a9a9;
+		                un-color__gray--800: #cdcdcd;
+		                un-color__gray--900: #dfdfdf;
+		                un-color__gray--1000: #ededed;
+		            #endregion
+		
+		            #region Surfaces
+		                un-surface--positive: $colors.un-color__positive;
+		                un-surface--negative: $colors.un-color__negative;
+		                un-surface--alternative: $colors.un-color__gray--100;
+		            #endregion
+		
+		            #region Accents
+		                un-accent__primary: $colors.un-color__purple--100;
+		                un-accent__primary--hover: $colors.un-color__purple--200;
+		                un-accent__primary-dim--hover: $colors.un-color__purple--20;
+		                un-accent__primary--active: $colors.un-color__purple--300;
+		                un-accent__secondary: $colors.un-color__purple--600;
+		                un-accent__secondary--hover: $colors.un-color__purple--500;
+		                un-accent__secondary--active: $colors.un-color__purple--400;
+		                un-accent__disabled: $colors.un-color__gray--400;
+		                un-accent__destructive: $colors.un-color__red--300;
+		            #endregion
+		
+		            #region Font_Colors
+		                un-text__on-surface--positive: $colors.un-color__negative;
+		                un-text__on-surface--negative: $colors.un-color__positive;
+		                un-text__on-surface--alternative: $colors.un-color__negative;
+		                un-text__on-primary: $colors.un-color__positive;
+		                un-text__on-secondary: $colors.un-color__white;
+		                un-text__on-disabled: $colors.un-color__gray--300;
+		                un-text__on-destructive: $colors.un-color__positive;
+		                un-text__on-alert: $colors.un-color__positive;
+		                un-text__primary: $colors.un-accent__primary;
+		                un-text__primary--hover: $colors.un-accent__primary--hover;
+		                un-text__primary--active: $colors.un-accent__primary--active;
+		                un-text__secondary: $colors.un-accent__secondary;
+		                un-text__secondary--hover: $colors.un-accent__secondary--hover;
+		                un-text__secondary--active: $colors.un-accent__secondary--active;
+		                un-text__disabled: $colors.un-color__gray--400;
+		                un-text__destructive: $colors.un-color__red--300;
+		                un-text__error: $colors.un-color__red--200;
+		                un-text__warning: $colors.un-color__orange--200;
+		                un-text__success: $colors.un-color__green--200;
+		                //Heading colors
+		                un-h1__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h1__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h2__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h2__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h3__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h3__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h4__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h4__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-h5__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-h5__font-color--negative: $colors.un-text__on-surface--negative;
+		                //Body text colors
+		                un-body__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-body__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-body__font-color--gray: $colors.un-color__gray--500;
+		                //Special text colors
+		                un-highlight__font-color--positive: $colors.un-text__on-surface--positive;
+		                un-highlight__font-color--negative: $colors.un-text__on-surface--negative;
+		                un-highlight__font-color--gray: $colors.un-color__gray--500;
+		                //Link colors
+		                un-link__font-color: $colors.un-text__primary;
+		                un-link__font-color--hover: $colors.un-text__primary--hover;
+		                un-link__font-color--active: $colors.un-text__primary--active;
+		                un-link__font-color--disabled: $colors.un-text__disabled;
+		            #endregion
+		
+		            #region Border_Colors
+		                un-border-color__primary: $colors.un-accent__primary;
+		                un-border-color__primary--hover: $colors.un-accent__primary--hover;
+		                un-border-color__primary--active: $colors.un-accent__primary--active;
+		                un-border-color__secondary: $colors.un-accent__secondary;
+		                un-border-color__secondary--hover: $colors.un-accent__secondary--hover;
+		                un-border-color__secondary--active: $colors.un-accent__secondary--active;
+		                un-border-color__disabled: $colors.un-accent__disabled;
+		                un-border-color__focused: $colors.un-accent__secondary;
+		                un-border-color__destructive: $colors.un-accent__destructive;
+		                un-border-color__error: $colors.un-color__red--200;
+		                un-border-color__warning: $colors.un-color__orange--200;
+		                un-border-color__success: $colors.un-color__green--200;
+		                un-border-color__mild: $colors.un-color__gray--300;
+		                un-border-color__strong: $colors.un-color__gray--600;
+		            #endregion
+		
+		            #region Elevations
+		                un-elevation--1: $colors.un-color__gray--200;
+		                un-elevation--2: $colors.un-color__gray--300;
+		                un-elevation--3: $colors.un-color__gray--400;
+		                un-elevation--4: $colors.un-color__gray--500;
+		            #endregion
+		
+		            #region Icons
+		                un-icon__on-surface--positive: $colors.un-color__negative;
+		                un-icon__on-surface--negative: $colors.un-color__positive;
+		                un-icon__on-surface--alternative: $colors.un-color__negative;
+		                un-icon__on-primary: $colors.un-color__positive;
+		                un-icon__on-secondary: $colors.un-color__white;
+		                un-icon__on-disabled: $colors.un-accent__disabled;
+		                un-icon__on-destructive: $colors.un-color__positive;
+		                un-icon__on-alert: $colors.un-color__positive;
+		                un-icon__primary: $colors.un-color__purple--100;
+		            #endregion
+		
+		            #region Background_Colors
+		                sidebar-bg: $colors.un-elevation--1;
+		                item-hover: $colors.un-elevation--4; 
+		                item-active: $colors.un-color__gray--300;
+		                row-hover: $colors.un-elevation--4;
+		                row-active: $colors.un-color__gray--300;
+		                header-bg: $colors.un-elevation--1;
+		                header-separator-bg: $colors.un-color__gray--300;
+		                form-container-bg: $colors.un-elevation--1;
+		                footer-actions-bg: $colors.un-elevation--1;
+		                attribute-bg: transparent;
+		                attribute-select-bg: $colors.un-surface--alternative;
+		                overlay-bg: $colors.un-elevation--2;
+		            #endregion
+		
+		            #region Auxiliary
+		                zebra-grid: #323234;
+		            #endregion
+		        }
+		    }
+		
+		    //SHADOWS
+		    #shadows { 
+		        xxxs: 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+		        xxs: 0px 2px 2px 0px rgba(0, 0, 0, 0.14);
+		        xs: 0px 3px 4px 0px rgba(0, 0, 0, 0.14); 
+		        s: 0px 4px 5px 0px rgba(0, 0, 0, 0.14);
+		        m: 0px 6px 10px 0px rgba(0, 0, 0, 0.14);
+		        l: 0px 8px 10px 1px rgba(0, 0, 0, 0.14);
+		        xl: 0px 9px 12px 1px rgba(0, 0, 0, 0.14);
+		        xxl: 0px 12px 17px 2px rgba(0, 0, 0, 0.14);
+		
+		        un-box-shadow--s: 0px 5px 22px 4px rgba(0, 0, 0, 0.12) 0px 7px 8px -4px rgba(0, 0, 0, 0.1);
+		        un-box-shadow--m: 0px 3px 14px 2px rgba(0, 0, 0, 0.12) 0px 5px 5px -3px rgba(0, 0, 0, 0.1);
+		        un-box-shadow--l: 0px 1px 10px 0px rgba(0, 0, 0, 0.12) 0px 2px 4px -1px rgba(0, 0, 0, 0.1);
+		        un-box-shadow--xl: 0px 2px 1px -1px rgba(0, 0, 0, 0.12) 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+		    }
+		
+		    //OPACITY
+		    #opacity
+		    {
+		        s: 0.1;
+		        m: 0.25;
+		        l: 0.5;
+		    }
+		    
+		    //SPACING
+		    #spacing {
+		        un-xs: 2px;
+		        un-s: 4px;
+		        un-m: 8px;
+		        un-l: 16px;
+		        un-xl: 24px;
+		        un-xxl: 32px;
+		        un-xxxl: 64px;
+		        un-xxxxl: 128px;
+		
+		        //TYPOGRAPHY -> Letter spacing
+		        letter-spacing-xs: 0.2px;
+		        letter-spacing-s: 0.4px;
+		        letter-spacing-m: 0.8px; 
+		        letter-spacing-l: 1.6px;
+		        letter-spacing-xl: 3.2px;
+		    }
+		
+		    //TYPOGRAPHY -> Font 
+		    #fonts  {
+		        un-font__family: SourceSansPro;
+		        un-font__weight--bold: 700;
+		        un-font__weight--semibold: 600;
+		        un-font__weight--regular: 400;
+		        un-font__weight--light: 300;
+		
+		        un-font__style--underline: underline;
+		        un-font__style--uppercase: uppercase;
+		
+		        un-line-height--xs: 16px;
+		        un-line-height--s: 24px;
+		        un-line-height--m: 26px; 
+		        un-line-height--l: 32px;
+		        un-line-height--xl: 44px;
+		        un-line-height--xxl: 54px;
+		        un-line-height--xxxl: 64px;
+		    }    
+		
+		    //TYPOGRAPHY -> Font Sizes
+		    #fontSizes  {
+		        un-xs: 11px;
+		        un-s: 14px;
+		        un-m: 16px;
+		        un-l: 18px;
+		        un-xl: 22px;
+		        un-xxl: 28px;
+		    }
+		}
+		
+	#End
+
+	#DesignStyles
+		styles Unanimo
+		{   
+		    #region Fonts
+		        @font-face {
+		            font-family: SourceSansPro;
+		            src: gx-file(GeneXusUnanimo.Unanimo_SourceSansPro_woff2) format('woff2');
+		        }
+		    #endregion
+		    
+		    #region Attribute
+		        .Attribute {
+		            height: 28px;
+		            max-width: 100%;
+		            font-family: $fonts.un-font__family;
+		            font-size: $fontSizes.un-s;
+		            padding-inline-start: $spacing.un-m;
+		            padding-inline-end: $spacing.un-m;
+		            border-width: 1px;
+		            border-style: solid;
+		            border-color: $colors.un-border-color__strong;
+		            color: $colors.un-text__on-surface--positive;
+		            background-color: $colors.attribute-bg;
+		            border-radius: $radius.un-radius--m;
+		            gx-attribute-focused-class: AttributeFocusedClass;
+		            gx-readonly-class: ROAttribute;
+		            gx-label-class: attribute-label;
+		        }
+		        .ROAttribute {
+		            @include Attribute;
+		            padding-inline-start: 0px;
+		            padding-inline-end: 0px;
+		            color: $colors.un-text__on-surface--positive;
+		            background-color: transparent;
+		            overflow-wrap: anywhere;
+		            border-style: none;
+		        }
+		        .AttributeFocusedClass {
+		            border-color: $colors.un-border-color__secondary--active;
+		            box-shadow: 0px 0px 0px 1px $colors.un-accent__secondary;
+		        }
+		        .AttributeSearch {
+		            @include Attribute;
+		            padding-inline-start: $spacing.un-xl;
+		            border-color: $colors.un-border-color__strong;
+		            color: $colors.un-text__on-surface--positive;
+		            border-radius: $radius.un-radius--m;
+		            background-image: gx-image(GeneXusUnanimo.search);
+		            background-repeat: no-repeat;
+		            background-position: 0px 1px;
+		        }
+		    #endregion
+		
+		    #region Buttons
+		        .Button {
+		            white-space: normal;
+		            height: 28px;
+		            padding-inline-start: $spacing.un-l;
+		            padding-inline-end: $spacing.un-l;
+		            border-radius: $radius.un-radius--s;
+		            min-width: 80px;
+		
+		            //button primary defaults
+		            background-color: $colors.un-accent__primary;
+		            font-size: $fontSizes.un-s;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            color: $colors.un-text__on-primary;
+		            text-transform: uppercase;
+		            border:none;
+		            gx-button-hovered-class: button-primary--hover;
+		            gx-button-focused-class: button-primary--focused;
+		            gx-button-highlighted-class: button-primary--active;
+		            gx-button-disabled-class: button-primary--disabled;
+		        }
+		        //BUTTON PRIMARY
+		        .button-primary {
+		            background-color: $colors.un-accent__primary;
+		            font-size: $fontSizes.un-s;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            color: $colors.un-text__on-primary;
+		            text-transform: uppercase;
+		            border:none;
+		            gx-button-hovered-class: button-primary--hover;
+		            gx-button-focused-class: button-primary--focused;
+		            gx-button-highlighted-class: button-primary--active;
+		            gx-button-disabled-class: button-primary--disabled;
+		        }
+		        .button-primary--hover {
+		            background-color: $colors.un-accent__primary--hover;
+		        }
+		        .button-primary--active {
+		            background-color: $colors.un-accent__primary--active;
+		            box-shadow: none;
+		            outline: none;
+		        }
+		        .button-primary--focused {
+		            background-color: $colors.un-accent__primary;
+		            outline-width: $borders.un-width--s;
+		            outline-style: solid;
+		            outline-color: $colors.un-border-color__secondary--active;
+		            outline-offset: -2px;
+		        }
+		        .button-primary--disabled {
+		            background-color: $colors.un-color__gray--500;
+		            color: $colors.un-text__disabled;
+		            cursor: auto;
+		        }
+		        //BUTTON SECONDARY
+		        .button-secondary {
+		            background-color: transparent;
+		            font-size: $fontSizes.un-s;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            color: $colors.un-text__primary;
+		            text-transform: uppercase;
+		            border: none;
+		            gx-button-hovered-class: button-secondary--hover;
+		            gx-button-focused-class: button-secondary--focused;
+		            gx-button-highlighted-class: button-secondary--active;
+		            gx-button-disabled-class: button-secondary--disabled;
+		        }
+		        .button-secondary--hover {
+		            background-color: $colors.un-accent__primary-dim--hover;
+		        }
+		        .button-secondary--focused {
+		            border: none;
+		            background-color: transparent;
+		            outline-width: $borders.un-width--s;
+		            outline-style: solid;
+		            outline-color: $colors.un-border-color__secondary--active;
+		            outline-offset: -2px;
+		            color: $colors.un-accent__primary;
+		        }
+		        .button-secondary-focused-highlighted {
+		            outline: none;
+		            background-color: transparent; 
+		        }
+		        .button-secondary--active {
+		            color: $colors.un-text__secondary--active;
+		            outline: none;
+		            background-color: transparent;
+		            box-shadow: none;
+		            AttributeFocused: button-secondary-focused-highlighted;
+		        }
+		        .button-secondary--disabled {
+		            color: $colors.un-text__on-disabled;
+		            background-color: transparent;
+		            cursor: auto;
+		        }
+		        //BUTTON TERTIARY (OUTLINED)
+		        .button-tertiary {
+		            background-color: transparent;
+		            font-size: $fontSizes.un-s;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            color: $colors.un-accent__primary;
+		            text-transform: uppercase;
+		            border-style: solid;
+		            border-width: $borders.un-width--xs;
+		            border-color: $colors.un-border-color__primary;
+		            gx-button-hovered-class: button-tertiary--hover;
+		            gx-button-focused-class: button-tertiary--focused;
+		            gx-button-highlighted-class: button-tertiary--active;
+		            gx-button-disabled-class: button-tertiary--disabled;
+		        }
+		        .button-tertiary--hover {
+		            background-color: $colors.un-accent__primary-dim--hover;
+		        }
+		        .button-tertiary--focused {
+		            background-color: transparent;
+		            outline: none;
+		            outline-width: $borders.un-width--s;
+		            outline-style: solid;
+		            outline-color: $colors.un-border-color__secondary--active;
+		            outline-offset: -2px;
+		        }
+		        .button-tertiary--active {
+		            border-color: $colors.un-border-color__primary--active;
+		            background-color: transparent;
+		            color: $colors.un-accent__primary--active;
+		            box-shadow: none;
+		            outline: none;
+		        }
+		        .button-tertiary--disabled {
+		            color: $colors.un-text__on-disabled;
+		            border-color: $colors.un-border-color__disabled;
+		            border-style: solid;
+		            border-width: $borders.un-width--xs;
+		            background-color: transparent;
+		            cursor: auto;
+		        }
+		        //BUTTON DESTRUCTIVE
+		        .button-primary-destructive {
+		            @include button-primary;
+		            background-color: $colors.un-accent__destructive;
+		            color: $colors.un-text__on-destructive;
+		            gx-button-hovered-class: button-primary-destructive--hover;
+		            gx-button-focused-class: button-primary-destructive--focused;
+		            gx-button-highlighted-class: button-primary-destructive--active;
+		        }
+		        .button-primary-destructive--hover {
+		            background-color: #d32f2b;
+		        }
+		        .button-primary-destructive--focused {
+		            background-color: $colors.un-accent__destructive;
+		            outline-width: $borders.un-width--s;
+		            outline-style: solid;
+		            outline-color: $colors.un-border-color__secondary--active;
+		            outline-offset: -2px;
+		        }
+		        .button-primary-destructive--active {
+		            background-color: #a02622;
+		        }
+		        .button-secondary-destructive {
+		            @include button-secondary;
+		            color: $colors.un-text__destructive;
+		            gx-button-hovered-class: button-secondary-destructive--hover;
+		            gx-button-focused-class: button-secondary-destructive--focused;
+		            gx-button-highlighted-class: button-secondary-destructive--active;
+		        }
+		        .button-secondary-destructive--hover {
+		            background-color: #ff665940;
+		        }
+		        .button-secondary-destructive--active {
+		            background-color: transparent;
+		            color: #a02622;
+		        }
+		        .button-secondary-destructive--focused {
+		            background-color: transparent;
+		            color: $colors.un-text__destructive;
+		            outline-width: $borders.un-width--s;
+		            outline-style: solid;
+		            outline-color: $colors.un-border-color__secondary--active;
+		            outline-offset: -2px;
+		        }
+		        .button-tertiary-destructive {
+		            @include button-tertiary;
+		            color: $colors.un-text__destructive;
+		            border-color: $colors.un-border-color__destructive;
+		            gx-button-hovered-class: button-secondary-destructive--hover;
+		            gx-button-focused-class: button-secondary-destructive--focused;
+		            gx-button-highlighted-class: button-secondary-destructive--active;
+		        }
+		        //BUTTON ROUNDED
+		        .button-rounded {
+		            background-color: $colors.un-accent__primary;
+		            font-size: 0px;
+		            color: $colors.un-text__on-primary;
+		            border:none;
+		            border-radius: 50%;
+		            height: 40px;
+		            width: 40px;
+		            padding-block-start: 2px;
+		            padding-inline-start: 8px;
+		            min-width: auto;
+		        }
+		        .button-rounded--hover {
+		            background-color: $colors.un-accent__primary--hover;
+		        }
+		        .button-rounded--focused {
+		            background-color: $colors.un-accent__primary;
+		            outline: none;
+		            border-color: $colors.un-border-color__secondary--active;
+		            border-width: $borders.un-width--s;
+		            border-style: solid;
+		            padding-inline-start: 6px;
+		        } 
+		        .button-rounded--active { 
+		            background-color: $colors.un-accent__primary--active;
+		            box-shadow: none;
+		            outline: none;
+		            border: none;
+		            padding-inline-start: 8px; 
+		        }
+		        .button-rounded--disabled {
+		            background-color: $colors.un-text__on-disabled;
+		            color: $colors.un-text__disabled;
+		            cursor: auto;
+		        }
+		        //BUTTON AUXILIARY
+		        .button-auxiliary {
+		            background-color: transparent;
+		            font-size: 0px;
+		            color: $colors.un-text__on-primary;
+		            border:none;
+		            border-radius: $radius.un-radius--s;
+		            height: 28px;
+		            width: 28px;
+		            min-width: 28px;
+		            gx-button-hovered-class: button-auxiliary--hover;
+		            gx-button-focused-class: button-auxiliary--focused;
+		            gx-button-highlighted-class: button-auxiliary--active;
+		            gx-button-disabled-class: button-auxiliary--disabled;
+		        }
+		        .button-auxiliary--hover {
+		            background-color: $colors.un-accent__primary-dim--hover;
+		        }
+		        .button-auxiliary--focused {
+		            border:none;
+		            background-color: transparent;
+		            outline-width: $borders.un-width--s;
+		            outline-style: solid;
+		            outline-color: $colors.un-border-color__secondary--active;
+		            outline-offset: -2px;
+		            color: $colors.un-accent__primary;
+		        }
+		        .button-auxiliary--active {
+		            color: $colors.un-text__secondary--active;
+		            outline: none;
+		            background-color: transparent;
+		            box-shadow: none;
+		        }
+		        .button-auxiliary--disabled {
+		            color: $colors.un-text__disabled;
+		            background-color: transparent;
+		            cursor: auto;
+		        }
+		        //Button icon
+		        .button-icon {
+		            line-height: 25px;
+		            cursor: pointer;
+		        }
+		        .Button.button-primary.button-icon {
+		            padding-inline-start: 12px;
+		        }
+		        .Button.button-secondary.button-icon {
+		            padding-inline-start: 10px;
+		        }
+		        .Button.button-tertiary.button-icon {
+		            padding-inline-start: 10px;
+		        }
+		
+		        .Button.button-primary.button-icon.icon-only,
+		        .Button.button-secondary.button-icon.icon-only,
+		        .Button.button-tertiary.button-icon.icon-only {
+		            padding-inline-start: 2px;
+		            padding-inline-end: 2px;
+		            width: 28px;
+		            min-width: 28px;
+		            overflow: hidden;
+		            font-size: 0px;
+		        }
+		    #endregion
+		
+		    #region Labels
+		        .attribute-label {
+		            color: $colors.un-text__on-surface--positive;
+		            font-size: $fontSizes.un-s;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            padding-block-start: $spacing.un-s;
+		        }
+		    #endregion
+		
+		    #region Textblock
+		        .heading-01 {
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--bold;
+		            font-size: $fontSizes.un-xxl;
+		            color: $colors.un-h1__font-color--positive;
+		            letter-spacing: 0.25px;
+		            line-height: $fonts.un-line-height--l; 
+		        }
+		        .heading-02 {
+		            @include heading-01;
+		            font-size: $fontSizes.un-xl;
+		            letter-spacing: 0.6px;
+		            line-height: 18px;
+		        }
+		        .heading-03 {
+		            @include heading-01;
+		            font-family: $fonts.un-font__family;
+		            font-size: $fontSizes.un-l;
+		            letter-spacing: 0.48px;
+		            line-height: 16px;
+		        }
+		        .heading-04 {
+		            @include heading-01;
+		            font-size: $fontSizes.un-s;
+		            letter-spacing: 0.38px;
+		            line-height: 13px;
+		        }
+		        .TextBlock, .Textblock {
+		            color: $colors.un-text__on-surface--positive;
+		            font-family: $fonts.un-font__family;
+		            font-size: $fontSizes.un-s;
+		        }
+		    #endregion
+		
+		    #region Badges
+		        //tag attributes ("badges")
+		        .badge {
+		            gx-label-class: attribute-label; 
+		            border-radius: 20px;
+		            padding-inline-start: 20px;
+		            padding-inline-end: 7px;
+		            background-repeat: no-repeat;
+		            background-position: 5px 5px;
+		            background-size: 8px;
+		            border-style: solid;
+		            border-width: 1px;
+		            font-family: $fonts.un-font__family;
+		            font-size: 13px;
+		            color: black;
+		            white-space: nowrap;
+		        }
+		        body[dir="rtl"] [class*="badge-"] {
+		            background-position: center right 5px;
+		        }
+		        .badge-success {
+		            @include badge;
+		            background-color: $colors.un-color__green--100;        
+		            border-color: $colors.un-border-color__success;  
+		            background-image: gx-image(GeneXusUnanimo.dot_green);
+		            background-position-y: center;
+		        }
+		        .Readonlybadge-success{
+		            @include badge-success;
+		        }
+		        .badge-warning {
+		            @include badge;
+		            background-color: $colors.un-color__orange--100;
+		            border-color: $colors.un-border-color__warning;
+		            background-image: gx-image(GeneXusUnanimo.dot_yellow);
+		            background-position-y: center;
+		        }
+		        .Readonlybadge-warning{
+		            @include badge-warning;
+		        }
+		        .badge-danger {
+		            @include badge;
+		            background-color: $colors.un-color__red--100;
+		            border-color: $colors.un-border-color__error;
+		            background-image: gx-image(GeneXusUnanimo.dot_red);   
+		            background-position-y: center;
+		        }
+		        .Readonlybadge-danger {
+		            @include badge-danger; 
+		        }
+		        .badge-info {
+		            @include badge;
+		            background-color: $colors.un-accent__primary-dim--hover;        
+		            border-color: $colors.un-border-color__primary;
+		            background-image: gx-image(GeneXusUnanimo.dot_purple);
+		            color: $colors.un-text__on-surface--positive;
+		            background-position-y: center;
+		        }
+		        .Readonlybadge-info {
+		            @include badge-info;
+		        }
+		        .badge-disabled {
+		            @include badge;
+		            background-color: $colors.un-color__gray--400;        
+		            border-color: $colors.un-color__gray--500;
+		            background-image: gx-image(GeneXusUnanimo.dot_gray);
+		            color: $colors.un-text__on-surface--positive;
+		            background-position-y: center;
+		        }
+		        .Readonlybadge-disabled {
+		            @include badge-disabled;
+		        }
+		    #endregion
+		
+		    #region Grid
+		        .Grid {
+		            background-color: $colors.form-container-bg;
+		            font-family: $fonts.un-font__family;
+		            font-size: $fontSizes.un-s;
+		            color: $colors.un-text__on-surface--positive;
+		            border-bottom-width: $borders.un-width--xs;
+		            border-bottom-style: solid;
+		            border-bottom-color: $colors.un-border-color__mild;
+		            padding-block: 7px;
+		            padding-inline-start: $spacing.un-m;
+		            padding-inline-end: $spacing.un-m;
+		            cursor: pointer;
+		        }
+		    #endregion
+		
+		    #region Grid Row
+		        .grid-row {
+		            text-align: start;
+		            padding-inline-start: $spacing.un-m;
+		            padding-inline-end: $spacing.un-m;
+		            border-bottom-width: $borders.un-width--xs;
+		            border-bottom-style: solid;
+		            border-bottom-color: $colors.un-border-color__mild;
+		        }
+		        .grid-row-highlight {
+		            text-align: start;
+		            padding-inline-start: $spacing.un-m;
+		            padding-inline-end: $spacing.un-m;
+		            border-bottom-width: $borders.un-width--xs;
+		            border-bottom-style: solid;
+		            border-bottom-color: $colors.un-border-color__mild;
+		            cursor: pointer;
+		        }
+		        .grid__group-separator {
+		            background-color: $colors.un-color__purple--10;
+		            font-family: $fonts.un-font__family;
+		            padding-inline: $spacing.un-m;
+		            height: 32px;
+		            align-items: center;
+		        }
+		        //selected class when Grid's AllowSelection is true
+		        .gx-row-selected {
+		            background-color: $colors.row-active;
+		            -webkit-box-shadow: -3px 0px 0px 0px $colors.un-accent__primary; 
+		            box-shadow: -3px 0px 0px 0px $colors.un-accent__primary;
+		        }
+		        .gx-grid__row-delete, .gx-grid__row-add { 
+		            content: gx-image(GeneXusUnanimo.minus_light);
+		            width: 18px;
+		            padding-top: 5px;
+		        }
+		        .gx-grid__row-add {
+		            content: gx-image(GeneXusUnanimo.plus_light);
+		        }
+		        .RowDeleted {
+		            text-decoration: line-through;
+		        }
+		    #endregion
+		
+		    #region Grid Column
+		        .column {
+		            width: 100%;  
+		            padding-inline-start: $spacing.un-m;
+		            padding-inline-end: $spacing.un-m;
+		            border-bottom-width: 1px;
+		            border-bottom-color: $colors.un-border-color__mild;
+		            border-bottom-style:solid;
+		            gx-grid-column-header-class: column;
+		        } 
+		        .column, .column-optional {
+		            overflow: hidden; 
+		            text-overflow: ellipsis;
+		            color: $colors.un-text__on-surface--positive;
+		        }
+		        .sort-ico--asc {
+		            content: gx-image(GeneXusUnanimo.arrow_asc_light); 
+		        }
+		        .sort-ico--desc {
+		            content: gx-image(GeneXusUnanimo.arrow_desc_light);
+		        }
+		        @media screen and (max-width: 767px) {
+		            .column-optional {
+		               display: none; 
+		            }
+		        }
+		        @media screen and (min-width: 768px) and (max-width: 991.98px) {
+		            .column-optional--md {
+		               display: none; 
+		            }
+		        }
+		    #endregion
+		
+		    #region Form Container
+		        .card {
+		            background-color: $colors.form-container-bg;
+		            border-radius: $radius.un-radius--l;
+		            box-shadow: $shadows.xxs;
+		        }
+		        .card-body {
+		            padding: $spacing.un-l;
+		        }
+		        .card-heading {
+		            border-bottom: solid $borders.un-width--xs $colors.un-border-color__mild;
+		            padding: $spacing.un-l;
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--bold;
+		            font-size: $fontSizes.un-s;
+		            letter-spacing: $spacing.letter-spacing-s;
+		            color: $colors.un-text__on-surface--positive;
+		        }
+		        .card-footer {
+		            border-top: solid $borders.un-width--xs $colors.un-border-color__mild;
+		            padding: $spacing.un-l;
+		        }
+		        .card__title {
+		            @include TextBlock;
+		            font-weight: $fonts.un-font__weight--bold;
+		        }
+		    #endregion
+		
+		    #region Tab
+		        .tab-item {
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            font-size: $fontSizes.un-s;
+		            letter-spacing: 0.4px;
+		            text-decoration: none;
+		            color: $colors.un-text__on-surface--positive;
+		            padding: 5px;
+		            gx-tab-page-hovered-class: tab-item--hover;
+		            gx-tab-page-selected-class: tab-item--selected;
+		        }
+		        .tab-item--hover {
+		            border-bottom-color: $colors.un-border-color__primary--hover;
+		        }
+		        .tab-item--selected {
+		            font-family: $fonts.un-font__family;
+		            font-weight: $fonts.un-font__weight--semibold;
+		            font-size: $fontSizes.un-s;
+		            letter-spacing: 0.4px;
+		            border-bottom-color: $colors.un-accent__primary--active;
+		            border-bottom-style: solid;
+		            border-bottom-width: 3px;
+		            text-decoration: none;
+		            color: $colors.un-text__on-surface--positive;
+		        }
+		    #endregion
+		
+		    #region Master Page
+		        .HeaderContainer {
+		            background-color: $colors.header-bg;
+		            height: 60px;
+		            border-bottom-width: 2px;
+		            border-bottom-style: solid;
+		            border-bottom-color: $colors.header-separator-bg;
+		            margin: 0 -15px;
+		        }
+		        .header__title {
+		            @include heading-01;
+		            color: $colors.un-text__on-secondary;
+		        }
+		        .header__logo {
+		            max-width: 100px;
+		        }
+		        .sidebar__toggle-ico {
+		            margin-top: 1px;
+		            display: none;
+		            margin-inline-end: $spacing.un-m;
+		        }
+		        .sidebar__toggle-ico:hover {
+		            cursor: pointer;
+		        }
+		        @media screen and (max-width: 767px) {
+		            .header__title {
+		                font-size: $fontSizes.un-l;
+		            }
+		            .header__logo {
+		                max-width: 60px;
+		            }
+		            .sidebar__toggle-ico {
+		                display: block;
+		            }
+		            .HeaderContainer {
+		                margin-bottom: $spacing.un-l;
+		            }
+		        }
+		    #endregion
+		
+		    //Utility classes
+		    #region Utils
+		        #region Spacing
+		            //stack
+		            .stack-top-m {
+		                margin-top: $spacing.un-m;
+		            }
+		            .stack-top-l {
+		                margin-top: $spacing.un-l;
+		            }
+		            .stack-top-l {
+		                margin-top: $spacing.un-l;
+		            }
+		            .stack-top-xl {
+		                margin-top: $spacing.un-xl;
+		            }
+		            .stack-top-xxl {
+		                margin-top: $spacing.un-xxl;
+		            }
+		            .stack-top-xxxl {
+		                margin-top: $spacing.un-xxxl;
+		            }
+		            .stack-top-xxxxl {
+		                margin-top: $spacing.un-xxxxl;
+		            }
+		            .stack-bottom-m {
+		                margin-bottom: $spacing.un-m;
+		            }
+		            .stack-bottom-l {
+		                margin-bottom: $spacing.un-l;
+		            }
+		            .stack-bottom-xl {
+		                margin-bottom: $spacing.un-xl;
+		            }
+		            .stack-bottom-xxl {
+		                margin-bottom: $spacing.un-xxl;
+		            }
+		            .stack-bottom-xxxl {
+		                margin-bottom: $spacing.un-xxxl;
+		            }
+		            .stack-bottom-xxxxl {
+		                margin-bottom: $spacing.un-xxxxl;
+		            }
+		            //inline
+		            .inline-left-l {
+		                margin-inline-start: $spacing.un-m;
+		            }
+		            .inline-left-xl {
+		                margin-inline-start: $spacing.un-l;
+		            }
+		            .inline-left-xxl {
+		                margin-inline-start: $spacing.un-xl;
+		            }
+		            .inline-left-xxxl {
+		                margin-inline-start: $spacing.un-xxl;
+		            }
+		            .inline-right-l {
+		                margin-inline-end: $spacing.un-m;
+		            }
+		            .inline-right-xl {
+		                margin-inline-end: $spacing.un-l;
+		            }
+		            .inline-right-xxl {
+		                margin-inline-end: $spacing.un-xl;
+		            }
+		            .inline-right-xxxl {
+		                margin-inline-end: $spacing.un-xxl;
+		            }
+		            //inset
+		            .inset-s {
+		                padding: $spacing.un-m;
+		            }
+		            .inset-m {
+		                padding: $spacing.un-l;
+		            }
+		            .inset-l {
+		                padding: $spacing.un-xxl;
+		            }
+		            //gap
+		            .gap-s {
+		                gap: $spacing.un-s;
+		            }
+		            .gap-m {
+		                gap: $spacing.un-m;
+		            }
+		            .gap-l {
+		                gap: $spacing.un-l;
+		            }
+		            .gap-xl {
+		                gap: $spacing.un-xl;
+		            }
+		            .gap-xxl {
+		                gap: $spacing.un-xxl;
+		            }
+		        #endregion
+		
+		        #region Sizing
+		            .w-100 {
+		                width: 100%;
+		            }
+		            .h-100 {
+		                height: 100%;
+		            }
+		        #endregion
+		
+		        #region Background
+		            .bg-white {
+		                background: $colors.un-surface--positive;
+		            }
+		        #endregion
+		
+		        #region Font Color
+		            .text-transparent {
+		                color: transparent;
+		            }
+		            .text-black {
+		                color: rgba(0, 0, 0, 1);
+		            }
+		            .text-white {
+		                color: rgba(255, 255, 255, 1);
+		            }
+		            .text-gray-500 {
+		                color: rgba(107, 114, 128, 1);
+		            }
+		        #endregion
+		
+		        #region Font Weight
+		            .light {
+		                font-family: $fonts.un-font__family;
+		                font-weight: $fonts.un-font__weight--light;
+		            }
+		            .normal {
+		                font-family: $fonts.un-font__family;
+		            }
+		            .bold {
+		                font-family: $fonts.un-font__family;
+		                font-weight: $fonts.un-font__weight--bold;
+		            }
+		        #endregion
+		
+		        #region Margin
+		            .mt-0 {
+		                margin-block-start: 0px;
+		            }
+		            .mr-0 {
+		                margin-inline-end: 0px;
+		            }
+		            .mb-0 {
+		                margin-block-end: 0px;
+		            }
+		            .ml-0 {
+		                margin-inline-start: 0px;
+		            }
+		        #endregion
+		
+		        #region Wrap
+		            .no-wrap {
+		                white-space: nowrap;
+		            }
+		        #endregion
+		    #endregion
+		
+		}
+		
+	#End
+
+	#Properties
+		Name = "Unanimo"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

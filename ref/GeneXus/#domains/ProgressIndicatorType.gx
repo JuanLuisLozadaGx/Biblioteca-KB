@@ -1,0 +1,17 @@
+Domain ProgressIndicatorType
+{
+	#Properties
+		Name = "ProgressIndicatorType"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		EnumValues = "Indeterminate, Indeterminate, 0; Determinate, Determinate, 1"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

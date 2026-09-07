@@ -1,0 +1,35 @@
+SDT GridState
+{
+	GridState{
+
+		CurrentPage [ DataType = 'Numeric(5.0)', Collection = 'False' ]
+
+		OrderedBy
+
+		InputValues [ Collection = 'True' ]	{
+
+			Name [ DataType = 'VarChar(256)' ]
+
+			Value [ DataType = 'VarChar(256)' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "GridState"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

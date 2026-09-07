@@ -1,0 +1,13 @@
+Domain NotificationBadgeType
+{
+	#Properties
+		Name = "NotificationBadgeType"
+
+		EnumValues = "None, None, 1; SetTo, Set To, 2; Increase, Increase, 3"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

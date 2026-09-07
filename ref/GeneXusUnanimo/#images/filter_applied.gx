@@ -1,0 +1,19 @@
+Image filter_applied
+{
+	'filter_applied.svg' [ Description = 'filter_applied.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'filter_applied_dark.svg' [ Description = 'filter_applied_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "filter_applied"
+
+		Description = "filter_applied"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

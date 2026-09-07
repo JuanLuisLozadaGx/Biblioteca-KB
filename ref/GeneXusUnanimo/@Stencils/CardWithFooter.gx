@@ -1,0 +1,13 @@
+Stencil CardWithFooter
+{
+	#Properties
+		Name = "CardWithFooter"
+
+		Description = "Card With Footer"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

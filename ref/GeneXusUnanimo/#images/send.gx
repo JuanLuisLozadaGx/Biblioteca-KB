@@ -1,0 +1,17 @@
+Image send
+{
+	'send.svg' [ Description = 'send.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "send"
+
+		Description = "send"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

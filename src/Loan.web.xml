@@ -1,0 +1,107 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable">
+			<row>
+				<cell widthSm="100" offsetSm="0">
+					<responsive name="TitleContainer" class="title-container" responsiveSizes="[]">
+						<row>
+							<cell>
+								<label name="Title" caption="Loan" class="heading-01" />
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<errorviewer name="ErrorViewer" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+			<row>
+				<cell widthSm="100" offsetSm="0">
+					<responsive name="FormContainer" class="form-container">
+						<row>
+							<cell name="ToolbarCell" class="form__toolbar-cell" widthSm="75" offsetSm="25">
+								<actiongroup name="Toolbar" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell-advanced" widthSm="100" offsetSm="0">
+								<input labelCaption="=LoanId.ContextualTitle" data="LoanId" name="ctlLoanId" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="=BookId.Title" data="BookId" name="ctlBookId" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="=BookTitle.Title" data="BookTitle" name="ctlBookTitle" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="=LoanPersonName.ContextualTitle" data="LoanPersonName" name="ctlLoanPersonName" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="=LoanDate.ContextualTitle" data="LoanDate" name="ctlLoanDate" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="=LoanExpectedReturnDate.ContextualTitle" data="LoanExpectedReturnDate" name="ctlLoanExpectedReturnDate" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="=LoanReturnedDate.ContextualTitle" data="LoanReturnedDate" name="ctlLoanReturnedDate" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+			<row>
+				<cell class="form__actions--fixed" horizontalAlignment="Right" verticalAlignment="Middle" widthSm="100" offsetSm="0">
+					<actiongroup name="FormButtons" />
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups>
+			<actiongroup name="FormButtons">
+				<item>
+					<action name="btn_enter" onClickEvent="Enter" caption="GX_BtnEnter" class="Button button-primary" />
+				</item>
+				<item>
+					<action name="btn_cancel" onClickEvent="Cancel" caption="GX_BtnCancel" class="Button button-tertiary" />
+				</item>
+				<item>
+					<action name="btn_delete" onClickEvent="Delete" caption="GX_BtnDelete" class="Button button-tertiary" />
+				</item>
+			</actiongroup>
+			<actiongroup name="Toolbar">
+				<item>
+					<actiongroup name="NavButtons">
+						<item>
+							<action name="btn_first" onClickEvent="First" caption="" class="Button button-auxiliary ico__arrow-first" />
+						</item>
+						<item>
+							<action name="btn_previous" onClickEvent="Previous" caption="" class="Button button-auxiliary ico__arrow-prev" />
+						</item>
+						<item>
+							<action name="btn_next" onClickEvent="Next" caption="" class="Button button-auxiliary ico__arrow-next" />
+						</item>
+						<item>
+							<action name="btn_last" onClickEvent="Last" caption="" class="Button button-auxiliary ico__arrow-last" />
+						</item>
+						<item>
+							<action name="btn_select" onClickEvent="Select" caption="GX_BtnSelect" class="Button button-secondary" />
+						</item>
+					</actiongroup>
+				</item>
+			</actiongroup>
+		</actiongroups>
+	</view>
+</layout>

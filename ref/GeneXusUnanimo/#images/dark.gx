@@ -1,0 +1,15 @@
+Image dark
+{
+	'dark.svg' [ Description = 'dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "dark"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

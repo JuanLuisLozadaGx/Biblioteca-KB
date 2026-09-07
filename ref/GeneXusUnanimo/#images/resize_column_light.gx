@@ -1,0 +1,19 @@
+Image resize_column_light
+{
+	'resize_column_light.svg' [ Description = 'resize_column_light.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'resize_column_dark.svg' [ Description = 'resize_column_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "resize_column_light"
+
+		Description = "resize_column_light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,66 @@
+UserControl Sidebar
+{
+	#UserControlScreenTemplate
+		{{=<% %>=}}
+		<ch-sidebar
+		  [class]="Class"
+		  [expandButtonExpandAccessibleName]="ExpandButtonExpandAccessibleName"
+		  [expandButtonCollapseAccessibleName]="ExpandButtonCollapseAccessibleName"
+		  [expandButtonExpandCaption]="ExpandButtonExpandCaption"
+		  [expandButtonCollapseCaption]="ExpandButtonCollapseCaption"
+		  [expanded]="Expanded"
+		  [showExpandButton]="ShowExpandButton"
+		  (expandedChange)="handleSidebarExpandedChange()"
+		>
+		  <div class="gx-sidebar-content">
+		    <slot name="content" />
+		  </div>
+		</ch-sidebar>
+		
+		<style>
+		  :host,
+		  .gx-sidebar-content {
+		    display: contents;
+		  }
+		</style>
+		
+	#End
+
+	#UserControlProperties
+		<Definition auto="false" target="Angular">
+		  <Property Name="Class" Type="string" Default="sidebar" />
+		  
+		  <Property Name="ExpandButtonExpandAccessibleName" Type="string" Default="Expand" />
+		  
+		  <Property Name="ExpandButtonCollapseAccessibleName" Type="string" Default="Collapse" />
+		
+		  <Property Name="ExpandButtonExpandCaption" Type="string" />
+		  
+		  <Property Name="ExpandButtonCollapseCaption" Type="string" />
+		
+		  <Property Name="Expanded" Type="Boolean" Default="true" />
+		  
+		  <Property Name="ShowExpandButton" Type="Boolean" Default="true" />
+		
+		  <Event Name="ExpandedChange" />
+		  
+		  <Dependency name="@genexus/chameleon-controls-library" version="6.20.1"/>
+		  
+		  <script Name="PrivateCode" When="BeforeShow" ng-location="ClassBody">
+		    handleSidebarExpandedChange = () => {
+		      this.Expanded = !this.Expanded;
+			 this.ExpandedChange();
+		    }
+		  </script>
+		</Definition>
+	#End
+
+	#Properties
+		Name = "Sidebar"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,25 @@
+<layout type="Web">
+	<view>
+		<responsive class="card" responsiveSizes="[]">
+			<row>
+				<cell>
+					<responsive name="CardHeader" class="card-heading" responsiveSizes="[]">
+						<row>
+							<cell>
+								<label name="Textblock1" caption="This is some content" class="TextBlock" />
+							</cell>
+							<cell horizontalAlignment="Right">
+								<label name="Textblock2" caption="ASSIGNED TO ME" class="badge-info" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<responsive name="CardBody" class="card-body" responsiveSizes="[]" />
+				</cell>
+			</row>
+		</responsive>
+	</view>
+</layout>

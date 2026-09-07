@@ -1,0 +1,13 @@
+Attribute BookPublicationYear
+{
+	#Properties
+		Name = "BookPublicationYear"
+
+		DataType = "Numeric(4.0)"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

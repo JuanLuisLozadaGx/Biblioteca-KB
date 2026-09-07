@@ -1,0 +1,86 @@
+Procedure ListPrograms
+{
+	
+	&ProgramNames = new()
+	
+	&name = !"WWAuthor"
+	&description = "Authors"
+	&link = WWAuthor.Link()
+	Do 'AddProgram'
+	
+	&name = !"WWBook"
+	&description = "Books"
+	&link = WWBook.Link()
+	Do 'AddProgram'
+	
+	&name = !"WWGenre"
+	&description = "Genres"
+	&link = WWGenre.Link()
+	Do 'AddProgram'
+	
+	&name = !"WWLoan"
+	&description = "Loans"
+	&link = WWLoan.Link()
+	Do 'AddProgram'
+	
+	&name = !"WWPublisher"
+	&description = "Publishers"
+	&link = WWPublisher.Link()
+	Do 'AddProgram'
+	
+	&name = !"WWShelf"
+	&description = "Shelves"
+	&link = WWShelf.Link()
+	Do 'AddProgram'
+	
+	Sub 'AddProgram'
+		&IsAuthorized = True
+		&IsAuthorized = IsAuthorized(&name)
+		If (&IsAuthorized)
+			&ProgramName = new ProgramNames.ProgramName()
+			&ProgramName.Name = &name
+			&ProgramName.Description = &description
+			&ProgramName.Link = &link
+			&ProgramNames.Add(&ProgramName)
+		Endif
+	EndSub
+	
+
+	#Rules
+		parm(out:&ProgramNames);
+		
+	#End
+
+	#Variables
+		IsAuthorized [ DataType = 'Boolean' ]
+
+		ProgramNames [ DataType = 'ProgramNames, General.UI' ]
+
+		ProgramName [ DataType = 'ProgramNames.ProgramName, General.UI' ]
+
+		name [ DataType = 'ObjectName, GeneXus' ]
+
+		description [ DataType = 'ObjectName, GeneXus' ]
+
+		link [ DataType = 'Url, GeneXus' ]
+
+		
+	#End
+
+	#Properties
+		Name = "ListPrograms"
+
+		IsDefault = "False"
+
+		
+
+		Procedure.Defaults = "WorkWith:(global)Templates\\ListProgramsProcedure.dkt"
+
+		
+
+		Variables.Defaults = "WorkWith:(global)Templates\\ListProgramsVariables.dkt"
+
+		
+	#End
+
+}

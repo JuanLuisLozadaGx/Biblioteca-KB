@@ -1,0 +1,31 @@
+SDT DropdownItems
+{
+	DropdownItems [ Collection = 'True', CollectionItemName = 'DropdownItem' ]{
+
+		id [ DataType = 'Code, GeneXusUnanimo' ]
+
+		title [ DataType = 'Title, GeneXusUnanimo' ]
+
+		icon [ Description = 'Item Icon', DataType = 'Url, GeneXus', Collection = 'False', ControlType = 'Edit' ]
+
+		alternativeText [ DataType = 'Description, GeneXusUnanimo' ]
+
+		link [ DataType = 'Url, GeneXus' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "DropdownItems"
+
+		ExposedNamespace = "GeneXusUnanimo"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

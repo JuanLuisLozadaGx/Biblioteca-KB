@@ -1,0 +1,478 @@
+DesignSystem TabularGrid
+{
+	#DesignTokens
+		tokens TabularGrid (color-scheme:dark|[light])
+		{
+		    //COLORS 
+		    @color-scheme = light {
+		        #colors {
+		            mask-bg: #0000001a;
+		            //0.1 opacity
+		        }
+		    }
+		    @color-scheme = dark {
+		        #colors { 
+		            mask-bg: #00000080;
+		            //0.5 opacity
+		        }
+		    }
+		}
+	#End
+
+	#DesignStyles
+		styles TabularGrid
+		{
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		
+		    .Grid {
+		        gx-grid-column-class: grid-cell;
+		    }
+		    ch-grid::part(settings-mask) {
+		        background-color: $colors.mask-bg;
+		    }
+		    .filter-input {
+		        border-width: 1px;
+		        min-height: 28px;
+		        max-width: 100%;
+		        font-family: $fonts.un-font__family;
+		        font-size: $fontSizes.un-s;
+		        padding-inline-start: $spacing.un-m;
+		        padding-inline-end: $spacing.un-m;
+		        padding-block: 0px;
+		        border-color: $colors.un-border-color__strong;
+		        color: $colors.un-text__on-surface--positive; 
+		        background-color: $colors.attribute-bg;
+		        border-radius: $radius.un-radius--m;
+		    }
+		    .grid-columnset {
+		        font-family: $fonts.un-font__family;
+		        font-weight: $fonts.un-font__weight--bold;
+		        font-size: $fontSizes.un-s;
+		        color: $colors.un-text__on-surface--positive;
+		        background-color: $colors.form-container-bg;
+		        border-bottom-width: $borders.un-width--xs;
+		        border-bottom-style: solid;
+		        border-bottom-color: $colors.un-border-color__mild;
+		        padding-block: 7px;
+		        padding-inline-start: $spacing.un-m;
+		        padding-inline-end: $spacing.un-m;
+		        cursor: default;
+		    }
+		    .grid-cell {
+		        align-items: center;
+		        padding-inline-start: $spacing.un-m;
+		        padding-inline-end: $spacing.un-m;
+		    }
+		    //Angular in-grid controls
+		    .in-grid-field {
+		        border: none;
+		        margin: 0px;
+		        padding: 0px;
+		        background-color: transparent;
+		    }
+		    .grid-cell gx-edit[readonly="true"] {
+		        @include in-grid-field;
+		        font-size: $fontSizes.un-s;
+		        align-items: center;
+		    }
+		    .grid-cell gx-checkbox[readonly="true"] {
+		        @include in-grid-field;
+		        align-items: center;
+		    }
+		    .grid-cell .gx-image-container.Attribute {
+		        @include in-grid-field;
+		    }
+		    .grid-cell gx-form-field {
+		        padding-block: 6px;
+		    }
+		    .grid-row {
+		        text-align: start;
+		        padding-inline-start: $spacing.un-m;
+		        padding-inline-end: $spacing.un-m;
+		        border-bottom-width: $borders.un-width--xs;
+		        border-bottom-style: solid;
+		        border-bottom-color: $colors.un-border-color__mild;
+		    }
+		    .gx-row-selected {
+		        background-color: rgba(105, 110, 242, 0.2);
+		        -webkit-box-shadow: -3px 0px 0px 0px $colors.un-accent__primary; 
+		        box-shadow: -3px 0px 0px 0px $colors.un-accent__primary;
+		    }
+		    .grid-row-highlight {
+		        text-align: start;
+		        padding-inline-start: $spacing.un-m;
+		        padding-inline-end: $spacing.un-m;
+		        border-bottom-width: $borders.un-width--xs;
+		        border-bottom-style: solid;
+		        border-bottom-color: $colors.un-border-color__mild;
+		        cursor: pointer;
+		    }
+		    .grid-row-highlight:hover {
+		        background-color: $colors.un-color__gray--300;
+		    }
+		    .grid-column {
+		        padding-inline-start: $spacing.un-m;
+		        padding-inline-end: $spacing.un-m;
+		    }
+		    .grid-column::part(bar) {
+		        flex: 1;
+		    }
+		    .grid-column::part(bar)::after {
+		        content: '';
+		        order: 2;
+		    }
+		    .grid-column::part(bar-settings) {
+		        width: 20px;
+		        height: 20px;
+		        visibility: hidden;
+		    }
+		    .grid-column:hover::part(bar-settings) {
+		        visibility: visible;
+		    }
+		    .grid-column::part(bar-settings):hover {
+		        cursor: pointer; 
+		    }
+		    .grid-column::part(bar-settings-button) {
+		        border: none;
+		        padding: 0;
+		        background-color: transparent;
+		        width: 20px;
+		        height: 20px;
+		    }
+		    .grid-column::part(bar-settings-button)::before {
+		        content: '';
+		        background-image: gx-image(GeneXusUnanimo.filter_outlined_light);
+		        background-size: contain;
+		        background-repeat: no-repeat;
+		        background-position: center;
+		        display: block;
+		        width: 20px;
+		        height: 20px;
+		    }
+		    .grid-column::part(bar-settings-button):hover {
+		        cursor: pointer;
+		    }
+		    .grid-column-filtering::part(bar-settings) {
+		        visibility: visible;
+		    }
+		    .grid-column-filtering::part(bar-settings-button):before {
+		        content: '';
+		        background-image: gx-image(GeneXusUnanimo.filter_applied);
+		        background-size: contain;
+		        background-repeat: no-repeat;
+		        background-position: center;
+		        display: block;
+		        width: 20px;
+		        height: 20px;
+		    }
+		    .grid-column::part(bar-name-text):hover {
+		        cursor: pointer;
+		    }
+		    .grid-column::part(bar-name-icon):hover {
+		        cursor: pointer;
+		    }
+		    .grid-column::part(bar-resize) {
+		        margin-inline-start: auto;
+		        width: 20px;
+		        height: 20px;
+		        visibility: hidden;
+		        display: block;
+		        align-self: auto;
+		    }
+		    .grid-column:hover::part(bar-resize) {
+		        visibility: visible;
+		    }
+		    .grid-column::part(bar-resize-split) {
+		        content: unset;
+		        background-image: gx-image(GeneXusUnanimo.resize_column_light);
+		        background-repeat: no-repeat;
+		        background-position: center center;
+		        background-size: 22px;
+		    }
+		    .grid-column::part(bar-sort):not([hidden]):hover {
+		        cursor: pointer;
+		    }
+		    .grid-column::part(bar-sort-ascending) {
+		        content: gx-image(GeneXusUnanimo.arrow_asc_light);
+		    }
+		    .grid-column::part(bar-sort-descending) {
+		        content: gx-image(GeneXusUnanimo.arrow_desc_light);
+		    }
+		    .grid-column-filter::part(main) {
+		        display: flex;
+		        flex-direction: column;
+		        gap: $spacing.un-m;
+		        padding: 0px;
+		        border: none;
+		    }
+		    .grid-column-filter::part(label greater) {
+		        font-family: $fonts.un-font__family;
+		        display: flex;
+		        flex-direction: column;
+		    }
+		    .grid-column-filter::part(label less) {
+		        font-family: $fonts.un-font__family;
+		        display: flex;
+		        flex-direction: column;
+		    }
+		    .grid-column-filter::part(footer) {
+		        display: flex;
+		        gap: $spacing.un-l;
+		        justify-content: flex-end;
+		        padding-block-start: $spacing.un-xl;
+		    }
+		    .grid-column-filter::part(field greater) {
+		        @include filter-input;
+		    }
+		    .grid-column-filter::part(field less) {
+		        @include filter-input;
+		    }
+		    .grid-column-filter::part(field equal) {
+		        @include filter-input;
+		    }
+		    .grid-column-filter::part(button reset) {
+		        @include Button button-tertiary;
+		    }
+		    .grid-column-filter::part(button reset):hover {
+		        cursor: pointer;
+		    }
+		    .grid-column-filter::part(button apply) {
+		        @include Button button-primary;
+		    }
+		    .grid-column-filter::part(button apply):hover {
+		        cursor: pointer;
+		    }
+		    .grid-cell span.Attribute {
+		        display: flex;
+		        align-items: center;
+		        height: auto !important;
+		        padding-block: $spacing.un-s;
+		    }
+		    .grid-cell img {
+		        position: relative;
+		        max-width: 50px;
+		        object-fit: scale-down;
+		        padding-block: 2px;
+		    }
+		    .Grid::part(footer), .ww__grid::part(footer) {
+		        display: flex;
+		        align-items: center;
+		        margin-block-start: $spacing.un-l;
+		    }
+		    //grid settings window
+		    .Grid::part(settings-window), .ww__grid::part(settings-window) {
+		        background: $colors.overlay-bg;
+		        padding: $spacing.un-l;
+		        border-radius: $radius.un-radius--l;
+		        border: none;
+		        box-shadow: $shadows.s;
+		    }
+		    .Grid::part(settings-header), .ww__grid::part(settings-header){
+		        display: flex;
+		        gap: 16px;
+		        justify-content: space-between;
+		        align-items: center;
+		        margin-bottom: $spacing.un-l;
+		    }
+		    .Grid::part(settings-caption), .ww__grid::part(settings-caption) {
+		        color: $colors.un-text__on-surface--positive;
+		        font-family: $fonts.un-font__family;
+		        font-weight: $fonts.un-font__weight--bold;
+		        font-size: $fontSizes.un-s;
+		        letter-spacing: $spacing.letter-spacing-s;
+		        line-height: 18px;
+		        text-transform: uppercase;
+		    }
+		    .Grid::part(settings-close), .ww__grid::part(settings-close) {
+		        @include button-close;
+		        background-position: center;
+		        margin-bottom: 0px;
+		    }
+		    .Grid::part(settings-close):hover, .ww__grid::part(settings-close):hover {
+		        cursor: pointer;
+		    }
+		    .Grid::part(settings-columns-item), .ww__grid::part(settings-columns-item) {
+		        padding-block: $spacing.un-s;
+		        font-family: $fonts.un-font__family;
+		    }
+		    .Grid::part(settings-columns-label), .ww__grid::part(settings-columns-label) {
+		        display: flex;
+		    }
+		    .Grid::part(settings-columns-label):hover, .ww__grid::part(settings-columns-label):hover {
+		        cursor: pointer;
+		    }
+		    .Grid::part(settings-columns-visible-checked) {
+		        accent-color: $colors.un-accent__primary;
+		        width: 16px;
+		    }
+		    .Grid::part(settings-columns-visible) {
+		        width: 16px;
+		    }
+		    
+		    //column filters window
+		    .grid-column::part(settings-mask) {
+		        background-color: $colors.mask-bg;
+		    }
+		    .grid-column::part(settings-window) {
+		        background: $colors.overlay-bg;
+		        padding: $spacing.un-l;
+		        border-radius: $radius.un-radius--l;
+		        border: none;
+		        box-shadow: $shadows.s;
+		    }
+		    .grid-column::part(settings-header){
+		        display: flex;
+		        justify-content: space-between;
+		        align-items: center;
+		        gap: $spacing.un-l;
+		        margin-block-end: $spacing.un-l;
+		    }
+		    .grid-column::part(settings-caption) {
+		        color: $colors.un-text__on-surface--positive;
+		        font-family: $fonts.un-font__family;
+		        font-weight: $fonts.un-font__weight--bold;
+		        font-size: $fontSizes.un-s;
+		        letter-spacing: $spacing.letter-spacing-s;
+		        line-height: 18px;
+		    }
+		    .grid-column::part(settings-close) {
+		        @include button-close;
+		        background-position: center;
+		        margin-block-end: 0px;
+		    }
+		    .grid-column::part(settings-close):hover {
+		        cursor: pointer;
+		    }
+		    .grid-column fieldset {
+		        border: none;
+		        margin: 0;
+		        padding: 0;
+		    }
+		    .grid-column caption {
+		        color: $colors.un-body__font-color--gray;
+		        font-family: $fonts.un-font__family;
+		    }
+		    .grid-column input {
+		        border-width: 1px;
+		        min-height: 28px;
+		        max-width: 100%;
+		        font-family: $fonts.un-font__family;
+		        font-size: $fontSizes.un-s;
+		        padding-inline-start: $spacing.un-m;
+		        padding-inline-end: $spacing.un-m;
+		        border-color: $colors.un-border-color__strong;
+		        color: $colors.un-text__on-surface--positive;
+		        background-color: $colors.attribute-bg;
+		        border-radius: $radius.un-radius--m;
+		    }
+		    .grid-column input:focus {
+		        border-color: $colors.un-border-color__secondary;
+		        box-shadow: 0px 0px 0px 1px #13142c;
+		    }
+		    .gx-grid-paging-bar {
+		        padding-inline-end: $spacing.un-m;
+		    }
+		    .grid-actionbar-footer {
+		        display: flex;
+		        column-gap: $spacing.un-m;
+		        align-items: center;
+		        margin-inline-end: auto;
+		        padding-inline-start: $spacing.un-m;
+		    }
+		    //grid footer buttons
+		    .button-refresh, ch-grid-action-refresh {
+		        content: gx-image(GeneXusUnanimo.refresh);
+		    }
+		    .button-refresh:hover, ch-grid-action-refresh:hover {
+		        cursor: pointer;
+		        background-color: $colors.un-accent__primary-dim--hover;
+		    }
+		    .button-settings, ch-grid-action-settings {
+		        content: gx-image(GeneXusUnanimo.settings);
+		    }
+		    .button-settings:hover, ch-grid-action-settings:hover {
+		        cursor: pointer;
+		        background-color: $colors.un-accent__primary-dim--hover;
+		    }
+		    ch-grid-actionbar, ch-paginator, ch-paginator-pages {
+		        display: flex;
+		    }
+		    ch-paginator-pages::part(pages) {
+		        gap: $spacing.un-l;
+		        padding-inline: $spacing.un-m;
+		        font-family: $fonts.un-font__family;
+		    }
+		    ch-paginator {
+		        margin-inline-start: auto;
+		    }
+		    //pagination buttons
+		    ch-paginator-navigate[type="first"] {
+		        content: gx-image(GeneXusUnanimo.arrow_first);
+		    }
+		    ch-paginator-navigate[type="previous"] {
+		        content: gx-image(GeneXusUnanimo.arrow_left);
+		    }
+		    ch-paginator-navigate[type="next"] {
+		        content: gx-image(GeneXusUnanimo.arrow_right);
+		    }
+		    ch-paginator-navigate[type="last"] {
+		        content: gx-image(GeneXusUnanimo.arrow_last);
+		    }
+		    ch-paginator-navigate[type]:hover {
+		        cursor: pointer;
+		        background-color: $colors.un-accent__primary-dim--hover;
+		    }
+		    ch-paginator-navigate[disabled] {
+		        filter: opacity(0.3);
+		    }
+		    ch-paginator-pages::part(page button active) {
+		        display: flex;
+		        justify-content: center;
+		        align-items: center;
+		        background-color: $colors.un-accent__secondary;
+		        color: $colors.un-text__on-secondary;
+		        width: 14px;
+		        height: 22px;
+		        border-radius: 100%;
+		        padding: 0px;
+		    }
+		    ch-paginator-pages::part(page button active):focus {
+		        outline: solid 2px $colors.un-border-color__primary--active;
+		        width: 12px;
+		        height: 20px;
+		    }
+		    ch-paginator-pages::part(page button){
+		        padding-inline: $spacing.un-s;
+		    }
+		    ch-paginator-pages::part(page button):hover {
+		        cursor: pointer;
+		    }
+		    ch-paginator-pages::part(page button):focus {
+		        border: solid 2px $colors.un-border-color__secondary--active;
+		    }
+		    .button-close {
+		        background-repeat: no-repeat;
+		        background-image: gx-image(GeneXusUnanimo.filter);
+		        border-width: 0;
+		        color: transparent;
+		        z-index: 2;
+		        background-color: $colors.un-surface--alternative;
+		        width: 20px;
+		        height: 20px;
+		        padding: 0px;
+		        margin-block-end: 20px;
+		        background-color: $colors.overlay-bg;
+		        background-image: gx-image(GeneXusUnanimo.close_ico);
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "TabularGrid"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,15 @@
+Image genexus_logo
+{
+	'genexus_logo.svg' [ Description = 'Logo GeneXus.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "genexus_logo"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

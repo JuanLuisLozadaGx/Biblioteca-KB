@@ -1,0 +1,13 @@
+Attribute BookAcquisitionDate
+{
+	#Properties
+		Name = "BookAcquisitionDate"
+
+		DataType = "Date"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

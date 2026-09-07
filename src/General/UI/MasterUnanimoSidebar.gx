@@ -1,0 +1,46 @@
+MasterPage MasterUnanimoSidebar
+{
+	#Events
+		Event Load
+			//init sidebar properties
+			SidebarMenu.Title = !"Unanimo"
+			SidebarMenu.DistanceToTop = 60
+			&sidebarItems = General.UI.SidebarItemsDP()
+		EndEvent
+		
+		Event SidebarMenu.ItemClick
+			&target = SidebarMenu.SelectedItemTarget
+			Link(&target)
+		EndEvent
+		
+		Event SidebarMenu.GetState
+			if SidebarMenu.isCollapsed
+				Content.Class = !"expandible-container" + !" expanded"
+			else
+				Content.Class = !"expandible-container"
+			endif
+		EndEvent
+		
+	#End
+
+	#Variables
+		sidebarItems [ DataType = 'SidebarItems, GeneXusUnanimo' ]
+
+		target [ DataType = 'Url, GeneXus' ]
+
+		
+	#End
+
+	#Properties
+		Name = "MasterUnanimoSidebar"
+
+		Description = "Master Unanimo Sidebar"
+
+		Type = "Master Page"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

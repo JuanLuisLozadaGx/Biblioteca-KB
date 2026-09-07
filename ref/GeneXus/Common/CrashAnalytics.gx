@@ -1,0 +1,263 @@
+ExternalObject CrashAnalytics
+{
+	#ExternalProperties
+		Enabled
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Static',
+
+			IosExternalName = 'isEnabled',
+
+			AndroidExternalGetMethod = 'isEnabled'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		DidCrashOnPreviousExecution
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'didCrashOnPreviousExecution',
+
+			AndroidExternalName = 'didCrashOnPreviousExecution'
+
+		]
+
+		
+
+		SetCustomKey
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'setCustomKey',
+
+			AndroidExternalName = 'setCustomKey'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+		
+
+				Value
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '200'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SetCustomKeys
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'setCustomKeys',
+
+			AndroidExternalName = 'setCustomKeys'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				CustomKeysAndValues
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'CrashAnalyticsKeyValue, GeneXus.Common',
+
+					Length = '0',
+
+					Collection = 'True'
+
+				]
+
+			}
+
+		}
+
+		
+
+		RemoveCustomKey
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'removeCustomKey',
+
+			AndroidExternalName = 'removeCustomKey'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SetUserId
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'setUserId',
+
+			AndroidExternalName = 'setUserId'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				UserId
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '60'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Log
+
+		[
+
+			Length = '200',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'log',
+
+			AndroidExternalName = 'log'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				Message
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '200'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "CrashAnalytics"
+
+		IosExternalName = "GXEOCrashAnalytics"
+
+		AndroidExternalName = "CrashlyticsAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.core.externalobjects.analytics.crashlytics"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

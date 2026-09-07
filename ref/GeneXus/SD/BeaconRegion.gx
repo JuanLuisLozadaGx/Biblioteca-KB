@@ -1,0 +1,25 @@
+SDT BeaconRegion
+{
+	BeaconRegion{
+
+		Identifier [ Description = 'Region\'s identifier', DataType = 'VarChar(256)' ]
+
+		BeaconMatch [ Description = 'Beacons in region match criteria (GroupId and Id are optional)', DataType = 'BeaconInfo, GeneXus.SD' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "BeaconRegion"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

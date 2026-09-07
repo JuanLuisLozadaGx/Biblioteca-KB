@@ -1,0 +1,27 @@
+SDT OAuthAuthorizationConfig
+{
+	OAuthAuthorizationConfig{
+
+		AccessTokenUrl [ DataType = 'Url, GeneXus', Collection = 'False', ControlType = 'Edit' ]
+
+		ClientId [ DataType = 'LongVarChar(2M)' ]
+
+		ClientSecret [ DataType = 'LongVarChar(2M)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "OAuthAuthorizationConfig"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

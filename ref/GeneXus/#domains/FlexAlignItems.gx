@@ -1,0 +1,15 @@
+Domain FlexAlignItems
+{
+	#Properties
+		Name = "FlexAlignItems"
+
+		DataType = "Character(20)"
+
+		EnumValues = "Stretch, Stretch, stretch; FlexStart, FlexStart, flex-start; FlexEnd, Flex End, flex-end; Center, Center, center; Baseline, Baseline, baseline"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

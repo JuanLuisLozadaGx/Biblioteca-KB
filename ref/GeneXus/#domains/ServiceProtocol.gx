@@ -1,0 +1,17 @@
+Domain ServiceProtocol
+{
+	#Properties
+		Name = "ServiceProtocol"
+
+		DataType = "Numeric(4.0)"
+
+		Length = "4"
+
+		EnumValues = "Rest, ReST, 1; Grpc, GRPC, 2"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,19 @@
+Image arrow_first
+{
+	'arrow_first.svg' [ Description = 'arrow_first.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'arrow_first_dark.svg' [ Description = 'arrow_first_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "arrow_first"
+
+		Description = "arrow_first"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

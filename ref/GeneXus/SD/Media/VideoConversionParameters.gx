@@ -1,0 +1,29 @@
+SDT VideoConversionParameters
+{
+	VideoConversionParameters{
+
+		ConvertFormat [ DataType = 'Boolean' ]
+
+		TargetFormat [ DataType = 'VideoFormat, GeneXus.SD.Media' ]
+
+		ReduceQuality [ DataType = 'Boolean' ]
+
+		TargetQuality [ DataType = 'CameraAPIQuality, GeneXus' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "VideoConversionParameters"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

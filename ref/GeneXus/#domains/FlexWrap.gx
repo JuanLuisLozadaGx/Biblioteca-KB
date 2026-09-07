@@ -1,0 +1,15 @@
+Domain FlexWrap
+{
+	#Properties
+		Name = "FlexWrap"
+
+		DataType = "Character(20)"
+
+		EnumValues = "NoWrap, No Wrap, nowrap; Wrap, Wrap, wrap; WrapReverse, Wrap Reverse, wrap-reverse"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

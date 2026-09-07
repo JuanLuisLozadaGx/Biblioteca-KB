@@ -1,0 +1,13 @@
+Domain SynchronizationReceiveResult
+{
+	#Properties
+		Name = "SynchronizationReceiveResult"
+
+		EnumValues = "OK, OK, 0; SyncNotNeeded, Synchronization Not Needed, 1; AppNotOffline, Application Is Not Offline, 2; HasPendingEvents, Has Pending Events, 3; AlreadyRunning, Already Running, 8; ServerError1, Server Error 1, 51; ServerError2, Server Error 2, 52; ServerError3, Server Error 3, 53; UnknownError, Unknown Error, 99"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

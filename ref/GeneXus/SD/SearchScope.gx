@@ -1,0 +1,25 @@
+SDT SearchScope
+{
+	SearchScope [ Collection = 'True' ]{
+
+		ScopeId
+
+		ScopeDescription [ DataType = 'Character(20)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "SearchScope"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

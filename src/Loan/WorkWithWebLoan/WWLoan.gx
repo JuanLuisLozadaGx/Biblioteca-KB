@@ -1,0 +1,106 @@
+WebPanel WWLoan
+{
+	#Events
+		Event Start
+		
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+		
+			Grid.Rows = 10
+			&Update = "GXM_update"
+			&Delete = "GX_BtnDelete"
+			Form.Caption = 'Loans'
+		
+			Do 'PrepareTransaction'
+			Grid.LoadSessionState()
+		EndEvent
+		
+		Event Refresh
+			Grid.SaveSessionState()
+		EndEvent
+		
+		Event Grid.Load
+			&Update.Link = Loan.Link(TrnMode.Update, LoanId)
+			&Delete.Link = Loan.Link(TrnMode.Delete, LoanId)
+			BookTitle.Link = ViewBook.Link(BookId, "")
+			LoanPersonName.Link = ViewLoan.Link(LoanId, "")
+		EndEvent
+		
+		Event 'DoInsert'
+			Loan(TrnMode.Insert, nullvalue(LoanId))
+		EndEvent
+		
+		Sub 'PrepareTransaction'
+			&TrnContext = new()
+			&TrnContext.CallerObject = &Pgmname
+			&TrnContext.CallerOnDelete = True
+			&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+			&TrnContext.TransactionName = !"Loan"
+		
+			&Session.Set(!"TrnContext", &TrnContext.ToXml())
+		EndSub
+		
+		
+	#End
+
+	#Conditions
+		LoanPersonName like &LoanPersonName when not &LoanPersonName.IsEmpty();
+		
+	#End
+
+	#Variables
+		IsAuthorized [ DataType = 'Boolean' ]
+
+		Session [ DataType = 'WebSession' ]
+
+		HTTPRequest [ DataType = 'HttpRequest' ]
+
+		GridState [ DataType = 'GridState, GeneXus.Common' ]
+
+		TrnContext [ DataType = 'TransactionContext, General.UI' ]
+
+		TrnContextAtt [ DataType = 'TransactionContext.Attribute, General.UI' ]
+
+		LoanPersonName [ DataType = 'Attribute:LoanPersonName' ]
+
+		Update [ DataType = 'Character(20)' ]
+
+		Delete [ DataType = 'Character(20)' ]
+
+		ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "WWLoan"
+
+		Description = "Loans"
+
+		IsDefault = "False"
+
+		
+
+		WebForm.Defaults = "WorkWith:Templates\\SelectionWebForm.dkt"
+
+		
+
+		Rules.Defaults = "WorkWith:Templates\\SelectionRules.dkt"
+
+		
+
+		Events.Defaults = "WorkWith:Templates\\SelectionEvents.dkt"
+
+		
+
+		Conditions.Defaults = "WorkWith:Templates\\SelectionConditions.dkt"
+
+		
+
+		Variables.Defaults = "WorkWith:Templates\\SelectionVariables.dkt"
+
+		
+	#End
+
+}

@@ -1,0 +1,51 @@
+SDT Configuration
+{
+	Configuration{
+
+		ApplicationId [ Description = 'GeneXus Main Application Name', DataType = 'Character(100)' ]
+
+		Properties [ DataType = 'ConfigurationProperty, GeneXus.Common.Notifications', Collection = 'True' ]
+
+		Debug	{
+
+			Debug [ DataType = 'Boolean' ]
+
+			Proxy		{
+
+				Host [ DataType = 'Character(100)' ]
+
+				Port [ DataType = 'Numeric(6.0)' ]
+
+			}
+
+	
+
+		}
+
+	
+
+		Advanced	{
+
+			BackCompatibility [ Description = 'Enable only if you want to keep compatibility with older GeneXus SD Devices', DataType = 'Boolean' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "Configuration"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

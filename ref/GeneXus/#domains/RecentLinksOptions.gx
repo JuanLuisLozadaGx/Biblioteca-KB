@@ -1,0 +1,19 @@
+Domain RecentLinksOptions
+{
+	#Properties
+		Name = "RecentLinksOptions"
+
+		Length = "4"
+
+		Decimals = "0"
+
+		EnumValues = "Size, Size, 8"
+
+		ControlType = "Combo Box"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

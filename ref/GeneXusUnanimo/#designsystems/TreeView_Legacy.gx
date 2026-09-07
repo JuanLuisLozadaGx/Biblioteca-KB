@@ -1,0 +1,44 @@
+DesignSystem TreeView_Legacy
+{
+	#DesignStyles
+		styles TreeView_Legacy
+		{
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		
+		    .ch-treeview-item {
+		        --text-color: $colors.un-text__on-surface--negative;
+		        --font-weight: normal;
+		        --font-size: $fontSizes.un-s;
+		        --item-hover-color: $colors.un-accent__primary-dim--hover;
+		        --item-active-color: $colors.un-accent__primary-dim--hover;
+		        --guide-color: $colors.un-surface--negative;
+		    }
+		    .ch-treeview-item ch-tree-item::part(expand-icon){
+		        -webkit-mask: gx-image(GeneXusUnanimo.plus);
+		        -webkit-mask-size: 16px;
+		        -webkit-mask-repeat: no-repeat;
+		        background-color: $colors.un-icon__on-surface--negative;
+		        background-position: center;
+		        width: 16px;
+		        height: 16px; 
+		    }
+		    .ch-treeview-item ch-tree-item::part(collapse-icon){
+		        -webkit-mask: gx-image(GeneXusUnanimo.minus);
+		        -webkit-mask-size: 16px;
+		        -webkit-mask-repeat: no-repeat;
+		        background-color: $colors.un-icon__on-surface--negative;
+		        width: 16px;
+		        height: 16px; 
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "TreeView_Legacy"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

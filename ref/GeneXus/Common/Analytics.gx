@@ -1,0 +1,329 @@
+ExternalObject Analytics
+{
+	#ExternalMethods
+		TrackView
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'trackView',
+
+			AndroidExternalName = 'trackView',
+
+			JavascriptExternalName = 'trackView'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				viewName
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+			}
+
+		}
+
+		
+
+		TrackEvent
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'trackEvent',
+
+			AndroidExternalName = 'trackEvent',
+
+			JavascriptExternalName = 'trackEvent'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				category
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+		
+
+				action
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+		
+
+				label
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+		
+
+				value
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Numeric',
+
+					Length = '18',
+
+					Decimals = '2',
+
+					Signed = 'True',
+
+					JavaExternalType = 'java.math.BigDecimal',
+
+					AndroidExternalType = 'java.math.BigDecimal'
+
+				]
+
+			}
+
+		}
+
+		
+
+		TrackEvent
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'trackEvent',
+
+			AndroidExternalName = 'trackEvent'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				category
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+		
+
+				action
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+		
+
+				label
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+		
+
+				value
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Numeric',
+
+					Length = '18',
+
+					Decimals = '2',
+
+					Signed = 'True',
+
+					JavaExternalType = 'java.math.BigDecimal',
+
+					AndroidExternalType = 'java.math.BigDecimal'
+
+				]
+
+		
+
+				customParameters
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'AnalyticsKeyValue, GeneXus.Common',
+
+					Length = '0',
+
+					Collection = 'True'
+
+				]
+
+			}
+
+		}
+
+		
+
+		TrackPurchase
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'trackPurchase',
+
+			AndroidExternalName = 'trackPurchase',
+
+			JavascriptExternalName = 'trackPurchase'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				purchaseInfo
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'AnalyticsPurchase, GeneXus.Common',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SetUserId
+
+		[
+
+			Length = '100',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'setUserId',
+
+			AndroidExternalName = 'setUserId',
+
+			JavascriptExternalName = 'setUserId'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				userId
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Analytics"
+
+		IosExternalName = "GXEOAnalytics"
+
+		AndroidExternalName = "AnalyticsAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.core.externalobjects.analytics"
+
+		JavascriptExternalName = "gx.core.analytics"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

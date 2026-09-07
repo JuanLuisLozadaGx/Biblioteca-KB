@@ -1,0 +1,13 @@
+Domain MediaStreamType
+{
+	#Properties
+		Name = "MediaStreamType"
+
+		EnumValues = "None, None, 0; Buffered, Buffered, 1; Live, Live, 2"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

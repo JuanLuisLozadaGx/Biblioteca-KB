@@ -1,0 +1,15 @@
+Domain Permission
+{
+	#Properties
+		Name = "Permission"
+
+		DataType = "VarChar(40)"
+
+		EnumValues = "AppleMusic, Apple Music, AppleMusic; Bluetooth, Bluetooth, Bluetooth; Calendar, Calendar, Calendar; Camera, Camera, Camera; Contacts, Contacts, Contacts; FaceId, Face Id, FaceId; HealthShare, Health Share, HealthShare; HelathUpdate, Helath Update, HelathUpdate; HomeKit, Home Kit, HomeKit; LocalNetwork, Local Network, LocalNetwork; LocationAlways, Location Always, LocationAlways; LocationBackground, Location Background, LocationBackground; LocationCoarse, Location Coarse, LocationCoarse; LocationFine, Location Fine, LocationFine; LocationTemporary, Location Temporary, LocationTemporary; LocationWhenInUse, Location When In Use, LocationWhenInUse; Microphone, Microphone, Microphone; Motion, Motion, Motion; NFC, NFC, NFC; Notifications, Notifications, Notifications; Reminders, Reminders, Reminders; Siri, Siri, Siri; SpeechRecognition, Speech Recognition, SpeechRecognition; Storage, Storage, Storage; UserTracking, User Tracking, UserTracking"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,94 @@
+WebPanel Gx0040
+{
+	#Rules
+		parm(out:&pGenreId);
+		order(GenreId); 
+		
+	#End
+
+	#Events
+		Event Start
+			Form.Caption = Format("GXSPC_SelectionList", "Genre")
+			&ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>"
+		EndEvent
+		
+		Event 'Toggle'
+			if AdvancedContainer.Class = StyleClass:AdvancedContainer
+				AdvancedContainer.Class = StyleClass:AdvancedContainer + !" " + StyleClass:AdvancedContainerVisible
+				BtnToggle.Class += !" " + StyleClass:BtnToggleActive
+			else
+				AdvancedContainer.Class = StyleClass:AdvancedContainer
+				BtnToggle.Class = StyleClass:BtnToggle
+			endif
+		Endevent
+		
+		Event LblGenreIdFilter.Click
+			if GenreIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				GenreIdFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cGenreId.Visible = true
+			else
+				GenreIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cGenreId.Visible = false
+			endif
+		EndEvent
+		
+		Event LblGenreNameFilter.Click
+			if GenreNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				GenreNameFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cGenreName.Visible = true
+			else
+				GenreNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cGenreName.Visible = false
+			endif
+		EndEvent
+		
+		Event Load
+			&LinkSelection.FromImage(selectRow)
+		EndEvent
+		
+		Event Enter
+			&pGenreId = GenreId
+			Return
+		EndEvent
+		
+	#End
+
+	#Conditions
+		GenreId >= &cGenreId ;
+		GenreName >= &cGenreName when not &cGenreName.IsEmpty();
+		
+	#End
+
+	#Variables
+		LinkSelection [ DataType = 'Image' ]
+
+		cGenreId [ Description = 'Genre Id', DataType = 'Attribute:GenreId' ]
+
+		cGenreName [ Description = 'Genre Name', DataType = 'Attribute:GenreName' ]
+
+		pGenreId [ Description = 'Genre Id', DataType = 'Attribute:GenreId' ]
+
+		ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "Gx0040"
+
+		Description = "Selection List Genre"
+
+		MasterPage = "MasterPrompt"
+
+		IsPrompt = "True"
+
+		AssociatedTable = "Genre"
+
+		FocusControl = "Browser dependent"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,56 @@
+UserControl TreeviewAngular
+{
+	#UserControlScreenTemplate
+		{{=<% %>=}}
+		<ch-tree id="ch-treeview" [toggleCheckboxes]="ToggleCheckboxes">
+		    <ch-tree-item *ngFor="let treeItem of TreeviewItems" class="ch-treeview-item" [checkbox]="!treeItem.SingleSelection" [opened]="treeItem.isOpen" [leftIcon]="treeItem.icon" (click)="SelectedItemId=treeItem.id; SelectedItemTarget=treeItem.target; ItemClick();">
+		      {{treeItem.text}}
+		      <ch-tree *ngIf="treeItem.hasSubItems" [checkbox]="!treeItem.SingleSelection" slot="tree">
+		        <ch-tree-item *ngFor="let treeSubItem of treeItem.TreeviewSubItems" class="ch-treeview-item" [checkbox]="!treeSubItem.SingleSelection" [opened]="treeSubItem.isOpen" [leftIcon]="treeSubItem.icon" (click)="SelectedItemId=treeSubItem.id; SelectedItemTarget=treeSubItem.target; ItemClick();  $event.stopPropagation()">
+		          {{treeSubItem.text}}
+		          <ch-tree *ngIf="treeSubItem.hasSubItems" [checkbox]="!treeSubItem.SingleSelection" slot="tree">
+		            <ch-tree-item *ngFor="let treeSubSubItem of treeSubItem.TreeviewSubSubItems" [checkbox]="!treeSubSubItem.SingleSelection" class="ch-treeview-item" [leftIcon]="treeSubSubItem.icon" (click)="SelectedItemId=treeSubSubItem.id; SelectedItemTarget=treeSubSubItem.target; ItemClick();  $event.stopPropagation()">
+		              {{treeSubSubItem.text}}
+		            </ch-tree-item>
+		          </ch-tree>
+		        </ch-tree-item>
+				
+		      </ch-tree>
+		    </ch-tree-item>
+		</ch-tree>
+	#End
+
+	#UserControlProperties
+		<Definition auto="false" target="Angular">
+		  <Property Name="ToggleCheckboxes" Type="boolean" />
+		  <Property Name="SingleSelection" Type="boolean" Default="false" />
+		  <Property Name="TreeviewItems" Type="sdt" />
+		  <Property Name="TreeviewItemsCurrentIndex" Type="numeric"  />
+		  <Property Name="SelectedItemId" Type="string" Scope="RunTime"/>
+		  <Property Name="SelectedItemTarget" Type="string" Scope="RunTime" />
+		  
+		  <Event Name="ItemClick" />
+		  
+		  <Dependency name="@genexus/chameleon-controls-library" version="6.20.1"/>
+		  
+		  <script name="initTree" when="AfterShow">
+				const UC = this;
+				const tree = document.getElementById("ch-treeview");
+				
+				tree.addEventListener("toggleIconClicked", function(e: any){
+				});
+			</script>
+		</Definition>
+	#End
+
+	#Properties
+		Name = "TreeviewAngular"
+
+		Description = "Treeview Angular"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

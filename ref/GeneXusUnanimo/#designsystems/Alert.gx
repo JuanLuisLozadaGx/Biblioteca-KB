@@ -1,0 +1,134 @@
+DesignSystem Alert
+{
+	#DesignStyles
+		styles Alert
+		{
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		    
+		    .alert {
+		        display: inline-flex;
+		        align-items: center;
+		        height: 60px;
+		        padding-inline-start: $spacing.un-xl;
+		        margin-bottom: $spacing.un-xl;
+		        box-shadow: $shadows.m;
+		        
+		    }
+		    //show alert always fixed to bottom, no matter of the scroll
+		    .alert-fixed {
+		        position: fixed;
+		        top: 90vh;
+		        z-index: 10;
+		        inset-inline-start: 50%;
+		        transform: translateX(-50%);
+		    }
+		    .alert-close {
+		        background-color: transparent;
+		        border: none;
+		        font-family: $fonts.un-font__family;
+		        font-size: 30px;
+		        cursor: pointer;
+		        color: $colors.un-icon__on-surface--positive;
+		    }
+		    .alert-title {
+		        font-family: $fonts.un-font__family;
+		        font-weight: $fonts.un-font__weight--bold;
+		        font-size: $fontSizes.un-s;
+		        letter-spacing: 0.38px;
+		        text-transform: uppercase;
+		        line-height: 16px;
+		        padding-inline-start: $spacing.un-m;
+		    }
+		    .alert-message {
+		        font-family: $fonts.un-font__family;
+		        font-size: $fontSizes.un-s;
+		        letter-spacing: 0.25px;
+		        line-height: 16px;
+		        padding-inline-start: $spacing.un-m;
+		    }
+		    .alert-badge {
+		        display: flex;
+		        justify-content: center;
+		        align-items: center;
+		        background-color: $colors.un-accent__primary;
+		        border-radius: 50%;
+		        padding: 2px;
+		        width: 20px;
+		        height: 20px;
+		        box-shadow: $shadows.l;
+		        position: relative;
+		        top: -25px;
+		        inset-inline-end: -5px;
+		    }
+		    .alert-badge-text {
+		        font-family: $fonts.un-font__family;
+		        font-size: $fontSizes.un-s;
+		        color: $colors.un-color__white;
+		    }
+		    .alert-multiple {
+		        box-shadow: 5px -5px 0px 0px #ececec, 10px -10px 0px 0px #f7f7f7;
+		    } 
+		    .alert-info {
+		        @include icon-info;
+		        background-color: $colors.un-color__gray--300;
+		        border-inline-start: solid 4px;
+		        border-inline-start-color: $colors.un-border-color__primary;
+		    }
+		    .alert-success {
+		        @include icon-success;
+		        background-color: $colors.un-color__green--100;
+		        border-inline-start: solid 4px;
+		        border-inline-start-color: $colors.un-border-color__success;
+		    }
+		    .alert-warning {
+		        @include icon-warning;
+		        background-color: $colors.un-color__orange--100;
+		        border-inline-start: solid 4px;
+		        border-inline-start-color: $colors.un-border-color__warning;
+		    }
+		    .alert-error {
+		        @include icon-error;
+		        background-color: $colors.un-color__red--100;
+		        border-inline-start: solid 4px;
+		        border-inline-start-color: $colors.un-border-color__error;
+		    }
+		    .icon-info {
+		        background-image: gx-image(GeneXusUnanimo.info_ico_purple);
+		        background-size: 25px;
+		        background-repeat: no-repeat;
+		        background-position: 15px, center;
+		    }
+		    .icon-success {
+		        background-image: gx-image(GeneXusUnanimo.success_ico_green);
+		        background-size: 25px;
+		        background-repeat: no-repeat;
+		        background-position: 15px, center;
+		    }
+		    .icon-warning {
+		        background-image: gx-image(GeneXusUnanimo.warning_ico);
+		        background-size: 25px;
+		        background-repeat: no-repeat;
+		        background-position: 15px, center;
+		    }
+		    .icon-error {
+		        background-image: gx-image(GeneXusUnanimo.error_ico);
+		        background-size: 25px;
+		        background-repeat: no-repeat;
+		        background-position: 15px, center;
+		    }
+		    html[gx-data-color-scheme="dark"] div[class*="alert"]{
+		        background-color: $colors.un-elevation--3;
+		        color: $colors.un-text__on-surface--positive;//$colors.on-alert;
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "Alert"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

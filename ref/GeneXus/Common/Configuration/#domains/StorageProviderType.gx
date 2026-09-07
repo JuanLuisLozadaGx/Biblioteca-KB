@@ -1,0 +1,17 @@
+Domain StorageProviderType
+{
+	#Properties
+		Name = "StorageProviderType"
+
+		DataType = "VarChar(100)"
+
+		Length = "100"
+
+		EnumValues = "Amazon_S3, Amazon S3, AMAZONS3; Box, Box Cloud Storage, BOX; Google_CloudStorage, Google Cloud Storage, GOOGLE; IBM_Bluemix, IBM Bluemix Storage (deprecated), BLUEMIXSTORAGE; IBM_ObjectStorage, IBM Cloud Object Storage, IBMCOS; Microsoft_Azure, MIcrosoft Azure Storage, AZURESTORAGE; OpenStack, Open Stack, OPENSTACKSTORAGE"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

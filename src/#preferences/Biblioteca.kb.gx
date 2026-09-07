@@ -1,0 +1,41 @@
+KnowledgeBase Biblioteca
+{
+	#Version
+		EnableNationalLanguageSupport = "Yes"
+
+		TimeOnlyCompatibility = "False"
+
+		Name = "Design"
+
+		ResourcesWorkWith = "Resources=1.1"
+
+		
+	#End
+
+	#Product
+		ProductName = "GeneXus"
+
+		ProductVersion = "18.0.15.188745"
+
+		FriendlyVersion = "18.0.188745 U15"
+
+		InstallationPath = "C:\\Program Files (x86)\\GeneXus\\GeneXus18"
+
+		
+	#End
+
+	#References
+		GeneXus [ Version = '4.15.53' ]
+
+		GeneXusUnanimo [ Version = '2.0.194', ServerUrl = 'https://samples.genexusserver.com/beta/kbdashboard.aspx?Unanimo,' ]
+
+		
+	#End
+
+	#Properties
+		KbLanguage = "Spanish"
+
+		
+	#End
+
+}

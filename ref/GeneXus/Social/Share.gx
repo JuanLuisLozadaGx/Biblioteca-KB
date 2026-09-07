@@ -1,0 +1,235 @@
+ExternalObject Share
+{
+	#ExternalMethods
+		ShareText
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				text
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '200'
+
+				]
+
+		
+
+				url
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+		
+
+				title
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '200'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ShareImage
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				image
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'Image',
+
+					Length = '4'
+
+				]
+
+		
+
+				text
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '200',
+
+					Collection = 'False'
+
+				]
+
+		
+
+				url
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+		
+
+				title
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '200'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ShareFile
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				uri
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+		
+
+				text
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '200'
+
+				]
+
+		
+
+				title
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '200'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ShareFile
+
+		[
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				uri
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Share"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

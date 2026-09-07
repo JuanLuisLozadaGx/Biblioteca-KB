@@ -1,0 +1,73 @@
+ExternalObject DynamicCallMethodProperties
+{
+	#ExternalProperties
+		IsStatic
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			NetFrameworkExternalName = 'IsStatic',
+
+			NetFrameworkExternalType = 'bool',
+
+			JavaExternalName = 'isStatic',
+
+			JavaExternalType = 'boolean',
+
+			JavaExternalSetMethod = 'setIsStatic',
+
+			JavaExternalGetMethod = 'getIsStatic'
+
+		]
+
+		
+
+		MethodName
+
+		[
+
+			Type = 'VarChar',
+
+			Length = '40',
+
+			NetFrameworkExternalName = 'MethodName',
+
+			NetFrameworkExternalType = 'string',
+
+			JavaExternalName = 'methodName',
+
+			JavaExternalType = 'String',
+
+			JavaExternalSetMethod = 'setMethodName',
+
+			JavaExternalGetMethod = 'getMethodName'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "DynamicCallMethodProperties"
+
+		Namespace = "GeneXus.DynamicCall"
+
+		NetFrameworkExternalName = "GxDynCallMethodConf"
+
+		NetFrameworkAssemblyName = ""
+
+		JavaExternalName = "GXDynCallMethodConf"
+
+		JavaExternalPackageName = "com.genexus.gxdynamiccall"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

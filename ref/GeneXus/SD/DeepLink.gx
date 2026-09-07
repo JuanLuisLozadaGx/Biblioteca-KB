@@ -1,0 +1,51 @@
+ExternalObject DeepLink
+{
+	#ExternalEvents
+		Handle
+
+		{
+
+			Parameters
+
+			{
+
+				Uri
+
+				[
+
+					BasedOn = 'Url, GeneXus'
+
+				]
+
+		
+
+				Handled
+
+				[
+
+					AccessType = 'Out',
+
+					Type = 'Boolean',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "DeepLink"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

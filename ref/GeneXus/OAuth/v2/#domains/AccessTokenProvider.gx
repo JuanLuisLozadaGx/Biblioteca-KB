@@ -1,0 +1,29 @@
+Domain AccessTokenProvider
+{
+	#Properties
+		Name = "AccessTokenProvider"
+
+		NullsInForms = "Empty as Null"
+
+		DataType = "VarChar(10000)"
+
+		Length = "10000"
+
+		Decimals = "0"
+
+		EnumValues = "Google, Refresh access token URL for Google, https://oauth2.googleapis.com/token; Microsoft_common, Refresh access token URL for MS with tenant common, https://login.microsoftonline.com/common/oauth2/v2.0/token; Microsoft_organizations, Refresh access token URL for MS with tenant organizations, https://login.microsoftonline.com/organizations/oauth2/v2.0/token; Microsoft_consumers, Refresh access token URL for MS with tenant consumers, https://login.microsoftonline.com/consumers/oauth2/v2.0/token"
+
+		Collection = "False"
+
+		AutonumberStart = "1"
+
+		AutonumberStep = "1"
+
+		ControlType = "Combo Box"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,136 @@
+DesignSystem Dropdown
+{
+	#DesignStyles
+		styles Dropdown {
+		    @import GeneXusUnanimo.Unanimo;
+		
+		    .dropdown::part(window) {
+		        background-color: $colors.form-container-bg;
+		        color: $colors.un-text__on-surface--positive;
+		        gap: $spacing.un-s;
+		        border-radius: $radius.un-radius--l;
+		        box-shadow: $shadows.xs;
+		        padding-block: $spacing.un-s;
+		    }
+		
+		    .dropdown::part(expandable-button) {
+		        @include button-secondary;
+		        white-space: normal;
+		        height: 28px;
+		        padding-inline-start: $spacing.un-l;
+		        padding-inline-end: $spacing.un-l;
+		        border-radius: $radius.un-radius--s;
+		        min-width: 80px;
+		        gap: $spacing.un-xs;
+		    }
+		
+		    .dropdown::part(action)::before {
+		        background-size: 20px;
+		    }
+		
+		    .dropdown::part(action) {
+		        padding-inline: $spacing.un-l;
+		        gap: $spacing.un-m;
+		        font-family: $fonts.un-font__family;
+		        font-weight: $fonts.un-font__weight--regular;
+		        font-size: $fontSizes.un-s;
+		        letter-spacing: .25px;
+		        line-height: 28px;
+		    }
+		
+		    .dropdown::part(action):hover {
+		        background-color: $colors.un-accent__primary-dim--hover;
+		    }
+		
+		    .dropdown::part(action expandable)::after {
+		        content: "";
+		        display: block;
+		        inline-size: 10px;
+		        block-size: 10px;
+		        background-image: gx-image(GeneXusUnanimo.arrow_right);
+		        background-position: center;
+		        background-repeat: no-repeat;
+		        background-size: 16px;
+		    }
+		
+		    .dropdown::part(action link) {
+		        text-decoration: underline;
+		    }
+		    
+		    .dropdown::part(action disabled) {
+		        opacity: .4;
+		    }
+		
+		    .dropdown-item::part(left-img) {
+		        width: 24px;
+		        height: 24px;
+		        min-width: 24px;
+		    }
+		
+		    .dropdown-item--logout::part(action)::before {
+		        content: "";
+		        width: 24px;
+		        height: 24px;
+		        min-width: 24px;
+		        background-color: $colors.un-accent__primary;
+		        -webkit-mask: gx-image(GeneXusUnanimo.sign_out) 50% 50%;
+		        -webkit-mask-repeat: no-repeat;
+		        -webkit-mask-size: 24px;
+		    }
+		
+		    .action-group::part(more-actions-button):hover,
+		    .action-group-item::part(action):hover,
+		    .dropdown-item::part(action):hover {
+		        background-color: $colors.un-accent__primary-dim--hover;
+		    }
+		
+		    .action-group-item::part(action):active,
+		    .dropdown-item::part(action):active {
+		        color: $colors.un-text__primary--active;
+		    }
+		
+		    .action-group::part(more-actions-button):focus-visible,
+		    .action-group-item::part(action):focus-visible,
+		    .dropdown::part(expandable-button):focus-visible,
+		    .dropdown-item::part(action):focus-visible {
+		        outline: $borders.un-width--s solid $colors.un-border-color__secondary;
+		        outline-offset: -2px;
+		    }
+		
+		    .dropdown::part(expandable-button)::after {
+		        content: "";
+		        width: 20px;
+		        height: 20px;
+		        padding-inline-start: $spacing.un-l;
+		        background-image: gx-image(GeneXusUnanimo.arrow_desc_light);
+		        background-position: center;
+		        background-repeat: no-repeat;
+		        background-size: 20px;
+		        transform: rotate(0deg);
+		        transition: transform 0.3s;
+		    }
+		
+		    .dropdown::part(expandable-button expanded)::after {
+		        transform: rotate(180deg);
+		        transition: transform 0.3s;
+		    }
+		
+		    .action-group-item::part(expandable-action)::after,
+		    .dropdown-item::part(expandable-action)::after {
+		        content: "";
+		        border-block-start: 4px dashed $colors.un-border-color__primary;
+		        border-inline: 4px solid transparent;
+		        margin-inline-start: 4px;
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "Dropdown"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

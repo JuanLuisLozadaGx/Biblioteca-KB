@@ -1,0 +1,17 @@
+Image refresh
+{
+	'refresh.svg' [ Description = 'Refresh.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'refresh_dark.svg' [ Description = 'refresh_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "refresh"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,39 @@
+<layout type="">
+	<view>
+		<table class="card" tableType="Responsive" responsiveSizes="[]">
+			<row>
+				<cell>
+					<table name="CardHeader" class="card-heading" tableType="Responsive" responsiveSizes="[]">
+						<row>
+							<cell>
+								<label name="Textblock1" caption="Title" class="TextBlock" />
+							</cell>
+							<cell horizontalAlignment="Right">
+								<label name="Textblock2" caption="ASSIGNED TO ME" class="badge-info" />
+							</cell>
+						</row>
+					</table>
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<table name="CardBody" class="card-body" tableType="Responsive" responsiveSizes="[]" />
+				</cell>
+			</row>
+			<row>
+				<cell>
+					<table name="CardFooter" class="card-footer" tableType="Responsive" responsiveSizes="[]">
+						<row>
+							<cell>
+								<actiongroup name="ActionGroup2" />
+							</cell>
+							<cell horizontalAlignment="Right">
+								<actiongroup name="ActionGroup1" />
+							</cell>
+						</row>
+					</table>
+				</cell>
+			</row>
+		</table>
+	</view>
+</layout>

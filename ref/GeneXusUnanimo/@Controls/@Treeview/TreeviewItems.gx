@@ -1,0 +1,65 @@
+SDT TreeviewItems
+{
+	TreeviewItems [ Collection = 'True', CollectionItemName = 'TreeviewItem' ]{
+
+		id [ DataType = 'Code, GeneXusUnanimo' ]
+
+		text [ DataType = 'Description, GeneXusUnanimo' ]
+
+		icon [ DataType = 'Url, GeneXus' ]
+
+		target [ DataType = 'Url, GeneXus' ]
+
+		isOpen [ DataType = 'Boolean' ]
+
+		hasSubItems [ DataType = 'Boolean' ]
+
+		TreeviewSubItems [ Collection = 'True', CollectionItemName = 'SubItem' ]	{
+
+			id [ DataType = 'Code, GeneXusUnanimo' ]
+
+			text [ DataType = 'Description, GeneXusUnanimo' ]
+
+			icon [ DataType = 'Url, GeneXus' ]
+
+			target [ DataType = 'Url, GeneXus' ]
+
+			isOpen [ DataType = 'Boolean' ]
+
+			hasSubItems [ DataType = 'Boolean' ]
+
+			TreeviewSubSubItems [ Collection = 'True', CollectionItemName = 'SubSubItem' ]		{
+
+				id [ DataType = 'Code, GeneXusUnanimo', Collection = 'False' ]
+
+				text [ DataType = 'Description, GeneXusUnanimo' ]
+
+				icon [ DataType = 'Url, GeneXus' ]
+
+				target [ DataType = 'Url, GeneXus' ]
+
+			}
+
+	
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "TreeviewItems"
+
+		ExposedNamespace = "GeneXusUnanimo"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

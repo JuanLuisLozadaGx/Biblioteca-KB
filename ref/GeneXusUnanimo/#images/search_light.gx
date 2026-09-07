@@ -1,0 +1,17 @@
+Image search_light
+{
+	'search_light.svg' [ Description = 'search_light.svg', Style = 'Any', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "search_light"
+
+		Description = "search_light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

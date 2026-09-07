@@ -1,0 +1,35 @@
+SDT Route
+{
+	Route [ Collection = 'False' ]{
+
+		name [ Description = 'The expected travel time in seconds', DataType = 'VarChar(40)' ]
+
+		advisoryNotices [ Description = 'A collection of advisory notice strings for the route', DataType = 'VarChar(200)', Collection = 'True', CollectionItemName = 'advisoryNotice' ]
+
+		distance [ Description = 'The route distance in meters', DataType = 'Numeric(10.2)' ]
+
+		expectedTravelTime [ Description = 'The expected travel time in seconds', DataType = 'Numeric(10.2)', Collection = 'False', ControlType = 'Edit' ]
+
+		transportType [ Description = 'The overall route transport type', DataType = 'TransportType, GeneXus.Common' ]
+
+		geoline [ Description = 'The route geometry', DataType = 'GeoLine' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "Route"
+
+		ExposedName = "Route"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

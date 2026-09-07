@@ -1,0 +1,17 @@
+Image close_ico_destructive
+{
+	'close_ico_destructive.svg' [ Description = 'close_ico_destructive.svg', Style = 'Any', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "close_ico_destructive"
+
+		Description = "close_ico_destructive"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

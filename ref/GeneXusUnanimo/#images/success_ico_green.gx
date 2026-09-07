@@ -1,0 +1,19 @@
+Image success_ico_green
+{
+	'success_green.svg' [ Description = 'success_green.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'success_green_dark.svg' [ Description = 'success_green_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "success_ico_green"
+
+		Description = "success_ico_green"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

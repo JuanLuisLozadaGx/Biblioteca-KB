@@ -1,0 +1,13 @@
+Domain MediaFinishReason
+{
+	#Properties
+		Name = "MediaFinishReason"
+
+		EnumValues = "Unknown, Unknown, 0; PlaybackCompleted, Playback Completed, 1; Stopped, Stopped, 2; Skipped, Skipped, 3; QueueReplaced, Queue Replaced, 4"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

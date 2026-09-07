@@ -1,0 +1,17 @@
+Domain EventExecution
+{
+	#Properties
+		Name = "EventExecution"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		EnumValues = "OnNotificationArrive, On Notification Arrive, 1; OnLauchByUser, On Lauch By User, 0"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,17 @@
+Image notification
+{
+	'notification.svg' [ Description = 'notification.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "notification"
+
+		Description = "notification"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

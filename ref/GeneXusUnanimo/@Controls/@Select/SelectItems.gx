@@ -1,0 +1,33 @@
+SDT SelectItems
+{
+	SelectItems [ Collection = 'True', CollectionItemName = 'SelectItem' ]{
+
+		value [ DataType = 'VarChar(40)' ]
+
+		text [ DataType = 'VarChar(100)' ]
+
+		leftIcon [ DataType = 'VarChar(1000)' ]
+
+		rightIcon [ DataType = 'VarChar(1000)' ]
+
+		selected [ DataType = 'Boolean' ]
+
+		disabled [ DataType = 'Boolean' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "SelectItems"
+
+		ExposedNamespace = "GeneXusUnanimo"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

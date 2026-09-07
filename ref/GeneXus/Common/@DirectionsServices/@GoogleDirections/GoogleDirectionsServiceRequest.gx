@@ -1,0 +1,26 @@
+Procedure GoogleDirectionsServiceRequest
+{
+	#Rules
+		parm(in:&DirectionsRequestParameters, out:&Routes, out:&errorMessages);
+		
+	#End
+
+	#Variables
+		DirectionsRequestParameters [ DataType = 'DirectionsRequestParameters, GeneXus.Common' ]
+
+		Routes [ DataType = 'Route, GeneXus.Common', Collection = 'True' ]
+
+		errorMessages [ DataType = 'Messages, GeneXus.Common' ]
+
+		
+	#End
+
+	#Properties
+		Name = "GoogleDirectionsServiceRequest"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

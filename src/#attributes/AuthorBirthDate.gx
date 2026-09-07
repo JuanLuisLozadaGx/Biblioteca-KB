@@ -1,0 +1,13 @@
+Attribute AuthorBirthDate
+{
+	#Properties
+		Name = "AuthorBirthDate"
+
+		DataType = "Date"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

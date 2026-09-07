@@ -1,0 +1,19 @@
+Image calendar_ico
+{
+	'calendar.svg' [ Description = 'calendar.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'calendar_dark.svg' [ Description = 'calendar_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "calendar_ico"
+
+		Description = "calendar"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

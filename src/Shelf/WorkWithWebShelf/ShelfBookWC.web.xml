@@ -1,0 +1,68 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" class="ww__view__grid-table">
+			<row>
+				<cell name="GridCell" class="ww__grid-cell" widthSm="100">
+					<responsive name="GridTable" responsiveSizes="[]">
+						<row>
+							<cell>
+								<flex name="TableTop" class="Flex ww__actions-container">
+									<cell class="ww__view__grid__actions-cell" flexGrow="0">
+										<actiongroup name="Actions" />
+									</cell>
+								</flex>
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<errorviewer name="ErrorViewer" />
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<responsive name="GridContainer" class="ww__grid-container" responsiveSizes="[]">
+									<row>
+										<cell>
+											<tabularGrid name="Grid" class="ViewGrid" order="">
+												<input title="Id" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="BookId" name="ctlBookId" />
+												<input title="Title" class="attribute-description" inputType="Values" dataSourceFrom="Values" columnClass="column" visible="True" data="BookTitle" name="ctlBookTitle" />
+												<input title="Author Id" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="AuthorId" name="ctlAuthorId" />
+												<input title="Author Name" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="AuthorName" name="ctlAuthorName" />
+												<input title="Publisher Id" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="PublisherId" name="ctlPublisherId" />
+												<input title="Publisher Name" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="PublisherName" name="ctlPublisherName" />
+												<input title="Genre Id" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="GenreId" name="ctlGenreId" />
+												<input title="Genre Name" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="GenreName" name="ctlGenreName" />
+												<input title="ISBN" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="BookISBN" name="ctlBookISBN" />
+												<input title="Publication Year" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="BookPublicationYear" name="ctlBookPublicationYear" />
+												<input title="Pages" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="BookPages" name="ctlBookPages" />
+												<input title="Language" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="BookLanguage" name="ctlBookLanguage" />
+												<input title="Status" columnClass="column column-optional" visible="True" data="BookStatus" name="ctlBookStatus" />
+												<input title="Rating" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="BookRating" name="ctlBookRating" />
+												<input title="Acquisition Date" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="BookAcquisitionDate" name="ctlBookAcquisitionDate" />
+												<input title="Notes" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="BookNotes" name="ctlBookNotes" />
+												<input title="" class="TextActionAttribute TextLikeLink" columnClass="WWTextActionColumn" readOnly="True" data="&amp;Update" name="ctlUpdate" />
+												<input title="" class="TextActionAttribute TextLikeLink" columnClass="WWTextActionColumn" readOnly="True" data="&amp;Delete" name="ctlDelete" />
+											</tabularGrid>
+										</cell>
+									</row>
+								</responsive>
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+			<row>
+				<cell widthSm="100">
+					<input labelPosition="None" inputType="Values" dataSourceFrom="Values" data="ShelfId" name="ctlShelfId" />
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups>
+			<actiongroup name="Actions" class="ww__view__actions">
+				<item>
+					<action name="BtnInsert" onClickEvent="'DoInsert'" caption="GXM_insert" class="Button button-primary" />
+				</item>
+			</actiongroup>
+		</actiongroups>
+	</view>
+</layout>

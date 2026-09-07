@@ -1,0 +1,15 @@
+Image PageFirst
+{
+	'PageFirst.gif' [ IsExternal = 'True', Style = 'Any', Language = 'Any', Source = 'PageFirst.gif' ]
+
+	
+
+	#Properties
+		Name = "PageFirst"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

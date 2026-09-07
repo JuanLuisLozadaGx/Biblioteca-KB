@@ -1,0 +1,37 @@
+UserControl StepAngular
+{
+	#UserControlScreenTemplate
+		{{=<% %>=}}
+		<ch-step-list>
+			<ch-step-list-item *ngFor="let stepItem of StepItems" class="{{Class}}" (click)="SelectedItem=stepItem.id; ItemClick();">
+				{{stepItem.text}}
+			</ch-step-list-item>
+		</ch-step-list>
+	#End
+
+	#UserControlProperties
+		<Definition auto="false" target="Angular">
+			<Property Name="Class" Type="string" Default="ch-step" />
+			<Property Name="StepItems" Type="sdt" />
+			<Property Name="SelectedItem" Type="string" Scope="RunTime"/>
+			
+			<Event Name="ItemClick" />
+			
+			<Dependency name="@genexus/chameleon-controls-library" version="6.20.1"/>
+			
+		</Definition>
+	#End
+
+	#Properties
+		Name = "StepAngular"
+
+		Description = "Step Angular"
+
+		BaseCss = "Unanimo_chameleon"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,113 @@
+WebComponent ShelfBookWC
+{
+	#Rules
+		parm(in:&ShelfId);
+		
+	#End
+
+	#Events
+		Event Start
+		
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+		
+			Grid.Rows = 10
+			&Update = "GXM_update"
+			&Delete = "GX_BtnDelete"
+			ShelfId.Visible = False
+		
+			Do 'PrepareTransaction'
+		EndEvent
+		
+		Event Grid.Load
+			&Update.Link = Book.Link(TrnMode.Update, BookId)
+			&Delete.Link = Book.Link(TrnMode.Delete, BookId)
+			BookTitle.Link = ViewBook.Link(BookId, "")
+			AuthorName.Link = ViewAuthor.Link(AuthorId, "")
+			PublisherName.Link = ViewPublisher.Link(PublisherId, "")
+			GenreName.Link = ViewGenre.Link(GenreId, "")
+		EndEvent
+		
+		Event 'DoInsert'
+			Book(TrnMode.Insert, nullvalue(BookId))
+		EndEvent
+		
+		Sub 'PrepareTransaction'
+			&TrnContext = new()
+			&TrnContext.CallerObject = &Pgmname
+			&TrnContext.CallerOnDelete = True
+			&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+			&TrnContext.TransactionName = !"Book"
+		
+			&TrnContextAtt = new()
+			&TrnContextAtt.AttributeName = !"ShelfId"
+			&TrnContextAtt.AttributeValue = &ShelfId.ToString()
+			&TrnContext.Attributes.Add(&TrnContextAtt)
+		
+			&Session.Set(!"TrnContext", &TrnContext.ToXml())
+		EndSub
+		
+		
+	#End
+
+	#Conditions
+		ShelfId = &ShelfId;
+		
+	#End
+
+	#Variables
+		IsAuthorized [ DataType = 'Boolean' ]
+
+		ShelfId [ DataType = 'Attribute:ShelfId' ]
+
+		Session [ DataType = 'WebSession' ]
+
+		HTTPRequest [ DataType = 'HttpRequest' ]
+
+		GridState [ DataType = 'GridState, GeneXus.Common' ]
+
+		TrnContext [ DataType = 'TransactionContext, General.UI' ]
+
+		TrnContextAtt [ DataType = 'TransactionContext.Attribute, General.UI' ]
+
+		Update [ DataType = 'Character(20)' ]
+
+		Delete [ DataType = 'Character(20)' ]
+
+		ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "ShelfBookWC"
+
+		Type = "Component"
+
+		IsDefault = "False"
+
+		
+
+		WebForm.Defaults = "WorkWith:Templates\\TabGridWebForm.dkt"
+
+		
+
+		Rules.Defaults = "WorkWith:Templates\\TabGridRules.dkt"
+
+		
+
+		Events.Defaults = "WorkWith:Templates\\TabGridEvents.dkt"
+
+		
+
+		Conditions.Defaults = "WorkWith:Templates\\TabGridConditions.dkt"
+
+		
+
+		Variables.Defaults = "WorkWith:Templates\\TabGridVariables.dkt"
+
+		
+	#End
+
+}

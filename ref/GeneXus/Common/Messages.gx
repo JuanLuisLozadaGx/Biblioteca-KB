@@ -1,0 +1,27 @@
+SDT Messages
+{
+	Messages [ Collection = 'True', CollectionItemName = 'Message' ]{
+
+		Id [ DataType = 'VarChar(128)' ]
+
+		Type [ DataType = 'MessageTypes, GeneXus' ]
+
+		Description [ DataType = 'VarChar(256)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "Messages"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

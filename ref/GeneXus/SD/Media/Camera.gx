@@ -1,0 +1,75 @@
+ExternalObject Camera
+{
+	#ExternalMethods
+		TakePhoto
+
+		[
+
+			Type = 'Image',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		RecordVideo
+
+		[
+
+			Type = 'Video',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		RecordVideo
+
+		[
+
+			Type = 'Video',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				videoQuality
+
+				[
+
+					BasedOn = 'CameraAPIQuality, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Camera"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

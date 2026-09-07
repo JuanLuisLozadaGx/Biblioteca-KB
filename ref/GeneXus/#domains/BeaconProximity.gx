@@ -1,0 +1,17 @@
+Domain BeaconProximity
+{
+	#Properties
+		Name = "BeaconProximity"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		EnumValues = "Unknown, Unknown, 0; Inmediate, Inmediate, 1; Near, Near, 2; Far, Far, 3"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

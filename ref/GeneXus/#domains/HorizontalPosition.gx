@@ -1,0 +1,15 @@
+Domain HorizontalPosition
+{
+	#Properties
+		Name = "HorizontalPosition"
+
+		DataType = "Character(20)"
+
+		EnumValues = "Left, Left, left; Center, Center, center; Right, Right, right"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

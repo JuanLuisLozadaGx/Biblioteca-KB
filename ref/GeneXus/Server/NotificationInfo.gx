@@ -1,0 +1,27 @@
+SDT NotificationInfo
+{
+	NotificationInfo{
+
+		Id [ DataType = 'Character(100)' ]
+
+		Object [ DataType = 'Character(100)' ]
+
+		Message [ DataType = 'LongVarChar(2M)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "NotificationInfo"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

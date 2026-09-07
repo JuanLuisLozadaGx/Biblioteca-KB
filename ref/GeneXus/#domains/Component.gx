@@ -1,0 +1,13 @@
+Domain Component
+{
+	#Properties
+		Name = "Component"
+
+		BasedOn = "Url, GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

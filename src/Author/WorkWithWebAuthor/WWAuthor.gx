@@ -1,0 +1,105 @@
+WebPanel WWAuthor
+{
+	#Events
+		Event Start
+		
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+		
+			Grid.Rows = 10
+			&Update = "GXM_update"
+			&Delete = "GX_BtnDelete"
+			Form.Caption = 'Authors'
+		
+			Do 'PrepareTransaction'
+			Grid.LoadSessionState()
+		EndEvent
+		
+		Event Refresh
+			Grid.SaveSessionState()
+		EndEvent
+		
+		Event Grid.Load
+			&Update.Link = Author.Link(TrnMode.Update, AuthorId)
+			&Delete.Link = Author.Link(TrnMode.Delete, AuthorId)
+			AuthorName.Link = ViewAuthor.Link(AuthorId, "")
+		EndEvent
+		
+		Event 'DoInsert'
+			Author(TrnMode.Insert, nullvalue(AuthorId))
+		EndEvent
+		
+		Sub 'PrepareTransaction'
+			&TrnContext = new()
+			&TrnContext.CallerObject = &Pgmname
+			&TrnContext.CallerOnDelete = True
+			&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+			&TrnContext.TransactionName = !"Author"
+		
+			&Session.Set(!"TrnContext", &TrnContext.ToXml())
+		EndSub
+		
+		
+	#End
+
+	#Conditions
+		AuthorName like &AuthorName when not &AuthorName.IsEmpty();
+		
+	#End
+
+	#Variables
+		IsAuthorized [ DataType = 'Boolean' ]
+
+		Session [ DataType = 'WebSession' ]
+
+		HTTPRequest [ DataType = 'HttpRequest' ]
+
+		GridState [ DataType = 'GridState, GeneXus.Common' ]
+
+		TrnContext [ DataType = 'TransactionContext, General.UI' ]
+
+		TrnContextAtt [ DataType = 'TransactionContext.Attribute, General.UI' ]
+
+		AuthorName [ DataType = 'Attribute:AuthorName' ]
+
+		Update [ DataType = 'Character(20)' ]
+
+		Delete [ DataType = 'Character(20)' ]
+
+		ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "WWAuthor"
+
+		Description = "Authors"
+
+		IsDefault = "False"
+
+		
+
+		WebForm.Defaults = "WorkWith:Templates\\SelectionWebForm.dkt"
+
+		
+
+		Rules.Defaults = "WorkWith:Templates\\SelectionRules.dkt"
+
+		
+
+		Events.Defaults = "WorkWith:Templates\\SelectionEvents.dkt"
+
+		
+
+		Conditions.Defaults = "WorkWith:Templates\\SelectionConditions.dkt"
+
+		
+
+		Variables.Defaults = "WorkWith:Templates\\SelectionVariables.dkt"
+
+		
+	#End
+
+}

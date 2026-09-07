@@ -1,0 +1,15 @@
+Image info
+{
+	'info.svg' [ Description = 'info.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "info"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

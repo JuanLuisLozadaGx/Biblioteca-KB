@@ -1,0 +1,17 @@
+Domain RegionState
+{
+	#Properties
+		Name = "RegionState"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		EnumValues = "Unknown, Unknown, 0; Inside, Inside, 1; Outside, Outside, 2"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

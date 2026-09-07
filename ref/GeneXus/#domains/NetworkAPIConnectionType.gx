@@ -1,0 +1,19 @@
+Domain NetworkAPIConnectionType
+{
+	#Properties
+		Name = "NetworkAPIConnectionType"
+
+		Description = "Network Connection Type"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		EnumValues = "None, None, 0; WiFi, WiFi, 1; WAN, WAN, 2; Roaming, Roaming, 3"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,15 @@
+Domain Code
+{
+	#Properties
+		Name = "Code"
+
+		DataType = "VarChar(100)"
+
+		Length = "100"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

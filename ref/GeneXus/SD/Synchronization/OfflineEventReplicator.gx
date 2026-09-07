@@ -1,0 +1,34 @@
+Procedure OfflineEventReplicator
+{
+	#Rules
+		parm(in:&GxPendingEvents, in:&GxSyncroInfo, out:&EventResults);
+		
+	#End
+
+	#Variables
+		EventResults [ DataType = 'SynchronizationEventResultList, GeneXus.SD.Synchronization' ]
+
+		GxPendingEvents [ DataType = 'SynchronizationEventList, GeneXus.SD.Synchronization' ]
+
+		GxSyncroInfo [ DataType = 'SynchronizationInfo, GeneXus.SD.Synchronization' ]
+
+		
+	#End
+
+	#Properties
+		Name = "OfflineEventReplicator"
+
+		Description = "Offline Event Replicator"
+
+		SoapProtocol = "False"
+
+		ConnectivitySupport = "Online"
+
+		StandardFunctions = "Allow non-standard functions"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

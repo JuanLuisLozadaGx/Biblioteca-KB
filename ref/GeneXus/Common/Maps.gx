@@ -1,0 +1,1273 @@
+ExternalObject Maps
+{
+	#ExternalProperties
+		AuthorizationStatus
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Returns the current authorization status.',
+
+			BasedOn = 'APIAuthorizationStatus, GeneXus',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'authorizationStatusNumber',
+
+			AndroidExternalGetMethod = 'authorizationStatus'
+
+		]
+
+		
+
+		Authorized
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Indicates whether the application has been given permission to use location services',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Static',
+
+			IosExternalName = 'locationservicesauthorized',
+
+			AndroidExternalGetMethod = 'authorized'
+
+		]
+
+		
+
+		ServiceEnabled
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Indicates whether location services are enable in the device',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Static',
+
+			IosExternalName = 'locationservicesenabled',
+
+			AndroidExternalGetMethod = 'serviceEnabled'
+
+		]
+
+		
+
+		AuthorizedAccuracy
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'Indicates the level of location accuracy the user has granted permission to use',
+
+			BasedOn = 'LocationAccuracyAuthorization, GeneXus.Common',
+
+			IsStatic = 'True',
+
+			ExternalMemberType = 'Static',
+
+			IosExternalName = 'authorizedAccuracy'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		CalculateDirections
+
+		[
+
+			Description = 'Calculates directions between the source and destination locations',
+
+			Type = 'Directions, GeneXus.Common',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'CalculateDirections',
+
+			NetFrameworkExternalType = 'dynamic',
+
+			JavaExternalName = 'calculateDirections',
+
+			JavaExternalType = 'GXXMLSerializable',
+
+			IosExternalName = 'calculatedirections',
+
+			AndroidExternalName = 'calculateDirections'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				sourceLocation
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The source location for the route',
+
+					Type = 'GeoPoint',
+
+					Length = '255'
+
+				]
+
+		
+
+				destinationLocation
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The destination location for the route',
+
+					Type = 'GeoPoint',
+
+					Length = '255'
+
+				]
+
+			}
+
+		}
+
+		
+
+		CalculateDirections
+
+		[
+
+			Description = 'Calculates directions between the source and destination locations with additional parameters',
+
+			Type = 'Directions, GeneXus.Common',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'CalculateDirections',
+
+			NetFrameworkExternalType = 'dynamic',
+
+			JavaExternalName = 'calculateDirections',
+
+			JavaExternalType = 'GXXMLSerializable',
+
+			IosExternalName = 'calculatedirections',
+
+			AndroidExternalName = 'calculateDirections'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				sourceLocation
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The source location for the route',
+
+					Type = 'GeoPoint',
+
+					Length = '255'
+
+				]
+
+		
+
+				destinationLocation
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The destination location for the route',
+
+					Type = 'GeoPoint',
+
+					Length = '255'
+
+				]
+
+		
+
+				transportType
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The transport type to use when calculating the route',
+
+					BasedOn = 'TransportType, GeneXus.Common'
+
+				]
+
+		
+
+				requestAlternateRoutes
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Whether the service will serve multiple alternative routes',
+
+					Type = 'Boolean',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		CalculateDirections
+
+		[
+
+			Description = 'Calculates directions between the source and destination locations with additional parameters',
+
+			Type = 'Directions, GeneXus.Common',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'CalculateDirections',
+
+			NetFrameworkExternalType = 'dynamic',
+
+			JavaExternalName = 'calculateDirections',
+
+			JavaExternalType = 'GXXMLSerializable',
+
+			IosExternalName = 'calculatedirections',
+
+			AndroidExternalName = 'calculateDirections'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				DirectionsParameters
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'DirectionsRequestParameters, GeneXus.Common',
+
+					Length = '0',
+
+					NetFrameworkExternalType = 'GxUserType'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetLocation
+
+		[
+
+			Description = 'Same as GetLocation(int, int, bool, bool), passing false to the last parameter',
+
+			Type = 'LocationInfo, GeneXus.Common',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'GetCurrentLocation',
+
+			NetFrameworkExternalType = 'GeneXus.MapServices.LocationInfo',
+
+			JavaExternalName = 'getCurrentLocation',
+
+			JavaExternalType = 'com.genexus.gxmaps.LocationInfo',
+
+			IosExternalName = 'getmylocation',
+
+			AndroidExternalName = 'getLocation'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				minAccuracy
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Minimum precision required to obtain the location, in meters'
+
+				]
+
+		
+
+				timeout
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Maximum time to wait in seconds, to obtain the desired accuracy'
+
+				]
+
+		
+
+				includeHeadingAndSpeed
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Indicates if it is necessary to include the heading and speed information',
+
+					Type = 'Boolean',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		StartTracking
+
+		[
+
+			Description = 'Starts generating tracking information',
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'startTracking'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				TrackingParameters
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'TrackingParameters, GeneXus.Common',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetLocation
+
+		[
+
+			Description = 'Returns the current location for the device',
+
+			Type = 'LocationInfo, GeneXus.Common',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'GetCurrentLocation',
+
+			NetFrameworkExternalType = 'GeneXus.MapServices.LocationInfo',
+
+			JavaExternalName = 'getCurrentLocation',
+
+			JavaExternalType = 'com.genexus.gxmaps.LocationInfo',
+
+			IosExternalName = 'getmylocation',
+
+			AndroidExternalName = 'getLocation'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				minAccuracy
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Minimum precision required to obtain the location, in meters'
+
+				]
+
+		
+
+				timeout
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Maximum time to wait in seconds, to obtain the desired accuracy'
+
+				]
+
+		
+
+				includeHeadingAndSpeed
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Indicates if it is necessary to include the heading and speed information',
+
+					Type = 'Boolean',
+
+					Length = '4'
+
+				]
+
+		
+
+				ignoreErrors
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'If set to true, following actions in a composite block will be executed, regardless of the execution status of this method',
+
+					Type = 'Boolean',
+
+					Length = '4'
+
+				]
+
+			}
+
+		}
+
+		
+
+		StartTracking
+
+		[
+
+			Description = 'Starts generating tracking information',
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'startTracking'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				changesInterval
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Minimum time in seconds to generate new tracking information'
+
+				]
+
+		
+
+				distance
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Minimum distance in meters to generate new tracking information'
+
+				]
+
+		
+
+				action
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The name of the action from the parent object to be called where there is new tracking information available',
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+		
+
+				actionTimeInterval
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The minimum interval in seconds between invocations to the action. Must be greater than changesInterval.'
+
+				]
+
+			}
+
+		}
+
+		
+
+		StartTracking
+
+		[
+
+			Description = 'Starts generating tracking information',
+
+			Collection = 'False',
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'startTracking'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				changesInterval
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Minimum time in seconds to generate new tracking information'
+
+				]
+
+		
+
+				distance
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Minimum distance in meters to generate new tracking information'
+
+				]
+
+		
+
+				action
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The name of the action from the parent object to be called where there is new tracking information available',
+
+					Type = 'Character',
+
+					Length = '20'
+
+				]
+
+		
+
+				actionTimeInterval
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The minimum interval in seconds between invocations to the action. Must be greater than changesInterval.'
+
+				]
+
+		
+
+				accuracy
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'Precision to obtain the locations, in meters'
+
+				]
+
+			}
+
+		}
+
+		
+
+		EndTracking
+
+		[
+
+			Description = 'Stops the generation of tracking information',
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'endTracking'
+
+		]
+
+		
+
+		GetLocationHistory
+
+		[
+
+			Description = 'Returns a collection of location information generated by the tracking methods',
+
+			Type = 'LocationInfo, GeneXus.Common',
+
+			Length = '0',
+
+			Collection = 'True',
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'getLocationHistory'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				startTime
+
+				[
+
+					AccessType = 'In',
+
+					Description = 'The initial time',
+
+					Type = 'DateTime',
+
+					Decimals = '5'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ClearLocationHistory
+
+		[
+
+			Description = 'Removes all previous location information generated by the tracking methods',
+
+			IsStatic = 'True',
+
+			AndroidExternalName = 'clearLocationHistory'
+
+		]
+
+		
+
+		GetLatitude
+
+		[
+
+			Description = 'Returns the latitude of the given location',
+
+			Type = 'Numeric',
+
+			Length = '9',
+
+			Decimals = '5',
+
+			Collection = 'False',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'GetLatitude',
+
+			NetFrameworkExternalType = 'Double',
+
+			JavaExternalName = 'getLatitude',
+
+			JavaExternalType = 'Double',
+
+			IosExternalName = 'getlatitude',
+
+			AndroidExternalName = 'getLatitude',
+
+			AndroidExternalType = 'double'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				location
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'GeoPoint',
+
+					Length = '255'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetLongitude
+
+		[
+
+			Description = 'Returns the longitude of the given location',
+
+			Type = 'Numeric',
+
+			Length = '9',
+
+			Decimals = '5',
+
+			Collection = 'False',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'GetLongitude',
+
+			NetFrameworkExternalType = 'Double',
+
+			JavaExternalName = 'getLongitude',
+
+			JavaExternalType = 'Double',
+
+			IosExternalName = 'getlongitude',
+
+			AndroidExternalName = 'getLongitude',
+
+			AndroidExternalType = 'double'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				location
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'GeoPoint',
+
+					Length = '255'
+
+				]
+
+			}
+
+		}
+
+		
+
+		ReverseGeocode
+
+		[
+
+			Description = 'Returns a collection of addresses for the given location',
+
+			Collection = 'True',
+
+			BasedOn = 'Address, GeneXus',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'ReverseGeocode',
+
+			NetFrameworkExternalType = 'GxSimpleCollection<String>',
+
+			JavaExternalName = 'reverseGeocode',
+
+			JavaExternalType = 'GXSimpleCollection<String>',
+
+			IosExternalName = 'getaddress',
+
+			AndroidExternalName = 'reverseGeocode'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				location
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'GeoPoint',
+
+					Length = '255'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GeocodeAddress
+
+		[
+
+			Description = 'Returns a collection of locations for the given address',
+
+			Type = 'GeoPoint',
+
+			Length = '255',
+
+			Collection = 'True',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'GeocodeAddress',
+
+			NetFrameworkExternalType = 'GxSimpleCollection<Geospatial>',
+
+			JavaExternalName = 'geocodeAddress',
+
+			JavaExternalType = 'GXSimpleCollection<GXGeospatial>',
+
+			IosExternalName = 'getlocation',
+
+			AndroidExternalName = 'geocodeAddress'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				address
+
+				[
+
+					AccessType = 'In',
+
+					BasedOn = 'Address, GeneXus',
+
+					NetFrameworkExternalType = 'String',
+
+					JavaExternalType = 'String'
+
+				]
+
+			}
+
+		}
+
+		
+
+		SetProximityAlerts
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'setproximityalerts',
+
+			AndroidExternalName = 'setProximityAlerts'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				proximityAlerts
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'LocationProximityAlert, GeneXus.Common',
+
+					Length = '0',
+
+					Collection = 'True'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetProximityAlerts
+
+		[
+
+			Type = 'LocationProximityAlert, GeneXus.Common',
+
+			Length = '0',
+
+			Collection = 'True',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'getproximityalerts',
+
+			AndroidExternalName = 'getProximityAlerts'
+
+		]
+
+		
+
+		GetCurrentProximityAlert
+
+		[
+
+			Type = 'LocationProximityAlert, GeneXus.Common',
+
+			Length = '0',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'getcurrentproximityalert',
+
+			AndroidExternalName = 'getCurrentProximityAlert'
+
+		]
+
+		
+
+		ClearProximityAlerts
+
+		[
+
+			IsStatic = 'True',
+
+			IosExternalName = 'clearproximityalerts',
+
+			AndroidExternalName = 'clearProximityAlerts'
+
+		]
+
+		
+
+		PickLocation
+
+		[
+
+			Type = 'GeoPoint',
+
+			Length = '255',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				geoLocationPickerParameters
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'LocationPickerParameters, GeneXus.Common',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetDistance
+
+		[
+
+			Description = 'Returns the distance between the two locations given',
+
+			Type = 'Numeric',
+
+			Length = '10',
+
+			Decimals = '2',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'GetDistance',
+
+			NetFrameworkExternalType = 'Double',
+
+			JavaExternalName = 'getDistance',
+
+			JavaExternalType = 'Double',
+
+			IosExternalName = 'getDecimalDistance',
+
+			AndroidExternalName = 'getDistance',
+
+			AndroidExternalType = 'double'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				fromLocation
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'GeoPoint',
+
+					Length = '255'
+
+				]
+
+		
+
+				toLocation
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'GeoPoint',
+
+					Length = '255'
+
+				]
+
+			}
+
+		}
+
+		
+
+		RequestTemporaryFullAccuracy
+
+		[
+
+			Description = 'Requests the user’s permission to temporarily use location services with full accuracy',
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				purpose
+
+				[
+
+					Description = 'The purpose for using full accuracy. This value could be showed to the user by the OS.',
+
+					Type = 'Character',
+
+					Length = '100'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#ExternalEvents
+		DirectionsCalculated
+
+		{
+
+			Parameters
+
+			{
+
+				routes
+
+				[
+
+					Type = 'Route, GeneXus.Common',
+
+					Length = '0',
+
+					Collection = 'True'
+
+				]
+
+		
+
+				errorMessage
+
+				[
+
+					Type = 'Messages, GeneXus.Common',
+
+					Length = '0'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Maps"
+
+		Namespace = "GeneXus.MapServices"
+
+		NetFrameworkExternalName = "Maps"
+
+		NetFrameworkAssemblyName = "GxMaps.dll"
+
+		JavaExternalName = "GXMaps"
+
+		JavaExternalPackageName = "com.genexus.gxmaps"
+
+		IosExternalName = "GXEOMaps"
+
+		AndroidExternalName = "MapsAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.location"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

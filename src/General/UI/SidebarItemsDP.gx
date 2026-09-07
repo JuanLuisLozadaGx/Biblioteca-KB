@@ -1,0 +1,46 @@
+DataProvider SidebarItemsDP
+{
+	SidebarItems
+	{
+		/* Code managed by Work With Pattern [Start] - Load WW instances */
+		//&wwProgramNames = ListPrograms()
+		
+		//SidebarItem
+		//input &wwProgramName in &wwProgramNames
+		//{
+		//	id = &wwProgramName.Name
+		//	title = &wwProgramName.Description
+		//	target = &wwProgramName.Link
+		//	hasSubItems = false
+		//}
+		/* Code managed by Work With Pattern [End] - Load WW instances */
+	
+		SidebarItem
+		{
+			id = !"OverdueLoansPanel"
+			title = !"Préstamos Vencidos"
+			target = OverdueLoansPanel.Link()
+			hasSubItems = false
+		}
+	}
+	
+
+	#Variables
+		wwProgramNames [ DataType = 'ProgramNames, General.UI' ]
+
+		wwProgramName [ DataType = 'ProgramNames.ProgramName, General.UI' ]
+
+		
+	#End
+
+	#Properties
+		Name = "SidebarItemsDP"
+
+		Output = "SidebarItems"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-16"?>
+<layout type="Report">
+  <printBlock name="printBlock1" height="100" />
+</layout>

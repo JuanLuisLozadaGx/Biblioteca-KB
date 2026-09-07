@@ -1,0 +1,13 @@
+Domain DeviceFolder
+{
+	#Properties
+		Name = "DeviceFolder"
+
+		EnumValues = "Downloads, Downloads, 1; Documents, Documents, 2"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

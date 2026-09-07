@@ -1,0 +1,17 @@
+Domain SocketStatus
+{
+	#Properties
+		Name = "SocketStatus"
+
+		DataType = "Numeric(1.0)"
+
+		Length = "1"
+
+		EnumValues = "Connected, Connected, 1; Disconnected, Disconnected, 0"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

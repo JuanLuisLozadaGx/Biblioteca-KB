@@ -1,0 +1,17 @@
+Image resize_column
+{
+	'resize_column.svg' [ Description = 'resize_column.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "resize_column"
+
+		Description = "resize_column"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

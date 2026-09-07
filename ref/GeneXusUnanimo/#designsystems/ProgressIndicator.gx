@@ -1,0 +1,36 @@
+DesignSystem ProgressIndicator
+{
+	#DesignStyles
+		styles ProgressIndicator {
+		    @import GeneXusUnanimo.Unanimo;
+		
+		    .progress__container {
+		        display: flex;
+		        flex-direction: column;
+		        align-items: center;
+		    }
+		    .progress__title {
+		        font-weight: $fonts.un-font__weight--semibold;
+		        align-self: flex-start;
+		    }
+		    .progress__label {
+		        color: $colors.un-text__primary;
+		        font-weight: $fonts.un-font__weight--semibold;
+		    }
+		    .progress__bar {
+		        height: 16px;
+		        width: 100%;
+		        accent-color: $colors.un-accent__primary;
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "ProgressIndicator"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

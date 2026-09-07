@@ -1,0 +1,13 @@
+Domain PlaybackState
+{
+	#Properties
+		Name = "PlaybackState"
+
+		EnumValues = "None, None, 0; Stopped, Stopped, 1; Paused, Paused, 2; Playing, Playing, 3; Error, Error, 4; Transitional, Transitional, 5"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

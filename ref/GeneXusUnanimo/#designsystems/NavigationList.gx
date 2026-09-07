@@ -1,0 +1,67 @@
+DesignSystem NavigationList
+{
+	#DesignStyles
+		Styles NavigationList
+		{
+		    @import GeneXusUnanimo.Unanimo.Tokens;
+		    
+		    .navigation-list {
+		        --ch-navigation-list-item__tooltip-separation-x: $spacing.un-s;
+		        --ch-navigation-list-item-custom-padding-inline-start: 10px;
+		        --ch-navigation-list-item-gap: $spacing.un-m;
+		        --ch-navigation-list-item-expand-collapse-duration: 200ms;
+		        --ch-navigation-list-item__image-size: 24px;
+		        --ch-navigation-list-item__expandable-button-size: 24px;
+		        --ch-navigation-list-item__expandable-button-image-size: 14px;
+		        font-size: $fontSizes.un-s;
+		        font-weight: 400;
+		        line-height: 18px;
+		        letter-spacing: 0.2px;
+		        scrollbar-width: thin;
+		        scrollbar-color: currentColor transparent;
+		    }
+		    .navigation-list::-webkit-scrollbar {
+		        width: 8px;
+		        height: 8px;
+		        background-color: transparent;
+		    }
+		    .navigation-list::-webkit-scrollbar-thumb {
+		        background-color: currentColor;
+		    }
+		    .navigation-list::part(item__action) {
+		        padding-block: $spacing.un-m;
+		        padding-inline-end: $spacing.un-m;
+		        color: $colors.un-text__on-surface--positive;
+		    }
+		    .navigation-list::part(item__caption tooltip) {
+		        padding-block: $spacing.un-s;
+		        padding-inline: $spacing.un-m;
+		        background-color: $colors.un-color__gray--600;
+		        border-radius: $radius.un-radius--m;
+		        color: $colors.un-surface--alternative;
+		    }
+		    .navigation-list::part(item__action):focus-visible {
+		        outline: 1px solid;
+		        outline-offset: -1px;
+		    }
+		    .navigation-list::part(item__button):hover {
+		        color: $colors.un-text__primary--hover;
+		    }
+		    .navigation-list::part(item__link selected) {
+		        color: $colors.un-text__primary--active;
+		    }
+		    .navigation-list::part(item__link not-selected):hover {
+		        color: $colors.un-text__primary--hover;
+		    }
+		}
+	#End
+
+	#Properties
+		Name = "NavigationList"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

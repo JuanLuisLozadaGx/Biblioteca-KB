@@ -1,0 +1,289 @@
+ExternalObject ClientInformation
+{
+	#ExternalProperties
+		Id
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'VarChar',
+
+			Length = '128',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'Id',
+
+			NetFrameworkExternalType = 'string',
+
+			JavaExternalGetMethod = 'getId',
+
+			IosExternalName = 'deviceId',
+
+			AndroidExternalName = '',
+
+			AndroidExternalGetMethod = 'id'
+
+		]
+
+		
+
+		OSName
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'VarChar',
+
+			Length = '40',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'OSName',
+
+			NetFrameworkExternalType = 'string',
+
+			JavaExternalGetMethod = 'getOSName',
+
+			IosExternalName = 'osName',
+
+			AndroidExternalName = '',
+
+			AndroidExternalGetMethod = 'osName'
+
+		]
+
+		
+
+		OSVersion
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'VarChar',
+
+			Length = '40',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'OSVersion',
+
+			NetFrameworkExternalType = 'string',
+
+			JavaExternalGetMethod = 'getOSVersion',
+
+			IosExternalName = 'osVersion',
+
+			AndroidExternalGetMethod = 'osVersion'
+
+		]
+
+		
+
+		Language
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'Character',
+
+			Length = '20',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'Language',
+
+			NetFrameworkExternalType = 'string',
+
+			JavaExternalGetMethod = 'getLanguage',
+
+			IosExternalName = 'language',
+
+			AndroidExternalGetMethod = 'getLanguage'
+
+		]
+
+		
+
+		DeviceType
+
+		[
+
+			PropertyType = 'Read',
+
+			BasedOn = 'SmartDeviceType, GeneXus',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'DeviceType',
+
+			NetFrameworkExternalType = 'short',
+
+			JavaExternalGetMethod = 'getDeviceType',
+
+			IosExternalName = 'deviceType',
+
+			AndroidExternalGetMethod = 'deviceType'
+
+		]
+
+		
+
+		PlatformName
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'VarChar',
+
+			Length = '128',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'PlatformName',
+
+			NetFrameworkExternalType = 'string',
+
+			JavaExternalGetMethod = 'getPlatformName',
+
+			IosExternalName = 'platformName',
+
+			AndroidExternalGetMethod = 'getPlatformName'
+
+		]
+
+		
+
+		AppVersionCode
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'VarChar',
+
+			Length = '40',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'AppVersionCode',
+
+			NetFrameworkExternalType = 'string',
+
+			JavaExternalGetMethod = 'getAppVersionCode',
+
+			IosExternalName = 'appVersionCode',
+
+			AndroidExternalGetMethod = 'getAppVersionCode'
+
+		]
+
+		
+
+		AppVersionName
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'VarChar',
+
+			Length = '40',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'AppVersionName',
+
+			NetFrameworkExternalType = 'string',
+
+			JavaExternalGetMethod = 'getAppVersionName',
+
+			IosExternalName = 'appVersionName',
+
+			AndroidExternalGetMethod = 'getAppVersionName'
+
+		]
+
+		
+
+		ApplicationId
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'VarChar',
+
+			Length = '128',
+
+			IsStatic = 'True',
+
+			NetFrameworkExternalName = 'ApplicationId',
+
+			NetFrameworkExternalType = 'string',
+
+			JavaExternalGetMethod = 'getApplicationId',
+
+			IosExternalName = 'applicationId',
+
+			AndroidExternalGetMethod = 'applicationId'
+
+		]
+
+		
+
+		AppBinaryVersionCode
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'This property will return the internal version code of the app binary installed on the device',
+
+			Type = 'VarChar',
+
+			Length = '40',
+
+			Collection = 'False',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'appBinaryVersionCode',
+
+			AndroidExternalGetMethod = 'getAppBinaryVersionCode'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "ClientInformation"
+
+		Namespace = "GX"
+
+		NetFrameworkExternalName = "ClientInformation"
+
+		JavaExternalName = "ClientInformation"
+
+		JavaExternalPackageName = "com.genexus"
+
+		IosExternalName = "GXEOClientInformation"
+
+		AndroidExternalName = "ClientInformation"
+
+		AndroidExternalPackageName = "com.genexus.android.device"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

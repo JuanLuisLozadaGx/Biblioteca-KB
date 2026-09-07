@@ -1,0 +1,13 @@
+Domain EventStatus
+{
+	#Properties
+		Name = "EventStatus"
+
+		EnumValues = "Pending, Pending, 1; ProcessingServer, Processing Server, 2; ConfirmedServer, Confirmed Server, 3; RejectedServer, Rejected Server, 4; CanceledUser, Canceled User, 5; RejectedFK, Rejected FK, 6; RejectedInvalidBC, Rejected Invalid BC, 7"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

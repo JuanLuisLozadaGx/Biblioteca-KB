@@ -1,0 +1,53 @@
+SDT Target
+{
+	Target{
+
+		TargetType [ Description = 'Target Type (required)', DataType = 'TargetType, GeneXus.Common.Notifications' ]
+
+		Devices [ Description = 'Devices List', Collection = 'True', CollectionItemName = 'Device' ]	{
+
+			DeviceToken [ DataType = 'Character(500)' ]
+
+		}
+
+	
+
+		Groups [ Collection = 'True', CollectionItemName = 'Group' ]	{
+
+			Name [ DataType = 'Character(100)' ]
+
+		}
+
+	
+
+		Targets [ Collection = 'True', CollectionItemName = 'Filter' ]	{
+
+			Name [ DataType = 'Character(100)' ]
+
+			Value [ DataType = 'Character(100)' ]
+
+			Relation [ DataType = 'FilterRelationType, GeneXus.Common.Notifications' ]
+
+			Operator [ DataType = 'FilterOperation, GeneXus.Common.Notifications' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "Target"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

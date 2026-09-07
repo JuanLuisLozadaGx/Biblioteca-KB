@@ -1,0 +1,15 @@
+ExternalObject AnyObject
+{
+	#Properties
+		Name = "AnyObject"
+
+		NetFrameworkExternalName = ""
+
+		JavaExternalName = ""
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

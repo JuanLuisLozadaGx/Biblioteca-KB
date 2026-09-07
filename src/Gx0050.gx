@@ -1,0 +1,94 @@
+WebPanel Gx0050
+{
+	#Rules
+		parm(out:&pPublisherId);
+		order(PublisherId); 
+		
+	#End
+
+	#Events
+		Event Start
+			Form.Caption = Format("GXSPC_SelectionList", "Publisher")
+			&ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>"
+		EndEvent
+		
+		Event 'Toggle'
+			if AdvancedContainer.Class = StyleClass:AdvancedContainer
+				AdvancedContainer.Class = StyleClass:AdvancedContainer + !" " + StyleClass:AdvancedContainerVisible
+				BtnToggle.Class += !" " + StyleClass:BtnToggleActive
+			else
+				AdvancedContainer.Class = StyleClass:AdvancedContainer
+				BtnToggle.Class = StyleClass:BtnToggle
+			endif
+		Endevent
+		
+		Event LblPublisherIdFilter.Click
+			if PublisherIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				PublisherIdFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cPublisherId.Visible = true
+			else
+				PublisherIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cPublisherId.Visible = false
+			endif
+		EndEvent
+		
+		Event LblPublisherNameFilter.Click
+			if PublisherNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				PublisherNameFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cPublisherName.Visible = true
+			else
+				PublisherNameFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cPublisherName.Visible = false
+			endif
+		EndEvent
+		
+		Event Load
+			&LinkSelection.FromImage(selectRow)
+		EndEvent
+		
+		Event Enter
+			&pPublisherId = PublisherId
+			Return
+		EndEvent
+		
+	#End
+
+	#Conditions
+		PublisherId >= &cPublisherId ;
+		PublisherName >= &cPublisherName when not &cPublisherName.IsEmpty();
+		
+	#End
+
+	#Variables
+		LinkSelection [ DataType = 'Image' ]
+
+		cPublisherId [ Description = 'Publisher Id', DataType = 'Attribute:PublisherId' ]
+
+		cPublisherName [ Description = 'Publisher Name', DataType = 'Attribute:PublisherName' ]
+
+		pPublisherId [ Description = 'Publisher Id', DataType = 'Attribute:PublisherId' ]
+
+		ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "Gx0050"
+
+		Description = "Selection List Publisher"
+
+		MasterPage = "MasterPrompt"
+
+		IsPrompt = "True"
+
+		AssociatedTable = "Publisher"
+
+		FocusControl = "Browser dependent"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

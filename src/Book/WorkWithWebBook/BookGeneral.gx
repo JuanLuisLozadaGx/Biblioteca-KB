@@ -1,0 +1,90 @@
+WebComponent BookGeneral
+{
+	#Rules
+		parm(in:BookId);
+		
+	#End
+
+	#Events
+		Event Start
+			If not IsAuthorized(&PgmName)
+				NotAuthorized(&PgmName)
+			Endif
+			Do 'PrepareTransaction'
+		EndEvent
+		
+		Event Load
+			AuthorName.Link = ViewAuthor.Link(AuthorId, "")
+			PublisherName.Link = ViewPublisher.Link(PublisherId, "")
+			GenreName.Link = ViewGenre.Link(GenreId, "")
+			ShelfName.Link = ViewShelf.Link(ShelfId, "")
+		EndEvent
+		
+		Event 'DoUpdate'
+			Book(TrnMode.Update, BookId)
+		EndEvent
+		
+		Event 'DoDelete'
+			Book(TrnMode.Delete, BookId)
+		EndEvent
+		
+		Sub 'PrepareTransaction'
+			&TrnContext = new()
+			&TrnContext.CallerObject = &Pgmname
+			&TrnContext.CallerOnDelete = False
+			&TrnContext.CallerURL = &HTTPRequest.ScriptName + !"?" + &HTTPRequest.QueryString
+			&TrnContext.TransactionName = !"Book"
+		
+			&TrnContextAtt = new()
+			&TrnContextAtt.AttributeName = !"BookId"
+			&TrnContextAtt.AttributeValue = &BookId.ToString()
+			&TrnContext.Attributes.Add(&TrnContextAtt)
+		
+			&Session.Set(!"TrnContext", &TrnContext.ToXml())
+		EndSub
+		
+	#End
+
+	#Variables
+		IsAuthorized [ DataType = 'Boolean' ]
+
+		BookId [ DataType = 'Attribute:BookId' ]
+
+		TrnContext [ DataType = 'TransactionContext, General.UI' ]
+
+		TrnContextAtt [ DataType = 'TransactionContext.Attribute, General.UI' ]
+
+		Session [ DataType = 'WebSession' ]
+
+		HTTPRequest [ DataType = 'HttpRequest' ]
+
+		
+	#End
+
+	#Properties
+		Name = "BookGeneral"
+
+		Type = "Component"
+
+		IsDefault = "False"
+
+		
+
+		WebForm.Defaults = "WorkWith:Templates\\TabTabularWebForm.dkt"
+
+		
+
+		Rules.Defaults = "WorkWith:Templates\\TabTabularRules.dkt"
+
+		
+
+		Events.Defaults = "WorkWith:Templates\\TabTabularEvents.dkt"
+
+		
+
+		Variables.Defaults = "WorkWith:Templates\\TabTabularVariables.dkt"
+
+		
+	#End
+
+}

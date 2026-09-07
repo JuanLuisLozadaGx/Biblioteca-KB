@@ -1,0 +1,308 @@
+DesignSystem Markdown
+{
+	#DesignStyles
+		styles Markdown {
+		    /* Host selector
+		    :host {
+		        font-size: 14px;
+		        font-weight: 400;
+		        line-height: 18px;
+		        letter-spacing: .2px;
+		        --ch-markdown-viewer-indicator-color: #3015b0;
+		    }
+		    */// Host selector
+		
+			h1 {
+				font-size: 28px;
+				font-weight: 700;
+				line-height: 32px;
+				letter-spacing: .4px;
+			}
+		
+			h2 {
+				font-size: 22px;
+				font-weight: 700;
+				line-height: 24px;
+				letter-spacing: .8px;
+			}
+		
+			h3 {
+				font-size: 18px;
+				font-weight: 400;
+				line-height: 24px;
+				letter-spacing: .4px;
+			}
+		
+			h6,
+			h5,
+			h4 {
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 18px;
+				letter-spacing: .4px;
+			}
+		
+			.code-block-header__download-code-button,
+			.code-block-header__copy-code-button {
+				display: inline-grid;
+				grid-auto-flow: column;
+				grid-auto-columns: max-content;
+				justify-content: center;
+				gap: 4px;
+				min-block-size: 32px;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 18px;
+				letter-spacing: .2px;
+				text-transform: uppercase;
+			}
+		
+			.code-block-header__download-code-button,
+			.code-block-header__copy-code-button {
+				color: #696ef2;
+				padding-inline:16px;
+			}
+		
+			.code-block-header__download-code-button:focus-visible,
+			.code-block-header__copy-code-button:focus-visible {
+				outline:2px solid currentColor;
+				outline-offset: -1px;
+			}
+		
+			.code-block-header__download-code-button:hover,
+			.code-block-header__copy-code-button:hover {
+				background-color: #696ef21a;
+				color: #413cd4;
+			}
+		
+			.code-block-header__download-code-button:active,
+			.code-block-header__copy-code-button:active {
+				color: #3015b0;
+			}
+		
+			a {
+				color: #696ef2;
+				font-size: 14px;
+				line-height: 18px;
+				letter-spacing: .4px;
+				text-decoration-line: underline;
+			}
+		
+			.code-block-header__download-code-button::before,
+			.code-block-header__copy-code-button::before {
+				content: "";
+				display: block;
+				inline-size: 24px;
+				block-size: 24px;
+				background-color: currentColor;
+		        //-webkit-mask-image: var(--icon-path);
+		        -webkit-mask-repeat: no-repeat;
+		        -webkit-mask-position: center;
+		        -webkit-mask-size: 100%;
+			}
+		
+			.code-block-header__download-code-button {
+				padding-inline:4px;
+			}
+		
+			.code-block-header__copy-code-button {
+				padding-inline: 16px;
+			}
+		
+			h1 {
+				margin-block:16px 8px;
+				padding-block-end: 8px;
+			}
+		
+			h2 {
+				margin-block:12px 6px;
+				padding-block-end:6px;
+			}
+		
+			h3 {
+				margin-block:8px 4px;
+				padding-block-end: 4px;
+			}
+		
+			h4 {
+				margin-block:4px 2px;
+				padding-block-end: 2px;
+			}
+		
+			h5 {
+				margin-block:4px 2px;
+				padding-block-end: 2px;
+			}
+		
+			h6 {
+				margin-block:4px 2px;
+				padding-block-end: 2px;
+			}
+		
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				border-block-end:1px solid #939498;
+			}
+		
+			p,
+			ul,
+			ol,
+			table,
+			.code-block-container {
+				margin-block: 8px;
+			}
+		
+			ul,
+			ol {
+				padding-inline-start:32px;
+			}
+		
+			blockquote {
+				margin-block: 8px;
+				padding-block:8px;
+				padding-inline: calc(32px - 4px) 32px;
+				border-inline-start:4px solid #939498;
+			}
+		
+			blockquote > p:first-of-type {
+				margin-block-start:0;
+			}
+		
+			blockquote > p:last-of-type {
+				margin-block-end:0;
+			}
+		
+			strong {
+				font-weight: 700;
+			}
+		
+			tr {
+				border: 1px solid #e0e0e0;
+			}
+		
+			th,
+			td {
+				padding: 8px;
+				border-inline-start:1px solid #e0e0e0;
+			}
+		
+			thead > tr,
+			tbody > tr:nth-child(2n) {
+				background-color:#323234;
+			}
+		
+			.code-block-container {
+				border: 1px solid #e0e0e0;
+				border-radius: 4px;
+				font-size: calc(1em - 2px);
+				overflow: hidden;
+			}
+		
+			.code-block-header {
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-auto-flow: column;
+				grid-auto-columns: max-content;
+				align-items: center;
+				gap: 8px;
+				padding-inline-start:16px;
+				background-color: #f3f4f6;
+			}
+		
+			.code-block-header.mobile {
+				padding-inline-start:calc(16px - 4px);
+			}
+		
+			.code-block-header__language {
+				font-family: monospace;
+			}
+		
+			.code-block-header__copy-code-button.mobile {
+				padding-inline:4px;
+			}
+		
+			ch-code {
+				background-color: #ffffff;
+				padding: 16px;
+			}
+		
+			ch-code.mobile {
+				padding: calc(16px - 4px);
+			}
+		
+			ch-code {
+				--ch-code__doctag: #666483;
+				--ch-code__keyword: color-mix(in srgb, #2a2c5f, #ffab13);
+				--ch-code__meta__keyword: #666483;
+				--ch-code__template-tag: #666483;
+				--ch-code__template-variable: #666483;
+				--ch-code__type: #a9acf8;
+				--ch-code__variable-language: #666483;
+				--ch-code__title: #121212;
+				--ch-code__title-class: #121212;
+				--ch-code__title-class-inherited: #121212;
+				--ch-code__title-function: #121212;
+				--ch-code__attr: #ccccfb;
+				--ch-code__attribute: #ccccfb;
+				--ch-code__meta: #ccccfb;
+				--ch-code__number: #ccccfb;
+				--ch-code__operator: #ccccfb;
+				--ch-code__variable: #ccccfb;
+				--ch-code__selector-attr: #ccccfb;
+				--ch-code__selector-class: #ccccfb;
+				--ch-code__selector-id: #ccccfb;
+				--ch-code__literal: color-mix( in srgb, #50beae 50%, #ccccfb );
+				--ch-code__regexp: #ffab13;
+				--ch-code__string: #ffab13;
+				--ch-code__meta__string: #ffab13;
+				--ch-code__comment: #02a08b;
+				--ch-code__code: #02a08b;
+				--ch-code__formula: #02a08b;
+				--ch-code__name: #02a08b;
+				--ch-code__quote: #02a08b;
+				--ch-code__selector-pseudo: #02a08b;
+				--ch-code__selector-tag: #02a08b;
+				--ch-code__subst: #121212;
+				--ch-code__built-in: color-mix( in srgb, #02a08b 70%, #a9acf8 );
+				--ch-code__symbol: color-mix( in srgb, #02a08b 70%, #a9acf8 );
+			}
+		
+			code {
+				padding-block:2px;
+				padding-inline: 4px;
+				background-color: #ffffff;
+				border-radius: 2px;
+				font-size: calc(1em - 2px);
+			}
+		
+			img {
+				display: inline-block;
+				max-inline-size: 25%;
+			}
+			
+		    /* Host selector
+			:host > :first-child,
+			ch-theme+* {
+				margin-block-start:0px;
+			}
+		
+			:host > :last-child {
+				margin-block-end:0px;
+			}
+		    */// Host selector
+		}
+	#End
+
+	#Properties
+		Name = "Markdown"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,33 @@
+SDT MapRegion
+{
+	MapRegion{
+
+		Name [ Description = 'The region identifier', DataType = 'VarChar(40)' ]
+
+		NorthEast [ Description = 'The point located at the north-most, east-most of the region', DataType = 'GeoPoint' ]
+
+		SouthWest [ Description = 'The point located at the south-most, west-most of the region', DataType = 'GeoPoint' ]
+
+		MinZoom [ Description = 'Minimum required zoom', DataType = 'Numeric(2.0)' ]
+
+		MaxZoom [ Description = 'Maximum required zoom', DataType = 'Numeric(2.0)' ]
+
+		Status [ DataType = 'RegionStatus, GeneXus.SD' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "MapRegion"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

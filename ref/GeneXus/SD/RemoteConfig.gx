@@ -1,0 +1,381 @@
+ExternalObject RemoteConfig
+{
+	#ExternalProperties
+		LastSuccessfulFetch
+
+		[
+
+			PropertyType = 'Read',
+
+			Type = 'DateTime',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'lastSuccessfulFetch',
+
+			AndroidExternalName = 'lastSuccessfulFetch',
+
+			AndroidExternalGetMethod = 'lastSuccessfulFetch'
+
+		]
+
+		
+
+		LastFetchStatus
+
+		[
+
+			PropertyType = 'Read',
+
+			BasedOn = 'FetchStatus, GeneXus.SD',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'lastFetchStatus',
+
+			AndroidExternalName = 'lastFetchStatus',
+
+			AndroidExternalGetMethod = 'lastFetchStatus'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalMethods
+		HasValue
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'hasValue',
+
+			AndroidExternalName = 'hasValue'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetStringValue
+
+		[
+
+			Type = 'VarChar',
+
+			Length = '200',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'getStringValue',
+
+			AndroidExternalName = 'getStringValue'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetIntegerValue
+
+		[
+
+			Type = 'Numeric',
+
+			Length = '9',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'getIntegerValue',
+
+			AndroidExternalName = 'getIntegerValue'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetDecimalValue
+
+		[
+
+			Type = 'Numeric',
+
+			Length = '12',
+
+			Decimals = '0',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'getDecimalValue',
+
+			AndroidExternalName = 'getDecimalValue'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetBooleanValue
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'getBooleanValue',
+
+			AndroidExternalName = 'getBooleanValue'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetDateValue
+
+		[
+
+			Type = 'Date',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'getDateValue',
+
+			AndroidExternalName = 'getDateValue'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		GetDateTimeValue
+
+		[
+
+			Type = 'DateTime',
+
+			Decimals = '5',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'getDateTimeValue',
+
+			AndroidExternalName = 'getDateTimeValue'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				key
+
+				[
+
+					AccessType = 'In',
+
+					Type = 'VarChar',
+
+					Length = '40'
+
+				]
+
+			}
+
+		}
+
+		
+
+		Fetch
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'fetch',
+
+			AndroidExternalName = 'fetch'
+
+		]
+
+		
+
+		Apply
+
+		[
+
+			Type = 'Boolean',
+
+			Length = '4',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'apply',
+
+			AndroidExternalName = 'apply'
+
+		]
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "RemoteConfig"
+
+		IosExternalName = "GXEORemoteConfig"
+
+		AndroidExternalName = "RemoteConfigAPIOffline"
+
+		AndroidExternalPackageName = "com.genexus.android.core.externalobjects"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

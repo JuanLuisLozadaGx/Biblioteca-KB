@@ -1,0 +1,17 @@
+Image list_view_white
+{
+	'list_view_white.svg' [ Description = 'list_view_white.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "list_view_white"
+
+		Description = "list_view_white"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

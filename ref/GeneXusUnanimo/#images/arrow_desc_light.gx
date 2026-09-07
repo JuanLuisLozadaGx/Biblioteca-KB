@@ -1,0 +1,19 @@
+Image arrow_desc_light
+{
+	'arrow_desc_light.svg' [ Description = 'arrow_desc_light.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'arrow_desc _dark.svg' [ Description = 'arrow_desc _dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "arrow_desc_light"
+
+		Description = "arrow_desc_light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

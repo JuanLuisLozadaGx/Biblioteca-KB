@@ -1,0 +1,19 @@
+Image info_ico_purple
+{
+	'info_ico_purple.svg' [ Description = 'info_ico_purple.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'info_ico_dark.svg' [ Description = 'info_ico_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "info_ico_purple"
+
+		Description = "info_ico_purple"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

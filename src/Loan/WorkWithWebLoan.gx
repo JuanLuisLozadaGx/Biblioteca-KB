@@ -1,0 +1,457 @@
+WorkWith WorkWithWebLoan
+{
+	WorkWithPatternInstance
+
+	[
+
+		UpdateTransaction = 'Apply WW Style'
+
+	]
+
+	{
+
+		Transaction
+
+		[
+
+			Transaction = 'Loan'
+
+		]
+
+		Level
+
+		[
+
+			Id = '94d9ba52-80dc-4d19-81ed-fc294fff0941:1',
+
+			Name = 'Loan'
+
+		]
+
+		{
+
+			DescriptionAttribute
+
+			[
+
+				Attribute = 'LoanPersonName',
+
+				Description = 'Person Name'
+
+			]
+
+			Selection
+
+			[
+
+				Description = 'Loans',
+
+				RowsPerPage = '<default>'
+
+			]
+
+			{
+
+				Attributes
+
+				{
+
+					Attribute
+
+					[
+
+						Attribute = 'LoanId',
+
+						Description = 'Id',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'BookId',
+
+						Description = 'Book Id',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'BookTitle',
+
+						Description = 'Book Title',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'LoanPersonName',
+
+						Description = 'Person Name',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'LoanDate',
+
+						Description = 'Date',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'LoanExpectedReturnDate',
+
+						Description = 'Return Date',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+					Attribute
+
+					[
+
+						Attribute = 'LoanReturnedDate',
+
+						Description = 'Returned Date',
+
+						Autolink = 'True',
+
+						Visible = 'True'
+
+					]
+
+				}
+
+				Orders
+
+				{
+
+					Order
+
+					[
+
+						Name = 'Person Name'
+
+					]
+
+					{
+
+						Attribute
+
+						[
+
+							Attribute = 'LoanPersonName',
+
+							Description = 'Person Name',
+
+							Ascending = 'True'
+
+						]
+
+					}
+
+				}
+
+				Filter
+
+				{
+
+					Attributes
+
+					{
+
+						FilterAttribute
+
+						[
+
+							Name = 'LoanPersonName',
+
+							Description = 'Person Name',
+
+							Default = ''
+
+						]
+
+					}
+
+					Conditions
+
+					{
+
+						Condition
+
+						[
+
+							Value = 'LoanPersonName like &LoanPersonName when not &LoanPersonName.IsEmpty()'
+
+						]
+
+					}
+
+				}
+
+			}
+
+			View
+
+			[
+
+				Caption = 'LoanPersonName.ToString()',
+
+				Description = 'Loan Information',
+
+				BackToSelection = 'True',
+
+				MasterPage = '<default>'
+
+			]
+
+			{
+
+				Parameters
+
+				{
+
+					Parameter
+
+					[
+
+						Name = 'LoanId',
+
+						NullValue = 'True'
+
+					]
+
+				}
+
+				FixedData
+
+				{
+
+					Attributes
+
+					{
+
+						Attribute
+
+						[
+
+							Attribute = 'LoanPersonName',
+
+							Description = 'Person Name',
+
+							Autolink = 'True',
+
+							Visible = 'True'
+
+						]
+
+					}
+
+				}
+
+				Tabs
+
+				{
+
+					Tab
+
+					[
+
+						Caption = 'General',
+
+						Code = 'General',
+
+						Description = 'Loan Info',
+
+						Type = 'Tabular',
+
+						ComponentName = 'LoanGeneral'
+
+					]
+
+					{
+
+						Attributes
+
+						{
+
+							Attribute
+
+							[
+
+								Attribute = 'LoanId',
+
+								Description = 'Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookId',
+
+								Description = 'Book Id',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'BookTitle',
+
+								Description = 'Book Title',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'LoanPersonName',
+
+								Description = 'Person Name',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'LoanDate',
+
+								Description = 'Date',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'LoanExpectedReturnDate',
+
+								Description = 'Return Date',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+							Attribute
+
+							[
+
+								Attribute = 'LoanReturnedDate',
+
+								Description = 'Returned Date',
+
+								Autolink = 'True',
+
+								Visible = 'True'
+
+							]
+
+						}
+
+						Actions
+
+						{
+
+							Action
+
+							[
+
+								Name = 'Update'
+
+							]
+
+							Action
+
+							[
+
+								Name = 'Delete'
+
+							]
+
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "WorkWithWebLoan"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

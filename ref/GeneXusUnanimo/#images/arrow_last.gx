@@ -1,0 +1,19 @@
+Image arrow_last
+{
+	'arrow_last.svg' [ Description = 'arrow_last.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'arrow_last_dark.svg' [ Description = 'arrow_last_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "arrow_last"
+
+		Description = "arrow_last"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

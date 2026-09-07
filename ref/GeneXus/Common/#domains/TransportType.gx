@@ -1,0 +1,15 @@
+Domain TransportType
+{
+	#Properties
+		Name = "TransportType"
+
+		DataType = "Character(20)"
+
+		EnumValues = "Any, Any, GXM_Any; Driving, Driving, GXM_Driving; Walking, Walking, GXM_Walking; Transit, Transit, GXM_Transit; Bicycling, Bicycling, GXM_Bicycling"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,159 @@
+WebPanel Gx0030
+{
+	#Rules
+		parm(out:&pBookId);
+		order(BookId); 
+		
+	#End
+
+	#Events
+		Event Start
+			Form.Caption = Format("GXSPC_SelectionList", "Book")
+			&ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>"
+		EndEvent
+		
+		Event 'Toggle'
+			if AdvancedContainer.Class = StyleClass:AdvancedContainer
+				AdvancedContainer.Class = StyleClass:AdvancedContainer + !" " + StyleClass:AdvancedContainerVisible
+				BtnToggle.Class += !" " + StyleClass:BtnToggleActive
+			else
+				AdvancedContainer.Class = StyleClass:AdvancedContainer
+				BtnToggle.Class = StyleClass:BtnToggle
+			endif
+		Endevent
+		
+		Event LblBookIdFilter.Click
+			if BookIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				BookIdFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cBookId.Visible = true
+			else
+				BookIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cBookId.Visible = false
+			endif
+		EndEvent
+		
+		Event LblBookTitleFilter.Click
+			if BookTitleFilterContainer.Class = StyleClass:AdvancedContainerItem
+				BookTitleFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cBookTitle.Visible = true
+			else
+				BookTitleFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cBookTitle.Visible = false
+			endif
+		EndEvent
+		
+		Event LblAuthorIdFilter.Click
+			if AuthorIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				AuthorIdFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cAuthorId.Visible = true
+			else
+				AuthorIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cAuthorId.Visible = false
+			endif
+		EndEvent
+		
+		Event LblPublisherIdFilter.Click
+			if PublisherIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				PublisherIdFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cPublisherId.Visible = true
+			else
+				PublisherIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cPublisherId.Visible = false
+			endif
+		EndEvent
+		
+		Event LblGenreIdFilter.Click
+			if GenreIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				GenreIdFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cGenreId.Visible = true
+			else
+				GenreIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cGenreId.Visible = false
+			endif
+		EndEvent
+		
+		Event LblShelfIdFilter.Click
+			if ShelfIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				ShelfIdFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cShelfId.Visible = true
+			else
+				ShelfIdFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cShelfId.Visible = false
+			endif
+		EndEvent
+		
+		Event LblBookISBNFilter.Click
+			if BookISBNFilterContainer.Class = StyleClass:AdvancedContainerItem
+				BookISBNFilterContainer.Class = StyleClass:AdvancedContainerItem + !" " + StyleClass:AdvancedContainerItemExpanded
+				&cBookISBN.Visible = true
+			else
+				BookISBNFilterContainer.Class = StyleClass:AdvancedContainerItem
+				&cBookISBN.Visible = false
+			endif
+		EndEvent
+		
+		Event Load
+			&LinkSelection.FromImage(selectRow)
+		EndEvent
+		
+		Event Enter
+			&pBookId = BookId
+			Return
+		EndEvent
+		
+	#End
+
+	#Conditions
+		BookId >= &cBookId ;
+		BookTitle LIKE &cBookTitle when not &cBookTitle.IsEmpty();
+		AuthorId >= &cAuthorId when not &cAuthorId.IsEmpty();
+		PublisherId >= &cPublisherId when not &cPublisherId.IsEmpty();
+		GenreId >= &cGenreId when not &cGenreId.IsEmpty();
+		ShelfId >= &cShelfId when not &cShelfId.IsEmpty();
+		BookISBN LIKE &cBookISBN when not &cBookISBN.IsEmpty();
+		
+	#End
+
+	#Variables
+		LinkSelection [ DataType = 'Image' ]
+
+		cBookId [ Description = 'Book Id', DataType = 'Attribute:BookId' ]
+
+		cBookTitle [ Description = 'Book Title', DataType = 'Attribute:BookTitle' ]
+
+		cAuthorId [ Description = 'Author Id', DataType = 'Attribute:AuthorId' ]
+
+		cPublisherId [ Description = 'Publisher Id', DataType = 'Attribute:PublisherId' ]
+
+		cGenreId [ Description = 'Genre Id', DataType = 'Attribute:GenreId' ]
+
+		cShelfId [ Description = 'Shelf Id', DataType = 'Attribute:ShelfId' ]
+
+		cBookISBN [ Description = 'Book ISBN', DataType = 'Attribute:BookISBN' ]
+
+		pBookId [ Description = 'Book Id', DataType = 'Attribute:BookId' ]
+
+		ADVANCED_LABEL_TEMPLATE [ DataType = 'Character(20)' ]
+
+		
+	#End
+
+	#Properties
+		Name = "Gx0030"
+
+		Description = "Selection List Book"
+
+		MasterPage = "MasterPrompt"
+
+		IsPrompt = "True"
+
+		AssociatedTable = "Book"
+
+		FocusControl = "Browser dependent"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

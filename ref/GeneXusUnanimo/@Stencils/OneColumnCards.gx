@@ -1,0 +1,11 @@
+Stencil OneColumnCards
+{
+	#Properties
+		Name = "OneColumnCards"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

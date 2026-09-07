@@ -1,0 +1,75 @@
+ExternalObject AppLifecycle
+{
+	#ExternalProperties
+		ApplicationState
+
+		[
+
+			PropertyType = 'Read',
+
+			Description = 'The runtime state of the application.',
+
+			BasedOn = 'ApplicationState, GeneXus',
+
+			IsStatic = 'True'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalEvents
+		AppStateChanged
+
+		[
+
+			Description = 'Triggered when the application\'s state changes'
+
+		]
+
+		{
+
+			Parameters
+
+			{
+
+				oldState
+
+				[
+
+					BasedOn = 'ApplicationState, GeneXus'
+
+				]
+
+		
+
+				newState
+
+				[
+
+					BasedOn = 'ApplicationState, GeneXus'
+
+				]
+
+			}
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "AppLifecycle"
+
+		Description = "Application life cycle"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

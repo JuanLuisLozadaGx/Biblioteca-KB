@@ -1,0 +1,17 @@
+Image filter_many_applied
+{
+	'filter_many_applied.svg' [ Description = 'filter_many_applied.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "filter_many_applied"
+
+		Description = "filter_many_applied"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,37 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable">
+			<row>
+				<cell class="ww__view__actions-cell" horizontalAlignment="Right" widthSm="100">
+					<actiongroup name="Actions" />
+				</cell>
+			</row>
+			<row>
+				<cell widthSm="100">
+					<responsive name="AttributesTable">
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Id" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="GenreId" name="ctlGenreId" />
+							</cell>
+						</row>
+						<row>
+							<cell class="form__cell" widthSm="100">
+								<input labelCaption="Name" class="ReadonlyAttribute" inputType="Values" dataSourceFrom="Values" data="GenreName" name="ctlGenreName" />
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+		<actiongroups>
+			<actiongroup name="Actions" class="ww__view__actions">
+				<item>
+					<action name="BtnUpdate" onClickEvent="'DoUpdate'" caption="GXM_update" class="Button button-primary" />
+				</item>
+				<item>
+					<action name="BtnDelete" onClickEvent="'DoDelete'" caption="GX_BtnDelete" class="Button button-tertiary" />
+				</item>
+			</actiongroup>
+		</actiongroups>
+	</view>
+</layout>

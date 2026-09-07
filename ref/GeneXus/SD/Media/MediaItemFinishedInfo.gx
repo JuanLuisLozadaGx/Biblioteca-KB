@@ -1,0 +1,29 @@
+SDT MediaItemFinishedInfo
+{
+	MediaItemFinishedInfo{
+
+		ItemId [ DataType = 'VarChar(40)' ]
+
+		QueuePosition [ DataType = 'Numeric(8.0)' ]
+
+		TrackPosition [ DataType = 'MediaDuration, GeneXus' ]
+
+		Reason [ DataType = 'MediaFinishReason, GeneXus' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "MediaItemFinishedInfo"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

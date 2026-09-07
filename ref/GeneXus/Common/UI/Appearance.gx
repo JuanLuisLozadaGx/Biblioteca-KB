@@ -1,0 +1,41 @@
+ExternalObject Appearance
+{
+	#ExternalProperties
+		PreferredColorScheme
+
+		[
+
+			PropertyType = 'Read',
+
+			BasedOn = 'ColorScheme, GeneXus.Common',
+
+			IsStatic = 'True',
+
+			IosExternalName = 'preferredColorScheme'
+
+		]
+
+		
+
+		
+	#End
+
+	#ExternalEvents
+		PreferredColorSchemeChanged
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Appearance"
+
+		IosExternalName = "GXEOAppearance"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

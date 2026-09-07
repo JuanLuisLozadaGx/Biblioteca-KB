@@ -1,0 +1,19 @@
+Domain CryptoSignAlgorithm
+{
+	#Properties
+		Name = "CryptoSignAlgorithm"
+
+		Description = "Crypto Algorithm Sign"
+
+		DataType = "Character(40)"
+
+		Length = "40"
+
+		EnumValues = "MD5withRSA, MD5 with RSA, MD5 RSA; SHA1withRSA, SHA1with RSA, SHA1 RSA; SHA256withRSA, SHA256with RSA, SHA256 RSA; SHA512withRSA, SHA512with RSA, SHA512 RSA"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,33 @@
+SDT LocalizedText
+{
+	LocalizedText{
+
+		DefaultText [ DataType = 'Character(100)' ]
+
+		Localized [ Description = 'Localized Text (optional)', Collection = 'True', CollectionItemName = 'Text' ]	{
+
+			Text [ DataType = 'Character(100)' ]
+
+			Language [ Description = 'Language Name', DataType = 'Character(100)' ]
+
+		}
+
+	
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "LocalizedText"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,19 @@
+Domain HttpMethod
+{
+	#Properties
+		Name = "HttpMethod"
+
+		DataType = "Character(7)"
+
+		Length = "7"
+
+		EnumValues = "Get, Get, GET; Post, Post, POST; Put, Put, PUT; Delete, Delete, DELETE; Options, Options, OPTIONS; Head, Head, HEAD; Trace, Trace, TRACE; Connect, Connect, CONNECT; Patch, Patch, PATCH"
+
+		ControlType = "Combo Box"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

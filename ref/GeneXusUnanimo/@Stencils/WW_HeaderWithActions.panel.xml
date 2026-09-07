@@ -1,0 +1,15 @@
+<layout type="">
+	<view>
+		<flex alignItems="Center">
+			<cell minHeight="40">
+				<label name="Textblock1" caption="Title" class="heading-01" />
+			</cell>
+			<cell flexGrow="0" minHeight="40">
+				<action name="None" onClickEvent="" caption="Action" class="Button button-primary" />
+			</cell>
+			<cell flexGrow="0" minHeight="40">
+				<input labelPosition="None" class="attribute-search" data="&amp;filterCharacter" name="ctlfilterCharacter" />
+			</cell>
+		</flex>
+	</view>
+</layout>

@@ -1,0 +1,47 @@
+Procedure GetOverdueLoans
+{
+	&TodayDate = Now()
+	
+	For Each
+		Order LoanExpectedReturnDate
+		Where LoanExpectedReturnDate < &TodayDate
+		Where LoanReturnedDate = &EmptyDate
+	
+		&OverdueLoan = new()
+		&OverdueLoan.BookId                 = BookId
+		&OverdueLoan.BookTitle              = BookTitle
+		&OverdueLoan.AuthorName             = AuthorName
+		&OverdueLoan.LoanId                 = LoanId
+		&OverdueLoan.LoanPersonName         = LoanPersonName
+		&OverdueLoan.LoanDate               = LoanDate
+		&OverdueLoan.LoanExpectedReturnDate = LoanExpectedReturnDate
+		&OverdueLoan.DaysOverdue            = &TodayDate - LoanExpectedReturnDate
+	
+		&OverdueLoanItem.OverdueLoanList.Add(&OverdueLoan)
+	EndFor
+
+	#Rules
+		parm(out: &OverdueLoanItem);
+	#End
+
+	#Variables
+		OverdueLoanItem [ DataType = 'OverdueLoanItem' ]
+
+		OverdueLoan [ DataType = 'OverdueLoanItem.OverdueLoan' ]
+
+		TodayDate [ DataType = 'Date' ]
+
+		EmptyDate [ DataType = 'Date' ]
+
+		
+	#End
+
+	#Properties
+		Name = "GetOverdueLoans"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

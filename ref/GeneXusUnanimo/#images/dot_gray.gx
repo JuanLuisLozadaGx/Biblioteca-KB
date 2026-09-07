@@ -1,0 +1,17 @@
+Image dot_gray
+{
+	'dot_gray.svg' [ Description = 'dot_gray.svg', Style = 'Unanimo', Language = 'Any' ]
+
+	
+
+	#Properties
+		Name = "dot_gray"
+
+		Description = "dot_gray"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

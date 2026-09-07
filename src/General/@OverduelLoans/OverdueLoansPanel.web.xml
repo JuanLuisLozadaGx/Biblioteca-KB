@@ -1,0 +1,44 @@
+<layout type="Web">
+	<view>
+		<responsive name="MainTable" class="body-container">
+			<row>
+				<cell name="GridCell" class="ww__grid-cell" widthSm="100">
+					<responsive name="GridTable" class="container-fluid container-advanced" responsiveSizes="[]">
+						<row>
+							<cell>
+								<flex name="TableTop" class="Flex ww__actions-container">
+									<cell class="ww__title-cell" flexGrow="1">
+										<label name="TitleText" caption="Préstamos Vencidos" class="heading-01" />
+									</cell>
+								</flex>
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<errorviewer name="ErrorViewer" />
+							</cell>
+						</row>
+						<row>
+							<cell>
+								<responsive name="GridContainer" class="ww__grid-container" responsiveSizes="[]">
+									<row>
+										<cell>
+											<tabularGrid name="Grid" class="ww__grid" order="LoanExpectedReturnDate" maxRows="20" infiniteScrolling="One page at a time">
+												<input title="Título" class="attribute-description" inputType="Values" dataSourceFrom="Values" columnClass="column" visible="True" data="BookTitle" name="ctlBookTitle" />
+												<input title="Autor" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="AuthorName" name="ctlAuthorName" />
+												<input title="Prestatario" inputType="Values" dataSourceFrom="Values" columnClass="column" visible="True" data="LoanPersonName" name="ctlLoanPersonName" />
+												<input title="Fecha de Préstamo" inputType="Values" dataSourceFrom="Values" columnClass="column column-optional" visible="True" data="LoanDate" name="ctlLoanDate" />
+												<input title="Fecha Esperada de Devolución" inputType="Values" dataSourceFrom="Values" columnClass="column" visible="True" data="LoanExpectedReturnDate" name="ctlLoanExpectedReturnDate" />
+												<input title="Días de Atraso" inputType="Values" dataSourceFrom="Values" columnClass="column" visible="True" data="&amp;DaysOverdue" name="ctlDaysOverdue" />
+											</tabularGrid>
+										</cell>
+									</row>
+								</responsive>
+							</cell>
+						</row>
+					</responsive>
+				</cell>
+			</row>
+		</responsive>
+	</view>
+</layout>

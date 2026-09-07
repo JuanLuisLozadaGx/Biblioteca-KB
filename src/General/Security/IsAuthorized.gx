@@ -1,0 +1,34 @@
+Procedure IsAuthorized
+{
+	&Authorized = True
+	
+	/*
+	LoadContext(&Context)
+	If (&GxObject = 'ViewInvoices' and &Context.UserLevel = 0)
+	        &Authorized = False
+	Endif
+	*/
+	
+
+	#Rules
+		parm(in:&GxObject, out:&Authorized);
+		
+	#End
+
+	#Variables
+		GxObject [ DataType = 'ObjectName, GeneXus' ]
+
+		Authorized [ DataType = 'Boolean' ]
+
+		
+	#End
+
+	#Properties
+		Name = "IsAuthorized"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,19 @@
+Image edit_light
+{
+	'edit_light.svg' [ Description = 'edit_light.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'edit_dark.svg' [ Description = 'edit_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "edit_light"
+
+		Description = "edit_light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

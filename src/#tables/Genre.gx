@@ -1,0 +1,37 @@
+Table Genre
+{
+	GenreId*
+
+	GenreName
+
+	
+
+	#Indexes
+		IGenre
+
+		[
+
+			Source = 'Automatic',
+
+			Type = 'Primary Key'
+
+		]
+
+		{
+
+			GenreId
+
+		}
+
+		
+
+		
+	#End
+
+	#Properties
+		Name = "Genre"
+
+		
+	#End
+
+}

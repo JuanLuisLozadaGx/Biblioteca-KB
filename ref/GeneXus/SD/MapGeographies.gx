@@ -1,0 +1,25 @@
+SDT MapGeographies
+{
+	MapGeographies [ Collection = 'True', CollectionItemName = 'MapGeography' ]{
+
+		Id [ DataType = 'VarChar(40)' ]
+
+		Feature [ DataType = 'Geography' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "MapGeographies"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

@@ -1,0 +1,35 @@
+SDT GeolocationInfo
+{
+	GeolocationInfo{
+
+		Location [ DataType = 'Geolocation, GeneXus' ]
+
+		Description [ DataType = 'Character(50)' ]
+
+		Time [ DataType = 'DateTime', Collection = 'False', ControlType = 'Edit' ]
+
+		Precision [ DataType = 'Numeric(8.2)' ]
+
+		RestrictedAccuracy [ DataType = 'Boolean' ]
+
+		Heading [ DataType = 'Numeric(6.2)' ]
+
+		Speed [ DataType = 'Numeric(8.2)' ]
+
+	}
+
+	
+
+	
+
+	#Properties
+		Name = "GeolocationInfo"
+
+		ExposedNamespace = "GeneXus"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

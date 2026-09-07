@@ -1,0 +1,19 @@
+Image filter_outlined_light
+{
+	'filter_outlined_light.svg' [ Description = 'filter_outlined_light.svg', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:light' ]
+
+	'filter_outlined_dark.svg' [ Description = 'filter_outlined_dark.svg', IsExternal = 'False', Style = 'Unanimo', Language = 'Any', Options = 'color-scheme:dark' ]
+
+	
+
+	#Properties
+		Name = "filter_outlined_light"
+
+		Description = "filter_outlined_light"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}

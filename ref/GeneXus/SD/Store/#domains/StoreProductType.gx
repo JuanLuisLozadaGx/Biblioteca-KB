@@ -1,0 +1,13 @@
+Domain StoreProductType
+{
+	#Properties
+		Name = "StoreProductType"
+
+		EnumValues = "Subscription, Subscription, 2; Product, Product, 1"
+
+		IsDefault = "False"
+
+		
+	#End
+
+}
