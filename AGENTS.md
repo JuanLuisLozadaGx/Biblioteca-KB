@@ -147,8 +147,18 @@ SDT MySDT
 | `For Each TableName` | `For Each` (GeneXus infiere la tabla por los atributos usados) |
 | `Order by Attribute` | `Order Attribute` (sin `by`) |
 | `Order` después de `Where` | Poner `Order` **antes** de las cláusulas `Where` |
+| `BookStatus = "Read"` (string a dominio enum) | `BookStatus = ReadingStatus.Read` (sintaxis `DomainName.EnumValue`) |
+| `For Each Author ... EndFor` para contar | `&Count = Count(AuthorId)` — evita establecer contexto de tabla |
 
 `Today()` y `CToD('')` **sí son válidos** dentro de secciones `#Conditions` y `#Events`.
+
+### Contexto de tabla en bloques `New` — gotcha crítico
+
+El especificador de GeneXus mantiene el contexto de tabla activo después de un `For Each ... EndFor` o de bloques `New`. Si en un mismo procedimiento hay bloques `New` para **distintas tablas** en secuencia, el especificador puede "heredar" el contexto de la tabla anterior y no encontrar los atributos de la tabla siguiente, creando variables Numeric automáticas.
+
+**Síntoma**: `error spc0010: Type mismatch in assignment: PublisherName = "..." (Numeric=Character)` — GeneXus trata el atributo como variable Numeric porque no lo encuentra en el contexto actual.
+
+**Regla**: Nunca usar `For Each TableA ... EndFor` antes de bloques `New` para otras tablas en el mismo procedimiento. Usar `Count(AttributeId)` para contar registros sin establecer contexto de tabla.
 
 ### WebPanel events — restricciones adicionales
 
